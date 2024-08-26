@@ -121,3 +121,9 @@ The following materials are recommend reading for the coure but by no
 means are they mandatory.
 
 **Books**
+
+| TITLE | AUTHOR | PUBLISHER |
+|----|----|----|
+| A Modern Introduction to Classical Electrodynamics | Maggiore, Michele | Oxford University Press (2023) |
+| Introduction to Electrodynamics (4th Edition) | Griffiths, David J. | Cambridge University Press (2023) |
+| Field and Wave Electromagnetics | Cheng, David Keun | Pearson Education India (1989) |
