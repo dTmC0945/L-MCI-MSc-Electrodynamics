@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Code for Electrodynamics Conservation Laws</title>
+<meta name="author" content="Daniel McGuiness" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" href="config/style.css">
+<script type="text/javascript"  src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="config/test.js">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+// @license-end
+</script>
+
+<script>
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+org_html_manager.set("TOC_DEPTH", "3");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "index.html");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "1");
+org_html_manager.set("VIEW", "info");
+org_html_manager.setup();  // activate after the parameters are set
+// @license-end
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="index.html"> UP </a>
+ |
+ <a accesskey="H" href=""> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Code for Electrodynamics Conservation Laws</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org1bc8e96">Introduction</a></li>
+</ul>
+</div>
+</div>
+<p>
+These are the code snippets used in <code>Conservation Laws</code>
+part of <code>Electrodynamics</code>.
+</p>
+
+<div id="outline-container-org1bc8e96" class="outline-2">
+<h2 id="org1bc8e96">Introduction</h2>
+<div class="outline-text-2" id="text-org1bc8e96">
+<div class="org-src-container">
+<pre class="src src-python" id="orga95a9bf"><span class="org-doc">"""Module creates an animation of an oscillating point charge's fields."""</span>
+<span class="org-doc">"""Module plots the fields and potentials generated by an oscillating charge.</span>
+
+<span class="org-doc">The cells calculate and plot the E field, B field, and potentials.</span>
+<span class="org-doc">"""</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">pragma pylint: disable=unexpected-keyword-arg</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">%% Setup script</span>
+<span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+<span class="org-keyword">from</span> matplotlib.colors <span class="org-keyword">import</span> LogNorm, SymLogNorm
+<span class="org-keyword">from</span> mpl_toolkits.axes_grid1.inset_locator <span class="org-keyword">import</span> inset_axes
+
+<span class="org-keyword">import</span> pycharge <span class="org-keyword">as</span> pc
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">%% Calculate and plot E field</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">Create charge and simulation objects</span>
+<span class="org-variable-name">charge</span> <span class="org-operator">=</span> pc.OscillatingCharge<span class="org-rainbow-delimiters-depth-1">(</span>origin<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>0, 0, 0<span class="org-rainbow-delimiters-depth-2">)</span>, direction<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>1, 0, 0<span class="org-rainbow-delimiters-depth-2">)</span>,
+                              amplitude<span class="org-operator">=</span>1e<span class="org-operator">-</span>10, omega<span class="org-operator">=</span>5e17<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">simulation</span> <span class="org-operator">=</span> pc.Simulation<span class="org-rainbow-delimiters-depth-1">(</span>charge<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Create meshgrid in x-y plane between -10 nm to 10 nm at z=0</span>
+<span class="org-variable-name">lim</span> <span class="org-operator">=</span> 10e<span class="org-operator">-</span>9
+<span class="org-variable-name">npoints</span> <span class="org-operator">=</span> 1000  <span class="org-comment-delimiter"># </span><span class="org-comment">Number of grid points</span>
+<span class="org-variable-name">coordinates</span> <span class="org-operator">=</span> np.linspace<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-operator">-</span>lim, lim, npoints<span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">grid from -lim to lim</span>
+<span class="org-variable-name">x</span>, <span class="org-variable-name">y</span>, <span class="org-variable-name">z</span> <span class="org-operator">=</span> np.meshgrid<span class="org-rainbow-delimiters-depth-1">(</span>coordinates, coordinates, 0, indexing<span class="org-operator">=</span><span class="org-string">'ij'</span><span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">z=0</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Calculate E field components at t=0</span>
+<span class="org-variable-name">E_x</span>, <span class="org-variable-name">E_y</span>, <span class="org-variable-name">E_z</span> <span class="org-operator">=</span> simulation.calculate_E<span class="org-rainbow-delimiters-depth-1">(</span>t<span class="org-operator">=</span>0, x<span class="org-operator">=</span>x, y<span class="org-operator">=</span>y, z<span class="org-operator">=</span>z<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Plot E_x, E_y, and E_z fields</span>
+<span class="org-variable-name">E_x_plane</span> <span class="org-operator">=</span> E_x<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">Create 2D array at z=0 for plotting</span>
+<span class="org-variable-name">E_y_plane</span> <span class="org-operator">=</span> E_y<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>
+<span class="org-variable-name">E_z_plane</span> <span class="org-operator">=</span> E_z<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Create figs and axes, plot E components on log scale</span>
+<span class="org-variable-name">fig</span>, <span class="org-variable-name">axs</span> <span class="org-operator">=</span> plt.subplots<span class="org-rainbow-delimiters-depth-1">(</span>1, 3, sharey<span class="org-operator">=</span><span class="org-constant">True</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">norm</span> <span class="org-operator">=</span> SymLogNorm<span class="org-rainbow-delimiters-depth-1">(</span>linthresh<span class="org-operator">=</span>1.01e6, linscale<span class="org-operator">=</span>1, vmin<span class="org-operator">=-</span>1e9, vmax<span class="org-operator">=</span>1e9<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">extent</span> <span class="org-operator">=</span> <span class="org-rainbow-delimiters-depth-1">[</span><span class="org-operator">-</span>lim, lim, <span class="org-operator">-</span>lim, lim<span class="org-rainbow-delimiters-depth-1">]</span>
+<span class="org-variable-name">im_0</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>0<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>E_x_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">im_1</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>1<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>E_y_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">im_2</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>2<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>E_z_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Add labels</span>
+<span class="org-keyword">for</span> ax <span class="org-keyword">in</span> axs:
+    ax.set_xlabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'x (nm)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>0<span class="org-rainbow-delimiters-depth-1">]</span>.set_ylabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'y (nm)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>0<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'E_x'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>1<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'E_y'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>2<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'E_z'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Add colorbar to figure</span>
+<span class="org-variable-name">Ecax</span> <span class="org-operator">=</span> inset_axes<span class="org-rainbow-delimiters-depth-1">(</span>axs<span class="org-rainbow-delimiters-depth-2">[</span>2<span class="org-rainbow-delimiters-depth-2">]</span>,
+                  width<span class="org-operator">=</span><span class="org-string">"6%"</span>,  <span class="org-comment-delimiter"># </span><span class="org-comment">width = 5% of parent_bbox width</span>
+                  height<span class="org-operator">=</span><span class="org-string">"100%"</span>,  <span class="org-comment-delimiter"># </span><span class="org-comment">height : 50%</span>
+                  loc<span class="org-operator">=</span><span class="org-string">'lower left'</span>,
+                  bbox_to_anchor<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>1.05, 0., 1, 1<span class="org-rainbow-delimiters-depth-2">)</span>,
+                  bbox_transform<span class="org-operator">=</span>axs<span class="org-rainbow-delimiters-depth-2">[</span>2<span class="org-rainbow-delimiters-depth-2">]</span>.transAxes,
+                  borderpad<span class="org-operator">=</span>0,
+                  <span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">E_cbar</span> <span class="org-operator">=</span> plt.colorbar<span class="org-rainbow-delimiters-depth-1">(</span>im_2, cax<span class="org-operator">=</span>Ecax<span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">right of im_2</span>
+E_cbar.ax.set_ylabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'E (N/C)'</span>, rotation<span class="org-operator">=</span>270, labelpad<span class="org-operator">=</span>12<span class="org-rainbow-delimiters-depth-1">)</span>
+
+plt.show<span class="org-rainbow-delimiters-depth-1">()</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">%% Calculate and plot B field</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">Create charge and simulation objects</span>
+<span class="org-variable-name">charge</span> <span class="org-operator">=</span> pc.OscillatingCharge<span class="org-rainbow-delimiters-depth-1">(</span>origin<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>0, 0, 0<span class="org-rainbow-delimiters-depth-2">)</span>, direction<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>1, 0, 0<span class="org-rainbow-delimiters-depth-2">)</span>,
+                              amplitude<span class="org-operator">=</span>1e<span class="org-operator">-</span>10, omega<span class="org-operator">=</span>5e17<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">simulation</span> <span class="org-operator">=</span> pc.Simulation<span class="org-rainbow-delimiters-depth-1">(</span>charge<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Create meshgrid in x-y plane between -10 nm to 10 nm at z=0</span>
+<span class="org-variable-name">lim</span> <span class="org-operator">=</span> 10e<span class="org-operator">-</span>9
+<span class="org-variable-name">npoints</span> <span class="org-operator">=</span> 1000  <span class="org-comment-delimiter"># </span><span class="org-comment">Number of grid points</span>
+<span class="org-variable-name">coordinates</span> <span class="org-operator">=</span> np.linspace<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-operator">-</span>lim, lim, npoints<span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">grid from -lim to lim</span>
+<span class="org-variable-name">x</span>, <span class="org-variable-name">y</span>, <span class="org-variable-name">z</span> <span class="org-operator">=</span> np.meshgrid<span class="org-rainbow-delimiters-depth-1">(</span>coordinates, coordinates, 0, indexing<span class="org-operator">=</span><span class="org-string">'ij'</span><span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">z=0</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Calculate B field components at t=0</span>
+<span class="org-variable-name">B_x</span>, <span class="org-variable-name">B_y</span>, <span class="org-variable-name">B_z</span> <span class="org-operator">=</span> simulation.calculate_B<span class="org-rainbow-delimiters-depth-1">(</span>t<span class="org-operator">=</span>0, x<span class="org-operator">=</span>x, y<span class="org-operator">=</span>y, z<span class="org-operator">=</span>z<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Plot E_x, E_y, and E_z fields</span>
+<span class="org-variable-name">B_x_plane</span> <span class="org-operator">=</span> B_x<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">Create 2D array at z=0 for plotting</span>
+<span class="org-variable-name">B_y_plane</span> <span class="org-operator">=</span> B_y<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>
+<span class="org-variable-name">B_z_plane</span> <span class="org-operator">=</span> B_z<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Create figs and axes, plot E components on log scale</span>
+<span class="org-variable-name">fig</span>, <span class="org-variable-name">axs</span> <span class="org-operator">=</span> plt.subplots<span class="org-rainbow-delimiters-depth-1">(</span>1, 3, sharey<span class="org-operator">=</span><span class="org-constant">True</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">norm</span> <span class="org-operator">=</span> SymLogNorm<span class="org-rainbow-delimiters-depth-1">(</span>linthresh<span class="org-operator">=</span>1.01e<span class="org-operator">-</span>3, linscale<span class="org-operator">=</span>1, vmin<span class="org-operator">=-</span>1, vmax<span class="org-operator">=</span>1<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">extent</span> <span class="org-operator">=</span> <span class="org-rainbow-delimiters-depth-1">[</span><span class="org-operator">-</span>lim, lim, <span class="org-operator">-</span>lim, lim<span class="org-rainbow-delimiters-depth-1">]</span>
+<span class="org-variable-name">im_0</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>0<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>B_x_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">im_1</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>1<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>B_y_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">im_2</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>2<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>B_z_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Add labels</span>
+<span class="org-keyword">for</span> ax <span class="org-keyword">in</span> axs:
+    ax.set_xlabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'x (nm)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>0<span class="org-rainbow-delimiters-depth-1">]</span>.set_ylabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'y (nm)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>0<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'B_x'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>1<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'B_y'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>2<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'B_z'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Add colorbar to figure</span>
+<span class="org-variable-name">Ecax</span> <span class="org-operator">=</span> inset_axes<span class="org-rainbow-delimiters-depth-1">(</span>axs<span class="org-rainbow-delimiters-depth-2">[</span>2<span class="org-rainbow-delimiters-depth-2">]</span>,
+                  width<span class="org-operator">=</span><span class="org-string">"6%"</span>,  <span class="org-comment-delimiter"># </span><span class="org-comment">width = 5% of parent_bbox width</span>
+                  height<span class="org-operator">=</span><span class="org-string">"100%"</span>,  <span class="org-comment-delimiter"># </span><span class="org-comment">height : 50%</span>
+                  loc<span class="org-operator">=</span><span class="org-string">'lower left'</span>,
+                  bbox_to_anchor<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>1.05, 0., 1, 1<span class="org-rainbow-delimiters-depth-2">)</span>,
+                  bbox_transform<span class="org-operator">=</span>axs<span class="org-rainbow-delimiters-depth-2">[</span>2<span class="org-rainbow-delimiters-depth-2">]</span>.transAxes,
+                  borderpad<span class="org-operator">=</span>0,
+                  <span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">E_cbar</span> <span class="org-operator">=</span> plt.colorbar<span class="org-rainbow-delimiters-depth-1">(</span>im_2, cax<span class="org-operator">=</span>Ecax<span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">right of im_2</span>
+E_cbar.ax.set_ylabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'B (T)'</span>, rotation<span class="org-operator">=</span>270, labelpad<span class="org-operator">=</span>12<span class="org-rainbow-delimiters-depth-1">)</span>
+
+plt.show<span class="org-rainbow-delimiters-depth-1">()</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">%% Calculate and plot scalar and vector potentials</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">Create charge and simulation objects</span>
+<span class="org-variable-name">charge</span> <span class="org-operator">=</span> pc.OscillatingCharge<span class="org-rainbow-delimiters-depth-1">(</span>origin<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>0, 0, 0<span class="org-rainbow-delimiters-depth-2">)</span>, direction<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>1, 0, 0<span class="org-rainbow-delimiters-depth-2">)</span>,
+                              amplitude<span class="org-operator">=</span>1e<span class="org-operator">-</span>10, omega<span class="org-operator">=</span>5e17<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">simulation</span> <span class="org-operator">=</span> pc.Simulation<span class="org-rainbow-delimiters-depth-1">(</span>charge<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Create meshgrid in x-y plane between -10 nm to 10 nm at z=0</span>
+<span class="org-variable-name">lim</span> <span class="org-operator">=</span> 10e<span class="org-operator">-</span>9
+<span class="org-variable-name">npoints</span> <span class="org-operator">=</span> 1000  <span class="org-comment-delimiter"># </span><span class="org-comment">Number of grid points</span>
+<span class="org-variable-name">coordinates</span> <span class="org-operator">=</span> np.linspace<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-operator">-</span>lim, lim, npoints<span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">grid from -lim to lim</span>
+<span class="org-variable-name">x</span>, <span class="org-variable-name">y</span>, <span class="org-variable-name">z</span> <span class="org-operator">=</span> np.meshgrid<span class="org-rainbow-delimiters-depth-1">(</span>coordinates, coordinates, 0, indexing<span class="org-operator">=</span><span class="org-string">'ij'</span><span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">z=0</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Calculate potentials at t=0</span>
+<span class="org-variable-name">V</span> <span class="org-operator">=</span> simulation.calculate_V<span class="org-rainbow-delimiters-depth-1">(</span>t<span class="org-operator">=</span>0, x<span class="org-operator">=</span>x, y<span class="org-operator">=</span>y, z<span class="org-operator">=</span>z<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">A_x</span>, <span class="org-variable-name">A_y</span>, <span class="org-variable-name">A_z</span> <span class="org-operator">=</span> simulation.calculate_A<span class="org-rainbow-delimiters-depth-1">(</span>t<span class="org-operator">=</span>0, x<span class="org-operator">=</span>x, y<span class="org-operator">=</span>y, z<span class="org-operator">=</span>z<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Plot scalar potential</span>
+<span class="org-variable-name">V_plane</span> <span class="org-operator">=</span> V<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">Create 2D array at z=0 for plotting</span>
+<span class="org-variable-name">fig</span>, <span class="org-variable-name">ax</span> <span class="org-operator">=</span> plt.subplots<span class="org-rainbow-delimiters-depth-1">()</span>
+<span class="org-variable-name">norm</span> <span class="org-operator">=</span> LogNorm<span class="org-rainbow-delimiters-depth-1">(</span>vmin<span class="org-operator">=</span>1e<span class="org-operator">-</span>1, vmax<span class="org-operator">=</span>1e1<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">extent</span> <span class="org-operator">=</span> <span class="org-rainbow-delimiters-depth-1">[</span><span class="org-operator">-</span>lim, lim, <span class="org-operator">-</span>lim, lim<span class="org-rainbow-delimiters-depth-1">]</span>
+<span class="org-variable-name">im_V</span> <span class="org-operator">=</span> ax.imshow<span class="org-rainbow-delimiters-depth-1">(</span>V_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+ax.set_xlabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'x (nm)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+ax.set_ylabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'y (nm)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+ax.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'V'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">Ecax</span> <span class="org-operator">=</span> inset_axes<span class="org-rainbow-delimiters-depth-1">(</span>ax,
+                  width<span class="org-operator">=</span><span class="org-string">"6%"</span>,  <span class="org-comment-delimiter"># </span><span class="org-comment">width = 5% of parent_bbox width</span>
+                  height<span class="org-operator">=</span><span class="org-string">"100%"</span>,  <span class="org-comment-delimiter"># </span><span class="org-comment">height : 50%</span>
+                  loc<span class="org-operator">=</span><span class="org-string">'lower left'</span>,
+                  bbox_to_anchor<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>1.05, 0., 1, 1<span class="org-rainbow-delimiters-depth-2">)</span>,
+                  bbox_transform<span class="org-operator">=</span>ax.transAxes,
+                  borderpad<span class="org-operator">=</span>0,
+                  <span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">E_cbar</span> <span class="org-operator">=</span> plt.colorbar<span class="org-rainbow-delimiters-depth-1">(</span>im_V, cax<span class="org-operator">=</span>Ecax<span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">right of im_V</span>
+E_cbar.ax.set_ylabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'V (V)'</span>, rotation<span class="org-operator">=</span>270, labelpad<span class="org-operator">=</span>12<span class="org-rainbow-delimiters-depth-1">)</span>
+plt.show<span class="org-rainbow-delimiters-depth-1">()</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Plot vector potential</span>
+<span class="org-variable-name">A_x_plane</span> <span class="org-operator">=</span> A_x<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>
+<span class="org-variable-name">A_y_plane</span> <span class="org-operator">=</span> A_y<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>
+<span class="org-variable-name">A_z_plane</span> <span class="org-operator">=</span> A_z<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>
+<span class="org-variable-name">fig</span>, <span class="org-variable-name">axs</span> <span class="org-operator">=</span> plt.subplots<span class="org-rainbow-delimiters-depth-1">(</span>1, 3, sharey<span class="org-operator">=</span><span class="org-constant">True</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">norm</span> <span class="org-operator">=</span> SymLogNorm<span class="org-rainbow-delimiters-depth-1">(</span>linthresh<span class="org-operator">=</span>1.01e<span class="org-operator">-</span>12, linscale<span class="org-operator">=</span>1,
+                  vmin<span class="org-operator">=-</span>1e<span class="org-operator">-</span>9, vmax<span class="org-operator">=</span>1e<span class="org-operator">-</span>9<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">extent</span> <span class="org-operator">=</span> <span class="org-rainbow-delimiters-depth-1">[</span><span class="org-operator">-</span>lim, lim, <span class="org-operator">-</span>lim, lim<span class="org-rainbow-delimiters-depth-1">]</span>
+<span class="org-variable-name">im_Ax</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>0<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>A_x_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">im_Ay</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>1<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>A_y_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">im_Az</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>2<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>A_z_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-keyword">for</span> ax <span class="org-keyword">in</span> axs:
+    ax.set_xlabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'x (nm)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>0<span class="org-rainbow-delimiters-depth-1">]</span>.set_ylabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'y (nm)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>0<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'A_x'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>1<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'A_y'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>2<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'A_z'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">Ecax</span> <span class="org-operator">=</span> inset_axes<span class="org-rainbow-delimiters-depth-1">(</span>axs<span class="org-rainbow-delimiters-depth-2">[</span>2<span class="org-rainbow-delimiters-depth-2">]</span>,
+                  width<span class="org-operator">=</span><span class="org-string">"6%"</span>,  <span class="org-comment-delimiter"># </span><span class="org-comment">width = 5% of parent_bbox width</span>
+                  height<span class="org-operator">=</span><span class="org-string">"100%"</span>,  <span class="org-comment-delimiter"># </span><span class="org-comment">height : 50%</span>
+                  loc<span class="org-operator">=</span><span class="org-string">'lower left'</span>,
+                  bbox_to_anchor<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>1.05, 0., 1, 1<span class="org-rainbow-delimiters-depth-2">)</span>,
+                  bbox_transform<span class="org-operator">=</span>axs<span class="org-rainbow-delimiters-depth-2">[</span>2<span class="org-rainbow-delimiters-depth-2">]</span>.transAxes,
+                  borderpad<span class="org-operator">=</span>0,
+                  <span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">E_cbar</span> <span class="org-operator">=</span> plt.colorbar<span class="org-rainbow-delimiters-depth-1">(</span>im_Az, cax<span class="org-operator">=</span>Ecax<span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">right of im_Az</span>
+E_cbar.ax.set_ylabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'A (V*s/m)'</span>, rotation<span class="org-operator">=</span>270, labelpad<span class="org-operator">=</span>12<span class="org-rainbow-delimiters-depth-1">)</span>
+plt.show<span class="org-rainbow-delimiters-depth-1">()</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python" id="org7c7fed3"><span class="org-doc">"""Plot sinusoidal plane wave electric field along x direction."""</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">pragma pylint: disable=unexpected-keyword-arg, W0621, W0613</span>
+<span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+<span class="org-keyword">from</span> matplotlib.colors <span class="org-keyword">import</span> SymLogNorm
+<span class="org-keyword">from</span> mpl_toolkits.axes_grid1.inset_locator <span class="org-keyword">import</span> inset_axes
+<span class="org-keyword">from</span> scipy.constants <span class="org-keyword">import</span> c
+
+<span class="org-keyword">import</span> pycharge <span class="org-keyword">as</span> pc
+
+
+<span class="org-keyword">def</span> <span class="org-function-name">E_external_fun</span><span class="org-rainbow-delimiters-depth-1">(</span>t, x, y, z<span class="org-rainbow-delimiters-depth-1">)</span>:
+    <span class="org-doc">"""Return sinusoidal plane wave electric field along x direction."""</span>
+    <span class="org-keyword">return</span> <span class="org-rainbow-delimiters-depth-1">[</span>1e8<span class="org-operator">*</span>np.sin<span class="org-rainbow-delimiters-depth-2">(</span>2<span class="org-operator">*</span>np.pi<span class="org-operator">/</span>wavelength<span class="org-operator">*</span><span class="org-rainbow-delimiters-depth-3">(</span>x<span class="org-operator">-</span>c<span class="org-operator">*</span>t<span class="org-rainbow-delimiters-depth-3">)</span><span class="org-rainbow-delimiters-depth-2">)</span>, 0, 0<span class="org-rainbow-delimiters-depth-1">]</span>
+
+
+<span class="org-keyword">def</span> <span class="org-function-name">B_external_fun</span><span class="org-rainbow-delimiters-depth-1">(</span>t, x, y, z<span class="org-rainbow-delimiters-depth-1">)</span>:
+    <span class="org-doc">"""Return sinusoidal plane wave magnetic field along y direction."""</span>
+    <span class="org-keyword">return</span> <span class="org-rainbow-delimiters-depth-1">[</span>0, 1e8<span class="org-operator">*</span>np.sin<span class="org-rainbow-delimiters-depth-2">(</span>2<span class="org-operator">*</span>np.pi<span class="org-operator">/</span>wavelength<span class="org-operator">*</span><span class="org-rainbow-delimiters-depth-3">(</span>x<span class="org-operator">-</span>c<span class="org-operator">*</span>t<span class="org-rainbow-delimiters-depth-3">)</span><span class="org-rainbow-delimiters-depth-2">)</span>,  0<span class="org-rainbow-delimiters-depth-1">]</span>
+
+
+<span class="org-variable-name">dt</span> <span class="org-operator">=</span> 1e<span class="org-operator">-</span>18
+<span class="org-variable-name">wavelength</span> <span class="org-operator">=</span> 10e<span class="org-operator">-</span>9
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">No charges in simulation</span>
+<span class="org-variable-name">simulation</span> <span class="org-operator">=</span> pc.Simulation<span class="org-rainbow-delimiters-depth-1">(</span>
+    <span class="org-rainbow-delimiters-depth-2">[]</span>, E_external<span class="org-operator">=</span>E_external_fun, B_external<span class="org-operator">=</span>B_external_fun<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Create meshgrid in x-y plane between -10 nm to 10 nm at z=0</span>
+<span class="org-variable-name">lim</span> <span class="org-operator">=</span> 10e<span class="org-operator">-</span>9
+<span class="org-variable-name">npoints</span> <span class="org-operator">=</span> 1000  <span class="org-comment-delimiter"># </span><span class="org-comment">Number of grid points</span>
+<span class="org-variable-name">coordinates</span> <span class="org-operator">=</span> np.linspace<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-operator">-</span>lim, lim, npoints<span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">grid from -lim to lim</span>
+<span class="org-variable-name">x</span>, <span class="org-variable-name">y</span>, <span class="org-variable-name">z</span> <span class="org-operator">=</span> np.meshgrid<span class="org-rainbow-delimiters-depth-1">(</span>coordinates, coordinates, 0, indexing<span class="org-operator">=</span><span class="org-string">'ij'</span><span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">z=0</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Calculate E and B field components at t=0</span>
+<span class="org-variable-name">E_x</span>, <span class="org-variable-name">E_y</span>, <span class="org-variable-name">E_z</span> <span class="org-operator">=</span> simulation.calculate_E<span class="org-rainbow-delimiters-depth-1">(</span>t<span class="org-operator">=</span>0, x<span class="org-operator">=</span>x, y<span class="org-operator">=</span>y, z<span class="org-operator">=</span>z<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">B_x</span>, <span class="org-variable-name">B_y</span>, <span class="org-variable-name">B_z</span> <span class="org-operator">=</span> simulation.calculate_B<span class="org-rainbow-delimiters-depth-1">(</span>t<span class="org-operator">=</span>0, x<span class="org-operator">=</span>x, y<span class="org-operator">=</span>y, z<span class="org-operator">=</span>z<span class="org-rainbow-delimiters-depth-1">)</span>
+
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Plot E_x, E_y, and E_z fields</span>
+<span class="org-variable-name">E_x_plane</span> <span class="org-operator">=</span> E_x<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">Create 2D array at z=0 for plotting</span>
+<span class="org-variable-name">E_y_plane</span> <span class="org-operator">=</span> E_y<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>
+<span class="org-variable-name">E_z_plane</span> <span class="org-operator">=</span> E_z<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Plot B_x, B_y, and B_z fields</span>
+<span class="org-variable-name">B_x_plane</span> <span class="org-operator">=</span> B_x<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">Create 2D array at z=0 for plotting</span>
+<span class="org-variable-name">B_y_plane</span> <span class="org-operator">=</span> B_y<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>
+<span class="org-variable-name">B_z_plane</span> <span class="org-operator">=</span> B_z<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Create figs and axes, plot E components on log scale</span>
+<span class="org-variable-name">fig</span>, <span class="org-variable-name">axs</span> <span class="org-operator">=</span> plt.subplots<span class="org-rainbow-delimiters-depth-1">(</span>2, 3, sharey<span class="org-operator">=</span><span class="org-constant">True</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">norm</span> <span class="org-operator">=</span> SymLogNorm<span class="org-rainbow-delimiters-depth-1">(</span>linthresh<span class="org-operator">=</span>1.01e6, linscale<span class="org-operator">=</span>1, vmin<span class="org-operator">=-</span>1e9, vmax<span class="org-operator">=</span>1e9<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">extent</span> <span class="org-operator">=</span> <span class="org-rainbow-delimiters-depth-1">[</span><span class="org-operator">-</span>lim, lim, <span class="org-operator">-</span>lim, lim<span class="org-rainbow-delimiters-depth-1">]</span>
+<span class="org-variable-name">im_00</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>0, 0<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>E_x_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">im_01</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>0, 1<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>E_y_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">im_02</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>0, 2<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>E_z_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">im_10</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>1, 0<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>B_x_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">im_11</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>1, 1<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>B_y_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">im_12</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>1, 2<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>B_z_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Add labels</span>
+<span class="org-keyword">for</span> ax <span class="org-keyword">in</span> axs.flatten<span class="org-rainbow-delimiters-depth-1">()</span>:
+    ax.set_xlabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'x (nm)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+axs<span class="org-rainbow-delimiters-depth-1">[</span>0, 0<span class="org-rainbow-delimiters-depth-1">]</span>.set_ylabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'y (nm)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>0, 0<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'E_x'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>0, 1<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'E_y'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>0, 2<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'E_z'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>1, 0<span class="org-rainbow-delimiters-depth-1">]</span>.set_ylabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'y (nm)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>1, 0<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'B_x'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>1, 1<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'B_y'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>1, 2<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'B_z'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Add colorbar to figure</span>
+<span class="org-variable-name">Ecax</span> <span class="org-operator">=</span> inset_axes<span class="org-rainbow-delimiters-depth-1">(</span>axs<span class="org-rainbow-delimiters-depth-2">[</span>0, 2<span class="org-rainbow-delimiters-depth-2">]</span>,
+                  width<span class="org-operator">=</span><span class="org-string">"6%"</span>,  <span class="org-comment-delimiter"># </span><span class="org-comment">width = 5% of parent_bbox width</span>
+                  height<span class="org-operator">=</span><span class="org-string">"100%"</span>,  <span class="org-comment-delimiter"># </span><span class="org-comment">height : 50%</span>
+                  loc<span class="org-operator">=</span><span class="org-string">'lower left'</span>,
+                  bbox_to_anchor<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>1.05, 0., 1, 1<span class="org-rainbow-delimiters-depth-2">)</span>,
+                  bbox_transform<span class="org-operator">=</span>axs<span class="org-rainbow-delimiters-depth-2">[</span>0, 2<span class="org-rainbow-delimiters-depth-2">]</span>.transAxes,
+                  borderpad<span class="org-operator">=</span>0,
+                  <span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">E_cbar</span> <span class="org-operator">=</span> plt.colorbar<span class="org-rainbow-delimiters-depth-1">(</span>im_02, cax<span class="org-operator">=</span>Ecax<span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">right of im_2</span>
+E_cbar.ax.set_ylabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'E (N/C)'</span>, rotation<span class="org-operator">=</span>270, labelpad<span class="org-operator">=</span>12<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Add colorbar to figure</span>
+<span class="org-variable-name">Bcax</span> <span class="org-operator">=</span> inset_axes<span class="org-rainbow-delimiters-depth-1">(</span>axs<span class="org-rainbow-delimiters-depth-2">[</span>1, 2<span class="org-rainbow-delimiters-depth-2">]</span>,
+                  width<span class="org-operator">=</span><span class="org-string">"6%"</span>,  <span class="org-comment-delimiter"># </span><span class="org-comment">width = 5% of parent_bbox width</span>
+                  height<span class="org-operator">=</span><span class="org-string">"100%"</span>,  <span class="org-comment-delimiter"># </span><span class="org-comment">height : 50%</span>
+                  loc<span class="org-operator">=</span><span class="org-string">'lower left'</span>,
+                  bbox_to_anchor<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>1.05, 0., 1, 1<span class="org-rainbow-delimiters-depth-2">)</span>,
+                  bbox_transform<span class="org-operator">=</span>axs<span class="org-rainbow-delimiters-depth-2">[</span>1, 2<span class="org-rainbow-delimiters-depth-2">]</span>.transAxes,
+                  borderpad<span class="org-operator">=</span>0,
+                  <span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">B_cbar</span> <span class="org-operator">=</span> plt.colorbar<span class="org-rainbow-delimiters-depth-1">(</span>im_12, cax<span class="org-operator">=</span>Bcax<span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">right of im_2</span>
+B_cbar.ax.set_ylabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'B (T)'</span>, rotation<span class="org-operator">=</span>270, labelpad<span class="org-operator">=</span>12<span class="org-rainbow-delimiters-depth-1">)</span>
+
+plt.tight_layout<span class="org-rainbow-delimiters-depth-1">()</span>
+plt.show<span class="org-rainbow-delimiters-depth-1">()</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python" id="org6da93de"><span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+
+<span class="org-keyword">import</span> pycharge <span class="org-keyword">as</span> pc
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Simulation variables</span>
+<span class="org-variable-name">init_r</span> <span class="org-operator">=</span> 1e<span class="org-operator">-</span>9  <span class="org-comment-delimiter"># </span><span class="org-comment">Initial charge separation along y-axis</span>
+<span class="org-variable-name">d_12</span> <span class="org-operator">=</span> 80e<span class="org-operator">-</span>9  <span class="org-comment-delimiter"># </span><span class="org-comment">Distance between dipoles along x-axis</span>
+<span class="org-variable-name">omega_0</span> <span class="org-operator">=</span> 100e12<span class="org-operator">*</span>2<span class="org-operator">*</span>np.pi  <span class="org-comment-delimiter"># </span><span class="org-comment">Natural angular frequency of the dipoles</span>
+<span class="org-variable-name">timesteps</span> <span class="org-operator">=</span> 40000  <span class="org-comment-delimiter"># </span><span class="org-comment">Number of time steps in the simulation</span>
+<span class="org-variable-name">dt</span> <span class="org-operator">=</span> 1e<span class="org-operator">-</span>18  <span class="org-comment-delimiter"># </span><span class="org-comment">Time step</span>
+
+<span class="org-variable-name">origin_list</span> <span class="org-operator">=</span> <span class="org-rainbow-delimiters-depth-1">(</span><span class="org-rainbow-delimiters-depth-2">(</span>0, 0, 0<span class="org-rainbow-delimiters-depth-2">)</span>, <span class="org-rainbow-delimiters-depth-2">(</span>d_12, 0, 0<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">Dipole origin vectors</span>
+<span class="org-variable-name">init_r_list</span> <span class="org-operator">=</span> <span class="org-rainbow-delimiters-depth-1">(</span><span class="org-rainbow-delimiters-depth-2">(</span>0, init_r, 0<span class="org-rainbow-delimiters-depth-2">)</span>, <span class="org-rainbow-delimiters-depth-2">(</span>0, init_r, 0<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">Initial charge displacements</span>
+<span class="org-variable-name">sources</span> <span class="org-operator">=</span> <span class="org-rainbow-delimiters-depth-1">(</span>pc.Dipole<span class="org-rainbow-delimiters-depth-2">(</span>omega_0, origin_list<span class="org-rainbow-delimiters-depth-3">[</span>0<span class="org-rainbow-delimiters-depth-3">]</span>, init_r_list<span class="org-rainbow-delimiters-depth-3">[</span>0<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>,
+           pc.Dipole<span class="org-rainbow-delimiters-depth-2">(</span>omega_0, origin_list<span class="org-rainbow-delimiters-depth-3">[</span>1<span class="org-rainbow-delimiters-depth-3">]</span>, init_r_list<span class="org-rainbow-delimiters-depth-3">[</span>1<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">simulation</span> <span class="org-operator">=</span> pc.Simulation<span class="org-rainbow-delimiters-depth-1">(</span>sources<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">Simulation data of dipoles is saved to file 's_dipoles.dat'</span>
+simulation.run<span class="org-rainbow-delimiters-depth-1">(</span>timesteps, dt, <span class="org-string">'s_dipoles.dat'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Calculate theoretical \delta and \gamma_12</span>
+<span class="org-variable-name">theory_delta_12</span>, <span class="org-variable-name">theory_gamma_12</span> <span class="org-operator">=</span> pc.s_dipole_theory<span class="org-rainbow-delimiters-depth-1">(</span>init_r, d_12, omega_0<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">Calculate \delta and \gamma from simulation starting from 5000 time steps</span>
+<span class="org-variable-name">delta_12</span>, <span class="org-variable-name">gamma</span> <span class="org-operator">=</span> pc.calculate_dipole_properties<span class="org-rainbow-delimiters-depth-1">(</span>
+    sources<span class="org-rainbow-delimiters-depth-2">[</span>0<span class="org-rainbow-delimiters-depth-2">]</span>, first_index<span class="org-operator">=</span>10000, plot<span class="org-operator">=</span><span class="org-constant">True</span>
+<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-builtin">print</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'Delta_12 (theory):'</span>, theory_delta_12<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-builtin">print</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'Delta_12 (simulation):'</span>, delta_12<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-builtin">print</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'Gamma_12 (theory):'</span>, theory_gamma_12<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-builtin">print</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'Gamma (simulation):'</span>, gamma<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-builtin">print</span><span class="org-rainbow-delimiters-depth-1">()</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python" id="orgde92b51"><span class="org-doc">"""Module calculates and plots the E field components from a stationary charge.</span>
+
+<span class="org-doc">The x, y, and z components generated by a stationary point charge at the origin</span>
+<span class="org-doc">(0, 0, 0) are plotted along the x-y plane between -10 nm to 10 nm. Each field</span>
+<span class="org-doc">component is plotted individually on a logarithmic scale.</span>
+<span class="org-doc">"""</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">pragma pylint: disable=unexpected-keyword-arg</span>
+<span class="org-keyword">import</span> matplotlib <span class="org-keyword">as</span> mpl
+<span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+<span class="org-keyword">from</span> mpl_toolkits.axes_grid1.inset_locator <span class="org-keyword">import</span> inset_axes
+
+<span class="org-keyword">import</span> pycharge <span class="org-keyword">as</span> pc
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Create charge and simulation objects</span>
+<span class="org-variable-name">source</span> <span class="org-operator">=</span> pc.StationaryCharge<span class="org-rainbow-delimiters-depth-1">(</span>position<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>0, 0, 0<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">simulation</span> <span class="org-operator">=</span> pc.Simulation<span class="org-rainbow-delimiters-depth-1">(</span>source<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Create meshgrid in x-y plane between -10 nm to 10 nm at z=0</span>
+<span class="org-variable-name">lim</span> <span class="org-operator">=</span> 10e<span class="org-operator">-</span>9
+<span class="org-variable-name">npoints</span> <span class="org-operator">=</span> 1000  <span class="org-comment-delimiter"># </span><span class="org-comment">Number of grid points</span>
+<span class="org-variable-name">coordinates</span> <span class="org-operator">=</span> np.linspace<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-operator">-</span>lim, lim, npoints<span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">grid from -lim to lim</span>
+<span class="org-variable-name">x</span>, <span class="org-variable-name">y</span>, <span class="org-variable-name">z</span> <span class="org-operator">=</span> np.meshgrid<span class="org-rainbow-delimiters-depth-1">(</span>coordinates, coordinates, 0, indexing<span class="org-operator">=</span><span class="org-string">'ij'</span><span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">z=0</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Calculate E field components at t=0</span>
+<span class="org-variable-name">E_x</span>, <span class="org-variable-name">E_y</span>, <span class="org-variable-name">E_z</span> <span class="org-operator">=</span> simulation.calculate_E<span class="org-rainbow-delimiters-depth-1">(</span>t<span class="org-operator">=</span>0, x<span class="org-operator">=</span>x, y<span class="org-operator">=</span>y, z<span class="org-operator">=</span>z<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Plot E_x, E_y, and E_z fields</span>
+<span class="org-variable-name">E_x_plane</span> <span class="org-operator">=</span> E_x<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">Create 2D array at z=0 for plotting</span>
+<span class="org-variable-name">E_y_plane</span> <span class="org-operator">=</span> E_y<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>
+<span class="org-variable-name">E_z_plane</span> <span class="org-operator">=</span> E_z<span class="org-rainbow-delimiters-depth-1">[</span>:, :, 0<span class="org-rainbow-delimiters-depth-1">]</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Create figs and axes, plot E components on log scale</span>
+<span class="org-variable-name">fig</span>, <span class="org-variable-name">axs</span> <span class="org-operator">=</span> plt.subplots<span class="org-rainbow-delimiters-depth-1">(</span>1, 3, sharey<span class="org-operator">=</span><span class="org-constant">True</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">norm</span> <span class="org-operator">=</span> mpl.colors.SymLogNorm<span class="org-rainbow-delimiters-depth-1">(</span>linthresh<span class="org-operator">=</span>1.01e6, linscale<span class="org-operator">=</span>1, vmin<span class="org-operator">=-</span>1e9, vmax<span class="org-operator">=</span>1e9<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">extent</span> <span class="org-operator">=</span> <span class="org-rainbow-delimiters-depth-1">[</span><span class="org-operator">-</span>lim, lim, <span class="org-operator">-</span>lim, lim<span class="org-rainbow-delimiters-depth-1">]</span>
+<span class="org-variable-name">im_0</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>0<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>E_x_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">im_1</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>1<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>E_y_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">im_2</span> <span class="org-operator">=</span> axs<span class="org-rainbow-delimiters-depth-1">[</span>2<span class="org-rainbow-delimiters-depth-1">]</span>.imshow<span class="org-rainbow-delimiters-depth-1">(</span>E_z_plane.T, origin<span class="org-operator">=</span><span class="org-string">'lower'</span>, norm<span class="org-operator">=</span>norm, extent<span class="org-operator">=</span>extent<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Add labels</span>
+<span class="org-keyword">for</span> ax <span class="org-keyword">in</span> axs:
+    ax.set_xlabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'x (nm)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>0<span class="org-rainbow-delimiters-depth-1">]</span>.set_ylabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'y (nm)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>0<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'E_x'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>1<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'E_y'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+axs<span class="org-rainbow-delimiters-depth-1">[</span>2<span class="org-rainbow-delimiters-depth-1">]</span>.set_title<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'E_z'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Add colorbar to figure</span>
+<span class="org-variable-name">Ecax</span> <span class="org-operator">=</span> inset_axes<span class="org-rainbow-delimiters-depth-1">(</span>
+    axs<span class="org-rainbow-delimiters-depth-2">[</span>2<span class="org-rainbow-delimiters-depth-2">]</span>, width<span class="org-operator">=</span><span class="org-string">"6%"</span>, height<span class="org-operator">=</span><span class="org-string">"100%"</span>, loc<span class="org-operator">=</span><span class="org-string">'lower left'</span>,
+    bbox_to_anchor<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>1.05, 0., 1, 1<span class="org-rainbow-delimiters-depth-2">)</span>, bbox_transform<span class="org-operator">=</span>axs<span class="org-rainbow-delimiters-depth-2">[</span>2<span class="org-rainbow-delimiters-depth-2">]</span>.transAxes, borderpad<span class="org-operator">=</span>0
+<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">E_cbar</span> <span class="org-operator">=</span> plt.colorbar<span class="org-rainbow-delimiters-depth-1">(</span>im_2, cax<span class="org-operator">=</span>Ecax<span class="org-rainbow-delimiters-depth-1">)</span>  <span class="org-comment-delimiter"># </span><span class="org-comment">right of im_2</span>
+E_cbar.ax.set_ylabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'E (N/C)'</span>, rotation<span class="org-operator">=</span>270, labelpad<span class="org-operator">=</span>12<span class="org-rainbow-delimiters-depth-1">)</span>
+
+plt.show<span class="org-rainbow-delimiters-depth-1">()</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python" id="org09fc585"><span class="org-comment-delimiter">#</span><span class="org-comment">MATHS BEHIND SIMPLE LINEAR REGRESSION FT. CELLULOID</span>
+<span class="org-comment-delimiter">#</span><span class="org-comment">pip install celluloid</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">import necessary libraries</span>
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+<span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
+<span class="org-keyword">from</span> celluloid <span class="org-keyword">import</span> Camera
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">gradient_descent function to reduce cost and find best coeff and intercept</span>
+<span class="org-keyword">def</span> <span class="org-function-name">gradient_descent</span><span class="org-rainbow-delimiters-depth-1">(</span>x,y<span class="org-rainbow-delimiters-depth-1">)</span>:
+    <span class="org-comment-delimiter">#</span><span class="org-comment">initialization of coeff and y_intercept</span>
+    <span class="org-variable-name">coeff</span> <span class="org-operator">=</span> y_intercept <span class="org-operator">=</span> 0 
+
+    <span class="org-comment-delimiter">#</span><span class="org-comment">initialization learning rate i.e. alpha</span>
+    <span class="org-variable-name">alpha</span> <span class="org-operator">=</span> 0.01
+
+    <span class="org-comment-delimiter">#</span><span class="org-comment">initialization of iterations or epochs</span>
+    <span class="org-variable-name">epochs</span> <span class="org-operator">=</span> 500 
+
+    <span class="org-comment-delimiter">#</span><span class="org-comment">initialize figure object</span>
+    <span class="org-variable-name">fig</span>  <span class="org-operator">=</span> plt.figure<span class="org-rainbow-delimiters-depth-1">(</span>figsize<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>13,6<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+    <span class="org-comment-delimiter">#</span><span class="org-comment">allocate memory for Camera class i.e. Celluloid</span>
+    <span class="org-variable-name">camera</span> <span class="org-operator">=</span> Camera<span class="org-rainbow-delimiters-depth-1">(</span>fig<span class="org-rainbow-delimiters-depth-1">)</span>
+
+    <span class="org-comment-delimiter"># </span><span class="org-comment">iter_lst for storing number of iterations</span>
+    <span class="org-variable-name">iter_lst</span> <span class="org-operator">=</span> <span class="org-rainbow-delimiters-depth-1">[]</span>
+
+    <span class="org-comment-delimiter"># </span><span class="org-comment">cost_lst for storing cost i.e. M.S.E.</span>
+    <span class="org-variable-name">cost_lst</span> <span class="org-operator">=</span> <span class="org-rainbow-delimiters-depth-1">[]</span>
+    <span class="org-variable-name">n</span> <span class="org-operator">=</span> <span class="org-builtin">len</span><span class="org-rainbow-delimiters-depth-1">(</span>x<span class="org-rainbow-delimiters-depth-1">)</span>
+    <span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span><span class="org-rainbow-delimiters-depth-1">(</span>epochs<span class="org-rainbow-delimiters-depth-1">)</span>:
+
+        <span class="org-comment-delimiter">#</span><span class="org-comment">random initialization of coeff and y-intercept</span>
+        <span class="org-variable-name">y_predicted</span> <span class="org-operator">=</span> coeff<span class="org-operator">*</span>x<span class="org-operator">+</span>y_intercept
+
+        <span class="org-comment-delimiter"># </span><span class="org-comment">calculating mean square error</span>
+        <span class="org-variable-name">cost</span> <span class="org-operator">=</span> <span class="org-rainbow-delimiters-depth-1">(</span>1<span class="org-operator">/</span>n<span class="org-rainbow-delimiters-depth-1">)</span><span class="org-operator">*</span>np.<span class="org-builtin">sum</span><span class="org-rainbow-delimiters-depth-1">(</span>np.square<span class="org-rainbow-delimiters-depth-2">(</span>y<span class="org-operator">-</span>y_predicted<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+        <span class="org-comment-delimiter"># </span><span class="org-comment">append the cost &amp; iterations in respective list</span>
+        cost_lst.append<span class="org-rainbow-delimiters-depth-1">(</span>cost<span class="org-rainbow-delimiters-depth-1">)</span>
+        iter_lst.append<span class="org-rainbow-delimiters-depth-1">(</span>i<span class="org-rainbow-delimiters-depth-1">)</span>
+
+        <span class="org-comment-delimiter"># </span><span class="org-comment">creation of subplots to visualize cost &amp; coeff,intercept  </span>
+        plt.subplot<span class="org-rainbow-delimiters-depth-1">(</span>121<span class="org-rainbow-delimiters-depth-1">)</span>
+        plt.scatter<span class="org-rainbow-delimiters-depth-1">(</span>x,y,color<span class="org-operator">=</span><span class="org-string">'green'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+        plt.text<span class="org-rainbow-delimiters-depth-1">(</span>x<span class="org-operator">=</span>1,y<span class="org-operator">=</span>0,s<span class="org-operator">=</span><span class="org-string">"y-intercept: {:1f} &amp; coeff: {:1f}"</span>.<span class="org-builtin">format</span><span class="org-rainbow-delimiters-depth-2">(</span>y_intercept,coeff<span class="org-rainbow-delimiters-depth-2">)</span>,fontdict<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">{</span><span class="org-string">'fontsize'</span>:12<span class="org-rainbow-delimiters-depth-2">}</span><span class="org-rainbow-delimiters-depth-1">)</span>
+        plt.xlabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'Independent Variable (x)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+        plt.ylabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'Response Variable (y)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+        plt.plot<span class="org-rainbow-delimiters-depth-1">(</span>x,y_predicted,color<span class="org-operator">=</span><span class="org-string">'red'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+        plt.subplot<span class="org-rainbow-delimiters-depth-1">(</span>122<span class="org-rainbow-delimiters-depth-1">)</span>
+        plt.xlabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'Number of epochs (x)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+        plt.ylabel<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">'Cost function (y)'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+        plt.plot<span class="org-rainbow-delimiters-depth-1">(</span>iter_lst, cost_lst,color<span class="org-operator">=</span><span class="org-string">'blue'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+        plt.text<span class="org-rainbow-delimiters-depth-1">(</span>x<span class="org-operator">=</span>300,y<span class="org-operator">=</span>1,s<span class="org-operator">=</span><span class="org-string">"Cost: {:1f}"</span>.<span class="org-builtin">format</span><span class="org-rainbow-delimiters-depth-2">(</span>cost<span class="org-rainbow-delimiters-depth-2">)</span>,fontdict<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">{</span><span class="org-string">'fontsize'</span>:12<span class="org-rainbow-delimiters-depth-2">}</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+        <span class="org-comment-delimiter">#</span><span class="org-comment">capturing snapshot of each &amp; every iteration</span>
+        camera.snap<span class="org-rainbow-delimiters-depth-1">()</span>
+
+        <span class="org-comment-delimiter">#</span><span class="org-comment">partial derivative of coeff</span>
+        <span class="org-variable-name">coeff_derivative</span> <span class="org-operator">=</span> <span class="org-operator">-</span><span class="org-rainbow-delimiters-depth-1">(</span>2<span class="org-operator">/</span>n<span class="org-rainbow-delimiters-depth-1">)</span><span class="org-operator">*</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-builtin">sum</span><span class="org-rainbow-delimiters-depth-2">(</span>x<span class="org-operator">*</span><span class="org-rainbow-delimiters-depth-3">(</span>y<span class="org-operator">-</span>y_predicted<span class="org-rainbow-delimiters-depth-3">)</span><span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+        <span class="org-comment-delimiter">#</span><span class="org-comment">parital derivative of intercept</span>
+        <span class="org-variable-name">y_intercept_derivative</span> <span class="org-operator">=</span> <span class="org-operator">-</span><span class="org-rainbow-delimiters-depth-1">(</span>2<span class="org-operator">/</span>n<span class="org-rainbow-delimiters-depth-1">)</span><span class="org-operator">*</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-builtin">sum</span><span class="org-rainbow-delimiters-depth-2">(</span>y<span class="org-operator">-</span>y_predicted<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+        <span class="org-comment-delimiter">#</span><span class="org-comment">update coeff and intercept iteratively </span>
+        <span class="org-comment-delimiter">#</span><span class="org-comment">newweight = oldweight - learning_rate * partialderivatives</span>
+        <span class="org-variable-name">coeff</span> <span class="org-operator">=</span> coeff<span class="org-operator">-</span>alpha<span class="org-operator">*</span>coeff_derivative
+        <span class="org-variable-name">y_intercept</span> <span class="org-operator">=</span> y_intercept<span class="org-operator">-</span>alpha<span class="org-operator">*</span>y_intercept_derivative
+
+        <span class="org-comment-delimiter">#</span><span class="org-comment">print("m {} b {} cost {} iters {}".format(m_curr,b_curr,cost,i))</span>
+
+    <span class="org-comment-delimiter">#</span><span class="org-comment">plt.scatter(x,y,c='red')</span>
+    plt.suptitle<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">"GRADIENT DESCENT &amp; COST FUNCTION PLOT"</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+    <span class="org-comment-delimiter">#</span><span class="org-comment">animate the snapshots</span>
+    <span class="org-variable-name">animate</span><span class="org-operator">=</span>camera.animate<span class="org-rainbow-delimiters-depth-1">()</span>
+    animate.save<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">"test.gif"</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+    <span class="org-comment-delimiter">#</span><span class="org-comment">plot visualization</span>
+    plt.show<span class="org-rainbow-delimiters-depth-1">()</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">numpy array with single feature vector (x) for easy understanding</span>
+<span class="org-variable-name">x</span> <span class="org-operator">=</span> np.array<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-rainbow-delimiters-depth-2">[</span>1,2,3,5,6,8,10<span class="org-rainbow-delimiters-depth-2">]</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">target - y</span>
+<span class="org-variable-name">y</span> <span class="org-operator">=</span> np.array<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-rainbow-delimiters-depth-2">[</span>2,1,2,3,3,4,4<span class="org-rainbow-delimiters-depth-2">]</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter">#</span><span class="org-comment">function call</span>
+gradient_descent<span class="org-rainbow-delimiters-depth-1">(</span>x,y<span class="org-rainbow-delimiters-depth-1">)</span>
+</pre>
+</div>
+
+<p>
+<a href="test.gif">test</a>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Daniel McGuiness</p>
+</div>
+</body>
+</html>

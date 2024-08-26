@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Code for Electrodynamics Vector Calculus</title>
+<meta name="author" content="Daniel McGuiness" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" href="config/style.css">
+<script type="text/javascript"  src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="config/test.js">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+// @license-end
+</script>
+
+<script>
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+org_html_manager.set("TOC_DEPTH", "3");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "index.html");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "1");
+org_html_manager.set("VIEW", "info");
+org_html_manager.setup();  // activate after the parameters are set
+// @license-end
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="index.html"> UP </a>
+ |
+ <a accesskey="H" href=""> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Code for Electrodynamics Vector Calculus</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orga412eb1">Introduction</a></li>
+<li><a href="#orgd2207ec">Plotting of Vector Fields</a></li>
+<li><a href="#orgfe34f19">Dirac Delta Function</a></li>
+<li><a href="#orgb3a633e">References</a></li>
+</ul>
+</div>
+</div>
+<p>
+These are the code snippets used in <span class="Hlight">Vector Calculus</span>
+part of <span class="Hlight">Electrodynamics</span>.
+</p>
+
+<div id="outline-container-orga412eb1" class="outline-2">
+<h2 id="orga412eb1">Introduction</h2>
+<div class="outline-text-2" id="text-orga412eb1">
+<p>
+First load the preamble to make sure all plottings and styles are loaded
+correctly
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python" id="orgc68c34a"><span class="org-keyword">import</span> ChalcedonPy <span class="org-keyword">as</span> cp <span class="org-comment-delimiter"># </span><span class="org-comment">custom-pakcage for lecture materials and publications</span>
+<span class="org-variable-name">SAVE_PATH</span> <span class="org-operator">=</span> <span class="org-string">"Vector-Calculus"</span> <span class="org-comment-delimiter"># </span><span class="org-comment">sets the default save path</span>
+<span class="org-variable-name">style</span><span class="org-operator">=</span><span class="org-string">"web"</span> <span class="org-comment-delimiter"># </span><span class="org-comment">sets the default rcParams stylce sheet</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd2207ec" class="outline-2">
+<h2 id="orgd2207ec">Plotting of Vector Fields</h2>
+<div class="outline-text-2" id="text-orgd2207ec">
+<div class="org-src-container">
+<pre class="src src-python" id="org2b6a5e7"><span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+
+<span class="org-variable-name">ax</span> <span class="org-operator">=</span> plt.figure<span class="org-rainbow-delimiters-depth-1">()</span>.add_subplot<span class="org-rainbow-delimiters-depth-1">(</span>projection<span class="org-operator">=</span><span class="org-string">'3d'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Make the grid</span>
+<span class="org-variable-name">x</span>, <span class="org-variable-name">y</span>, <span class="org-variable-name">z</span> <span class="org-operator">=</span> np.meshgrid<span class="org-rainbow-delimiters-depth-1">(</span>np.arange<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-operator">-</span>0.8, 1, 0.2<span class="org-rainbow-delimiters-depth-2">)</span>,
+                      np.arange<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-operator">-</span>0.8, 1, 0.2<span class="org-rainbow-delimiters-depth-2">)</span>,
+                      np.arange<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-operator">-</span>0.8, 1, 0.8<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-variable-name">t</span> <span class="org-operator">=</span> np.array<span class="org-rainbow-delimiters-depth-1">(</span>np.arange<span class="org-rainbow-delimiters-depth-2">(</span>0, 1, 0.1<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Make the direction data for the arrows</span>
+<span class="org-variable-name">u</span> <span class="org-operator">=</span> z
+<span class="org-variable-name">v</span> <span class="org-operator">=</span> x <span class="org-operator">*</span> y
+<span class="org-variable-name">w</span> <span class="org-operator">=</span> <span class="org-operator">-</span> y <span class="org-operator">**</span> 2
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Define the curve</span>
+<span class="org-variable-name">c_x</span> <span class="org-operator">=</span> t <span class="org-operator">**</span> 2
+<span class="org-variable-name">c_y</span> <span class="org-operator">=</span> t
+<span class="org-variable-name">c_z</span> <span class="org-operator">=</span> np.sqrt<span class="org-rainbow-delimiters-depth-1">(</span>t<span class="org-rainbow-delimiters-depth-1">)</span>
+
+ax.plot<span class="org-rainbow-delimiters-depth-1">(</span>c_x, c_y, c_z<span class="org-rainbow-delimiters-depth-1">)</span>
+ax.quiver<span class="org-rainbow-delimiters-depth-1">(</span>x, y, z, u, v, w, length<span class="org-operator">=</span>0.15,cmap<span class="org-operator">=</span>plt.cm.jet, normalize<span class="org-operator">=</span><span class="org-constant">True</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+plt.show<span class="org-rainbow-delimiters-depth-1">()</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">cp.store_fig("test",</span>
+<span class="org-comment-delimiter">#              </span><span class="org-comment">filepath = SAVE_PATH,</span>
+<span class="org-comment-delimiter">#              </span><span class="org-comment">style = style,</span>
+<span class="org-comment-delimiter">#              </span><span class="org-comment">close = True)</span>
+</pre>
+</div>
+
+<p>
+The following code plots for the following question:
+</p>
+
+<p>
+Find the circulation of the field <img src="ltximg/Vector-Calculus_21840f63b20ae5d3eaafa15b3673922b4b0d9a72.png" alt="$\vF = \comp{\x - \y}{\x}{}$" /> around the circle,
+<img src="ltximg/Vector-Calculus_d3f32ea0adcff3b913dbbcc51f12e6f91dea3e0f.png" alt="$\mathbf{r}(t) = \comp \cos \t}{\sin \t}{}$" /> where <img src="ltximg/Vector-Calculus_c48dca82b4c09bb19d4a02029a1b0229d96a76ca.png" alt="$0 \leq \t 2\gpi$" />.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python" id="org401121d"><span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Define the grid and the X and Y coordinates</span>
+<span class="org-variable-name">X</span>, <span class="org-variable-name">Y</span> <span class="org-operator">=</span> np.meshgrid<span class="org-rainbow-delimiters-depth-1">(</span>np.arange<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-operator">-</span>2, 2, .2<span class="org-rainbow-delimiters-depth-2">)</span>,
+                   np.arange<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-operator">-</span>2, 2,  .2<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">U</span> <span class="org-operator">=</span> X <span class="org-operator">-</span> Y
+<span class="org-variable-name">V</span> <span class="org-operator">=</span> X
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Define the curve in the vector field</span>
+<span class="org-variable-name">t</span> <span class="org-operator">=</span> np.arange<span class="org-rainbow-delimiters-depth-1">(</span>0, 2<span class="org-operator">*</span>np.pi, 0.01<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">c_x</span> <span class="org-operator">=</span> np.cos<span class="org-rainbow-delimiters-depth-1">(</span>t<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">c_y</span> <span class="org-operator">=</span> np.sin<span class="org-rainbow-delimiters-depth-1">(</span>t<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Create the plot</span>
+<span class="org-variable-name">fig</span>, <span class="org-variable-name">ax</span> <span class="org-operator">=</span> plt.subplots<span class="org-rainbow-delimiters-depth-1">(</span>figsize<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>6,6<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">M</span> <span class="org-operator">=</span> np.hypot<span class="org-rainbow-delimiters-depth-1">(</span>U, V<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">Q</span> <span class="org-operator">=</span> ax.quiver<span class="org-rainbow-delimiters-depth-1">(</span>X, Y, U, V, M,
+              units<span class="org-operator">=</span><span class="org-string">'x'</span>,
+              pivot<span class="org-operator">=</span><span class="org-string">'middle'</span>,
+              width<span class="org-operator">=</span>0.05,
+              scale<span class="org-operator">=</span>1 <span class="org-operator">/</span> 0.1<span class="org-rainbow-delimiters-depth-1">)</span>
+ax.plot<span class="org-rainbow-delimiters-depth-1">(</span>c_x, c_y<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Save the plot with the correct style</span>
+cp.store_fig<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">"vector-question-2"</span>,
+             filepath <span class="org-operator">=</span> SAVE_PATH,
+             style <span class="org-operator">=</span> style,
+             close <span class="org-operator">=</span> <span class="org-constant">True</span><span class="org-rainbow-delimiters-depth-1">)</span>
+</pre>
+</div>
+
+
+<div id="org0381549" class="figure">
+<p><img src="images/Vector-Calculus/vector-question-2.png" alt="vector-question-2.png" />
+</p>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python" id="org23fbf4c"><span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+
+<span class="org-variable-name">X</span>, <span class="org-variable-name">Y</span> <span class="org-operator">=</span> np.meshgrid<span class="org-rainbow-delimiters-depth-1">(</span>np.arange<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-operator">-</span>2, 2, .2<span class="org-rainbow-delimiters-depth-2">)</span>, np.arange<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-operator">-</span>2, 2,  .2<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">U</span>, <span class="org-variable-name">V</span> <span class="org-operator">=</span> <span class="org-operator">-</span> Y, X
+
+fig, <span class="org-rainbow-delimiters-depth-1">(</span><span class="org-variable-name">ax1</span>, <span class="org-variable-name">ax2</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-operator">=</span> plt.subplots<span class="org-rainbow-delimiters-depth-1">(</span>1, 2, figsize<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>12, 6<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-variable-name">M</span> <span class="org-operator">=</span> np.hypot<span class="org-rainbow-delimiters-depth-1">(</span>U, V<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">Q</span> <span class="org-operator">=</span> ax1.quiver<span class="org-rainbow-delimiters-depth-1">(</span>X, Y, U, V, M, units<span class="org-operator">=</span><span class="org-string">'x'</span>, pivot<span class="org-operator">=</span><span class="org-string">'middle'</span>, width<span class="org-operator">=</span>0.05,
+               scale<span class="org-operator">=</span>1 <span class="org-operator">/</span> 0.1<span class="org-rainbow-delimiters-depth-1">)</span>
+ax2.yaxis.set_visible<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-constant">False</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-comment-delimiter"># </span><span class="org-comment">don't show yaxis</span>
+
+<span class="org-variable-name">U</span>, <span class="org-variable-name">V</span> <span class="org-operator">=</span> 0, X
+
+<span class="org-variable-name">M</span> <span class="org-operator">=</span> np.hypot<span class="org-rainbow-delimiters-depth-1">(</span>U, V<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">Q</span> <span class="org-operator">=</span> ax2.quiver<span class="org-rainbow-delimiters-depth-1">(</span>X, Y, U, V, M, units<span class="org-operator">=</span><span class="org-string">'x'</span>, pivot<span class="org-operator">=</span><span class="org-string">'middle'</span>, width<span class="org-operator">=</span>0.05,
+               scale<span class="org-operator">=</span>1 <span class="org-operator">/</span> 0.1<span class="org-rainbow-delimiters-depth-1">)</span>
+
+cp.store_fig<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">"vector-question-3"</span>,
+             filepath <span class="org-operator">=</span> SAVE_PATH,
+             style <span class="org-operator">=</span> style,
+             close <span class="org-operator">=</span> <span class="org-constant">True</span><span class="org-rainbow-delimiters-depth-1">)</span>
+</pre>
+</div>
+
+
+<div id="org06d27c2" class="figure">
+<p><img src="images/Vector-Calculus/vector-question-3.png" alt="vector-question-3.png" />
+</p>
+</div>
+
+<p>
+The following code prints the figure for the following question:
+</p>
+
+<p>
+Evaluate the following integral:
+</p>
+
+<p>
+<img src="ltximg/Vector-Calculus_684b45ba538edc123038f139b38c8e2ce3637c0e.png" alt="\begin{equation*}" />
+{
+    &int;<sub>0</sub><sup>&infin;</sup> x exp{ (-x) }x}
+{equation*
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python" id="orge2fcb7a"><span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+
+<span class="org-variable-name">X</span> <span class="org-operator">=</span> np.arange<span class="org-rainbow-delimiters-depth-1">(</span>0, 10, .02<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">Y</span> <span class="org-operator">=</span> X <span class="org-operator">*</span> np.exp<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-operator">-</span>X<span class="org-rainbow-delimiters-depth-1">)</span>
+
+plt.plot<span class="org-rainbow-delimiters-depth-1">(</span>X,Y<span class="org-rainbow-delimiters-depth-1">)</span>
+cp.store_fig<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">"x-exp-x"</span>,
+             filepath <span class="org-operator">=</span> SAVE_PATH,
+             style <span class="org-operator">=</span> style,
+             close <span class="org-operator">=</span> <span class="org-constant">True</span><span class="org-rainbow-delimiters-depth-1">)</span>
+</pre>
+</div>
+
+
+<div id="orgb8146d1" class="figure">
+<p><img src="images/Vector-Calculus/x-exp-x.png" alt="x-exp-x.png" />
+</p>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+
+<span class="org-variable-name">ax</span> <span class="org-operator">=</span> plt.figure<span class="org-rainbow-delimiters-depth-1">()</span>.add_subplot<span class="org-rainbow-delimiters-depth-1">(</span>projection<span class="org-operator">=</span><span class="org-string">'3d'</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Make the grid</span>
+<span class="org-variable-name">x</span>, <span class="org-variable-name">y</span>, <span class="org-variable-name">z</span> <span class="org-operator">=</span> np.meshgrid<span class="org-rainbow-delimiters-depth-1">(</span>np.arange<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-operator">-</span>5, 5, 1<span class="org-rainbow-delimiters-depth-2">)</span>,
+                      np.arange<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-operator">-</span>5, 5, 1<span class="org-rainbow-delimiters-depth-2">)</span>,
+                      np.arange<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-operator">-</span>5, 5, 1<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Make the direction data for the arrows</span>
+<span class="org-variable-name">u</span> <span class="org-operator">=</span> x <span class="org-operator">*</span> y
+<span class="org-variable-name">v</span> <span class="org-operator">=</span> 2 <span class="org-operator">*</span> y <span class="org-operator">*</span> z
+<span class="org-variable-name">w</span> <span class="org-operator">=</span> 3 <span class="org-operator">*</span> z <span class="org-operator">*</span> x
+
+ax.quiver<span class="org-rainbow-delimiters-depth-1">(</span>x, y, z, u, v, w,
+          length<span class="org-operator">=</span>0.5,
+          pivot<span class="org-operator">=</span><span class="org-string">"middle"</span>,
+          linewidth <span class="org-operator">=</span>1,
+          normalize<span class="org-operator">=</span><span class="org-constant">True</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+cp.store_fig<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">"3d-quiver-1"</span>,
+             filepath <span class="org-operator">=</span> SAVE_PATH,
+             style <span class="org-operator">=</span> style,
+             close <span class="org-operator">=</span> <span class="org-constant">True</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+plt.show<span class="org-rainbow-delimiters-depth-1">()</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+
+<span class="org-variable-name">X</span>, <span class="org-variable-name">Y</span> <span class="org-operator">=</span> np.meshgrid<span class="org-rainbow-delimiters-depth-1">(</span>np.arange<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-operator">-</span>2, 2, .2<span class="org-rainbow-delimiters-depth-2">)</span>, np.arange<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-operator">-</span>2, 2,  .2<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">U</span> <span class="org-operator">=</span> X
+<span class="org-variable-name">V</span> <span class="org-operator">=</span> Y
+
+fig, <span class="org-rainbow-delimiters-depth-1">(</span><span class="org-variable-name">ax1</span>, <span class="org-variable-name">ax2</span>, <span class="org-variable-name">ax3</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-operator">=</span> plt.subplots<span class="org-rainbow-delimiters-depth-1">(</span>1, 3, figsize<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>12, 4<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-variable-name">M</span> <span class="org-operator">=</span> np.hypot<span class="org-rainbow-delimiters-depth-1">(</span>U, V<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">Q</span> <span class="org-operator">=</span> ax1.quiver<span class="org-rainbow-delimiters-depth-1">(</span>X, Y, U, V, M, units<span class="org-operator">=</span><span class="org-string">'x'</span>, pivot<span class="org-operator">=</span><span class="org-string">'middle'</span>, width<span class="org-operator">=</span>0.03,
+               scale<span class="org-operator">=</span>1 <span class="org-operator">/</span> 0.1<span class="org-rainbow-delimiters-depth-1">)</span>
+
+
+<span class="org-variable-name">U</span> <span class="org-operator">=</span> <span class="org-operator">-</span>X
+<span class="org-variable-name">V</span> <span class="org-operator">=</span> <span class="org-operator">-</span>Y
+
+<span class="org-variable-name">M</span> <span class="org-operator">=</span> np.hypot<span class="org-rainbow-delimiters-depth-1">(</span>U, V<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">Q</span> <span class="org-operator">=</span> ax2.quiver<span class="org-rainbow-delimiters-depth-1">(</span>X, Y, U, V, M, units<span class="org-operator">=</span><span class="org-string">'x'</span>, pivot<span class="org-operator">=</span><span class="org-string">'middle'</span>, width<span class="org-operator">=</span>0.03,
+               scale<span class="org-operator">=</span>1 <span class="org-operator">/</span> 0.1<span class="org-rainbow-delimiters-depth-1">)</span>
+ax2.yaxis.set_visible<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-constant">False</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-variable-name">U</span> <span class="org-operator">=</span> Y
+<span class="org-variable-name">V</span> <span class="org-operator">=</span> X
+
+<span class="org-variable-name">M</span> <span class="org-operator">=</span> np.hypot<span class="org-rainbow-delimiters-depth-1">(</span>U, V<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">Q</span> <span class="org-operator">=</span> ax3.quiver<span class="org-rainbow-delimiters-depth-1">(</span>X, Y, U, V, M, units<span class="org-operator">=</span><span class="org-string">'x'</span>, pivot<span class="org-operator">=</span><span class="org-string">'middle'</span>, width<span class="org-operator">=</span>0.03,
+               scale<span class="org-operator">=</span>1 <span class="org-operator">/</span> 0.1<span class="org-rainbow-delimiters-depth-1">)</span>
+ax3.yaxis.set_visible<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-constant">False</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-comment-delimiter">#</span><span class="org-comment">plt.tight_layout()</span>
+<span class="org-comment-delimiter">#</span><span class="org-comment">plt.show()</span>
+
+cp.store_fig<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">"divergence"</span>,
+             filepath <span class="org-operator">=</span> SAVE_PATH,
+             style <span class="org-operator">=</span> style,
+             close <span class="org-operator">=</span> <span class="org-constant">True</span><span class="org-rainbow-delimiters-depth-1">)</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+
+<span class="org-variable-name">X</span>, <span class="org-variable-name">Y</span> <span class="org-operator">=</span> np.meshgrid<span class="org-rainbow-delimiters-depth-1">(</span>np.arange<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-operator">-</span>2, 2, .2<span class="org-rainbow-delimiters-depth-2">)</span>, np.arange<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-operator">-</span>2, 2,  .2<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">U</span> <span class="org-operator">=</span> X <span class="org-operator">-</span> Y
+<span class="org-variable-name">V</span> <span class="org-operator">=</span> X <span class="org-operator">+</span> Y
+
+fig, <span class="org-rainbow-delimiters-depth-1">(</span><span class="org-variable-name">ax1</span>, <span class="org-variable-name">ax2</span>, <span class="org-variable-name">ax3</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-operator">=</span> plt.subplots<span class="org-rainbow-delimiters-depth-1">(</span>1, 3, figsize<span class="org-operator">=</span><span class="org-rainbow-delimiters-depth-2">(</span>12, 4<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-variable-name">M</span> <span class="org-operator">=</span> np.hypot<span class="org-rainbow-delimiters-depth-1">(</span>U, V<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">Q</span> <span class="org-operator">=</span> ax1.quiver<span class="org-rainbow-delimiters-depth-1">(</span>X, Y, U, V, M, units<span class="org-operator">=</span><span class="org-string">'x'</span>, pivot<span class="org-operator">=</span><span class="org-string">'middle'</span>, width<span class="org-operator">=</span>0.03,
+               scale<span class="org-operator">=</span>1 <span class="org-operator">/</span> 0.1<span class="org-rainbow-delimiters-depth-1">)</span>
+
+
+<span class="org-variable-name">U</span> <span class="org-operator">=</span> Y
+<span class="org-variable-name">V</span> <span class="org-operator">=</span> X 
+
+<span class="org-variable-name">M</span> <span class="org-operator">=</span> np.hypot<span class="org-rainbow-delimiters-depth-1">(</span>U, V<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">Q</span> <span class="org-operator">=</span> ax2.quiver<span class="org-rainbow-delimiters-depth-1">(</span>X, Y, U, V, M, units<span class="org-operator">=</span><span class="org-string">'x'</span>, pivot<span class="org-operator">=</span><span class="org-string">'middle'</span>, width<span class="org-operator">=</span>0.03,
+               scale<span class="org-operator">=</span>1 <span class="org-operator">/</span> 0.1<span class="org-rainbow-delimiters-depth-1">)</span>
+ax2.yaxis.set_visible<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-constant">False</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-variable-name">U</span> <span class="org-operator">=</span> X
+<span class="org-variable-name">V</span> <span class="org-operator">=</span> Y
+
+<span class="org-variable-name">M</span> <span class="org-operator">=</span> np.hypot<span class="org-rainbow-delimiters-depth-1">(</span>U, V<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-variable-name">Q</span> <span class="org-operator">=</span> ax3.quiver<span class="org-rainbow-delimiters-depth-1">(</span>X, Y, U, V, M, units<span class="org-operator">=</span><span class="org-string">'x'</span>, pivot<span class="org-operator">=</span><span class="org-string">'middle'</span>, width<span class="org-operator">=</span>0.03,
+               scale<span class="org-operator">=</span>1 <span class="org-operator">/</span> 0.1<span class="org-rainbow-delimiters-depth-1">)</span>
+ax3.yaxis.set_visible<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-constant">False</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+cp.store_fig<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">"curl"</span>,
+             filepath <span class="org-operator">=</span> SAVE_PATH,
+             style <span class="org-operator">=</span> style,
+             close <span class="org-operator">=</span> <span class="org-constant">True</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfe34f19" class="outline-2">
+<h2 id="orgfe34f19">Dirac Delta Function</h2>
+<div class="outline-text-2" id="text-orgfe34f19">
+<p>
+The 1D delta function is an infinitely high, infinitesimally
+narrow <span class="Hlight">spike</span>, with an area of 1 <a href="#citeproc_bib_item_1">[1]</a>.
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/Vector-Calculus_d12ca22da36179241ef9efbcb48550e83b1c3a9c.png" alt="\begin{equation*}
+    \delta (x) =
+    \begin{cases}
+        0 ,      &amp;amp; \text{if $x \neq 0$}, \\
+        \infty , &amp;amp; \text{if $x = 0$}.\\
+    \end{cases}
+\end{equation*}
+" />
+</span>
+</div>
+
+<p>
+Below is the code to generate the 1D Dirac Delta equation.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python" id="org1c77c0a"><span class="org-comment-delimiter">#</span><span class="org-comment">importing the packages</span>
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+<span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
+
+<span class="org-comment-delimiter">#</span><span class="org-comment">Defining the delta function</span>
+<span class="org-keyword">def</span> <span class="org-function-name">delta</span><span class="org-rainbow-delimiters-depth-1">(</span>x, a<span class="org-rainbow-delimiters-depth-1">)</span>:
+    <span class="org-keyword">return</span> 1 <span class="org-operator">/</span> <span class="org-rainbow-delimiters-depth-1">(</span> np.<span class="org-builtin">abs</span><span class="org-rainbow-delimiters-depth-2">(</span>a<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-operator">*</span> np.sqrt<span class="org-rainbow-delimiters-depth-2">(</span>np.pi<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-operator">*</span> np.exp<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-operator">-</span><span class="org-rainbow-delimiters-depth-2">(</span>x <span class="org-operator">/</span> a<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-operator">**</span> 2<span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-variable-name">x</span> <span class="org-operator">=</span> np.arange<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-operator">-</span>1, 1, 0.001<span class="org-rainbow-delimiters-depth-1">)</span>
+
+plt.figure<span class="org-rainbow-delimiters-depth-1">()</span>
+<span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span><span class="org-rainbow-delimiters-depth-1">(</span>1,10<span class="org-rainbow-delimiters-depth-1">)</span>:
+    plt.plot<span class="org-rainbow-delimiters-depth-1">(</span>x,delta<span class="org-rainbow-delimiters-depth-2">(</span>x,1<span class="org-operator">/</span>i<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Save the plot with the correct style</span>
+cp.store_fig<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">"dirac-delta-1d"</span>,
+             filepath <span class="org-operator">=</span> SAVE_PATH,
+             style <span class="org-operator">=</span> style,
+             close <span class="org-operator">=</span> <span class="org-constant">True</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+</pre>
+</div>
+
+
+<div id="org1446851" class="figure">
+<p><img src="images/Vector-Calculus/dirac-delta-1d.png" alt="dirac-delta-1d.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb3a633e" class="outline-2">
+<h2 id="orgb3a633e">References</h2>
+<div class="outline-text-2" id="text-orgb3a633e">
+<style>.csl-left-margin{float: left; padding-right: 0em;}
+ .csl-right-inline{margin: 0 0 0 1em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
+    <div class="csl-left-margin">[1]</div><div class="csl-right-inline">G. B. Arfken and H. J. Weber, “Mathematical methods for physicists 6th ed.,” <i>Mathematical methods for physicists 6th ed. by george b. arfken and hans j. weber. published: Amsterdam; boston: Elsevier</i>, 2005.</div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Daniel McGuiness</p>
+</div>
+</body>
+</html>
