@@ -1,13 +1,18 @@
-# Table of Contents <span class="tag" tag-name="TOC_5"><span class="smallcaps">TOC_5</span></span>
+# Table of Contents 
 
+- [Content Home](#content-home)
 - [A Gentle Introduction](#a-gentle-introduction)
   - [Lecture Information](#lecture-information)
-    - [Assignments](#assignments)
-      - [Individual Assignment](#individual-assignment)
-      - [Final Exam](#final-exam)
+    - [Final Examination](#final-examination)
   - [The Lecture Structure](#the-lecture-structure)
   - [Code Supplement](#code-supplement)
   - [Reading List](#reading-list)
+
+# Content Home
+
+All lecture content sans the assignment(s) and important announcmenets
+will be hosted on the lectures Github Page which you can find it
+[here](https://github.com/dTmC0945/L-MCI-MSc-Electrodynamics).
 
 # A Gentle Introduction
 
@@ -30,59 +35,30 @@ where our focus will be on the topics of:
 
 The details of the lecture are given below.
 
-| DESCRIPTION   | VALUE                                       |
-|---------------|---------------------------------------------|
-| Program Name  | M.Sc Smart Technologies                     |
-| Module Name   | Elektrodynamik                              |
-| Semester      | 1                                           |
-| Room          | Lecture Room                                |
-| Assessment(s) | Midterm Assignment (40 %) Final Exam (60 %) |
-| Lecturer      | Daniel McGuiness                            |
-| Software      | Python                                      |
-| Hardware      | \-                                          |
-| SWS Total     | 2                                           |
-| Total Units   | 30                                          |
-| ECTS          | 3                                           |
-| Lecture Type  | ILV                                         |
+| DESCRIPTION   | VALUE                   |
+|---------------|-------------------------|
+| Program Name  | M.Sc Smart Technologies |
+| Module Name   | Elektrodynamik          |
+| Semester      | 1                       |
+| Room          | Lecture Room            |
+| Assessment(s) | Final Exam (100 %)      |
+| Lecturer      | Daniel McGuiness        |
+| Software      | Python                  |
+| Hardware      | \-                      |
+| SWS Total     | 2                       |
+| Total Units   | 30                      |
+| ECTS          | 3                       |
+| Lecture Type  | ILV                     |
 
-### Assignments
+### Final Examination
 
-There will be one (**1**) assignment and one (**1**) exam for this
-course.
+The exam will consists of topics discussed in the lecture. You will be
+given the necessary functions and definitions needed to solve the
+questions and NO custom documents and/or formula sheets will be allowed.
+You are allowed to bring a calculator to the exam.
 
-The grade breakdown is as follows:
-
-| DEFINITION            | GRADE (%) |
-|-----------------------|-----------|
-| Individual Assignment | 40        |
-| Final Exam            | 60        |
-| Sum                   | 100       |
-
-1.  Individual Assignment
-
-    An individual assignment will be given to you to work on. This
-    assignment will consist of questions pertaining to concepts and
-    image processing techniques.
-
-    The grade breakdown is as follows:
-
-    | DEFINITION | GRADE (%) |
-    |------------|-----------|
-    | Sum        | 100       |
-
-    **NOTE:** The assignment is individual and is not meant to be worked
-    as a group. Once the the work is submitted it will be vetted against
-    a software to determine if any collusion has occured.
-
-2.  Final Exam
-
-    The exam will consists of topics discussed in the lecture. You will
-    be given the necessary functions and definitions needed to solve the
-    questions and NO custom documents and/or formula sheets will be
-    allowed. You are allowed to bring a calculator to the exam.
-
-    The exam will take 90 mins and will focus on more numerical aspects
-    of electrodynamics.
+The exam will take 90 mins and will focus on more numerical aspects of
+electrodynamics.
 
 ## The Lecture Structure
 
@@ -113,17 +89,17 @@ relevant code used in the lecture as it is not feasible to fit all the
 content of the code to the slides and it is easier to share this way.
 
 [Visit the Code Supplement
-Website](https://dtmc0945.github.io/L-MCI-BSc-Digital-Image-Processing/)
+Website](https://dtmc0945.github.io/L-MCI-MSc-Electrodynamics/)
 
 ## Reading List
 
 The following materials are recommend reading for the coure but by no
 means are they mandatory.
 
-**Books**
-
 | TITLE | AUTHOR | PUBLISHER |
 |----|----|----|
 | A Modern Introduction to Classical Electrodynamics | Maggiore, Michele | Oxford University Press (2023) |
 | Introduction to Electrodynamics (4th Edition) | Griffiths, David J. | Cambridge University Press (2023) |
 | Field and Wave Electromagnetics | Cheng, David Keun | Pearson Education India (1989) |
+
+–DTMc
