@@ -1,0 +1,208 @@
+#+title: MSc Electrodynamics
+
+** Table of Contents :TOC_2:
+  - [[#lecture-information][Lecture Information]]
+  - [[#requirements-and-the-learning-outcomes][Requirements and the Learning Outcomes]]
+  - [[#grading-of-the-lecture][Grading of the Lecture]]
+  - [[#lecture-sources][Lecture Sources]]
+  - [[#content-and-unit-distribution][Content and Unit Distribution]]
+  - [[#lecture-table-of-contents][Lecture Table of Contents]]
+  - [[#related-links][Related Links]]
+
+** Lecture Information
+
+- The goal of this lecture is to introduce you to the physical foundation
+  governing all thing electrical and magnetics.
+- Through the eyes of an engineer we shall look at different magnetic
+  and electric event and using these effects, utilise the most out of
+  materials.
+     
+The structure for this lecture is as follows.
+
+| DESCRIPTION        | VALUE                          |
+| Official Name      | Elektrodynamik                 |
+| Lecture Code       | EDY                            |
+| Module Code        | MECH-M-1-EDY-EDY-VO            |
+| Degree             | M.Sc                           |
+| Program Name       | Mechatronik Smart Technologies |
+| Lecture Name       | Higher Mathematics II          |
+| Semester           | 1                              |
+| Season             | WS                             |
+| Room Type          | Lecture Room                   |
+| Assignments        |                                |
+| Lecturer           | Daniel T. McGuiness, Ph.D      |
+| Module Responsible | DaM                            |
+| Software           | Python                         |
+| Hardware           | -                              |
+| SWS Total          | 2                              |
+| SWS Teaching       |                                |
+| ECTS               | 3                              |
+| Lecture Type       | VO                             |
+
+** Requirements and the Learning Outcomes
+
+- The student should be comfortable with working with physical problems and
+  have a basic understanding of material science along with calculus.
+
+| REQUIREMENTS          | TAUGHT LECTURE | MODULE CODE | DEGREE | OUTCOME                  |
+| Vector Calculus       | Mathematik 1   | MAT         | B.Sc   | Advanced Vector Calculus |
+| Differential Calculus | Mathematik 2   | MAT         | B.Sc   | Electrostatics           |
+| Linear Algebra        | Mathematik 1   | MAT         | B.Sc   | Magnetostatics           |
+| Physics               | Physik         | PHY         |        | Electrodynamics          |
+| -                     |                |             |        | Electromagnetic Waves    |
+
+** Grading of the Lecture
+
+    
+- The lecture will have a single personal assignment comprising of a set list of
+  questions and a final exam comprising of all the topics covered in the lecture.
+
+- For the written exam you are allowed to write your own equation reference paper, as
+  long as it is a single sheet of A4, double sided and contains no exercise or solutions.  
+  
+| ASSIGNMENT TYPE     | VALUE |
+| Personal Assignment |    40 |
+| Final Exam          |    60 |
+| SUM                 |   100 |
+
+** Lecture Sources
+
+The following are a table of documentation which are useful resources which
+goes well with the lectures.
+
+| AUTHOR                              | TITLE                                              | PUBLISHER                         |
+| Maggiore Michele                    | A modern introduction to classical electrodynamics | Oxford University Press (2023)    |
+| Griffiths David J.                  | Introduction to Electrodynamics (4th Edition)      | Cambridge University Press (2023) |
+| Cheng David Keun.                   | Field and Wave Electromagnetics                    | Pearson Education India (1989).   |
+| Electromagnetic Waves and Radiation |                                                    |                                   |
+| Schaum's Electromagnetics           |                                                    |                                   |
+
+** Content and Unit Distribution
+
+- The content and unit distribution of the lecture is as follows where a unit
+  is defined as 45 min lecture.
+    
+| TOPIC                         | UNITS | SELF STUDY |
+| Vector Calculus               |     4 |          8 |
+| Electrostatics                |     4 |          8 |
+| Advanced Mathematical Methods |     4 |          8 |
+| Electric Fields in Matter     |     4 |          8 |
+| Magnetostatics                |     4 |          8 |
+| Magnetic Fields in Matter     |     4 |          8 |
+| Electrodynamics               |     4 |          8 |
+| Final Exam                    |     2 |          4 |
+| SUM                           |    30 |         60 |
+
+** Lecture Table of Contents
+
+The structure of the M.Sc Electrodynamics can be grouped into
+three (3) parts:
+
+1. Electric Fields and Matter
+2. Magnetic Fields and Matter
+3. Electrodynamics and Waves
+
+Below is the detailed structure of the lecture.
+
+- Vector Calculus
+  - Vector Algebra
+    - Vector Operations
+    - Vector Component Forms
+    - Triple Products
+    - Position, Displacement, and Separation Vectors
+  - Differential Calculus
+    - Ordinary Derivatives
+    - Gradient
+    - The Del Operator
+    - Divergence
+    - Curl
+    - Product Rules
+    - Second Derivatives
+      - Divergence of a Gradient
+      - Curl of a Gradient
+      - Gradient of Divergence
+      - Divergence of a Curl
+      - Curl of a Curl
+  - Integral Calculus
+    - Line, Surface, and Volume Integrals
+    - The Fundamental Theorem of Calculus
+    - The Fundamental Theorem for Gradients
+      - The Fundamental Theorem for Divergences
+    - The Fundamental Theorem for Curls
+  - Curvilinear Coordinates
+    - Spherical Coordinate System
+    - Cylindrical Coordinates
+  - Dirac Delta Function
+    - A Mathematical Anomaly
+    - The 1D Dirac Delta Function
+    - The 3D Dirac Delta Function
+  - Vector Field Theory
+    - Helmholtz Theorem
+    - Potentials
+- Electrostatics
+  - The Electric Field
+    - Coulomb's Law
+    - The Electric Field
+    - Continuous Charge Distributions
+  - Divergence and Curl of Electrostatic Fields
+    - Divergence of E
+    - Applications of Gauss's Law
+    - Curl of E
+  - Electric Potential
+    - Defining the Potential
+    - Some Digressions on Potential
+      - Naming
+      - Advantages of the Potential
+      - The Reference Point
+    - Poisson's Equation and Laplace's Equation
+    - The Potential of a Localised Charge Distribution
+- Advanced Mathematical Methods
+  - Introduction
+    - Laplace's Equation in One Dimension
+    - Laplace's Equation in Two Dimensions
+      - Laplace's Equation in Three Dimensions
+    - Boundary Conditions and Uniqueness Theorems
+    - Conductors and the Second Uniqueness Theorem
+  - Method of Images
+    - A Classic Problem
+    - Induced Surface Charge
+    - Force and Energy
+    - Other Image Problems
+  - Separation of Variables
+- Electric Fields in Matter
+  - Polarisation
+    - Dielectrics
+    - Induced Dipoles
+    - Alignment of Polar Molecules
+  - The Field of a Polarised Matter
+    - Bound Charges
+    - Understanding Bound Charges
+    - Field Inside a Dielectric
+- Magnetostatics
+  - Lorentz Force Law
+    - Magnetic Fields
+    - Magnetic Forces
+    - Currents
+  - Divergence and Curl of B
+    - Straight Line Currents
+    - Divergence and Curl of B
+    - Amperé's Law
+    - Comparison of Magnetostatics and Electrostatics
+  - The Magnetic Vector Potential
+- Magnetic Fields in Matter
+  - Magnetisation
+    - Diamagnets, Paramagnets, and Ferromagnets
+    - Torques and Forces on Magnetic Dipoles
+    - Magnetic Field on Atomic Orbits
+    - Magnetisation
+  - Field of a Magnetised Object
+    - Bound Currents
+- Electrodynamics
+  - Introduction
+    - Electromotive Force
+    - Motional EMF
+  - Electromagnetic Induction
+    - Faraday's Law
+- Final Exam
+
+(-DTMc 2025)
