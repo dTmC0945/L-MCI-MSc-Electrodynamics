@@ -83,16 +83,17 @@ goes well with the lectures.
 - The content and unit distribution of the lecture is as follows where a unit
   is defined as 45 min lecture.
     
-| TOPIC                         | UNITS | SELF STUDY |
-| Vector Calculus               |     4 |          8 |
-| Electrostatics                |     4 |          8 |
-| Advanced Mathematical Methods |     4 |          8 |
-| Electric Fields in Matter     |     4 |          8 |
-| Magnetostatics                |     4 |          8 |
-| Magnetic Fields in Matter     |     4 |          8 |
-| Electrodynamics               |     4 |          8 |
-| Final Exam                    |     2 |          4 |
-| SUM                           |    30 |         60 |
+| ORDER | TOPIC                         | UNITS | SELF STUDY |
+|     1 | Electrostatics                |     4 |          8 |
+|     2 | Advanced Mathematical Methods |     4 |          8 |
+|     3 | Electric Fields in Matter     |     2 |          4 |
+|     4 | Magnetostatics                |     4 |          8 |
+|     5 | Magnetic Fields in Matter     |     2 |          4 |
+|     6 | Electrodynamics               |     4 |          8 |
+|     7 | Electrodynamics Waves         |     4 |          8 |
+|     8 | Radiation                     |     4 |          8 |
+|     9 | Final Exam                    |     2 |          4 |
+|    10 | SUM                           |    30 |         60 |
 
 ** Lecture Table of Contents
 
