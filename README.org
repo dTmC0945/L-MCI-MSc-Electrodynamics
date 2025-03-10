@@ -7,6 +7,7 @@
   - [[#lecture-sources][Lecture Sources]]
   - [[#content-and-unit-distribution][Content and Unit Distribution]]
   - [[#lecture-table-of-contents][Lecture Table of Contents]]
+  - [[#documentation][Documentation]]
   - [[#related-links][Related Links]]
 
 ** Lecture Information
@@ -35,7 +36,7 @@ The structure for this lecture is as follows.
 | Software           | Python                         |
 | Hardware           | -                              |
 | SWS Total          | 2                              |
-| SWS Teaching       |                                |
+| SWS Teaching       | 2                              |
 | ECTS               | 3                              |
 | Lecture Type       | VO                             |
 
@@ -204,5 +205,11 @@ Below is the detailed structure of the lecture.
   - Electromagnetic Induction
     - Faraday's Law
 - Final Exam
+
+** Documentation
+
+For any student in need of a LaTex class designed from the ground-up for
+assignment/lab/thesis/slide for MCI needs please have a look at ~mcidoc~ class
+hosted at [[https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc][GitHub]].      
 
 (-DTMc 2025)
