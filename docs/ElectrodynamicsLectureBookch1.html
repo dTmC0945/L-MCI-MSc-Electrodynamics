@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+ <head>
+  <title>
+   1 The Purpose of Electromagnetism
+  </title>
+    <link rel='icon' type='image/x-icon' href='figures/logo.svg'></link>
+  <meta charset="utf-8"/>
+  <meta content="ParSnip" name="generator"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <link href="ElectrodynamicsLectureBook.css" rel="stylesheet" type="text/css"/>
+  <meta content="ElectrodynamicsLectureBook.tex" name="src"/>
+  <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript">
+  </script>
+  <link href="flatweb.css" rel="stylesheet" type="text/css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+  </script>
+  <script src="flatjs.js">
+  </script>
+  <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css"/>
+  <script type="module">
+   import pdfjsDist from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@5.3.93/+esm'
+  </script>
+  <script>
+   function moveTOC() { 
+var htmlShow = document.getElementsByClassName("wide"); 
+if (htmlShow[0].style.display === "none") { 
+htmlShow[0].style.display = "block"; 
+} else { 
+htmlShow[0].style.display = "none"; 
+} 
+}
+  </script>
+  <link href="https://unpkg.com/nord-highlightjs@0.1.0/dist/nord.css" rel="stylesheet" type="text/css"/>
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js">
+  </script>
+  <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js">
+  </script>
+  <link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+  <script src="flatjs.js">
+  </script>
+  <header>
+  </header>
+ </head>
+ <body id="top">
+  <nav class="wide">
+   <div class="contents">
+    <h3 style="font-weight:lighter; padding: 20px 0 20px 0;">
+     1
+   
+     
+   
+
+   The Purpose of Electromagnetism
+    </h3>
+    <h4 style="font-weight:lighter">
+     Chapter Table of Contents
+    </h4>
+    <ul>
+     <div class="chapterTOCS">
+      <li>
+       <span class="sectionToc">
+        <small>
+         1.1
+        </small>
+        <a href="#x3-30001.1">
+         Mechanics in Four Different Views
+        </a>
+       </span>
+      </li>
+      <li>
+       <span class="subsectionToc" style="font-size:12px;margin:0px;">
+        <small>
+         1.1.1
+        </small>
+        <a href="#x3-40001.1.1">
+         Four Kinds of Forces
+        </a>
+       </span>
+      </li>
+      <li>
+       <span class="subsectionToc" style="font-size:12px;margin:0px;">
+        <small>
+         1.1.2
+        </small>
+        <a href="#x3-50001.1.2">
+         Unifying Physical Theories
+        </a>
+       </span>
+      </li>
+      <li>
+       <span class="subsectionToc" style="font-size:12px;margin:0px;">
+        <small>
+         1.1.3
+        </small>
+        <a href="#x3-60001.1.3">
+         Fields of Electrodynamics
+        </a>
+       </span>
+      </li>
+      <li>
+       <span class="subsectionToc" style="font-size:12px;margin:0px;">
+        <small>
+         1.1.4
+        </small>
+        <a href="#x3-70001.1.4">
+         Electric Charge
+        </a>
+       </span>
+      </li>
+     </div>
+    </ul>
+    <div class="prev-next" style="text-align: center">
+     <p class="noindent">
+      <a href="index.html" style="float:left; font-size:10px">
+       ← PREV
+      </a>
+      <a href="index.html">
+       TOP
+      </a>
+     </p>
+    </div>
+    <div id="author-info" style="bottom: 0; padding-bottom: 10px;">
+     <div id="author-logo">
+      <img src="figures/logo.svg" style="margin: 10px 0;"/>
+      <div>
+       <div>
+        <h4 style="color:#7aa0b8; font-weight:lighter;">
+         WebBook | D. T. McGuiness, P.hD
+        </h4>
+       </div>
+      </div>
+      <div id="author-text" style="bottom: 0; padding-top: 50px;border-top: solid 1px #3b4b5e;font-size: 12px;text-align: right;">
+       <p>
+        <b>
+         Authors Note
+        </b>
+        The website you are viewing is auto-generated
+    using ParSnip and therefore subject to slight errors in
+    typography and formatting. When in doubt, please consult the
+    LectureBook.
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <div class="page">
+   <article class="chapter">
+    <h1 class="chapterHead">
+     <div class="number">
+      1
+     </div>
+     <a id="x3-20001">
+     </a>
+     The Purpose of Electromagnetism
+    </h1><button id='toc-button' onclick='moveTOC()'>TOC</button>
+    <div class="section-control" style="text-align: center">
+     <a id="prev-section" onclick="goPrev()" style="float:left;">
+      ← Previous Section
+     </a>
+     <a id="next-section" onclick="goNext()" style="float:right;">
+      Next Section →
+     </a>
+    </div>
+    <h2 class="sectionHead">
+     <a aria-label="Link to this section in PDF version" class="pdf-link" href="ElectrodynamicsLectureBook.pdf#section.1.1" style="color: red;  position: absolute;  left: -30px;" target="_blank">
+      <svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
+       <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z">
+       </path>
+       <path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z">
+       </path>
+      </svg>
+     </a>
+     <small class="titlemark">
+      1.1
+     </small>
+     <a id="x3-30001.1">
+     </a>
+     Mechanics in Four Different Views
+    </h2>
+    <p class="noindent">
+     Newtonian
+mechanics
+is
+usually
+enough
+for
+most
+     <alert style="color: #821131;">
+      everyday
+life
+     </alert>
+     applications
+ranging
+from
+calculating
+the
+motion
+an
+object
+falling
+from
+a
+building
+to
+the
+trajectories
+for
+planets.
+When
+objects
+start
+to
+move
+at
+high
+speeds,
+     <alert style="color: #821131;">
+      <span id="bold" style="font-weight:bold;">
+       <sup class="textsuperscript">
+        1
+       </sup>
+      </span>
+     </alert>
+     <span class="marginnote">
+      <alert style="color: #821131;">
+       <span id="bold" style="font-weight:bold;">
+        <sup class="textsuperscript">
+         1
+        </sup>
+       </span>
+      </alert>
+      <span style="color:#42395F;">
+       as
+       in
+       speeds
+       comparable
+       to
+       the
+       speed
+       of
+       light.
+      </span>
+     </span>
+     however,
+     the
+     Newtonian
+     model
+     fails
+     to
+     predict
+     accurately
+     and
+     was
+     replaced
+     by
+     special
+     relativity,
+     which
+     was
+     introduced
+     by
+     Einstein
+     in
+     1905.
+     For
+     objects
+     which
+     are
+     <alert style="color: #821131;">
+      extremely
+small
+     </alert>
+     ,
+     sizes
+     comparable
+     to
+     that
+     of
+     atoms,
+     then
+     the
+     theory
+     of
+     relativity
+     fails
+     for
+     different
+     reasons,
+     and
+     is
+     superseded
+     by
+     quantum
+     mechanics.
+     <alert style="color: #821131;">
+      <span id="bold" style="font-weight:bold;">
+       <sup class="textsuperscript">
+        2
+       </sup>
+      </span>
+     </alert>
+     <span class="marginnote">
+      <alert style="color: #821131;">
+       <span id="bold" style="font-weight:bold;">
+        <sup class="textsuperscript">
+         2
+        </sup>
+       </span>
+      </alert>
+      <span style="color:#42395F;">
+       Developed
+       by
+       Bohr,
+       Schrodinger,
+       Heisenberg,
+       and
+       many
+       others,
+       in
+       the
+       1920’s,
+       mostly.
+      </span>
+     </span>
+    </p>
+    <p class="noindent">
+     Finally,
+     for
+     objects
+     which
+     are
+     both
+     very
+     fast
+     and
+     very
+     small,
+     <alert style="color: #821131;">
+      <span id="bold" style="font-weight:bold;">
+       <sup class="textsuperscript">
+        3
+       </sup>
+      </span>
+     </alert>
+     <span class="marginnote">
+      <alert style="color: #821131;">
+       <span id="bold" style="font-weight:bold;">
+        <sup class="textsuperscript">
+         3
+        </sup>
+       </span>
+      </alert>
+      <span style="color:#42395F;">
+       As
+       is
+       common
+       in
+       modern
+       particle
+       physics.
+      </span>
+     </span>
+     a
+     mechanics
+     which
+     combines
+     both
+     relativity
+     and
+     quantum
+     principles
+     is
+     needed:
+    </p>
+    <div class="quoteblock">
+     <p class="noindent">
+      This
+      relativistic
+      quantum
+      mechanics
+      is
+      known
+      as
+      quantum
+      field
+      theory.
+     </p>
+    </div>
+    <p class="noindent">
+     Even
+     today
+     this
+     new
+     model
+     cannot
+     claim
+     to
+     be
+     a
+     completely
+     satisfactory
+     system.
+    </p>
+    <p class="noindent">
+     Luckily
+     for
+     us,
+     in
+     this
+     lecture,
+     we
+     will
+     not
+     look
+     at
+     these
+     models
+     in
+     detail
+     but
+     look
+     at
+     a
+     specific
+     subset
+     of
+     it
+     called
+     <alert style="color: #821131;">
+      electrodynamics
+     </alert>
+     which
+     is
+     generally
+     in
+     the
+     domain
+     of
+     classical
+     mechanics.
+     <alert style="color: #821131;">
+      <span id="bold" style="font-weight:bold;">
+       <sup class="textsuperscript">
+        4
+       </sup>
+      </span>
+     </alert>
+     <span class="marginnote">
+      <alert style="color: #821131;">
+       <span id="bold" style="font-weight:bold;">
+        <sup class="textsuperscript">
+         4
+        </sup>
+       </span>
+      </alert>
+      <span style="color:#42395F;">
+       which
+       can
+       be
+       extended
+       to
+       other
+       domains
+       if
+       needed.
+      </span>
+     </span>
+    </p>
+    <div class="knowledge">
+     <p class="noindent">
+      Interestingly, electromagnetism was one of the main catalyst for developing general relativity.
+     </p>
+    </div>
+    <h3 class="subsectionHead">
+     <a aria-label="Link to this section in PDF version" class="pdf-link" href="ElectrodynamicsLectureBook.pdf#subsection.1.1.1" style="color: red;  position: absolute;  left: -30px;" target="_blank">
+      <svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
+       <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z">
+       </path>
+       <path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z">
+       </path>
+      </svg>
+     </a>
+     <small class="titlemark">
+      1.1.1
+     </small>
+     <a id="x3-40001.1.1">
+     </a>
+     Four  Kinds  of  Forces
+    </h3>
+    <p class="noindent">
+     Mechanics tells us how behaviour is when subjected to a given force. There are four
+     <alert style="color: #821131;">(4)</alert> basic forces known to physics. Listing them in the order of decreasing strength:
+    </p>
+    <dl class="description">
+     <dt class="description">
+      <a id="x3-4001x1.1.1">
+      </a>
+      <span class="ec-lmssbx-10x-x-70">
+       Strong
+      </span>
+     </dt>
+     <dd class="description">
+      <p class="noindent">
+       hold
+       protons
+       and
+       neutrons
+       together
+       in
+       the
+       atomic
+       nucleus,
+       have
+       extremely
+       short
+       range,
+       so
+       we
+       do
+       not
+       “feel”
+       them,
+       in
+       spite
+       of
+       the
+       fact
+       that
+       they
+       are
+       a
+       hundred
+       times
+       more
+       powerful
+       than
+       electrical
+       forces.
+      </p>
+     </dd>
+     <dt class="description">
+      <a id="x3-4002x1.1.1">
+      </a>
+      <span class="ec-lmssbx-10x-x-70">
+       Weak
+      </span>
+     </dt>
+     <dd class="description">
+      <p class="noindent">
+       which
+       account
+       for
+       certain
+       kinds
+       of
+       radioactive
+       decay,
+       are
+       also
+       of
+       short
+       range,
+       and
+       they
+       are
+       far
+       weaker
+       than
+       electromagnetic
+       forces.
+      </p>
+     </dd>
+     <dt class="description">
+      <a id="x3-4003x1.1.1">
+      </a>
+      <span class="ec-lmssbx-10x-x-70">
+       Gravitational
+      </span>
+     </dt>
+     <dd class="description">
+      <p class="noindent">
+       it
+       is
+       very
+       weak
+       (compared
+       to
+       all
+       of
+       the
+       others)
+       that
+       it
+       is
+       only
+       in
+       scale
+       of
+       huge
+       mass
+       concentrations
+       (like
+       the
+       earth
+       and
+       the
+       sun)
+       that
+       we
+       ever
+       notice
+       it
+       at
+       all.
+      </p>
+     </dd>
+     <dt class="description">
+      <a id="x3-4004x1.1.1">
+      </a>
+      <span class="ec-lmssbx-10x-x-70">
+       Electromagnetic
+      </span>
+     </dt>
+     <dd class="description">
+      <p class="noindent">
+       It
+       is
+       the
+       interaction
+       that
+       occurs
+       between
+       particles
+       with
+       electric
+       charge
+       via
+       electromagnetic
+       fields.
+      </p>
+     </dd>
+    </dl>
+    <div class="knowledge">
+     <p class="noindent">
+      For reference, the electrical repulsion between two <alert style="color: #821131;">(2)</alert>
+      electrons is
+      <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+       <mstyle class="text">
+        <mtext>
+         10
+         <sup class="textsuperscript">
+          42
+         </sup class="textsuperscript">
+        </mtext>
+       </mstyle>
+      </math>
+      times as large as their gravitational attraction
+     </p>
+    </div>
+    <p class="noindent">
+    </p>
+    <figure class="float">
+     <div class="threeparttable">
+      <table class="tabularray tblr" id="tbl-1">
+       <tr id="row-1-1-">
+        <th id="cell1-1-1" style="text-align:right;vertical-align:top;">
+         <span id="bold" style="font-weight:bold;">
+          Traits
+         </span>
+        </th>
+        <th id="cell1-1-2" style="text-align:justify;vertical-align:top;">
+         <span id="bold" style="font-weight:bold;">
+          Strong Force
+         </span>
+        </th>
+        <th id="cell1-1-3" style="text-align:justify;vertical-align:top;">
+         <span id="bold" style="font-weight:bold;">
+          Electromagnetism
+         </span>
+        </th>
+        <th id="cell1-1-4" style="text-align:justify;vertical-align:top;">
+         <span id="bold" style="font-weight:bold;">
+          Weak Force
+         </span>
+        </th>
+        <th id="cell1-1-5" style="text-align:justify;vertical-align:top;">
+         <span id="bold" style="font-weight:bold;">
+          Gravity
+         </span>
+        </th>
+       </tr>
+       <tr id="row-1-2-">
+        <td id="cell1-2-1" style="text-align:right;vertical-align:top;">
+         <span id="bold" style="font-weight:bold;">
+          Affected
+         </span>
+         <span id="bold" style="font-weight:bold;">
+          Particles
+         </span>
+        </td>
+        <td id="cell1-2-2" style="text-align:justify;vertical-align:top;">
+         quarks
+         <sup class="textsuperscript">
+          1
+         </sup>
+         and gluons
+         <sup class="textsuperscript">
+          2
+         </sup>
+        </td>
+        <td id="cell1-2-3" style="text-align:justify;vertical-align:top;">
+         electrically
+         charged
+        </td>
+        <td id="cell1-2-4" style="text-align:justify;vertical-align:top;">
+         quarks
+         and leptons
+         <sup class="textsuperscript">
+          3
+         </sup>
+        </td>
+        <td id="cell1-2-5" style="text-align:justify;vertical-align:top;">
+         all particles
+         with mass
+        </td>
+       </tr>
+       <tr id="row-1-3-">
+        <td id="cell1-3-1" style="text-align:right;vertical-align:top;">
+         <span id="bold" style="font-weight:bold;">
+          Force
+         </span>
+         <span id="bold" style="font-weight:bold;">
+          Carrying 
+Particle
+         </span>
+        </td>
+        <td id="cell1-3-2" style="text-align:justify;vertical-align:top;">
+         gluon
+         (
+         <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mi>
+           g
+          </mi>
+         </math>
+         )
+        </td>
+        <td id="cell1-3-3" style="text-align:justify;vertical-align:top;">
+         photon
+         <sup class="textsuperscript">
+          4
+         </sup>
+         (
+         <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mi>
+           γ
+          </mi>
+         </math>
+         )
+        </td>
+        <td id="cell1-3-4" style="text-align:justify;vertical-align:top;">
+         W     and     Z 
+bosons
+         (
+         <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+          <msup>
+           <mrow>
+            <mi>
+             W
+            </mi>
+           </mrow>
+           <mrow>
+            <mo class="MathClass-bin" stretchy="false">
+             +
+            </mo>
+           </mrow>
+          </msup>
+          <mo class="MathClass-punc" stretchy="false">
+           ,
+          </mo>
+          <mspace class="thinspace" width="0.17em">
+          </mspace>
+          <msup>
+           <mrow>
+            <mi>
+             W
+            </mi>
+           </mrow>
+           <mrow>
+            <mo class="MathClass-bin" stretchy="false">
+             −
+            </mo>
+           </mrow>
+          </msup>
+          <mo class="MathClass-punc" stretchy="false">
+           ,
+          </mo>
+          <mspace class="thinspace" width="0.17em">
+          </mspace>
+          <msup>
+           <mrow>
+            <mi>
+             Z
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             0
+            </mn>
+           </mrow>
+          </msup>
+         </math>
+         )
+        </td>
+        <td id="cell1-3-5" style="text-align:justify;vertical-align:top;">
+         graviton
+         (unobserved)
+        </td>
+       </tr>
+       <tr id="row-1-4-">
+        <td id="cell1-4-1" style="text-align:right;vertical-align:top;">
+         <span id="bold" style="font-weight:bold;">
+          Acting 
+Range
+         </span>
+        </td>
+        <td id="cell1-4-2" style="text-align:justify;vertical-align:top;">
+         short 
+(
+         <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mo class="MathClass-rel" stretchy="false">
+           ∼
+          </mo>
+          <mstyle class="text">
+           <mtext>
+            1
+           </mtext>
+          </mstyle>
+          <mspace class="thinspace" width="0.17em">
+          </mspace>
+          <mstyle class="text">
+           <mtext>
+            fm
+           </mtext>
+          </mstyle>
+         </math>
+         )
+         <sup class="textsuperscript">
+          5
+         </sup>
+        </td>
+        <td id="cell1-4-3" style="text-align:justify;vertical-align:top;">
+         <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mi>
+           ∞
+          </mi>
+         </math>
+        </td>
+        <td id="cell1-4-4" style="text-align:justify;vertical-align:top;">
+         short
+        </td>
+        <td id="cell1-4-5" style="text-align:justify;vertical-align:top;">
+         <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mi>
+           ∞
+          </mi>
+         </math>
+        </td>
+       </tr>
+       <tr id="row-1-5-">
+        <td id="cell1-5-1" style="text-align:right;vertical-align:top;">
+         <span id="bold" style="font-weight:bold;">
+          Strength
+         </span>
+        </td>
+        <td id="cell1-5-2" style="text-align:justify;vertical-align:top;">
+         1
+        </td>
+        <td id="cell1-5-3" style="text-align:justify;vertical-align:top;">
+         <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mstyle class="text">
+           <mtext>
+           </mtext>
+           <mstyle class="math">
+            <mn>
+             1
+            </mn>
+           </mstyle>
+           <mtext>
+           </mtext>
+           <mstyle class="math">
+           </mstyle>
+           <mtext>
+           </mtext>
+           <mstyle class="math">
+            <mo class="MathClass-bin" stretchy="false">
+             ∕
+            </mo>
+           </mstyle>
+           <mtext>
+           </mtext>
+           <mstyle class="math">
+           </mstyle>
+           <mtext>
+           </mtext>
+           <mstyle class="math">
+            <mn>
+             1
+            </mn>
+            <mn>
+             3
+            </mn>
+            <mn>
+             7
+            </mn>
+           </mstyle>
+           <mtext>
+           </mtext>
+          </mstyle>
+         </math>
+         <sup class="textsuperscript">
+          6
+         </sup>
+        </td>
+        <td id="cell1-5-4" style="text-align:justify;vertical-align:top;">
+         <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mstyle class="text">
+           <mtext>
+            1 × 10
+            <sup class="textsuperscript">
+             −6
+            </sup class="textsuperscript">
+           </mtext>
+          </mstyle>
+         </math>
+        </td>
+        <td id="cell1-5-5" style="text-align:justify;vertical-align:top;">
+         <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mstyle class="text">
+           <mtext>
+            6 × 10
+            <sup class="textsuperscript">
+             −39
+            </sup class="textsuperscript">
+           </mtext>
+          </mstyle>
+         </math>
+        </td>
+       </tr>
+      </table>
+      <div class="tablenotes">
+       <p class="noindent">
+        <sup class="textsuperscript">
+         1
+        </sup>
+        Elementary particle responsible for making
+        <span id="bold" style="font-weight:bold;">
+         protons
+        </span>
+        and
+        <span id="bold" style="font-weight:bold;">
+         neutron
+        </span>
+        .
+       </p>
+       <p class="noindent">
+        <sup class="textsuperscript">
+         2
+        </sup>
+        Elementary particle acting as exchange particle for the
+        <span id="bold" style="font-weight:bold;">
+         strong force
+        </span>
+        between
+        <span id="bold" style="font-weight:bold;">
+         quarks
+        </span>
+        .
+       </p>
+       <p class="noindent">
+        <sup class="textsuperscript">
+         3
+        </sup>
+        Elementary particle affected by the
+        <span id="bold" style="font-weight:bold;">
+         weak force
+        </span>
+        but not by the
+        <span id="bold" style="font-weight:bold;">
+         strong force
+        </span>
+        .
+       </p>
+       <p class="noindent">
+        <sup class="textsuperscript">
+         4
+        </sup>
+        Elementary particle that is a
+        <span id="bold" style="font-weight:bold;">
+         quantum
+        </span>
+        of the
+        <span id="bold" style="font-weight:bold;">
+         electromagnetic
+        </span>
+        field, including electromagnetic radiation such as
+        light and radio waves.
+       </p>
+       <p class="noindent">
+        <sup class="textsuperscript">
+         5
+        </sup>
+        1 femtometre (
+        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+         <mstyle class="text">
+          <mtext>
+           1
+          </mtext>
+         </mstyle>
+         <mspace class="thinspace" width="0.17em">
+         </mspace>
+         <mstyle class="text">
+          <mtext>
+           fm
+          </mtext>
+         </mstyle>
+         <mo class="MathClass-rel" stretchy="false">
+          =
+         </mo>
+         <mstyle class="text">
+          <mtext>
+           1 × 10
+           <sup class="textsuperscript">
+            −15
+           </sup class="textsuperscript">
+          </mtext>
+         </mstyle>
+         <mspace class="thinspace" width="0.17em">
+         </mspace>
+         <mstyle class="text">
+          <mtext>
+           m
+          </mtext>
+         </mstyle>
+        </math>
+        ).
+        i.e., the gold nucleus radius is approx.
+        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+         <mstyle class="text">
+          <mtext>
+           8.45
+          </mtext>
+         </mstyle>
+         <mspace class="thinspace" width="0.17em">
+         </mspace>
+         <mstyle class="text">
+          <mtext>
+           fm
+          </mtext>
+         </mstyle>
+        </math>
+        .
+       </p>
+       <p class="noindent">
+        <sup class="textsuperscript">
+         6
+        </sup>
+        Known as the
+        <span id="bold" style="font-weight:bold;">
+         fine structure constant.
+        </span>
+       </p>
+       <p class="noindent">
+        <sup class="textsuperscript">
+        </sup>
+       </p>
+      </div>
+     </div>
+     <a id="x3-4005r1">
+     </a>
+     <figcaption class="caption">
+      <span class="id">
+       Table
+       1.1:
+      </span>
+      <span class="content">
+       The four fundamental forces and their respective properties.
+      </span>
+     </figcaption>
+    </figure>
+    <p class="noindent">
+     Not only are electromagnetic forces overwhelmingly dominant in everyday life, they are also, the only ones which are completely understood.
+    </p>
+    <p class="noindent">
+     There is, of course, a classical theory of gravity and a relativistic one, but no entirely satisfactory quantum
+     mechanical theory of gravity has been constructed. At the present time there is a very successful theory for the
+     weak interactions, and a strikingly attractive candidate (called
+     <alert style="color: #821131;">
+      chromodynamics
+     </alert>
+     ) for the strong interactions.
+    </p>
+    <p class="noindent">
+     All these theories draw their inspiration from electrodynamics. None can claim conclusive experimental verification at this stage.
+     So electrodynamics, a complete and successful theory, has become a pedestal for physicists: an ideal model that other theories emulate.
+    </p>
+    <p class="noindent">
+     The laws of classical electrodynamics were discovered in bits and pieces by Franklin, Coulomb, Ampere, Faraday, and others, but the
+     person who completed the job, and packaged it all in the compact and consistent form it has today, was James Clerk Maxwell.
+    </p>
+    <p class="noindent">
+     The  theory  is  now  about  150  years  old.
+    </p>
+    <h3 class="subsectionHead">
+     <a aria-label="Link to this section in PDF version" class="pdf-link" href="ElectrodynamicsLectureBook.pdf#subsection.1.1.2" style="color: red;  position: absolute;  left: -30px;" target="_blank">
+      <svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
+       <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z">
+       </path>
+       <path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z">
+       </path>
+      </svg>
+     </a>
+     <small class="titlemark">
+      1.1.2
+     </small>
+     <a id="x3-50001.1.2">
+     </a>
+     Unifying  Physical  Theories
+    </h3>
+    <p class="noindent">
+     In the beginning, electricity and magnetism were entirely separate subjects. The one dealt with glass rods and cat’s fur,
+     batteries, currents, electrolysis, and lightning, whereas the other with bar magnets, iron filings, compass needles, and
+     the North Pole. But in 1820 Oersted noticed that an electric current could deflect a magnetic compass needle.
+     Soon afterward, Ampere correctly postulated that all magnetic phenomena are due to electric charges in motion.
+     Then, in 1831, Faraday discovered that a moving magnet generates an electric current. By the time Maxwell
+     and Lorentz put the finishing touches on the theory, electricity and magnetism were inextricably intertwined.
+    </p>
+    <p class="noindent">
+     They could no longer be regarded as separate subjects, but rather as two aspects of a single subject: electromagnetism.
+    </p>
+    <p class="noindent">
+     Faraday speculated that light, too, is electrical in nature. Maxwell’s theory provided justification for this hypothesis, and
+     soon optics, which is the study of lenses, mirrors, prisms, interference, and diffraction, was incorporated into
+     electromagnetism. Hertz, who presented the decisive experimental confirmation for Maxwell’s theory in 1888, said:
+    </p>
+    <div class="center">
+     <p class="noindent">
+     </p>
+     <p class="noindent">
+      <italic>
+       The connection between light and electricity is now established . . . In every flame, in every luminous parti- cle, we
+see an electrical process . . . Thus, the domain of electricity extends over the whole of nature. It even affects
+ourselves intimately: we perceive that we possess . . . an electrical organ-the eye.
+      </italic>
+     </p>
+    </div>
+    <p class="noindent">
+     By 1900, then, three great branches of physics:
+     <span id="bold" style="font-weight:bold;">
+      electricity
+     </span>
+     ,
+     <span id="bold" style="font-weight:bold;">
+      magnetism
+     </span>
+     , and
+     <span id="bold" style="font-weight:bold;">
+      optics
+     </span>
+     had merged into a single unified theory.
+    </p>
+    <div class="knowledge">
+     <p class="noindent">
+      it was soon apparent that visible light represents only a tiny “window” in the vast spectrum of electromagnetic radiation, from
+      radio through microwaves, infrared and ultraviolet, to x-rays and gamma rays
+     </p>
+    </div>
+    Einstein worked on a further unification, which
+    would combine gravity and electrodynamics, in much the same way as electricity and magnetism had been combined a century
+    earlier. His unified field theory was not particularly successful, but in recent years the same impulse has spawned a hierarchy of
+    increasingly ambitious unification schemes, beginning in the 1960s with the electroweak theory of Glashow, Weinberg, and
+    Salam, which joins the weak and electromagnetic forces, and culminating in the 1980s with the superstring theory.
+    <div class="figure">
+     <p class="noindent">
+      <img alt="PIC" height="" src="figures/The-Purpose-of-Electromagnetics/figures-1.svg" width="150%"/>
+      <a id="x3-5001r1">
+      </a>
+     </p>
+     <figcaption class="caption">
+      <span class="id">
+       Figure
+       1.1:
+      </span>
+      <span class="content">
+       The Standard Model of particle physics is the theory describing three of the four known fundamental forces
+       (electromagnetic, weak and strong interactions - excluding gravity) in the universe and classifying all known
+       elementary particles. It was developed in stages throughout the latter half of the 20th century, through
+       the work of many scientists worldwide, with the current formulation being finalized in the mid-1970s upon
+       experimental confirmation of the existence of quarks.
+      </span>
+     </figcaption>
+    </div>
+    <p class="noindent">
+     At each step in this hierarchy, the mathematical difficulties mount, and the gap between inspired conjecture and experimental test widens;
+     nevertheless, it is clear the unification of forces initiated by electrodynamics has become a major theme in the progress of physics.
+    </p>
+    <h3 class="subsectionHead">
+     <a aria-label="Link to this section in PDF version" class="pdf-link" href="ElectrodynamicsLectureBook.pdf#subsection.1.1.3" style="color: red;  position: absolute;  left: -30px;" target="_blank">
+      <svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
+       <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z">
+       </path>
+       <path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z">
+       </path>
+      </svg>
+     </a>
+     <small class="titlemark">
+      1.1.3
+     </small>
+     <a id="x3-60001.1.3">
+     </a>
+     Fields  of  Electrodynamics
+    </h3>
+    <p class="noindent">
+     The essential problem the theory of electromagnetism hopes to solve is this:
+    </p>
+    <div class="center">
+     <p class="noindent">
+     </p>
+     <p class="noindent">
+      <italic>
+       If there exists a bunch of electric charges here (and maybe shake them around), what happens to some other charge,
+over there?
+      </italic>
+     </p>
+    </div>
+    <p class="noindent">
+     The classical solution takes the form of a
+     <span id="bold" style="font-weight:bold;">
+      field theory
+     </span>
+     :
+    </p>
+    <p class="noindent">
+     We say that the space around an electric charge is permeated by electric and magnetic fields. A second charge, in the presence of these
+     fields, experiences a force. The fields, then, transmit the influence from one charge to the other-they “mediate” the interaction.
+    </p>
+    <p class="noindent">
+     When a charge undergoes acceleration, a portion of the field
+     <alert style="color: #821131;">
+      detaches
+     </alert>
+     itself, in sense, and travels off at the speed of light,
+     carrying with it energy, momentum, and angular momentum. We call this
+     <span id="bold" style="font-weight:bold;">
+      electromagnetic radiation
+     </span>
+     . Its existence invites (if
+     not compels) us to regard the fields as independent dynamical entities in their own right, every bit as
+     <alert style="color: #821131;">
+      real
+     </alert>
+     as atoms or baseballs.
+    </p>
+    <p class="noindent">
+     Our interest accordingly shifts from the study of forces between charges to the theory of the fields themselves. But it takes a charge to produce
+     an electromagnetic field, and it takes another charge to detect one, so we had best begin by reviewing the essential properties of electric charge.
+    </p>
+    <h3 class="subsectionHead">
+     <a aria-label="Link to this section in PDF version" class="pdf-link" href="ElectrodynamicsLectureBook.pdf#subsection.1.1.4" style="color: red;  position: absolute;  left: -30px;" target="_blank">
+      <svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
+       <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z">
+       </path>
+       <path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z">
+       </path>
+      </svg>
+     </a>
+     <small class="titlemark">
+      1.1.4
+     </small>
+     <a id="x3-70001.1.4">
+     </a>
+     Electric  Charge
+    </h3>
+    <ul class="itemize1">
+     <li class="itemize">
+      <p class="noindent">
+       <span id="bold" style="font-weight:bold;">
+        Charge
+comes
+in
+two
+varieties:
+       </span>
+       We
+       call
+       <span id="bold" style="font-weight:bold;">
+        plus
+       </span>
+       and
+       <span id="bold" style="font-weight:bold;">
+        minus
+       </span>
+       ,
+       as
+       their
+       effects
+       tend
+       to
+       cancel
+       (if
+       you
+       have
+       <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mo class="MathClass-bin" stretchy="false">
+         +
+        </mo>
+        <mi>
+         q
+        </mi>
+       </math>
+       and
+       <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mi>
+         q
+        </mi>
+       </math>
+       at
+       the
+       same
+       point,
+       electrically
+       it
+       is
+       the
+       same
+       as
+       having
+       no
+       charge
+       there
+       at
+       all).
+       The
+       interesting
+       fact
+       is
+       that
+       plus
+       and
+       minus
+       charges
+       occur
+       in
+       exactly
+       equal
+       amounts,
+       to
+       high
+       precision,
+       in
+       bulk
+       matter,
+       so
+       that
+       their
+       effects
+       are
+       almost
+       completely
+       neutralised.
+      </p>
+     </li>
+     <li class="itemize">
+      <p class="noindent">
+       <span id="bold" style="font-weight:bold;">
+        Charge
+is
+conserved:
+       </span>
+       It
+       cannot
+       be
+       created
+       or
+       destroyed.
+       What
+       there
+       is
+       now
+       has
+       always
+       been.
+       A
+       plus
+       charge
+       can
+       <span id="bold" style="font-weight:bold;">
+        annihilate
+       </span>
+       an
+       equal
+       minus
+       charge,
+       but
+       a
+       plus
+       charge
+       cannot
+       simply
+       disappear
+       by
+       itself,
+       something
+       must
+       pick
+       up
+       that
+       electric
+       charge.
+       So
+       the
+       total
+       charge
+       of
+       the
+       universe
+       is
+       fixed
+       for
+       all
+       time.
+       This
+       is
+       called
+       <span id="bold" style="font-weight:bold;">
+        global
+conservation
+of
+charge
+       </span>
+       .
+       Charges
+       also
+       cannot
+       disappear
+       and
+       then
+       reappear
+       in
+       some
+       other
+       place,
+       the
+       charge,
+       if
+       moved
+       must
+       follow
+       a
+       continuous
+       path.
+       This
+       is
+       called
+       <span id="bold" style="font-weight:bold;">
+        local
+conservation
+of
+charge
+       </span>
+       .
+      </p>
+     </li>
+     <li class="itemize">
+      <p class="noindent">
+       <span id="bold" style="font-weight:bold;">
+        Charge
+is
+quantised:
+       </span>
+       Although
+       nothing
+       in
+       classical
+       electrodynamics
+       requires
+       that
+       it
+       be
+       so,
+       electric
+       charge
+       comes
+       only
+       in
+       integer
+       multiples
+       of
+       the
+       basic
+       unit
+       of
+       charge.
+       If
+       we
+       call
+       the
+       charge
+       on
+       the
+       proton
+       <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mo class="MathClass-bin" stretchy="false">
+         +
+        </mo>
+        <mi>
+         e
+        </mi>
+       </math>
+       ,
+       then
+       the
+       electron
+       carries
+       charge
+       <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mi>
+         e
+        </mi>
+       </math>
+       and
+       never
+       7.392e,
+       or
+       even
+       1/2e.
+      </p>
+     </li>
+    </ul>
+   </article>
+   <footer>
+    <div class="next">
+     <p class="noindent">
+      <a href="index.html" style="float: left;">
+       ← Previous Chapter
+      </a>
+      <a href="index.html">
+       TOP
+      </a>
+     </p>
+    </div>
+   </footer>
+  </div>
+  <p class="noindent">
+   <a id="tailElectrodynamicsLectureBookch1.html">
+   </a>
+  </p>
+ </body>
+</html>
