@@ -15,10 +15,8 @@
 - The goal of this lecture is to introduce you to the physical foundation
   governing all thing electrical and magnetics.
 - Through the eyes of an engineer we shall look at different magnetic
-  and electric event and using these effects, utilise the most out of
+  and electric events and using these effects, utilise the most out of
   materials.
-     
-The structure for this lecture is as follows.
 
 | DESCRIPTION        | VALUE                          |
 | Official Name      | Elektrodynamik                 |
@@ -26,19 +24,21 @@ The structure for this lecture is as follows.
 | Module Code        | MECH-M-1-EDY-EDY-VO            |
 | Degree             | M.Sc                           |
 | Program Name       | Mechatronik Smart Technologies |
-| Lecture Name       | Higher Mathematics II          |
+| Lecture Name       | Electrodynamics                |
 | Semester           | 1                              |
 | Season             | WS                             |
 | Room Type          | Lecture Room                   |
-| Assignments        |                                |
+| Assignments        | Personal Assignment Final Exam |
 | Lecturer           | Daniel T. McGuiness, Ph.D      |
 | Module Responsible | DaM                            |
 | Software           | Python                         |
 | Hardware           | -                              |
 | SWS Total          | 2                              |
 | SWS Teaching       | 2                              |
+| UE Total           | 30                             |
 | ECTS               | 3                              |
 | Lecture Type       | VO                             |
+| Working Language   | English                        |
 
 ** Requirements and the Learning Outcomes
 
@@ -54,46 +54,47 @@ The structure for this lecture is as follows.
 
 ** Grading of the Lecture
 
-    
 - The lecture will have a single personal assignment comprising of a set list of
-  questions and a final exam comprising of all the topics covered in the lecture.
-
-- For the written exam you are allowed to write your own equation reference paper, as
-  long as it is a single sheet of A4, double sided and contains no exercise or solutions.  
+  questions and a final exam comprising of all the topics covered in the
+  lecture.
+- For the written exam you are allowed to write your own equation reference
+  paper, as long as it is a single sheet of A4, double sided and contains no
+  exercise or solutions.
   
-| ASSIGNMENT TYPE     | VALUE |
-| Personal Assignment |    40 |
-| Final Exam          |    60 |
-| SUM                 |   100 |
+| ASSIGNMENT TYPE     | VALUE | QUANTITY |
+| Personal Assignment |    40 |        1 |
+| Final Exam          |    60 |        1 |
+| SUM                 |   100 |        2 |
 
 ** Lecture Sources
 
 The following are a table of documentation which are useful resources which
-goes well with the lectures.
+goes well with the lecture.
 
 | AUTHOR                              | TITLE                                              | PUBLISHER                         |
 | Maggiore Michele                    | A modern introduction to classical electrodynamics | Oxford University Press (2023)    |
 | Griffiths David J.                  | Introduction to Electrodynamics (4th Edition)      | Cambridge University Press (2023) |
 | Cheng David Keun.                   | Field and Wave Electromagnetics                    | Pearson Education India (1989).   |
 | Electromagnetic Waves and Radiation |                                                    |                                   |
-| Schaum's Electromagnetics           |                                                    |                                   |
+| Schaums Electromagnetics            |                                                    |                                   |
 
 ** Content and Unit Distribution
 
+    
 - The content and unit distribution of the lecture is as follows where a unit
   is defined as 45 min lecture.
     
-| ORDER | TOPIC                         | UNITS | SELF STUDY |
-|     1 | Electrostatics                |     4 |          8 |
-|     2 | Advanced Mathematical Methods |     4 |          8 |
-|     3 | Electric Fields in Matter     |     2 |          4 |
-|     4 | Magnetostatics                |     4 |          8 |
-|     5 | Magnetic Fields in Matter     |     2 |          4 |
-|     6 | Electrodynamics               |     4 |          8 |
-|     7 | Electrodynamics Waves         |     4 |          8 |
-|     8 | Radiation                     |     4 |          8 |
-|     9 | Final Exam                    |     2 |          4 |
-|    10 | SUM                           |    30 |         60 |
+| ORDER | TOPIC                           | UNITS | SELF STUDY |
+|     1 | The Purpose of Electromagnetism |     4 |          8 |
+|     2 | Vector Calculus                 |     4 |          8 |
+|     3 | Electrostatics                  |     4 |          8 |
+|     4 | Advanced Mathematical Methods   |     4 |          8 |
+|     5 | Electric Fields in Matter       |     2 |          4 |
+|     6 | Magnetostatics                  |     4 |          8 |
+|     7 | Magnetic Fields in Matter       |     2 |          4 |
+|     8 | Electrodynamics                 |     4 |          8 |
+|     9 | Final Exam                      |     2 |          4 |
+|    10 | SUM                             |    30 |         60 |
 
 ** Lecture Table of Contents
 
@@ -106,6 +107,12 @@ three (3) parts:
 
 Below is the detailed structure of the lecture.
 
+- The Purpose of Electromagnetism
+  - Mechanics in Four Different Views
+    - Four Kinds of Forces
+    - Unifying Physical Theories
+    - The Fields of Electrodynamics
+    - Electric Charge
 - Vector Calculus
   - Vector Algebra
     - Vector Operations
@@ -116,8 +123,6 @@ Below is the detailed structure of the lecture.
     - Ordinary Derivatives
     - Gradient
     - The Del Operator
-    - Divergence
-    - Curl
     - Product Rules
     - Second Derivatives
       - Divergence of a Gradient
@@ -127,8 +132,7 @@ Below is the detailed structure of the lecture.
       - Curl of a Curl
   - Integral Calculus
     - Line, Surface, and Volume Integrals
-    - The Fundamental Theorem of Calculus
-    - The Fundamental Theorem for Gradients
+    - The Fundamental Theorems of Vector Calculus
       - The Fundamental Theorem for Divergences
     - The Fundamental Theorem for Curls
   - Curvilinear Coordinates
@@ -147,6 +151,7 @@ Below is the detailed structure of the lecture.
     - The Electric Field
     - Continuous Charge Distributions
   - Divergence and Curl of Electrostatic Fields
+    - Quantification
     - Divergence of E
     - Applications of Gauss's Law
     - Curl of E
@@ -159,10 +164,10 @@ Below is the detailed structure of the lecture.
     - Poisson's Equation and Laplace's Equation
     - The Potential of a Localised Charge Distribution
 - Advanced Mathematical Methods
-  - Introduction
+  - Solving Electrostatics
     - Laplace's Equation in One Dimension
-    - Laplace's Equation in Two Dimensions
-      - Laplace's Equation in Three Dimensions
+      - Solving in Two Dimensions
+      - Solving in Three Dimensions
     - Boundary Conditions and Uniqueness Theorems
     - Conductors and the Second Uniqueness Theorem
   - Method of Images
@@ -171,6 +176,12 @@ Below is the detailed structure of the lecture.
     - Force and Energy
     - Other Image Problems
   - Separation of Variables
+    - Spherical Coordinates
+  - Multipole Expansion
+    - Approximating Potentials at Large Distances
+    - Monopole and Dipole Terms
+    - Origin of Coordinates in Multipole Expansions
+    - The Electric Field of a Dipole
 - Electric Fields in Matter
   - Polarisation
     - Dielectrics
@@ -192,13 +203,22 @@ Below is the detailed structure of the lecture.
     - Comparison of Magnetostatics and Electrostatics
   - The Magnetic Vector Potential
 - Magnetic Fields in Matter
+- Magnetic Fields in Matter
   - Magnetisation
-    - Diamagnets, Paramagnets, and Ferromagnets
+    - Diamagnets, Paramagnets, and Ferrormagnets
     - Torques and Forces on Magnetic Dipoles
-    - Magnetic Field on Atomic Orbits
-    - Magnetisation
-  - Field of a Magnetised Object
+    - Effect of a Magnetic Field on Atomic Orbits
+    - Magnetization
+  - The Field of a Magnetised Object
     - Bound Currents
+    - Physical Interpretation of Bound Currents
+    - The Magnetic Field Inside Matter
+  - The Auxiliary H Field
+    - Ampère's Law in Magnetized Materials
+    - Boundary Conditions
+  - Linear and Non-Linear Media
+    - Magnetic Susceptibility and Permeability
+    - Ferromagnetism
 - Electrodynamics
   - Introduction
     - Electromotive Force
@@ -206,11 +226,12 @@ Below is the detailed structure of the lecture.
   - Electromagnetic Induction
     - Faraday's Law
 - Final Exam
+  - Final Exam
 
 ** Documentation
 
-For any student in need of a LaTex class designed from the ground-up for
+For any student in need of a LaTeX class designed from the ground-up for
 assignment/lab/thesis/slide for MCI needs please have a look at ~mcidoc~ class
-hosted at [[https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc][GitHub]].      
+hosted at [[https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc][GitHub]].
 
 (-DTMc 2025)
