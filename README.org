@@ -1,4 +1,5 @@
-#+title: MSc Electrodynamics
+#+title: LS MSc Electrodynamics
+
 
 ** Table of Contents :TOC_2:
   - [[#lecture-information][Lecture Information]]
@@ -8,9 +9,9 @@
   - [[#content-and-unit-distribution][Content and Unit Distribution]]
   - [[#lecture-table-of-contents][Lecture Table of Contents]]
   - [[#documentation][Documentation]]
-  - [[#related-links][Related Links]]
 
 ** Lecture Information
+
 
 - The goal of this lecture is to introduce you to the physical foundation
   governing all thing electrical and magnetics.
@@ -18,41 +19,61 @@
   and electric events and using these effects, utilise the most out of
   materials.
 
-| DESCRIPTION        | VALUE                          |
-| Official Name      | Elektrodynamik                 |
-| Lecture Code       | EDY                            |
-| Module Code        | MECH-M-1-EDY-EDY-VO            |
-| Degree             | M.Sc                           |
-| Program Name       | Mechatronik Smart Technologies |
-| Lecture Name       | Electrodynamics                |
-| Semester           | 1                              |
-| Season             | WS                             |
-| Room Type          | Lecture Room                   |
-| Assignments        | Personal Assignment Final Exam |
-| Lecturer           | Daniel T. McGuiness, Ph.D      |
-| Module Responsible | DaM                            |
-| Software           | Python                         |
-| Hardware           | -                              |
-| SWS Total          | 2                              |
-| SWS Teaching       | 2                              |
-| UE Total           | 30                             |
-| ECTS               | 3                              |
-| Lecture Type       | VO                             |
-| Working Language   | English                        |
+| INDEX | DESCRIPTION        | VALUE                          | STATUS |
+|-------+--------------------+--------------------------------+--------|
+|     1 | Official Name      | Elektrodynamik                 |        |
+|-------+--------------------+--------------------------------+--------|
+|     2 | Lecture Code       | EDY                            | A      |
+|     3 | Module Code        | MECH-M-1-EDY-EDY-VO            | A      |
+|     4 | Degree             | M.Sc                           | A      |
+|     5 | Program Name       | Mechatronik Smart Technologies | A      |
+|     6 | Lecture Name       | Electrodynamics                |        |
+|     7 | Semester           | 1                              | A      |
+|     8 | Season             | WS                             | A      |
+|     9 | Room Type          | Lecture Room                   |        |
+|    10 | Assignments        | Personal Assignment Final Exam | A      |
+|    11 | Lecturer           | Daniel T. McGuiness, Ph.D      |        |
+|    12 | Module Responsible | DaM                            | A      |
+|-------+--------------------+--------------------------------+--------|
+|    13 | Software           | Python                         |        |
+|    14 | Hardware           | -                              |        |
+|-------+--------------------+--------------------------------+--------|
+|    15 | SWS Total          | 2                              | A      |
+|    16 | SWS Teaching       | 2                              |        |
+|    17 | SWS Tutorial       | 0                              |        |
+|    18 | SWS Laboratory     | 0                              |        |
+|    19 | SWS Project Work   | 0                              |        |
+|-------+--------------------+--------------------------------+--------|
+|    20 | UE Total           | 30                             | A      |
+|    21 | UE Teaching        | 30                             | A      |
+|    22 | UE Tutorial        | 0                              | A      |
+|    23 | UE Laboratory      | 0                              | A      |
+|    24 | Assessment Units   | 0                              | A      |
+|    25 | Planned Units      | 0                              | A      |
+|-------+--------------------+--------------------------------+--------|
+|    26 | ECTS               | 3                              | A      |
+|    27 | Lecture Type       | VO                             | A      |
+|    28 | Working Language   | English                        |        |
+|-------+--------------------+--------------------------------+--------|
+
 
 ** Requirements and the Learning Outcomes
 
 - The student should be comfortable with working with physical problems and
   have a basic understanding of material science along with calculus.
 
-| REQUIREMENTS          | TAUGHT LECTURE | MODULE CODE | DEGREE | OUTCOME                  |
-| Vector Calculus       | Mathematik 1   | MAT         | B.Sc   | Advanced Vector Calculus |
-| Differential Calculus | Mathematik 2   | MAT         | B.Sc   | Electrostatics           |
-| Linear Algebra        | Mathematik 1   | MAT         | B.Sc   | Magnetostatics           |
-| Physics               | Physik         | PHY         |        | Electrodynamics          |
-| -                     |                |             |        | Electromagnetic Waves    |
+| INDEX | REQUIREMENTS          | TAUGHT LECTURE | MODULE CODE | DEGREE | OUTCOME                  |
+|-------+-----------------------+----------------+-------------+--------+--------------------------|
+|     1 | Vector Calculus       | Mathematik 1   | MAT         | B.Sc   | Advanced Vector Calculus |
+|     2 | Differential Calculus | Mathematik 2   | MAT         | B.Sc   | Electrostatics           |
+|     3 | Linear Algebra        | Mathematik 1   | MAT         | B.Sc   | Magnetostatics           |
+|     4 | Physics               | Physik         | PHY         |        | Electrodynamics          |
+|     5 | -                     |                |             |        | Electromagnetic Waves    |
+|-------+-----------------------+----------------+-------------+--------+--------------------------|
 
 ** Grading of the Lecture
+
+
 
 - The lecture will have a single personal assignment comprising of a set list of
   questions and a final exam comprising of all the topics covered in the
@@ -62,8 +83,10 @@
   exercise or solutions.
   
 | ASSIGNMENT TYPE     | VALUE | QUANTITY |
+|---------------------+-------+----------|
 | Personal Assignment |    40 |        1 |
 | Final Exam          |    60 |        1 |
+|---------------------+-------+----------|
 | SUM                 |   100 |        2 |
 
 ** Lecture Sources
@@ -71,12 +94,14 @@
 The following are a table of documentation which are useful resources which
 goes well with the lecture.
 
-| AUTHOR                              | TITLE                                              | PUBLISHER                         |
-| Maggiore Michele                    | A modern introduction to classical electrodynamics | Oxford University Press (2023)    |
-| Griffiths David J.                  | Introduction to Electrodynamics (4th Edition)      | Cambridge University Press (2023) |
-| Cheng David Keun.                   | Field and Wave Electromagnetics                    | Pearson Education India (1989).   |
-| Electromagnetic Waves and Radiation |                                                    |                                   |
-| Schaums Electromagnetics            |                                                    |                                   |
+| INDEX | AUTHOR                              | TITLE                                              | PUBLISHER                         |
+|-------+-------------------------------------+----------------------------------------------------+-----------------------------------|
+|     1 | Maggiore Michele                    | A modern introduction to classical electrodynamics | Oxford University Press (2023)    |
+|     2 | Griffiths David J.                  | Introduction to Electrodynamics (4th Edition)      | Cambridge University Press (2023) |
+|     3 | Cheng David Keun.                   | Field and Wave Electromagnetics                    | Pearson Education India (1989).   |
+|     4 | Electromagnetic Waves and Radiation |                                                    |                                   |
+|     5 | Schaums Electromagnetics            |                                                    |                                   |
+|-------+-------------------------------------+----------------------------------------------------+-----------------------------------|
 
 ** Content and Unit Distribution
 
@@ -85,6 +110,7 @@ goes well with the lecture.
   is defined as 45 min lecture.
     
 | ORDER | TOPIC                           | UNITS | SELF STUDY |
+|-------+---------------------------------+-------+------------|
 |     1 | The Purpose of Electromagnetism |     4 |          8 |
 |     2 | Vector Calculus                 |     4 |          8 |
 |     3 | Electrostatics                  |     4 |          8 |
@@ -94,6 +120,7 @@ goes well with the lecture.
 |     7 | Magnetic Fields in Matter       |     2 |          4 |
 |     8 | Electrodynamics                 |     4 |          8 |
 |     9 | Final Exam                      |     2 |          4 |
+|-------+---------------------------------+-------+------------|
 |    10 | SUM                             |    30 |         60 |
 
 ** Lecture Table of Contents
@@ -234,4 +261,3 @@ For any student in need of a LaTeX class designed from the ground-up for
 assignment/lab/thesis/slide for MCI needs please have a look at ~mcidoc~ class
 hosted at [[https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc][GitHub]].
 
-(-DTMc 2025)
