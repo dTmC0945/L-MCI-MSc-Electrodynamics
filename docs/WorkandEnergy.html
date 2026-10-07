@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Work and Energy</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Electrodynamics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2026.WS</span>
+<span class="header-chapter">Electrostatics</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="ThePurposeofElectromagnetism.html#x3-20001">The Purpose of Electromagnetism</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-30001.1">Mechanics in Four Different
+Views</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-40001.1.1">Electromagnetism and Relativity</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-50001.1.2">Four Kinds of Forces</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-60001.1.3">Unifying
+Physical Theories</a></span></span><span class="subsectionToc"><span class="number">1.1.4</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-70001.1.4">The Fields of Electrodynamics</a></span></span><span class="subsectionToc"><span class="number">1.1.5</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-80001.1.5">Electric Charge</a></span></span><span class="subsectionToc"><span class="number">1.1.6</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-90001.1.6">Interpreting
+Conservation   of   Charge</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="VectorCalculus.html#x5-100002">Vector   Calculus</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="VectorAlgebra.html#x6-110002.1">Vector   Algebra</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="VectorAlgebra.html#x6-120002.1.1">Vector
+Operations</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="VectorAlgebra.html#x6-170002.1.2">Vector Component Forms</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="VectorAlgebra.html#x6-180002.1.3">Triple Products</a></span></span><span class="subsectionToc"><span class="number">2.1.4</span><span class="title"><a href="VectorAlgebra.html#x6-210002.1.4">Position,
+Displacement, and Separation Vectors</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-220002.2">Differential Calculus</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="DifferentialCalculus.html#x7-230002.2.1">Ordinary
+Derivatives</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-240002.2.2">Gradient</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="DifferentialCalculus.html#x7-250002.2.3">The Del Operator</a></span></span><span class="subsectionToc"><span class="number">2.2.4</span><span class="title"><a href="DifferentialCalculus.html#x7-280002.2.4">Product Rules</a></span></span><span class="subsectionToc"><span class="number">2.2.5</span><span class="title"><a href="DifferentialCalculus.html#x7-290002.2.5">Second
+Derivatives</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="IntegralCalculus.html#x8-350002.3">Integral Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="IntegralCalculus.html#x8-360002.3.1">Line, Surface, and Volume Integrals</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="IntegralCalculus.html#x8-400002.3.2">The
+Fundamental Theorems of Vector Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="IntegralCalculus.html#x8-430002.3.3">The Fundamental Theorem for
+Curls</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="CurvilinearCoordinates.html#x9-440002.4">Curvilinear Coordinates</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="CurvilinearCoordinates.html#x9-450002.4.1">Spherical Coordinate System</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="CurvilinearCoordinates.html#x9-460002.4.2">Cylindrical
+Coordinates</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="DiracDeltaFunction.html#x10-470002.5">Dirac Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="DiracDeltaFunction.html#x10-480002.5.1">A Mathematical Anomaly</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="DiracDeltaFunction.html#x10-490002.5.2">The 1D Dirac
+Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="DiracDeltaFunction.html#x10-500002.5.3">The 3D Dirac Delta Function</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="VectorFieldTheory.html#x11-510002.6">Vector Field Theory</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="VectorFieldTheory.html#x11-520002.6.1">Helmholtz
+Theorem</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="VectorFieldTheory.html#x11-530002.6.2">Potentials</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Electrostatics.html#x12-540003">Electrostatics</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="TheElectricField.html#x13-550003.1">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="TheElectricField.html#x13-560003.1.1">Coulomb’s
+Law</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="TheElectricField.html#x13-570003.1.2">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.3</span><span class="title"><a href="TheElectricField.html#x13-580003.1.3">Continuous Charge Distributions</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-590003.2">Divergence and
+Curl of Electrostatic Fields</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-600003.2.1">Quantification</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-610003.2.2">Divergence of E</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-620003.2.3">Applications
+of Gauss’s Law</a></span></span><span class="subsectionToc"><span class="number">3.2.4</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-630003.2.4">Curl of E</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ElectricPotential.html#x15-640003.3">Electric Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ElectricPotential.html#x15-650003.3.1">Defining the Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ElectricPotential.html#x15-660003.3.2">Some
+Digressions on Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.3</span><span class="title"><a href="ElectricPotential.html#x15-720003.3.3">Poisson’s Equation and Laplace’s Equation</a></span></span><span class="subsectionToc"><span class="number">3.3.4</span><span class="title"><a href="ElectricPotential.html#x15-730003.3.4">The
+Potential of a Localised Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.3.5</span><span class="title"><a href="ElectricPotential.html#x15-740003.3.5">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="#x16-750003.4">Work and
+Energy</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="#x16-760003.4.1">To Move a Charge</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="#x16-770003.4.2">The Energy of a Point Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.3</span><span class="title"><a href="#x16-780003.4.3">The
+Energy of a Continuous Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.4</span><span class="title"><a href="#x16-790003.4.4">Comments on Electrostatic
+Energy</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="Conductors.html#x17-830003.5">Conductors</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="Conductors.html#x17-840003.5.1">Properties</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="Conductors.html#x17-850003.5.2">Induced Charges</a></span></span><span class="subsectionToc"><span class="number">3.5.3</span><span class="title"><a href="Conductors.html#x17-860003.5.3">Surface Charge
+and the Force on a Conductor</a></span></span><span class="subsectionToc"><span class="number">3.5.4</span><span class="title"><a href="Conductors.html#x17-870003.5.4">Capacitors</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 7.10.2026, at 8:21.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="Conductors.html">Conductors</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="ElectricPotential.html">Electric Potential</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="Electrostatics.html#WorkandEnergy.html">Chapter: Electrostatics</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-3.4"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#section.3.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">3.4</span> <span class="title"> <a id="x16-750003.4"></a>Work and Energy</span></h3></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.4.1"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.3.4.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.4.1</span> <span class="title"> <a id="x16-760003.4.1"></a>To Move a Charge</span></h4></div>
+</p><p class="noindent">To understand how to define work, Let us assume that we have a stationary configuration of source charges, and we want
+to move a test charge (<math display="inline"><mi>Q</mi></math>)
+from point <math display="inline"><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></math>
+to point <math display="inline"><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">→</mo></mover></math>.
+Here we need to ask the following question:
+</p>
+<div class="quote"> How much work will we have to do? </div>
+<p class="noindent">At any point along the path, the electric force on
+<math display="inline"><mi>Q</mi></math> is
+<math display="inline"><mover accent="true"><mrow><mi>F</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>Q</mi><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>;
+the force we must exert, in opposition to this electrical force, is
+<math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>Q</mi><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>. The
+work we do is therefore: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo><msubsup><mrow><mo> ∫
+ </mo></mrow><mrow><mn>0</mn></mrow><mrow><mi>b</mi></mrow></msubsup><mover accent="true"><mrow><mi>F</mi></mrow><mo accent="true">→</mo></mover> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>l</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi>Q</mi><msubsup><mrow><mo>∫
+ </mo></mrow><mrow><mn>0</mn></mrow><mrow><mi>b</mi></mrow></msubsup><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>l</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>Q</mi> <mrow><mo fence="true" form="prefix">[</mo><mrow><mi>V</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>V</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></mrow><mo fence="true" form="postfix">]</mo></mrow><mstyle class="text"><mtext></mtext></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">Please observe the answer is <b>independent of the path</b> we take from
+<math display="inline"><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></math> to
+<math display="inline"><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">→</mo></mover></math>;
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">In mechanics, we call the electrostatic force “conservative”<span class="margin-block">. <span class="margin-comment"><span class="ellipsis">[60]</span>
+<span class="sidenote">A force with the property which the total
+work done by the force in moving a particle between two (<span class="alert">2</span>) points is independent of the path taken.
+Equivalently, if a particle travels in a closed loop, the total work done by a conservative force is zero.</span></span></span>
+</p></div></div>
+<p class="noindent">Dividing through by <math display="inline"><mi>Q</mi></math>,
+we have: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x16-76001r29"></mstyle>
+<mi>V</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>V</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>W</mi></mrow>
+<mrow>
+<mi>Q</mi></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(3.29)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">In other words, the potential difference between points
+<math display="inline"><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></math> and
+<math display="inline"><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">→</mo></mover></math>
+is equal to the work per unit charge required to carry a particle from
+<math display="inline"><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></math> to
+<math display="inline"><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">→</mo></mover></math>. In particular, if we want
+to bring <math display="inline"><mi>Q</mi></math> in from far away
+and stick it at point <math display="inline"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">→</mo></mover></math>,
+the work we must do is </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>Q</mi> <mrow><mo fence="true" form="prefix">[</mo><mrow><mi>V</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>V</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>∞</mi></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup></mrow><mo fence="true" form="postfix">]</mo></mrow> <mstyle class="text"><mtext></mtext></mstyle><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td></tr></table>
+<p class="noindent">so, if we have set the reference point at infinity, </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x16-76002r30"></mstyle>
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>Q</mi><mi>V</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi>r</mi><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td><td class="eq-no">(3.30)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Here, <span class="alert">potential</span> is potential <span class="alert">energy</span>, the work it takes to create the system, per unit charge, just as the field is the force
+per unit charge.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.4.2"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.3.4.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.4.2</span> <span class="title"> <a id="x16-770003.4.2"></a>The Energy of a Point Charge Distribution</span></h4></div>
+</p><p class="noindent">How much work would it take to assemble an entire <span class="alert">collection</span> of point charges? Imagine
+bringing in the charges, one by one, from far away (Fig. 2.40). The first charge,
+<math display="inline"><msubsup><mrow><mi>q</mi></mrow><mrow><mn>1</mn></mrow><mrow></mrow></msubsup></math>,
+takes no work, since there is no field yet to fight against. Now bring in
+<math display="inline"><msubsup><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup></math>. According to <span> Eq. (<a href="#x16-76002r30">3.30</a>)</span>
+, this will cost you <math display="inline"><msubsup><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup><msub><mrow><mi>V</mi> </mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mstyle mathvariant="bold"><mi>r</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math>,
+where <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mn>1</mn></mrow></msub></math> is the
+potential due to <math display="inline"><msubsup><mrow><mi>q</mi></mrow><mrow><mn>1</mn></mrow><mrow></mrow></msubsup></math>,
+and <math display="inline"><msub><mrow><mstyle mathvariant="bold"><mi>r</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub></math> is the place
+we’re putting <math display="inline"><msubsup><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup></math>:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle><msubsup><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup> <mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac>
+<mrow>
+<msubsup><mrow><mi>q</mi></mrow><mrow><mn>1</mn></mrow><mrow></mrow></msubsup></mrow>
+<mrow><msub><mrow>
+<mi>q</mi></mrow><mrow><mn>1</mn></mrow></msub><mn>2</mn></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow>
+</math></td></tr></table>
+<p class="noindent"><math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>λ</mi></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math> is the distance
+between <math display="inline"><msubsup><mrow><mi>q</mi></mrow><mrow><mn>1</mn></mrow><mrow></mrow></msubsup></math>
+and <math display="inline"><msubsup><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup></math>
+once they are in position). As you bring in each charge, nail it down in its final
+location, so it doesn’t move when you bring in the next charge. Now bring in
+<math display="inline"><msubsup><mrow><mi>q</mi></mrow><mrow><mn>3</mn></mrow><mrow></mrow></msubsup></math>; this requires
+work <math display="inline"><msubsup><mrow><mi>q</mi></mrow><mrow><mn>3</mn></mrow><mrow></mrow></msubsup><msub><mrow><mi>V</mi> </mrow><mrow><mn>1</mn><mo class="MathClass-punc" stretchy="false">,</mo><mn>2</mn></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mstyle mathvariant="bold"><mi>r</mi></mstyle></mrow><mrow><mn>3</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math>, where
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mn>1</mn><mo class="MathClass-punc" stretchy="false">,</mo><mn>2</mn></mrow></msub></math> is the potential
+due to charges <math display="inline"><msubsup><mrow><mi>q</mi></mrow><mrow><mn>1</mn></mrow><mrow></mrow></msubsup></math>
+and <math display="inline"><msubsup><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup></math>,
+namely, <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-open" stretchy="false">(</mo><msubsup><mrow><mi>q</mi></mrow><mrow><mn>1</mn></mrow><mrow></mrow></msubsup><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>ν</mi></mrow><mrow><mn>1</mn><mn>3</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msubsup><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>ν</mi></mrow><mrow><mn>2</mn><mn>3</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math>.
+Thus </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>W</mi></mrow><mrow><mn>3</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle><msubsup><mrow><mi>q</mi></mrow><mrow><mn>3</mn></mrow><mrow></mrow></msubsup> <mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac>
+<mrow>
+<msubsup><mrow><mi>q</mi></mrow><mrow><mn>1</mn></mrow><mrow></mrow></msubsup></mrow>
+<mrow><msub><mrow>
+<mi>q</mi></mrow><mrow><mn>1</mn><mn>3</mn></mrow></msub></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msubsup><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup></mrow>
+<mrow><msub><mrow>
+<mi>q</mi></mrow><mrow><mn>2</mn><mn>3</mn></mrow></msub></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">Similarly, the extra work to bring in <math display="inline"><msub><mrow><mi>q</mi></mrow><mrow><mn>4</mn></mrow></msub></math>
+will be </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>W</mi></mrow><mrow><mn>4</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle><msub><mrow><mi>q</mi></mrow><mrow><mn>4</mn></mrow></msub> <mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac>
+<mrow>
+<msub><mrow><mi>q</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>λ</mi></mrow><mrow><mn>1</mn><mn>4</mn></mrow></msub></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msub><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>λ</mi></mrow><mrow><mn>2</mn><mn>4</mn></mrow></msub></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msub><mrow><mi>q</mi></mrow><mrow><mn>3</mn></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>λ</mi></mrow><mrow><mn>3</mn><mn>4</mn></mrow></msub></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">The total work necessary to assemble the first four charges, then, is </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac>
+<mrow>
+<msub><mrow><mi>q</mi></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>λ</mi></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msub><mrow><mi>q</mi></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mi>q</mi></mrow><mrow><mn>3</mn></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>λ</mi></mrow><mrow><mn>1</mn><mn>3</mn></mrow></msub></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msub><mrow><mi>q</mi></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mi>q</mi></mrow><mrow><mn>4</mn></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>λ</mi></mrow><mrow><mn>1</mn><mn>4</mn></mrow></msub></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msub><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mi>q</mi></mrow><mrow><mn>3</mn></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>λ</mi></mrow><mrow><mn>2</mn><mn>3</mn></mrow></msub></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msub><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mi>q</mi></mrow><mrow><mn>4</mn></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>λ</mi></mrow><mrow><mn>2</mn><mn>4</mn></mrow></msub></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msub><mrow><mi>q</mi></mrow><mrow><mn>3</mn></mrow></msub><msub><mrow><mi>q</mi></mrow><mrow><mn>4</mn></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>λ</mi></mrow><mrow><mn>3</mn><mn>4</mn></mrow></msub></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">You see the general rule: Take the product of each pair of charges, divide by their separation distance,
+and add it all up: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x16-77001r31"></mstyle>
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle><munderover accent="false" accentunder="false"><mrow><mo> ∑</mo>
+</mrow><mrow><mi>i</mi><mo class="MathClass-rel" stretchy="false">=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><munderover accent="false" accentunder="false"><mrow><mo> ∑</mo>
+</mrow><mrow><mi>j</mi><mo class="MathClass-rel" stretchy="false">&gt;</mo><mi>i</mi></mrow><mrow><mi>n</mi></mrow></munderover><mfrac><mrow><msub><mrow><mi>q</mi></mrow><mrow><mi>i</mi></mrow></msub><msub><mrow><mi>q</mi></mrow><mrow><mi>j</mi></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>n</mi></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(3.31)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The stipulation <math display="inline"><mi>j</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mi>i</mi></math> is
+to remind you not to count the same pair twice. A nicer way to accomplish this is <span class="alert">intentionally</span> to count each pair twice, and
+then divide by <math display="inline"><mn>2</mn></math>:
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x16-77002r32"></mstyle>
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>8</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><munderover accent="false" accentunder="false"><mrow><mo> ∑</mo>
+</mrow><mrow><mi>i</mi><mo class="MathClass-rel" stretchy="false">=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><munderover accent="false" accentunder="false"><mrow><mo> ∑</mo>
+</mrow><mrow><mi>j</mi><mo class="MathClass-rel" stretchy="false">=</mo><mi>i</mi></mrow><mrow><mi>n</mi></mrow></munderover><mfrac><mrow><msub><mrow><mi>q</mi></mrow><mrow><mi>i</mi></mrow></msub><msub><mrow><mi>q</mi></mrow><mrow><mi>j</mi></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>n</mi></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></mfrac>
+</math></td><td class="eq-no">(3.32)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">(we must still avoid <math display="inline"><mi>i</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>j</mi></math>,
+of course). Notice that in this form the answer plainly does not depend on the <span class="alert">order</span> in which you
+assemble the charges, since every pair occurs in the sum. Finally, let’s pull out the factor
+<math display="inline"><msub><mrow><mi>q</mi></mrow><mrow><mi>i</mi></mrow></msub></math>:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><munderover accent="false" accentunder="false"><mrow><mo>∑</mo>
+</mrow><mrow><mi>i</mi><mo class="MathClass-rel" stretchy="false">=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><msub><mrow><mi>q</mi></mrow><mrow>
+<mi>i</mi></mrow></msub> <mrow><mo fence="true" form="prefix">(</mo><mrow><munderover accent="false" accentunder="false"><mrow><mo>∑</mo>
+</mrow><mrow><mi>i</mi><mi>≠</mi><mi>i</mi></mrow><mrow><mi>n</mi></mrow></munderover> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac> <mfrac>
+<mrow>
+<msub><mrow><mi>q</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>ν</mi></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">The term in parentheses is the potential at point
+<math display="inline"><msub><mrow><mstyle mathvariant="bold"><mi>r</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math> (the position
+of <math display="inline"><msub><mrow><mi>q</mi></mrow><mrow><mi>i</mi></mrow></msub></math>) due
+to all the <span class="alert">other</span> charges-all of them, now, not just the ones that were present at some stage during the
+assembly. Thus, </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x16-77003r33"></mstyle>
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><munderover accent="false" accentunder="false"><mrow><mo>∑</mo>
+</mrow><mrow><mi>i</mi><mo class="MathClass-rel" stretchy="false">=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><msub><mrow><mi>q</mi></mrow><mrow>
+<mi>i</mi></mrow></msub><mi>V</mi> <mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mstyle mathvariant="bold"><mi>r</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(3.33)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">That’s how much work it takes to assemble a configuration of point charges; it’s also the amount of
+work you’d get back if you dismantled the system. In the meantime, it represents energy stored in the
+configuration ("potential" energy, if you insist, though for obvious reasons I prefer to avoid that word in
+this context).
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.4.3"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.3.4.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.4.3</span> <span class="title"> <a id="x16-780003.4.3"></a>The Energy of a Continuous Charge Distribution</span></h4></div>
+</p><p class="noindent">For a volume charge density <math display="inline"><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>ρ</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></math>,
+<span> Eq. (<a href="#x16-77003r33">3.33</a>)</span> <span class="margin-block">becomes: <span class="margin-comment"><span class="ellipsis">[61]</span>
+<span class="sidenote">The corresponding integrals for line and surface charges would be
+<math display="inline"><mo>∫</mo>
+<mi>λ</mi><mi>V</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>l</mi></math> and
+<math display="inline"><mo>∫</mo>
+<mi>σ</mi><mi>V</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>a</mi></math>.</span></span></span>
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x16-78001r34"></mstyle>
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><mo>∫
+ </mo><mi>ρ</mi><mi>V</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi>
+</math></td><td class="eq-no">(3.34)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">There is a tidy way to rewrite this result, in which
+<math display="inline"><mi>ρ</mi></math> and
+<math display="inline"><mi>V</mi> </math> are eliminated in
+favor of <math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>. First use
+Gauss’s law to express <math display="inline"><mi>ρ</mi></math>
+in terms of <math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>ρ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>so</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mo>∫
+ </mo><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mi>V</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi>
+</math></td></tr></table>
+<p class="noindent">Now use integration by parts, to transfer the derivative from
+<math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math> to
+<math display="inline"><mi>V</mi> </math>:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mrow><mo fence="true" form="prefix">[</mo><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mo> ∫
+ </mo><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mi>·</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>V</mi> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>∮</mi>
+<mi>V</mi> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">]</mo></mrow><mstyle class="text"><mtext></mtext></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">But we know <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>V</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>,
+so </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x16-78002r35"></mstyle>
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mo>∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>V</mi> </mstyle></mrow></msub><msubsup><mrow><mi>E</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mi>∮</mi>
+</mrow><mrow><mstyle mathvariant="script"><mi>S</mi></mstyle></mrow></msub><mi>V</mi> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td><td class="eq-no">(3.35)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">But what volume is this we’re integrating over? Let’s go back to the formula we started with, <span> Eq.
+(<a href="#x16-78001r34">3.34</a>)
+</span> . From its derivation, it is clear that we should integrate over the region where the charge is
+located. But actually, any larger volume would do just as well:
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">The “extra” territory we throw in will contribute nothing to the integral, since
+<math display="inline"><mi>ρ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math> out
+there. </p></div></div>
+<p class="noindent">With this in mind, we return to <span> Eq. (<a href="#x16-78002r35">3.35</a>)</span> . What happens here, as we enlarge the
+volume beyond the minimum necessary to trap all the charge? Well, the integral of
+<math display="inline"><msubsup><mrow><mi>E</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></math> can
+only <span class="margin-block">increase; <span class="margin-comment"><span class="ellipsis">[62]</span>
+<span class="sidenote">the integrand being positive.</span></span></span> evidently the surface integral must decrease
+correspondingly to leave the sum <span class="margin-block">intact. <span class="margin-comment"><span class="ellipsis">[63]</span>
+<span class="sidenote">In fact, at large distances from the charge,
+<math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math> goes
+<math display="inline"><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><msubsup><mrow><mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></math> and
+<math display="inline"><mi>V</mi> </math>
+<math display="inline"><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mi>r</mi></math>, while the surface
+area grows like <math display="inline"><msubsup><mrow><mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></math>;
+roughly speaking, then, the surface integral goes down like
+<math display="inline"><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mi>r</mi></math>.</span></span></span>
+</p><p class="noindent">It is now worth stressing out that <span> Eq. (<a href="#x16-78002r35">3.35</a>)</span>  gives us the correct energy
+<math display="inline"><mi>W</mi></math>,
+whatever volume we <span class="margin-block">use, <span class="margin-comment"><span class="ellipsis">[64]</span>
+<span class="sidenote">as long as it encloses all the charge</span></span></span> but the contribution from the volume
+integral goes up, and that of the surface integral goes down, as you take larger and larger
+volumes.
+</p>
+<div class="quote"> In particular, why not integrate over all space? </div>
+<p class="noindent">Then the surface integral goes to zero, and we are left with:
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x16-78003r36"></mstyle>
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mo>∫
+ </mo><msubsup><mrow><mi>E</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi>
+</math></td><td class="eq-no">(3.36)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.4.4"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.3.4.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.4.4</span> <span class="title"> <a id="x16-790003.4.4"></a>Comments on Electrostatic Energy</span></h4></div>
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-12"> <a id="x16-80000"></a>An Interesting Inconsistency</h5>
+</p><p class="noindent">We can see <span> Eq. (<a href="#x16-78003r36">3.36</a>)</span>  implies the energy of a stationary charge distribution is always <span class="alert">positive</span>.
+On the other hand, <span> Eq. (<a href="#x16-77003r33">3.33</a>)</span>  which we derived <span> Eq. (<a href="#x16-78003r36">3.36</a>)</span> , can be either <span class="alert">positive</span> or <span class="alert">negative</span>. </p><div class="quote">  For
+instance, according to <span> Eq. (<a href="#x16-77003r33">3.33</a>)</span> , the energy of two (<span class="alert">2</span>) equal but <b>opposite</b> charges a distance
+<math display="inline"><msup><mrow><mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mstyle mathvariant="sans-serif"><mi>r</mi></mstyle><mi>}</mi></math> apart
+is <math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-bin" stretchy="false">/</mo><msup><mrow><mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mstyle mathvariant="sans-serif"><mi>r</mi></mstyle><mi>}</mi><mo class="MathClass-close" stretchy="false">)</mo></math>.
+</div>
+<div class="quote"> What’s gone wrong? Which equation is correct? </div>
+<p class="noindent">The answer is that <span class="alert">both</span> are correct, but they speak to slightly different questions. <span> Eq. (<a href="#x16-77003r33">3.33</a>)</span>  does
+<b>NOT</b> take into account the work necessary to make the point charges in the first place;
+we <span class="alert">started</span> with point charges and simply found the work required to bring them together. This
+is wise strategy, given <span> Eq. (<a href="#x16-78003r36">3.36</a>)</span>  indicates that the energy of a point charge is in fact <span class="alert">infinite</span>:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow>
+<mrow>
+<mn>2</mn><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo> ∫
+ </mo><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><msup><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow><msup><mrow>
+<mi>r</mi></mrow><mrow><mn>4</mn></mrow></msup></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow><mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup><mo> <mi class="loglike">sin</mi><mo>⁡</mo></mo><mi>𝜃</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>r</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>𝜃</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>ϕ</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msubsup><mrow><mi>q</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></mrow>
+<mrow>
+<mn>8</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><msubsup><mrow><mo> ∫
+ </mo></mrow><mrow><mn>0</mn></mrow><mrow><mi>∞</mi></mrow></msubsup> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msubsup><mrow>
+<mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></mrow></mfrac><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>r</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>∞</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent"><span> Eq. (<a href="#x16-78003r36">3.36</a>)</span> is more <span class="alert">complete</span>, in the sense that it tells you the <span class="alert">total</span> energy stored in a charge configuration, but <span> Eq.
+(<a href="#x16-77003r33">3.33</a>)
+</span> is more appropriate when we’re dealing with point charges, because we prefer to leave out
+that portion of the total energy that is attributable to the fabrication of the point charges
+themselves.
+</p><p class="noindent">In practice, after all, the point charges are given to us ready-made; all we do is move them around.
+Since we did not put them together, and we cannot take them apart, it is immaterial how much work
+the process would <span class="margin-block">involve. <span class="margin-comment"><span class="ellipsis">[65]</span>
+<span class="sidenote">Still, the infinite energy of a point charge is a recurring source of
+embarrassment for electromagnetic theory, afflicting the quantum version as well as the
+classical.</span></span></span>
+</p><p class="noindent">Now, it is a valid question to ask when the inconsistency crept into an apparently watertight derivation.
+The “flaw” lies between <span> Eq. (<a href="#x16-77003r33">3.33</a>)</span>  and <span> Eq. (<a href="#x16-78001r34">3.34</a>)</span> :
+</p><p class="noindent">In the former, <math display="inline"><mi>V</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mi>i</mi></mrow><mrow></mrow></msubsup></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup></math> represents the
+potential due to all the <span class="alert">other</span> charges <span class="alert">but not</span> <math display="inline"><msubsup><mrow><mi>q</mi></mrow><mrow><mi>i</mi></mrow><mrow></mrow></msubsup></math>,
+whereas in the latter, <math display="inline"><mi>V</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></math>
+is the <span class="alert">full</span> potential. For a <span class="alert">continuous</span> distribution, there is no distinction, given the amount of charge <span class="alert">right at the point</span>
+<math display="inline"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">→</mo></mover></math> is
+vanishingly small, and its contribution to the potential is zero.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">In the presence of point charges we should better stick with <span> Eq. (<a href="#x16-77003r33">3.33</a>)</span> . </p></div></div>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-13"> <a id="x16-81000"></a>The Place where Energy is Stored</h5>
+</p><p class="noindent"><span> Eq. (<a href="#x16-78001r34">3.34</a>)</span> and <span> Eq. (<a href="#x16-78003r36">3.36</a>)</span>  offer two (<span class="alert">2</span>) different ways of calculating the same thing.
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+1. 
+</dt><dd class="enumerate-enumitem">The first is an integral over the charge distribution;
+</dd>
+<dt class="enumerate-enumitem">
+2. 
+</dt><dd class="enumerate-enumitem">The second is an integral over the field.</dd></dl>
+<p class="noindent">These can involve completely different regions. For instance, in the case of the spherical shell, the
+charge is confined to the surface, whereas the electric field is everywhere <span class="alert">outside</span> this surface. </p><div class="quote">  Where is the
+energy, then? </div>
+<p class="noindent">Is it stored in the field, as <span> Eq. (<a href="#x16-78003r36">3.36</a>)</span>  seems to suggest, or is it stored in the charge, as <span> Eq. (<a href="#x16-78001r34">3.34</a>)</span>
+implies? At the present stage this is simply an unanswerable question: I can tell you what the total
+energy is, and I can provide you with several different ways to compute it, but it is impertinent to
+worry about where the energy is located. In the context of radiation theory it is useful to regard the
+energy as stored in the field, with a density: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mfrac>
+<mrow>
+<msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac>
+<msup><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle class="text"><mtext>energy per unit volume</mtext></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">But in electrostatics one could just as well say it is stored in the charge, with a density
+<math display="inline"><mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><mi>ρ</mi><mi>V</mi> </math>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">The difference is purely a matter of bookkeeping. </p></div></div>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-14"> <a id="x16-82000"></a>Principle of Superposition</h5>
+</p><p class="noindent">Because electrostatic energy is quadratic in the fields, it does <b>NOT</b> obey a superposition principle.
+The energy of a compound system is <b>NOT</b> the sum of the energies of its parts considered separately as
+there are also “cross terms” to take into account:
+</p><math display="block"><mtable class="align" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><msubsup><mrow><mi>W</mi></mrow><mrow><mi>t</mi><mi>o</mi><mi>t</mi></mrow><mrow></mrow></msubsup></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mo>∫
+ </mo><msubsup><mrow><mi>E</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msup><mrow><mi>τ</mi></mrow><mrow><mi>′</mi></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mo>∫
+ </mo><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>1</mn></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow><mn>2</mn></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msup><mrow><mi>τ</mi></mrow><mrow><mi>′</mi></mrow></msup><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"><mstyle class="label" id="x16-82001r37"></mstyle><mstyle class="maketag"><mtext>(3.37)</mtext></mstyle><mspace class="nbsp" width="0.33em"></mspace>
+</mtd></mtr><mtr><mtd class="align-odd" columnalign="right"></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mo>∫
+ </mo><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow><mi>E</mi></mrow><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo> <msubsup><mrow><mi>E</mi></mrow><mrow>
+<mn>2</mn></mrow><mrow><mn>2</mn></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo> <mn>2</mn><msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow>
+<mn>1</mn></mrow><mrow></mrow></msubsup> <mi>·</mi><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"><mstyle class="label" id="x16-82002r38"></mstyle><mstyle class="maketag"><mtext>(3.38)</mtext></mstyle><mspace class="nbsp" width="0.33em"></mspace>
+</mtd></mtr><mtr><mtd class="align-odd" columnalign="right"></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>W</mi></mrow><mrow><mn>1</mn></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo> <msubsup><mrow><mi>W</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mo> ∫
+ </mo><msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>1</mn></mrow><mrow></mrow></msubsup> <mi>·</mi><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi><mo class="MathClass-punc" stretchy="false">.</mo><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"><mstyle class="label" id="x16-82003r39"></mstyle><mstyle class="maketag"><mtext>(3.39)</mtext></mstyle><mspace class="nbsp" width="0.33em"></mspace>
+</mtd></mtr></mtable></math>
+<div class="quote"> For example, if you double the charge everywhere, you <span class="alert">quadruple</span> the total energy. </div>
+<nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="Conductors.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="ElectricPotential.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="Electrostatics.html#WorkandEnergy.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 7.10.2026, at 8:21.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 3.4: Work and Energy</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

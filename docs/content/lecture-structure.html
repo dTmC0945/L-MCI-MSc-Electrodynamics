@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-10-07 Wed 08:22 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LS MSc Electrodynamics</title>
+<meta name="author" content="Daniel McGuiness" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">LS MSc Electrodynamics</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org53b81a0">1. Lecture Information</a></li>
+<li><a href="#org7273cdf">2. Requirements and the Learning Outcomes</a></li>
+<li><a href="#orgf031b9e">3. Grading of the Lecture</a></li>
+<li><a href="#orgb58de11">4. Lecture Sources</a></li>
+<li><a href="#orge978344">5. Content and Unit Distribution</a></li>
+<li><a href="#org7698ef8">6. Lecture Table of Contents</a></li>
+<li><a href="#org335d360">7. Documentation</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org53b81a0" class="outline-2">
+<h2 id="org53b81a0"><span class="section-number-2">1.</span> Lecture Information</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>The goal of this lecture is to introduce you to the physical foundation
+governing all thing electrical and magnetics.</li>
+<li>Through the eyes of an engineer we shall look at different magnetic
+and electric events and using these effects, utilise the most out of
+materials.</li>
+</ul>
+
+<table id="orge4b3711" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">INDEX</th>
+<th scope="col" class="org-left">DESCRIPTION</th>
+<th scope="col" class="org-left">VALUE</th>
+<th scope="col" class="org-left">STATUS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">Official Name</td>
+<td class="org-left">Elektrodynamik</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">Lecture Code</td>
+<td class="org-left">EDY</td>
+<td class="org-left">A</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">Module Code</td>
+<td class="org-left">MECH-M-1-EDY-EDY-VO</td>
+<td class="org-left">A</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">Degree</td>
+<td class="org-left">M.Sc</td>
+<td class="org-left">A</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Program Name</td>
+<td class="org-left">Mechatronik Smart Technologies</td>
+<td class="org-left">A</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">Lecture Name</td>
+<td class="org-left">Electrodynamics</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">Semester</td>
+<td class="org-left">1</td>
+<td class="org-left">A</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-left">Season</td>
+<td class="org-left">WS</td>
+<td class="org-left">A</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-left">Room Type</td>
+<td class="org-left">Lecture Room</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">Assignments</td>
+<td class="org-left">Personal Assignment Final Exam</td>
+<td class="org-left">A</td>
+</tr>
+
+<tr>
+<td class="org-right">11</td>
+<td class="org-left">Lecturer</td>
+<td class="org-left">Daniel T. McGuiness, Ph.D</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">12</td>
+<td class="org-left">Module Responsible</td>
+<td class="org-left">DaM</td>
+<td class="org-left">A</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">13</td>
+<td class="org-left">Software</td>
+<td class="org-left">Python</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">14</td>
+<td class="org-left">Hardware</td>
+<td class="org-left">-</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">15</td>
+<td class="org-left">SWS Total</td>
+<td class="org-left">2</td>
+<td class="org-left">A</td>
+</tr>
+
+<tr>
+<td class="org-right">16</td>
+<td class="org-left">SWS Teaching</td>
+<td class="org-left">2</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">17</td>
+<td class="org-left">SWS Tutorial</td>
+<td class="org-left">0</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">18</td>
+<td class="org-left">SWS Laboratory</td>
+<td class="org-left">0</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">19</td>
+<td class="org-left">SWS Project Work</td>
+<td class="org-left">0</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">20</td>
+<td class="org-left">UE Total</td>
+<td class="org-left">30</td>
+<td class="org-left">A</td>
+</tr>
+
+<tr>
+<td class="org-right">21</td>
+<td class="org-left">UE Teaching</td>
+<td class="org-left">30</td>
+<td class="org-left">A</td>
+</tr>
+
+<tr>
+<td class="org-right">22</td>
+<td class="org-left">UE Tutorial</td>
+<td class="org-left">0</td>
+<td class="org-left">A</td>
+</tr>
+
+<tr>
+<td class="org-right">23</td>
+<td class="org-left">UE Laboratory</td>
+<td class="org-left">0</td>
+<td class="org-left">A</td>
+</tr>
+
+<tr>
+<td class="org-right">24</td>
+<td class="org-left">Assessment Units</td>
+<td class="org-left">0</td>
+<td class="org-left">A</td>
+</tr>
+
+<tr>
+<td class="org-right">25</td>
+<td class="org-left">Planned Units</td>
+<td class="org-left">0</td>
+<td class="org-left">A</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">26</td>
+<td class="org-left">ECTS</td>
+<td class="org-left">3</td>
+<td class="org-left">A</td>
+</tr>
+
+<tr>
+<td class="org-right">27</td>
+<td class="org-left">Lecture Type</td>
+<td class="org-left">VO</td>
+<td class="org-left">A</td>
+</tr>
+
+<tr>
+<td class="org-right">28</td>
+<td class="org-left">Working Language</td>
+<td class="org-left">English</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org7273cdf" class="outline-2">
+<h2 id="org7273cdf"><span class="section-number-2">2.</span> Requirements and the Learning Outcomes</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>The student should be comfortable with working with physical problems and
+have a basic understanding of material science along with calculus.</li>
+</ul>
+
+<table id="org7b9acc4" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">INDEX</th>
+<th scope="col" class="org-left">REQUIREMENTS</th>
+<th scope="col" class="org-left">TAUGHT LECTURE</th>
+<th scope="col" class="org-left">MODULE CODE</th>
+<th scope="col" class="org-left">DEGREE</th>
+<th scope="col" class="org-left">OUTCOME</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">Vector Calculus</td>
+<td class="org-left">Mathematik 1</td>
+<td class="org-left">MAT</td>
+<td class="org-left">B.Sc</td>
+<td class="org-left">Advanced Vector Calculus</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">Differential Calculus</td>
+<td class="org-left">Mathematik 2</td>
+<td class="org-left">MAT</td>
+<td class="org-left">B.Sc</td>
+<td class="org-left">Electrostatics</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">Linear Algebra</td>
+<td class="org-left">Mathematik 1</td>
+<td class="org-left">MAT</td>
+<td class="org-left">B.Sc</td>
+<td class="org-left">Magnetostatics</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">Physics</td>
+<td class="org-left">Physik</td>
+<td class="org-left">PHY</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Electrodynamics</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">-</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Electromagnetic Waves</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgf031b9e" class="outline-2">
+<h2 id="orgf031b9e"><span class="section-number-2">3.</span> Grading of the Lecture</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>The lecture will have a single personal assignment comprising of a set list of
+questions and a final exam comprising of all the topics covered in the
+lecture.</li>
+<li>For the written exam you are allowed to write your own equation reference
+paper, as long as it is a single sheet of A4, double sided and contains no
+exercise or solutions.</li>
+</ul>
+
+<table id="org5ea90ac" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">ASSIGNMENT TYPE</th>
+<th scope="col" class="org-right">VALUE</th>
+<th scope="col" class="org-right">QUANTITY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Personal Assignment</td>
+<td class="org-right">40</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">Final Exam</td>
+<td class="org-right">60</td>
+<td class="org-right">1</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">SUM</td>
+<td class="org-right">100</td>
+<td class="org-right">2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgb58de11" class="outline-2">
+<h2 id="orgb58de11"><span class="section-number-2">4.</span> Lecture Sources</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+The following are a table of documentation which are useful resources which
+goes well with the lecture.
+</p>
+
+<table id="orgeed320b" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">INDEX</th>
+<th scope="col" class="org-left">AUTHOR</th>
+<th scope="col" class="org-left">TITLE</th>
+<th scope="col" class="org-left">PUBLISHER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">Maggiore Michele</td>
+<td class="org-left">A modern introduction to classical electrodynamics</td>
+<td class="org-left">Oxford University Press (2023)</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">Griffiths David J.</td>
+<td class="org-left">Introduction to Electrodynamics (4th Edition)</td>
+<td class="org-left">Cambridge University Press (2023)</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">Cheng David Keun.</td>
+<td class="org-left">Field and Wave Electromagnetics</td>
+<td class="org-left">Pearson Education India (1989).</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">Electromagnetic Waves and Radiation</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Schaums Electromagnetics</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orge978344" class="outline-2">
+<h2 id="orge978344"><span class="section-number-2">5.</span> Content and Unit Distribution</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>The content and unit distribution of the lecture is as follows where a unit
+is defined as 45 min lecture.</li>
+</ul>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">ID</th>
+<th scope="col" class="org-left">CHAPTER</th>
+<th scope="col" class="org-right">UE</th>
+<th scope="col" class="org-right">WORKLOAD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1.0</td>
+<td class="org-left">Review on Vector Calculus</td>
+<td class="org-right">2.0</td>
+<td class="org-right">4.0</td>
+</tr>
+
+<tr>
+<td class="org-right">2.0</td>
+<td class="org-left">Electrostatics</td>
+<td class="org-right">4.0</td>
+<td class="org-right">8.0</td>
+</tr>
+
+<tr>
+<td class="org-right">3.0</td>
+<td class="org-left">Mathematical Methods for Electrostatics</td>
+<td class="org-right">2.0</td>
+<td class="org-right">4.0</td>
+</tr>
+
+<tr>
+<td class="org-right">4.0</td>
+<td class="org-left">Electric Fields in Matter</td>
+<td class="org-right">2.0</td>
+<td class="org-right">4.0</td>
+</tr>
+
+<tr>
+<td class="org-right">5.0</td>
+<td class="org-left">Magnetostatics</td>
+<td class="org-right">4.0</td>
+<td class="org-right">8.0</td>
+</tr>
+
+<tr>
+<td class="org-right">6.0</td>
+<td class="org-left">Magnetic Fields in Matter</td>
+<td class="org-right">2.0</td>
+<td class="org-right">4.0</td>
+</tr>
+
+<tr>
+<td class="org-right">7.0</td>
+<td class="org-left">Electrodynamics</td>
+<td class="org-right">4.0</td>
+<td class="org-right">8.0</td>
+</tr>
+
+<tr>
+<td class="org-right">8.0</td>
+<td class="org-left">Laws of Conservation</td>
+<td class="org-right">2.0</td>
+<td class="org-right">4.0</td>
+</tr>
+
+<tr>
+<td class="org-right">9.0</td>
+<td class="org-left">Electromagnetic  Waves</td>
+<td class="org-right">4.0</td>
+<td class="org-right">8.0</td>
+</tr>
+
+<tr>
+<td class="org-right">10.0</td>
+<td class="org-left">Pre-Exam Tutorial</td>
+<td class="org-right">2.0</td>
+<td class="org-right">4.0</td>
+</tr>
+
+<tr>
+<td class="org-right">11.0</td>
+<td class="org-left">Exam</td>
+<td class="org-right">2.0</td>
+<td class="org-right">4.0</td>
+</tr>
+</tbody>
+</table>
+
+<table id="orgb6a694c" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">ORDER</th>
+<th scope="col" class="org-left">TOPIC</th>
+<th scope="col" class="org-right">UNITS</th>
+<th scope="col" class="org-right">SELF STUDY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">The Purpose of Electromagnetism</td>
+<td class="org-right">4</td>
+<td class="org-right">8</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">Vector Calculus</td>
+<td class="org-right">4</td>
+<td class="org-right">8</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">Electrostatics</td>
+<td class="org-right">4</td>
+<td class="org-right">8</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">Advanced Mathematical Methods</td>
+<td class="org-right">4</td>
+<td class="org-right">8</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Electric Fields in Matter</td>
+<td class="org-right">2</td>
+<td class="org-right">4</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">Magnetostatics</td>
+<td class="org-right">4</td>
+<td class="org-right">8</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">Magnetic Fields in Matter</td>
+<td class="org-right">2</td>
+<td class="org-right">4</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-left">Electrodynamics</td>
+<td class="org-right">4</td>
+<td class="org-right">8</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-left">Final Exam</td>
+<td class="org-right">2</td>
+<td class="org-right">4</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">SUM</td>
+<td class="org-right">30</td>
+<td class="org-right">60</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org7698ef8" class="outline-2">
+<h2 id="org7698ef8"><span class="section-number-2">6.</span> Lecture Table of Contents</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+The structure of the M.Sc Electrodynamics can be grouped into
+three (3) parts:
+</p>
+
+<ol class="org-ol">
+<li>Electric Fields and Matter</li>
+<li>Magnetic Fields and Matter</li>
+<li>Electrodynamics and Waves</li>
+</ol>
+
+<p>
+Below is the detailed structure of the lecture.
+</p>
+
+<ul class="org-ul">
+<li>The Purpose of Electromagnetism
+<ul class="org-ul">
+<li>Mechanics in Four Different Views
+<ul class="org-ul">
+<li>Four Kinds of Forces</li>
+<li>Unifying Physical Theories</li>
+<li>The Fields of Electrodynamics</li>
+<li>Electric Charge</li>
+</ul></li>
+</ul></li>
+<li>Vector Calculus
+<ul class="org-ul">
+<li>Vector Algebra
+<ul class="org-ul">
+<li>Vector Operations</li>
+<li>Vector Component Forms</li>
+<li>Triple Products</li>
+<li>Position, Displacement, and Separation Vectors</li>
+</ul></li>
+<li>Differential Calculus
+<ul class="org-ul">
+<li>Ordinary Derivatives</li>
+<li>Gradient</li>
+<li>The Del Operator</li>
+<li>Product Rules</li>
+<li>Second Derivatives
+<ul class="org-ul">
+<li>Divergence of a Gradient</li>
+<li>Curl of a Gradient</li>
+<li>Gradient of Divergence</li>
+<li>Divergence of a Curl</li>
+<li>Curl of a Curl</li>
+</ul></li>
+</ul></li>
+<li>Integral Calculus
+<ul class="org-ul">
+<li>Line, Surface, and Volume Integrals</li>
+<li>The Fundamental Theorems of Vector Calculus
+<ul class="org-ul">
+<li>The Fundamental Theorem for Divergences</li>
+</ul></li>
+<li>The Fundamental Theorem for Curls</li>
+</ul></li>
+<li>Curvilinear Coordinates
+<ul class="org-ul">
+<li>Spherical Coordinate System</li>
+<li>Cylindrical Coordinates</li>
+</ul></li>
+<li>Dirac Delta Function
+<ul class="org-ul">
+<li>A Mathematical Anomaly</li>
+<li>The 1D Dirac Delta Function</li>
+<li>The 3D Dirac Delta Function</li>
+</ul></li>
+<li>Vector Field Theory
+<ul class="org-ul">
+<li>Helmholtz Theorem</li>
+<li>Potentials</li>
+</ul></li>
+</ul></li>
+<li>Electrostatics
+<ul class="org-ul">
+<li>The Electric Field
+<ul class="org-ul">
+<li>Coulomb's Law</li>
+<li>The Electric Field</li>
+<li>Continuous Charge Distributions</li>
+</ul></li>
+<li>Divergence and Curl of Electrostatic Fields
+<ul class="org-ul">
+<li>Quantification</li>
+<li>Divergence of E</li>
+<li>Applications of Gauss's Law</li>
+<li>Curl of E</li>
+</ul></li>
+<li>Electric Potential
+<ul class="org-ul">
+<li>Defining the Potential</li>
+<li>Some Digressions on Potential
+<ul class="org-ul">
+<li>Naming</li>
+<li>Advantages of the Potential</li>
+<li>The Reference Point</li>
+</ul></li>
+<li>Poisson's Equation and Laplace's Equation</li>
+<li>The Potential of a Localised Charge Distribution</li>
+</ul></li>
+</ul></li>
+<li>Advanced Mathematical Methods
+<ul class="org-ul">
+<li>Solving Electrostatics
+<ul class="org-ul">
+<li>Laplace's Equation in One Dimension
+<ul class="org-ul">
+<li>Solving in Two Dimensions</li>
+<li>Solving in Three Dimensions</li>
+</ul></li>
+<li>Boundary Conditions and Uniqueness Theorems</li>
+<li>Conductors and the Second Uniqueness Theorem</li>
+</ul></li>
+<li>Method of Images
+<ul class="org-ul">
+<li>A Classic Problem</li>
+<li>Induced Surface Charge</li>
+<li>Force and Energy</li>
+<li>Other Image Problems</li>
+</ul></li>
+<li>Separation of Variables
+<ul class="org-ul">
+<li>Spherical Coordinates</li>
+</ul></li>
+<li>Multipole Expansion
+<ul class="org-ul">
+<li>Approximating Potentials at Large Distances</li>
+<li>Monopole and Dipole Terms</li>
+<li>Origin of Coordinates in Multipole Expansions</li>
+<li>The Electric Field of a Dipole</li>
+</ul></li>
+</ul></li>
+<li>Electric Fields in Matter
+<ul class="org-ul">
+<li>Polarisation
+<ul class="org-ul">
+<li>Dielectrics</li>
+<li>Induced Dipoles</li>
+<li>Alignment of Polar Molecules</li>
+</ul></li>
+<li>The Field of a Polarised Matter
+<ul class="org-ul">
+<li>Bound Charges</li>
+<li>Understanding Bound Charges</li>
+<li>Field Inside a Dielectric</li>
+</ul></li>
+</ul></li>
+<li>Magnetostatics
+<ul class="org-ul">
+<li>Lorentz Force Law
+<ul class="org-ul">
+<li>Magnetic Fields</li>
+<li>Magnetic Forces</li>
+<li>Currents</li>
+</ul></li>
+<li>Divergence and Curl of B
+<ul class="org-ul">
+<li>Straight Line Currents</li>
+<li>Divergence and Curl of B</li>
+<li>Amperé's Law</li>
+<li>Comparison of Magnetostatics and Electrostatics</li>
+</ul></li>
+<li>The Magnetic Vector Potential</li>
+</ul></li>
+<li>Magnetic Fields in Matter</li>
+<li>Magnetic Fields in Matter
+<ul class="org-ul">
+<li>Magnetisation
+<ul class="org-ul">
+<li>Diamagnets, Paramagnets, and Ferrormagnets</li>
+<li>Torques and Forces on Magnetic Dipoles</li>
+<li>Effect of a Magnetic Field on Atomic Orbits</li>
+<li>Magnetization</li>
+</ul></li>
+<li>The Field of a Magnetised Object
+<ul class="org-ul">
+<li>Bound Currents</li>
+<li>Physical Interpretation of Bound Currents</li>
+<li>The Magnetic Field Inside Matter</li>
+</ul></li>
+<li>The Auxiliary H Field
+<ul class="org-ul">
+<li>Ampère's Law in Magnetized Materials</li>
+<li>Boundary Conditions</li>
+</ul></li>
+<li>Linear and Non-Linear Media
+<ul class="org-ul">
+<li>Magnetic Susceptibility and Permeability</li>
+<li>Ferromagnetism</li>
+</ul></li>
+</ul></li>
+<li>Electrodynamics
+<ul class="org-ul">
+<li>Introduction
+<ul class="org-ul">
+<li>Electromotive Force</li>
+<li>Motional EMF</li>
+</ul></li>
+<li>Electromagnetic Induction
+<ul class="org-ul">
+<li>Faraday's Law</li>
+</ul></li>
+</ul></li>
+<li>Final Exam
+<ul class="org-ul">
+<li>Final Exam</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org335d360" class="outline-2">
+<h2 id="org335d360"><span class="section-number-2">7.</span> Documentation</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Daniel McGuiness</p>
+<p class="date">Created: 2026-10-07 Wed 08:22</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

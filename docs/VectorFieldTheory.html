@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Vector Field Theory</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Electrodynamics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2026.WS</span>
+<span class="header-chapter">Vector Calculus</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="ThePurposeofElectromagnetism.html#x3-20001">The Purpose of Electromagnetism</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-30001.1">Mechanics in Four Different
+Views</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-40001.1.1">Electromagnetism and Relativity</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-50001.1.2">Four Kinds of Forces</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-60001.1.3">Unifying
+Physical Theories</a></span></span><span class="subsectionToc"><span class="number">1.1.4</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-70001.1.4">The Fields of Electrodynamics</a></span></span><span class="subsectionToc"><span class="number">1.1.5</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-80001.1.5">Electric Charge</a></span></span><span class="subsectionToc"><span class="number">1.1.6</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-90001.1.6">Interpreting
+Conservation   of   Charge</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="VectorCalculus.html#x5-100002">Vector   Calculus</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="VectorAlgebra.html#x6-110002.1">Vector   Algebra</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="VectorAlgebra.html#x6-120002.1.1">Vector
+Operations</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="VectorAlgebra.html#x6-170002.1.2">Vector Component Forms</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="VectorAlgebra.html#x6-180002.1.3">Triple Products</a></span></span><span class="subsectionToc"><span class="number">2.1.4</span><span class="title"><a href="VectorAlgebra.html#x6-210002.1.4">Position,
+Displacement, and Separation Vectors</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-220002.2">Differential Calculus</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="DifferentialCalculus.html#x7-230002.2.1">Ordinary
+Derivatives</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-240002.2.2">Gradient</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="DifferentialCalculus.html#x7-250002.2.3">The Del Operator</a></span></span><span class="subsectionToc"><span class="number">2.2.4</span><span class="title"><a href="DifferentialCalculus.html#x7-280002.2.4">Product Rules</a></span></span><span class="subsectionToc"><span class="number">2.2.5</span><span class="title"><a href="DifferentialCalculus.html#x7-290002.2.5">Second
+Derivatives</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="IntegralCalculus.html#x8-350002.3">Integral Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="IntegralCalculus.html#x8-360002.3.1">Line, Surface, and Volume Integrals</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="IntegralCalculus.html#x8-400002.3.2">The
+Fundamental Theorems of Vector Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="IntegralCalculus.html#x8-430002.3.3">The Fundamental Theorem for
+Curls</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="CurvilinearCoordinates.html#x9-440002.4">Curvilinear Coordinates</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="CurvilinearCoordinates.html#x9-450002.4.1">Spherical Coordinate System</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="CurvilinearCoordinates.html#x9-460002.4.2">Cylindrical
+Coordinates</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="DiracDeltaFunction.html#x10-470002.5">Dirac Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="DiracDeltaFunction.html#x10-480002.5.1">A Mathematical Anomaly</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="DiracDeltaFunction.html#x10-490002.5.2">The 1D Dirac
+Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="DiracDeltaFunction.html#x10-500002.5.3">The 3D Dirac Delta Function</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="#x11-510002.6">Vector Field Theory</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="#x11-520002.6.1">Helmholtz
+Theorem</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="#x11-530002.6.2">Potentials</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Electrostatics.html#x12-540003">Electrostatics</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="TheElectricField.html#x13-550003.1">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="TheElectricField.html#x13-560003.1.1">Coulomb’s
+Law</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="TheElectricField.html#x13-570003.1.2">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.3</span><span class="title"><a href="TheElectricField.html#x13-580003.1.3">Continuous Charge Distributions</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-590003.2">Divergence and
+Curl of Electrostatic Fields</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-600003.2.1">Quantification</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-610003.2.2">Divergence of E</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-620003.2.3">Applications
+of Gauss’s Law</a></span></span><span class="subsectionToc"><span class="number">3.2.4</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-630003.2.4">Curl of E</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ElectricPotential.html#x15-640003.3">Electric Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ElectricPotential.html#x15-650003.3.1">Defining the Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ElectricPotential.html#x15-660003.3.2">Some
+Digressions on Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.3</span><span class="title"><a href="ElectricPotential.html#x15-720003.3.3">Poisson’s Equation and Laplace’s Equation</a></span></span><span class="subsectionToc"><span class="number">3.3.4</span><span class="title"><a href="ElectricPotential.html#x15-730003.3.4">The
+Potential of a Localised Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.3.5</span><span class="title"><a href="ElectricPotential.html#x15-740003.3.5">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="WorkandEnergy.html#x16-750003.4">Work and
+Energy</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="WorkandEnergy.html#x16-760003.4.1">To Move a Charge</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="WorkandEnergy.html#x16-770003.4.2">The Energy of a Point Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.3</span><span class="title"><a href="WorkandEnergy.html#x16-780003.4.3">The
+Energy of a Continuous Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.4</span><span class="title"><a href="WorkandEnergy.html#x16-790003.4.4">Comments on Electrostatic
+Energy</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="Conductors.html#x17-830003.5">Conductors</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="Conductors.html#x17-840003.5.1">Properties</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="Conductors.html#x17-850003.5.2">Induced Charges</a></span></span><span class="subsectionToc"><span class="number">3.5.3</span><span class="title"><a href="Conductors.html#x17-860003.5.3">Surface Charge
+and the Force on a Conductor</a></span></span><span class="subsectionToc"><span class="number">3.5.4</span><span class="title"><a href="Conductors.html#x17-870003.5.4">Capacitors</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 7.10.2026, at 8:21.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="Electrostatics.html">Chapter: Electrostatics</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="DiracDeltaFunction.html">Dirac Delta Function</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="VectorCalculus.html#VectorFieldTheory.html">Chapter: Vector
+Calculus</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-2.6"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#section.2.6"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">2.6</span> <span class="title"> <a id="x11-510002.6"></a>Vector Field
+Theory</span></h3></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.6.1"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.2.6.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.6.1</span> <span class="title"> <a id="x11-520002.6.1"></a>Helmholtz Theorem</span></h4></div>
+</p><p class="noindent">Electricity and magnetism are generally expressed as <span class="alert">electric and magnetic fields</span>,
+<math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math> and
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> and
+like many physical laws, these are most compactly expressed as <b>differential equations</b>.
+</p><p class="noindent">As <math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math> and
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> are
+<b>vectors</b>, the differential equations naturally involve vector derivatives: <i>divergence</i> and <i>curl</i>. Maxwell
+reduced the entire theory to four (<span class="alert">4</span>) fundamental equations, specifying respectively the divergence and the
+curl of <math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>
+and <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>.
+</p><p class="noindent">This formulation raises an interesting question:
+</p>
+<div class="quote"> To what extent is a vector function determined by its divergence and curl? </div>
+<p class="noindent">To study this case lets assume a vector of <math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle></math>.
+If the divergence of <math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle></math> is a
+specified scalar function <math display="inline"><mi>D</mi></math>,
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>F</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>D</mi><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td></tr></table>
+<p class="noindent">and the curl of <math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle></math> is a
+specified vector function <math display="inline"><mstyle mathvariant="bold"><mi>C</mi></mstyle></math>,
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>F</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>C</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td></tr></table>
+<p class="noindent">and for consistency, we assume <math display="inline"><mstyle mathvariant="bold"><mi>C</mi></mstyle></math>
+to have <b>NO</b> divergence, </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>C</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td></tr></table>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Remember, the divergence of a curl is <b>ALWAYS</b> zero. </p></div></div>
+<p class="noindent">Using this knowledge, is it possible to determine the function
+<math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle></math>?
+</p><p class="noindent">Without knowing more information, it is not really possible. There are many functions whose
+divergence and curl are both zero everywhere.
+</p><p class="noindent">Some examples are:
+</p><math display="block"><mtable class="align-star" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><mstyle mathvariant="bold"><mi>F</mi></mstyle></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"><mstyle mathvariant="bold"><mi>F</mi></mstyle></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>y</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>z</mi><mi>x</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>x</mi><mi>y</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"><mstyle mathvariant="bold"><mi>F</mi></mstyle></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="loglike">sin</mi><mo>⁡</mo><mi>x</mi><mo><mi class="loglike">cosh</mi><mo>⁡</mo></mo><mi>y</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mo class="MathClass-bin" stretchy="false">−</mo> <mi class="loglike">cos</mi><mo>⁡</mo><mi>x</mi><mo><mi class="loglike">sinh</mi><mo>⁡</mo></mo><mi>y</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mo class="MathClass-punc" stretchy="false">.</mo></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr></mtable></math>
+<p class="noindent">If we recall <b>Higher Mathematics I</b>, to solve a differential equation with a particular solution, we
+must also be supplied with appropriate <b>boundary conditions</b>.
+</p><p class="noindent">In electrodynamics we typically require the fields go to zero at infinity. With that extra
+information, the <b>Helmholtz theorem</b><span class="margin-block"><span class="margin"><span> <span class="ellipsis">[41]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Vector-Calculus/raster/portrait-helmholtz.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[41]</span><b>Hermann Ludwig Ferdinand von Helmholtz</b>
+<i>(1821  - 1894)</i>
+was a German physicist and physician who made significant contributions in several
+scientific fields, particularly hydrodynamic stability. The Helmholtz Association,
+the largest German association of research institutions, was named in his honour.
+In physics, he is known for his theories on the conservation of energy and on the electrical double layer,
+work in electrodynamics, chemical thermodynamics, and on a mechanical foundation of
+thermodynamics. Although credit is shared with Julius von Mayer, James Joule, and Daniel
+Bernoulli-among others-for the energy conservation principles that eventually led to the first law of
+thermodynamics, he is credited with the first formulation of the energy conservation principle in its
+maximally general form.</span></span></span></span> guarantees the field is uniquely determined by its divergence and
+curl.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.6.2"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.2.6.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.6.2</span> <span class="title"> <a id="x11-530002.6.2"></a>Potentials</span></h4></div>
+</p><p class="noindent">If the curl of a vector field (<math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle></math>)
+vanishes everywhere, then <math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle></math>
+can be written as the <b>gradient of a scalar potential</b>
+(<math display="inline"><mi>V</mi> </math>):
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x11-53001r19"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>F</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-rel" stretchy="false">⟺</mo><mstyle mathvariant="bold"><mi>F</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>V</mi>
+</math></td><td class="eq-no">(2.19)</td></tr></table>
+<p class="noindent"></p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">The minus sign is purely conventional. </p></div></div>
+<p class="noindent">That’s the essential idea of the following theorem: </p><div class="theo-block" id="theo-block-2.6"> <a class="copiable-link" href="#theo-block-2.6"> ¶</a> <span class="theo-upper"> <span class="theo-header"> <b>Theory 2.<a id="x11-53002r6"></a>6: </b> </span> <span class="theo-title"> Zero Curl Fields </span> </span>
+<div class="body">
+<p class="noindent">The following conditions are <span class="alert">equivalent</span>.
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+i. 
+</dt><dd class="enumerate-enumitem"><math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>F</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>
+everywhere,
+</dd>
+<dt class="enumerate-enumitem">
+ii. 
+</dt><dd class="enumerate-enumitem"><math display="inline"><msubsup><mrow><mo>∫</mo>
+</mrow><mrow><mstyle mathvariant="bold"><mi>a</mi></mstyle></mrow><mrow><mstyle mathvariant="bold"><mi>b</mi></mstyle></mrow></msubsup><mstyle mathvariant="bold"><mi>F</mi></mstyle> <mi>·</mi> <mi>d</mi><mstyle mathvariant="bold"><mi>l</mi></mstyle></math>
+is independent of path, for any given end points,
+</dd>
+<dt class="enumerate-enumitem">
+iii. 
+</dt><dd class="enumerate-enumitem"><math display="inline"><mi>∮</mi>
+<mstyle mathvariant="bold"><mi>F</mi></mstyle> <mi>·</mi> <mi>d</mi><mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>
+for any closed loop,
+</dd>
+<dt class="enumerate-enumitem">
+iv. 
+</dt><dd class="enumerate-enumitem"><math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle></math>
+is the gradient of some scalar function: <math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>V</mi> </math>.</dd></dl>
+</div> </div>
+<p class="noindent">The potential is <b>NOT</b> unique as any constant can be added to
+<math display="inline"><mi>V</mi> </math>, since
+this will not affect its gradient.
+</p><p class="noindent">If the divergence of a vector field (<math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle></math>)
+vanishes everywhere, then <math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle></math>
+can be expressed as the curl of a <b>vector potential</b>
+(<math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math>):
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x11-53007r20"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>F</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-rel" stretchy="false">⟺</mo><mstyle mathvariant="bold"><mi>F</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle>
+</math></td><td class="eq-no">(2.20)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">That’s the main conclusion of the following theorem: </p><div class="theo-block" id="theo-block-2.7"> <a class="copiable-link" href="#theo-block-2.7"> ¶</a> <span class="theo-upper"> <span class="theo-header"> <b>Theory 2.<a id="x11-53008r7"></a>7: </b> </span> <span class="theo-title"> Zero Divergence Fields </span> </span>
+<div class="body">
+<p class="noindent">The following conditions are <span class="alert">equivalent</span>:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+i. 
+</dt><dd class="enumerate-enumitem"><math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>F</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>
+everywhere.
+</dd>
+<dt class="enumerate-enumitem">
+ii. 
+</dt><dd class="enumerate-enumitem"><math display="inline"><mi>f</mi><mstyle mathvariant="bold"><mi>F</mi></mstyle> <mi>·</mi> <mi>d</mi><mstyle mathvariant="bold"><mi>a</mi></mstyle></math>
+is independent of surface, for any given boundary line.
+</dd>
+<dt class="enumerate-enumitem">
+iii. 
+</dt><dd class="enumerate-enumitem"><math display="inline"><mi>f</mi><mstyle mathvariant="bold"><mi>F</mi></mstyle> <mi>·</mi> <mi>d</mi><mstyle mathvariant="bold"><mi>a</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>
+for any closed surface.
+</dd>
+<dt class="enumerate-enumitem">
+iv. 
+</dt><dd class="enumerate-enumitem"><math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle></math>
+is the curl of some vector function: <math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle></math>.</dd></dl>
+</div> </div>
+<p class="noindent">The vector potential is <b>NOT</b> unique as the gradient of any scalar function can be added to
+<math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math>
+without affecting the curl, given the curl of a gradient is zero.
+</p><p class="noindent">Incidentally, in all cases, a vector field <math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle></math>
+can be written as the gradient of a scalar plus the curl of a vector. </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mstyle mathvariant="bold">
+<mi>F</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>V</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle>
+</math></td></tr></table>
+<nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="Electrostatics.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="DiracDeltaFunction.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="VectorCalculus.html#VectorFieldTheory.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 7.10.2026, at 8:21.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 2.6: Vector Field Theory</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

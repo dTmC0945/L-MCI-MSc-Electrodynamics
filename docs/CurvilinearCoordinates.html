@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Curvilinear Coordinates</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Electrodynamics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2026.WS</span>
+<span class="header-chapter">Vector Calculus</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="ThePurposeofElectromagnetism.html#x3-20001">The Purpose of Electromagnetism</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-30001.1">Mechanics in Four Different
+Views</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-40001.1.1">Electromagnetism and Relativity</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-50001.1.2">Four Kinds of Forces</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-60001.1.3">Unifying
+Physical Theories</a></span></span><span class="subsectionToc"><span class="number">1.1.4</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-70001.1.4">The Fields of Electrodynamics</a></span></span><span class="subsectionToc"><span class="number">1.1.5</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-80001.1.5">Electric Charge</a></span></span><span class="subsectionToc"><span class="number">1.1.6</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-90001.1.6">Interpreting
+Conservation   of   Charge</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="VectorCalculus.html#x5-100002">Vector   Calculus</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="VectorAlgebra.html#x6-110002.1">Vector   Algebra</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="VectorAlgebra.html#x6-120002.1.1">Vector
+Operations</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="VectorAlgebra.html#x6-170002.1.2">Vector Component Forms</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="VectorAlgebra.html#x6-180002.1.3">Triple Products</a></span></span><span class="subsectionToc"><span class="number">2.1.4</span><span class="title"><a href="VectorAlgebra.html#x6-210002.1.4">Position,
+Displacement, and Separation Vectors</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-220002.2">Differential Calculus</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="DifferentialCalculus.html#x7-230002.2.1">Ordinary
+Derivatives</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-240002.2.2">Gradient</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="DifferentialCalculus.html#x7-250002.2.3">The Del Operator</a></span></span><span class="subsectionToc"><span class="number">2.2.4</span><span class="title"><a href="DifferentialCalculus.html#x7-280002.2.4">Product Rules</a></span></span><span class="subsectionToc"><span class="number">2.2.5</span><span class="title"><a href="DifferentialCalculus.html#x7-290002.2.5">Second
+Derivatives</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="IntegralCalculus.html#x8-350002.3">Integral Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="IntegralCalculus.html#x8-360002.3.1">Line, Surface, and Volume Integrals</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="IntegralCalculus.html#x8-400002.3.2">The
+Fundamental Theorems of Vector Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="IntegralCalculus.html#x8-430002.3.3">The Fundamental Theorem for
+Curls</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="#x9-440002.4">Curvilinear Coordinates</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="#x9-450002.4.1">Spherical Coordinate System</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="#x9-460002.4.2">Cylindrical
+Coordinates</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="DiracDeltaFunction.html#x10-470002.5">Dirac Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="DiracDeltaFunction.html#x10-480002.5.1">A Mathematical Anomaly</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="DiracDeltaFunction.html#x10-490002.5.2">The 1D Dirac
+Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="DiracDeltaFunction.html#x10-500002.5.3">The 3D Dirac Delta Function</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="VectorFieldTheory.html#x11-510002.6">Vector Field Theory</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="VectorFieldTheory.html#x11-520002.6.1">Helmholtz
+Theorem</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="VectorFieldTheory.html#x11-530002.6.2">Potentials</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Electrostatics.html#x12-540003">Electrostatics</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="TheElectricField.html#x13-550003.1">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="TheElectricField.html#x13-560003.1.1">Coulomb’s
+Law</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="TheElectricField.html#x13-570003.1.2">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.3</span><span class="title"><a href="TheElectricField.html#x13-580003.1.3">Continuous Charge Distributions</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-590003.2">Divergence and
+Curl of Electrostatic Fields</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-600003.2.1">Quantification</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-610003.2.2">Divergence of E</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-620003.2.3">Applications
+of Gauss’s Law</a></span></span><span class="subsectionToc"><span class="number">3.2.4</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-630003.2.4">Curl of E</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ElectricPotential.html#x15-640003.3">Electric Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ElectricPotential.html#x15-650003.3.1">Defining the Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ElectricPotential.html#x15-660003.3.2">Some
+Digressions on Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.3</span><span class="title"><a href="ElectricPotential.html#x15-720003.3.3">Poisson’s Equation and Laplace’s Equation</a></span></span><span class="subsectionToc"><span class="number">3.3.4</span><span class="title"><a href="ElectricPotential.html#x15-730003.3.4">The
+Potential of a Localised Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.3.5</span><span class="title"><a href="ElectricPotential.html#x15-740003.3.5">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="WorkandEnergy.html#x16-750003.4">Work and
+Energy</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="WorkandEnergy.html#x16-760003.4.1">To Move a Charge</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="WorkandEnergy.html#x16-770003.4.2">The Energy of a Point Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.3</span><span class="title"><a href="WorkandEnergy.html#x16-780003.4.3">The
+Energy of a Continuous Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.4</span><span class="title"><a href="WorkandEnergy.html#x16-790003.4.4">Comments on Electrostatic
+Energy</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="Conductors.html#x17-830003.5">Conductors</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="Conductors.html#x17-840003.5.1">Properties</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="Conductors.html#x17-850003.5.2">Induced Charges</a></span></span><span class="subsectionToc"><span class="number">3.5.3</span><span class="title"><a href="Conductors.html#x17-860003.5.3">Surface Charge
+and the Force on a Conductor</a></span></span><span class="subsectionToc"><span class="number">3.5.4</span><span class="title"><a href="Conductors.html#x17-870003.5.4">Capacitors</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 7.10.2026, at 8:21.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="DiracDeltaFunction.html">Dirac Delta Function</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="IntegralCalculus.html">Integral Calculus</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="VectorCalculus.html#CurvilinearCoordinates.html">Chapter: Vector
+Calculus</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-2.4"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#section.2.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">2.4</span> <span class="title"> <a id="x9-440002.4"></a>Curvilinear
+Coordinates</span></h3></div>
+<p class="noindent">Curvilinear coordinates are a generalized coordinate system in which coordinate lines can be curved.
+Unlike Cartesian systems that use straight, fixed axes, curvilinear coordinates feature basis vectors
+that change in direction or magnitude from point to point. Here we will have a look at the
+two most important ones which have numerous applications in engineering and physics
+problems.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.4.1"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.2.4.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.4.1</span> <span class="title"> <a id="x9-450002.4.1"></a>Spherical Coordinate System</span></h4></div>
+</p><p class="noindent">It is possible to label a point <math display="inline"><mi>P</mi></math>
+in Cartesian coordinates <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mi>y</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mi>z</mi><mo class="MathClass-close" stretchy="false">)</mo></math>,
+but sometimes it is more convenient to use <b>spherical</b> coordinates
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>r</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>𝜃</mi><mo class="MathClass-punc" stretchy="false">,</mo><mi>ϕ</mi><mo class="MathClass-close" stretchy="false">)</mo></math>;
+<math display="inline"><mi>r</mi></math> is the distance from
+the origin, <math display="inline"><mi>𝜃</mi></math> is called
+the <b>polar angle</b>, and <math display="inline"><mi>ϕ</mi></math>
+is the <b>azimuthal angle</b>. Their relation to Cartesian coordinates can be read from <b>Fig.</b> <a href="#x9-45001r9">2.9</a>a.
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>x</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>r</mi><mi class="loglike">sin</mi><mo>⁡</mo><mi>𝜃</mi><mo><mi class="loglike">cos</mi><mo>⁡</mo></mo><mi>ϕ</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mi>y</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>r</mi><mo><mi class="loglike">sin</mi><mo>⁡</mo></mo><mi>𝜃</mi><mo><mi class="loglike">sin</mi><mo>⁡</mo></mo><mi>ϕ</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mi>z</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>r</mi><mo><mi class="loglike">cos</mi><mo>⁡</mo></mo><mi>𝜃</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent"><b>Fig.</b> <a href="#x9-45001r9">2.9</a>a also shows three unit vectors, <math display="inline"><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>𝜃</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>ϕ</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle></math>,
+pointing in the direction of increase of the corresponding coordinates.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x9-45001r9"></a>
+<figcaption class="caption"><span class="id">Figure 2.9: 
+         </span><span class="content">The two types of coordinate systems in question. (a) Spherical coordinate system (b) Spherical coordinate
+         system.                                                                  </span></figcaption>
+<img alt="PIC" src="figures/Vector-Calculus/figures-4.png" style=""/>
+</figure>
+<p class="noindent">They constitute an <b>orthogonal</b> basis <span class="margin-block">set, <span class="margin-comment"><span class="ellipsis">[38]</span>
+<span class="sidenote">meaning mutually perpendicular.</span></span></span> similar to
+<math display="inline"><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle></math>, and any
+vector <math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math>
+can be expressed in terms of them, in the usual way: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mstyle mathvariant="bold">
+<mi>A</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>A</mi></mrow><mrow><mi>r</mi></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>A</mi></mrow><mrow><mi>𝜃</mi></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>𝜃</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>A</mi></mrow><mrow><mi>ϕ</mi></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>ϕ</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle>
+</math></td></tr></table>
+<p class="noindent">Here, <math display="inline"><msub><mrow><mi>A</mi></mrow><mrow><mi>r</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><msub><mrow><mi>A</mi></mrow><mrow><mi>𝜃</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><msub><mrow><mi>A</mi></mrow><mrow><mi>ϕ</mi></mrow></msub></math>
+are the radial, polar, and azimuthal components of vector
+<math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math>. In
+terms of the Cartesian unit vectors:
+</p><math display="block"><mtable class="align-star" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="loglike">sin</mi><mo>⁡</mo><mi>𝜃</mi><mo><mi class="loglike">cos</mi><mo>⁡</mo></mo><mi>ϕ</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="loglike">sin</mi><mo>⁡</mo><mi>𝜃</mi><mo><mi class="loglike">sin</mi><mo>⁡</mo></mo><mi>ϕ</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>𝜃</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="loglike">cos</mi><mo>⁡</mo><mi>𝜃</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>ϕ</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>𝜃</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="loglike">cos</mi><mo>⁡</mo><mi>𝜃</mi><mo><mi class="loglike">cos</mi><mo>⁡</mo></mo><mi>ϕ</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="loglike">cos</mi><mo>⁡</mo><mi>𝜃</mi><mo><mi class="loglike">sin</mi><mo>⁡</mo></mo><mi>ϕ</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>𝜃</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mo class="MathClass-bin" stretchy="false">−</mo> <mi class="loglike">sin</mi><mo>⁡</mo><mi>𝜃</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>ϕ</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>ϕ</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mo class="MathClass-bin" stretchy="false">−</mo> <mi class="loglike">sin</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="loglike">cos</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>𝜃</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mn>0</mn></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>ϕ</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mo class="MathClass-punc" stretchy="false">.</mo><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr></mtable></math>
+<p class="noindent">An infinitesimal displacement in the <math display="inline"><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle></math>
+direction is simply <math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>r</mi></math>, just as an
+infinitesimal element of length in the <math display="inline"><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle></math>
+direction is <math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi></math>:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle>
+<msub><mrow><mi>l</mi></mrow><mrow><mi>r</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>r</mi>
+</math></td></tr></table>
+<p class="noindent">On the other hand, an infinitesimal element of length in the
+<math display="inline"><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>𝜃</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle></math> direction is
+<b>NOT</b> just <math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>𝜃</mi></math>
+but rather, </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle>
+<msub><mrow><mi>l</mi></mrow><mrow><mi>𝜃</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>r</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>𝜃</mi>
+</math></td></tr></table>
+<p class="noindent">Similarly, an infinitesimal element of length in the
+<math display="inline"><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>ϕ</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle></math>
+direction is </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle>
+<msub><mrow><mi>l</mi></mrow><mrow><mi>ϕ</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>r</mi><mi class="loglike">sin</mi><mo>⁡</mo><mi>𝜃</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>ϕ</mi>
+</math></td></tr></table>
+<p class="noindent">Thus the general infinitesimal displacement <math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle></math>
+is: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle>
+<mstyle mathvariant="bold">
+<mi>l</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>r</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>r</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>𝜃</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>𝜃</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>r</mi><mi class="loglike">sin</mi><mo>⁡</mo><mi>𝜃</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>ϕ</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle>
+</math></td></tr></table>
+<p class="noindent">This plays the role <math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>y</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>z</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle></math>
+plays in Cartesian coordinates. The infinitesimal volume element
+<math display="inline"><mi>d</mi><mi>τ</mi></math>, in
+spherical coordinates, is the product of the three (<span class="alert">3</span>) infinitesimal displacements: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle>
+<mi>τ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mi>l</mi></mrow><mrow><mi>r</mi></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mi>l</mi></mrow><mrow><mi>𝜃</mi></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mi>l</mi></mrow><mrow><mi>ϕ</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup> <mi class="loglike">sin</mi><mo>⁡</mo><mi>𝜃</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>r</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>𝜃</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>ϕ</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">It is not possible to give a general expression for <span class="alert">surface</span> elements
+<math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle></math>, since
+these depend on the orientation of the surface. We simply have to analyse the geometry for any given
+case, which goes for <span class="alert">Cartesian</span> and <span class="alert">curvilinear</span> coordinates. </p></div></div>
+<p class="noindent">Integrating over the surface of a sphere, for instance, makes
+<math display="inline"><mi>r</mi></math> constant,
+whereas <math display="inline"><mi>𝜃</mi></math>
+and <math display="inline"><mi>ϕ</mi></math>
+change: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow>
+<mstyle mathvariant="bold">
+<mi>a</mi></mstyle>
+</mrow><mrow><mn>1</mn></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mi>l</mi></mrow><mrow><mi>𝜃</mi></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mi>l</mi></mrow><mrow><mi>ϕ</mi></mrow></msub><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup> <mi class="loglike">sin</mi><mo>⁡</mo><mi>𝜃</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>𝜃</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>ϕ</mi><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle>
+</math></td></tr></table>
+<p class="noindent">On the other hand, if the surface lies in the <math display="inline"><mi>x</mi><mi>y</mi></math>
+plane, making <math display="inline"><mi>𝜃</mi></math> is
+constant, while <math display="inline"><mi>r</mi></math>
+and <math display="inline"><mi>ϕ</mi></math>
+vary: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow>
+<mstyle mathvariant="bold">
+<mi>a</mi></mstyle>
+</mrow><mrow><mn>2</mn></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mi>l</mi></mrow><mrow><mi>r</mi></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mi>l</mi></mrow><mrow><mi>ϕ</mi></mrow></msub><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>𝜃</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>r</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>r</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>ϕ</mi><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>𝜃</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle>
+</math></td></tr></table>
+<p class="noindent">Finally: <math display="inline"><mi>r</mi></math>
+ranges from <math display="inline"><mn>0</mn></math>
+to <math display="inline"><mi>∞</mi></math>,
+<math display="inline"><mi>ϕ</mi></math> from
+<math display="inline"><mn>0</mn></math> to
+<math display="inline"><mn>2</mn><mi>π</mi></math>, and
+<math display="inline"><mi>𝜃</mi></math> from
+<math display="inline"><mn>0</mn></math> to
+<math display="inline"><mi>π</mi></math>.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.4.2"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.2.4.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.4.2</span> <span class="title"> <a id="x9-460002.4.2"></a>Cylindrical Coordinates</span></h4></div>
+</p><p class="noindent">The cylindrical coordinates <math display="inline"><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>s</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mi>ϕ</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mi>z</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></math>
+of a point <math display="inline"><mi>P</mi></math> are defined in
+<b>Fig.</b> <a href="#x9-45001r9">2.9</a>b. Observe that <math display="inline"><mi>ϕ</mi></math>
+has the same meaning as in spherical coordinates, and
+<math display="inline"><mi>z</mi></math> is the same as
+Cartesian; <math display="inline"><mi>s</mi></math> is the
+distance to <math display="inline"><mi>P</mi></math> from the
+<math display="inline"><mi>z</mi></math> axis, whereas the
+spherical coordinate <math display="inline"><mi>r</mi></math>
+is the distance from the origin. The relation to Cartesian coordinates is: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>x</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>s</mi><mi class="loglike">cos</mi><mo>⁡</mo><mi>ϕ</mi><mspace class="qquad" width="2em"></mspace><mi>y</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>s</mi><mo><mi class="loglike">sin</mi><mo>⁡</mo></mo><mi>ϕ</mi><mspace class="qquad" width="2em"></mspace><mi>z</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>z</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">The unit vectors are:
+</p><math display="block"><mtable class="align-star" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŝ</mi></mstyle></mstyle></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi class="loglike">cos</mi><mo>⁡</mo><mi>ϕ</mi><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><mo> <mi class="loglike">sin</mi><mo>⁡</mo></mo><mi>ϕ</mi><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>ϕ</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mi class="loglike">sin</mi><mo>⁡</mo><mi>ϕ</mi><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><mo> <mi class="loglike">cos</mi><mo>⁡</mo></mo><mi>ϕ</mi><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr></mtable></math>
+<p class="noindent">The infinitesimal displacements are </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle>
+<msub><mrow><mi>l</mi></mrow><mrow><mi>s</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>s</mi><mspace class="qquad" width="2em"></mspace><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mi>l</mi></mrow><mrow><mi>ϕ</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>s</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>ϕ</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mi>l</mi></mrow><mrow><mi>z</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>z</mi>
+</math></td></tr></table>
+<p class="noindent">which makes: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle>
+<mstyle mathvariant="bold">
+<mi>l</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>s</mi><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŝ</mi></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>s</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>ϕ</mi><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>p</mi><mi>h</mi><mi>i</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>z</mi><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">and the volume element is </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle>
+<mi>τ</mi><mi>′</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>s</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>s</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>ϕ</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>z</mi>
+</math></td></tr></table>
+<p class="noindent">The range of <math display="inline"><mi>s</mi></math>
+is <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo> <mi>∞</mi><mo class="MathClass-close" stretchy="false">)</mo></math>,
+<math display="inline"><mi>ϕ</mi></math> is from
+0 to <math display="inline"><mn>2</mn><mi>p</mi><mi>i</mi></math> and z
+is from <math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>∞</mi></math>
+to <math display="inline"> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>∞</mi></math>
+<nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="DiracDeltaFunction.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="IntegralCalculus.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="VectorCalculus.html#CurvilinearCoordinates.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> </p><div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 7.10.2026, at 8:21.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 2.4: Curvilinear Coordinates</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

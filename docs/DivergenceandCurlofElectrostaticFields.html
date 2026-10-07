@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Divergence and Curl of Electrostatic Fields</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Electrodynamics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2026.WS</span>
+<span class="header-chapter">Electrostatics</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="ThePurposeofElectromagnetism.html#x3-20001">The Purpose of Electromagnetism</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-30001.1">Mechanics in Four Different
+Views</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-40001.1.1">Electromagnetism and Relativity</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-50001.1.2">Four Kinds of Forces</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-60001.1.3">Unifying
+Physical Theories</a></span></span><span class="subsectionToc"><span class="number">1.1.4</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-70001.1.4">The Fields of Electrodynamics</a></span></span><span class="subsectionToc"><span class="number">1.1.5</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-80001.1.5">Electric Charge</a></span></span><span class="subsectionToc"><span class="number">1.1.6</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-90001.1.6">Interpreting
+Conservation   of   Charge</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="VectorCalculus.html#x5-100002">Vector   Calculus</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="VectorAlgebra.html#x6-110002.1">Vector   Algebra</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="VectorAlgebra.html#x6-120002.1.1">Vector
+Operations</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="VectorAlgebra.html#x6-170002.1.2">Vector Component Forms</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="VectorAlgebra.html#x6-180002.1.3">Triple Products</a></span></span><span class="subsectionToc"><span class="number">2.1.4</span><span class="title"><a href="VectorAlgebra.html#x6-210002.1.4">Position,
+Displacement, and Separation Vectors</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-220002.2">Differential Calculus</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="DifferentialCalculus.html#x7-230002.2.1">Ordinary
+Derivatives</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-240002.2.2">Gradient</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="DifferentialCalculus.html#x7-250002.2.3">The Del Operator</a></span></span><span class="subsectionToc"><span class="number">2.2.4</span><span class="title"><a href="DifferentialCalculus.html#x7-280002.2.4">Product Rules</a></span></span><span class="subsectionToc"><span class="number">2.2.5</span><span class="title"><a href="DifferentialCalculus.html#x7-290002.2.5">Second
+Derivatives</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="IntegralCalculus.html#x8-350002.3">Integral Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="IntegralCalculus.html#x8-360002.3.1">Line, Surface, and Volume Integrals</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="IntegralCalculus.html#x8-400002.3.2">The
+Fundamental Theorems of Vector Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="IntegralCalculus.html#x8-430002.3.3">The Fundamental Theorem for
+Curls</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="CurvilinearCoordinates.html#x9-440002.4">Curvilinear Coordinates</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="CurvilinearCoordinates.html#x9-450002.4.1">Spherical Coordinate System</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="CurvilinearCoordinates.html#x9-460002.4.2">Cylindrical
+Coordinates</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="DiracDeltaFunction.html#x10-470002.5">Dirac Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="DiracDeltaFunction.html#x10-480002.5.1">A Mathematical Anomaly</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="DiracDeltaFunction.html#x10-490002.5.2">The 1D Dirac
+Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="DiracDeltaFunction.html#x10-500002.5.3">The 3D Dirac Delta Function</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="VectorFieldTheory.html#x11-510002.6">Vector Field Theory</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="VectorFieldTheory.html#x11-520002.6.1">Helmholtz
+Theorem</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="VectorFieldTheory.html#x11-530002.6.2">Potentials</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Electrostatics.html#x12-540003">Electrostatics</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="TheElectricField.html#x13-550003.1">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="TheElectricField.html#x13-560003.1.1">Coulomb’s
+Law</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="TheElectricField.html#x13-570003.1.2">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.3</span><span class="title"><a href="TheElectricField.html#x13-580003.1.3">Continuous Charge Distributions</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="#x14-590003.2">Divergence and
+Curl of Electrostatic Fields</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="#x14-600003.2.1">Quantification</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="#x14-610003.2.2">Divergence of E</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="#x14-620003.2.3">Applications
+of Gauss’s Law</a></span></span><span class="subsectionToc"><span class="number">3.2.4</span><span class="title"><a href="#x14-630003.2.4">Curl of E</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ElectricPotential.html#x15-640003.3">Electric Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ElectricPotential.html#x15-650003.3.1">Defining the Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ElectricPotential.html#x15-660003.3.2">Some
+Digressions on Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.3</span><span class="title"><a href="ElectricPotential.html#x15-720003.3.3">Poisson’s Equation and Laplace’s Equation</a></span></span><span class="subsectionToc"><span class="number">3.3.4</span><span class="title"><a href="ElectricPotential.html#x15-730003.3.4">The
+Potential of a Localised Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.3.5</span><span class="title"><a href="ElectricPotential.html#x15-740003.3.5">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="WorkandEnergy.html#x16-750003.4">Work and
+Energy</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="WorkandEnergy.html#x16-760003.4.1">To Move a Charge</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="WorkandEnergy.html#x16-770003.4.2">The Energy of a Point Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.3</span><span class="title"><a href="WorkandEnergy.html#x16-780003.4.3">The
+Energy of a Continuous Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.4</span><span class="title"><a href="WorkandEnergy.html#x16-790003.4.4">Comments on Electrostatic
+Energy</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="Conductors.html#x17-830003.5">Conductors</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="Conductors.html#x17-840003.5.1">Properties</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="Conductors.html#x17-850003.5.2">Induced Charges</a></span></span><span class="subsectionToc"><span class="number">3.5.3</span><span class="title"><a href="Conductors.html#x17-860003.5.3">Surface Charge
+and the Force on a Conductor</a></span></span><span class="subsectionToc"><span class="number">3.5.4</span><span class="title"><a href="Conductors.html#x17-870003.5.4">Capacitors</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 7.10.2026, at 8:21.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="ElectricPotential.html">Electric Potential</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="TheElectricField.html">The Electric Field</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="Electrostatics.html#DivergenceandCurlofElectrostaticFields.html">Chapter: Electrostatics</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-3.2"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#section.3.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">3.2</span> <span class="title"> <a id="x14-590003.2"></a>Divergence and Curl of
+Electrostatic Fields</span></h3></div>
+<p class="noindent">As we have seen by now, the integrals involved in computing
+<math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math> can be
+complicated and often laborious, even for reasonably simple charge distributions.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Therefore, rest of electrostatics from this point onwards is devoted to assembling methods for <span class="alert">avoiding these integrals</span>.
+</p></div></div>
+<p class="noindent">It all begins with the <span class="alert">divergence</span> and <span class="alert">curl</span> of <math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>. We
+shall calculate the divergence of <math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>
+directly from <span> Eq. (<a href="TheElectricField.html#x13-58005r5">3.5</a>)</span> , but first we should develop an intuitive view of
+<math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>.
+</p><p class="noindent">Let’s begin with the simplest possible case: </p><div class="quote">   A singular point charge
+(<math display="inline"><mi>q</mi></math>),
+situated at the <span class="alert">origin</span>: </div>
+<table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover><msup><mrow>
+<mrow><mo fence="true" form="prefix">(</mo><mrow><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">→</mo></mover>
+</mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle> <mfrac>
+<mrow>
+<mi>q</mi></mrow>
+<mrow><msubsup><mrow>
+<mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></mrow></mfrac><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle>
+</math></td></tr></table>
+<p class="noindent">As the equation tells, the field falls off with a factor of
+<math display="inline"><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><msubsup><mrow><mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></math>, the
+vectors get shorter as you go farther away from the origin and <span class="alert">they always point radially outward</span>. But there is a nicer way to represent
+this field, and that’s to connect up the arrows, to form <b>field lines</b>. The magnitude of the field is
+indicated by the <b>density</b> of the field lines:
+</p>
+<div class="quote"> It’s strong near the center where the field lines are close together, and weak farther out, where they
+are relatively far apart. </div>
+<p class="noindent">In truth, the field-line diagram can be deceptive, as when we draw it on a
+two-dimensional surface, for the density of lines passing through a circle of radius
+<math display="inline"><mi>r</mi></math> is the total number divided
+by the circumference <math display="inline"><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>n</mi><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn><mi>π</mi><mi>r</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></math>,
+which goes at a rate of <math display="inline"><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mi>r</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></math>,
+and not <math display="inline"><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><msubsup><mrow><mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></math>.
+</p><p class="noindent">But if were to imagine the model in three dimensions then the density of lines is the total number divided by the area
+of the sphere <math display="inline"><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>n</mi><mo class="MathClass-bin" stretchy="false">/</mo><mn>4</mn><mi>π</mi><msubsup><mrow><mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup></math>, which <span class="alert">does</span>
+change with a factor of <math display="inline"><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><msubsup><mrow><mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></math>.
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x14-59001r3"></a>
+<figcaption class="caption"><span class="id">Figure 3.3: </span><span class="content">An example of imagining electric field as a collection of lines passing through. Here we can see the flux
+lines (i.e., the arrows) passing through an object.                                               </span></figcaption>
+<img alt="PIC" src="figures/Electrostatics/figures-2.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">Such diagrams are also convenient for representing more complicated fields. Field lines begin on positive
+charges and end on negative ones and they cannot simply terminate in midair, though they may extend
+out to infinity.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">If they were to terminate, the divergence of <math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>
+would not be zero, and that cannot happen in empty space. In addition, field lines can never cross at
+the intersection, </p></div></div>
+<p class="noindent">With all this in mind, it is easy to sketch the field of any simple configuration of point
+charges.
+</p><p class="noindent">In this model, the <span class="alert">flux</span> of <math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>
+through a surface <math display="inline"><mstyle mathvariant="script"><mi>S</mi></mstyle></math>,
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-59002r6"></mstyle><msubsup><mrow>
+<mi mathvariant="normal">Φ</mi>
+</mrow><mrow><mi>E</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow><mo> ∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>S</mi></mstyle></mrow></msub><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(3.6)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent"></p><figure class="float">
+<a id="x14-59003r4"></a>
+<figcaption class="caption"><span class="id">Figure 3.4: 
+         </span><span class="content">An example interaction of tow charges interacting with one another with their field lines visible. Please
+         observe that the field line spread away from the plus charge and are collected by the minus charge.    </span></figcaption>
+<img alt="PIC" src="figures/Electrostatics/figures-3.png" style=""/>
+</figure>
+<p class="noindent">is a measure of <span class="alert">the number of field lines</span> passing through <math display="inline"><mstyle mathvariant="script"><mi>S</mi></mstyle></math>.
+It is worth mentioning here that it is only a representation of the <span class="margin-block"><span class="margin"><span>field lines, <span class="ellipsis">[46]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Electrostatics/raster/portrait-line-of-force.png" style=""/></span><span class="sidenote-text"><span class="ellipsis">[46]</span>In the history of
+physics, a line of force in Michael Faraday’s extended sense is synonymous with James Clerk Maxwell’s
+line of induction. According to J.J. Thomson, Faraday usually discusses lines of force as chains of
+polarized particles in a dielectric, yet sometimes Faraday discusses them as having an existence all their
+own as in stretching across a vacuum. From the 20th century perspective, lines of force are energy
+linkages embedded in a 19th-century field theory that led to more mathematically and experimentally
+sophisticated concepts and theories, including Maxwell’s equations and Albert Einstein’s theory of
+relativity.</span></span></span></span> as the <span class="alert">total</span> number would be infinite. But <span class="alert">for a given sampling rate</span> the flux is <i>proportional</i> to the number of lines
+drawn, because the field strength, is proportional to the density of field lines, and therefore
+<math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></math>,
+is proportional to the number of lines passing through the infinitesimal area
+<math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></math>.
+</p><p class="noindent">This means the flux through any <b>closed</b> surface is a measure of the total mass inside the surface. For
+the field lines that originate on a positive charge must either pass through the surface or else
+terminate on a negative charge inside. On the other hand, a charge <i>outside</i> the surface
+will contribute nothing to the total flux, since its field lines pass in one side and out the
+other.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">This is the basic idea behind Gauss’ law. </p></div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.2.1"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.3.2.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.2.1</span> <span class="title"> <a id="x14-600003.2.1"></a>Quantification</span></h4></div>
+</p><p class="noindent">In the case of a point charge <math display="inline"><mi>q</mi></math> at
+the origin, the flux of <math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math> through
+a spherical surface of radius <math display="inline"><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>r</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></math>
+is: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>∮</mi>
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover>
+<mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ </mo><mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac>
+<mrow>
+<mi>q</mi></mrow>
+<mrow><msubsup><mrow>
+<mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></mrow></mfrac><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mi>·</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow><mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup><mo> <mi class="loglike">sin</mi><mo>⁡</mo></mo><mi>𝜃</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>𝜃</mi><mi>d</mi><mi>ϕ</mi><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><mi>q</mi>
+</math></td></tr></table>
+<p class="noindent">Observe that the radius of the sphere <span class="alert">cancels out</span>, as the surface area goes <b>up</b> as
+<math display="inline"><msubsup><mrow><mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></math>, the field goes
+<i>down</i> as <math display="inline"><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><msubsup><mrow><mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></math>,
+so the product is <b>constant</b>. In terms of the field-line picture, this makes sense, given the
+same number of field lines pass through any sphere centered at the origin, regardless of its
+size.
+</p><p class="noindent">In fact, it doesn’t have to be a sphere. <b>Any</b> closed surface, whatever is shape, would be pierced by the
+same number of field lines. Evidently the flux through any surface enclosing the charge is
+<math display="inline"><mi>q</mi><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></math>.
+</p><p class="noindent">Let’s extend this idea a bit further and assume instead of a single charge at the origin, we have a bunch
+of charges scattered about.
+</p><p class="noindent">According to the principle of superposition, the total field is the vector sum of all the individual
+fields:
+</p>
+<table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover>
+<mo class="MathClass-rel" stretchy="false">=</mo><munderover accent="false" accentunder="false"><mrow><mo> ∑</mo>
+</mrow><mrow><mi>i</mi><mo class="MathClass-rel" stretchy="false">=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow>
+<mi>i</mi></mrow><mrow></mrow></msubsup>
+</math></td></tr></table>
+<p class="noindent">The flux through a surface that encloses them all is: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>∮</mi>
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover>
+<mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msubsup><mrow><mover accent="true"><mrow><mo>∑</mo>
+</mrow><mo accent="true">¯</mo></mover></mrow><mrow><mi>i</mi><mo class="MathClass-rel" stretchy="false">=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></msubsup><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>∮</mi><msubsup><mrow>
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mi>i</mi></mrow><mrow></mrow></msubsup> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo><munderover accent="false" accentunder="false"><mrow><mo> ∑</mo>
+</mrow><mrow><mi>i</mi><mo class="MathClass-rel" stretchy="false">=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><msubsup><mrow><mi>q</mi></mrow><mrow><mi>i</mi></mrow><mrow></mrow></msubsup></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup>
+</math></td></tr></table>
+<p class="noindent">For any closed surface, then, </p><div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-60001r7"></mstyle>
+<mi>∮</mi>
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover>
+<mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><msubsup><mrow><mi>Q</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow><mrow></mrow></msubsup>
+</math></td><td class="eq-no">(3.7)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<div class="sidenote"> <span class="figure">
+<p class="noindent"> <img alt="PIC" src="figures/Electrostatics/figures-4.png" style=""/> <a id="x14-60002r5"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 3.5: </span><span class="content">A visual representation of the gauss’ law.                                           </span></figcaption>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">where <math display="inline"><msubsup><mrow><mi>Q</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow><mrow></mrow></msubsup></math>
+is the total charge enclosed within the surface. This is the quantitative statement of Gauss’s law. As it
+stands, Gauss’s law is an <i>integral</i> equation, but we can easily turn it into a <i>differential</i> one, by applying
+the divergence theorem: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block"><msub><mrow>
+<mi>∮</mi>
+</mrow><mrow><mstyle mathvariant="script"><mi>S</mi></mstyle></mrow></msub>
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover>
+<mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow><mo> ∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>V</mi> </mstyle></mrow></msub><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi>
+</math></td></tr></table>
+<p class="noindent">Rewriting <math display="inline"><msubsup><mrow><mi>Q</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow><mrow></mrow></msubsup></math> in terms
+of the charge density <math display="inline"><mi>ρ</mi></math>,
+we have
+</p>
+<table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msubsup><mrow><mi>Q</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo><msubsup><mrow><mo> ∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>V</mi> </mstyle></mrow><mrow></mrow></msubsup><mi>ρ</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi>
+</math></td></tr></table>
+<p class="noindent">So Gauss’s law becomes
+</p>
+<table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mo>∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>V</mi> </mstyle></mrow></msub><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow><mo> ∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>V</mi> </mstyle></mrow></msub><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac>
+<mrow>
+<mi>ρ</mi></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi>
+</math></td></tr></table>
+<p class="noindent">And since this holds for <i>any</i> volume, the integrands must be equal: </p><div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-60003r8"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><mi>ρ</mi>
+</math></td><td class="eq-no">(3.8)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent"><span> Eq. (<a href="#x14-60003r8">3.8</a>)</span> carries the same message as <span> Eq. (<a href="#x14-60001r7">3.7</a>)</span>  as it is <b>Gauss’s law in differential form</b>. The
+differential version is idler, but the integral form has the advantage in that it accommodates point, line,
+and surface charges more naturally.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.2.2"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.3.2.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.2.2</span> <span class="title"> <a id="x14-610003.2.2"></a>Divergence of E</span></h4></div>
+</p><p class="noindent">Let’s go back, now, and calculate the divergence of
+<math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>
+directly from <span> Eq. (<a href="TheElectricField.html#x13-58005r5">3.5</a>)</span> :
+</p>
+<table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover><msup><mrow>
+<mrow><mo fence="true" form="prefix">(</mo><mrow><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">→</mo></mover>
+</mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle><munder class="msub"><mrow><mo> ∫
+ </mo></mrow><mrow><mstyle class="text"><mtext>all space</mtext></mstyle></mrow></munder> <mfrac><mrow><msup><mrow><mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mstyle mathvariant="bold"><mi>r</mi></mstyle><mi>}</mi></mrow>
+<mrow><msup><mrow>
+<mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mstyle mathvariant="sans-serif"><mi>r</mi></mstyle><msup><mrow><mi>}</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mi>ρ</mi><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><msup><mrow><mstyle mathvariant="bold"><mi>r</mi></mstyle></mrow><mrow><mi>′</mi></mrow></msup></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msup><mrow><mi>τ</mi></mrow><mrow><mi>′</mi></mrow></msup>
+</math></td></tr></table>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">While the interation is originally defined over the volume occupied by the charge, it is much easier to encompass
+all the space as <math display="inline"><mi>ρ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>
+outside the volume regardless. </p></div></div>
+<p class="noindent">Noting that the <math display="inline"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">→</mo></mover></math>-dependence
+of the aforementioned equation is contained in the following: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msup><mrow><mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mstyle mathvariant="sans-serif"><mi>r</mi></mstyle><mi>}</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-bin" stretchy="false">−</mo><msup><mrow> <mstyle mathvariant="bold"><mi>r</mi></mstyle></mrow><mrow><mi>′</mi></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>where we have</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle><mo> ∫
+ </mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><msup><mrow><mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mover accent="true"><mrow><mstyle mathvariant="bold"><mi>r</mi></mstyle></mrow><mo accent="true">^</mo></mover><mi>}</mi></mrow>
+<mrow><msup><mrow>
+<mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mstyle mathvariant="sans-serif"><mi>r</mi></mstyle><msup><mrow><mi>}</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mi>ρ</mi><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><msup><mrow><mstyle mathvariant="bold"><mi>r</mi></mstyle></mrow><mrow><mi>′</mi></mrow></msup></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msup><mrow><mi>τ</mi></mrow><mrow><mi>′</mi></mrow></msup>
+</math></td></tr></table>
+<p class="noindent">This is precisely the divergence we calculated in the previous chapter regarding the divergence anomaly.
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block"><msup><mrow>
+<mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><msup><mrow><mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mover accent="true"><mrow><mstyle mathvariant="bold"><mi>r</mi></mstyle></mrow><mo accent="true">^</mo></mover><mi>}</mi></mrow>
+<mrow><msup><mrow>
+<mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mstyle mathvariant="sans-serif"><mi>r</mi></mstyle><msup><mrow><mi>}</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac>
+</mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>4</mn><mi>π</mi><msubsup><mrow><mi>δ</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msup><mrow><mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mstyle mathvariant="bold"><mi>r</mi></mstyle><mi>}</mi></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup>
+</math></td></tr></table>
+<p class="noindent">Using this relation we can arrive at the following: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle><mo> ∫
+ </mo><mn>4</mn><mi>π</mi><msubsup><mrow><mi>δ</mi></mrow><mrow></mrow><mrow><mn>3</mn></mrow></msubsup><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-bin" stretchy="false">−</mo><msup><mrow> <mstyle mathvariant="bold"><mi>r</mi></mstyle></mrow><mrow><mi>′</mi></mrow></msup></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mi>ρ</mi><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><msup><mrow><mstyle mathvariant="bold"><mi>r</mi></mstyle></mrow><mrow><mi>′</mi></mrow></msup></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msup><mrow><mi>τ</mi></mrow><mrow><mi>′</mi></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><mi>ρ</mi><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td></tr></table>
+<p class="noindent">which is Gauss’s law in differential form given in <span> Eq. (<a href="#x14-60003r8">3.8</a>)</span> . To recover the integral form in <span> Eq. (<a href="#x14-60001r7">3.7</a>)</span> ,
+we run the previous argument <b>in reverse</b>, integrate over a volume and apply the divergence
+theorem:
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-61001r9"></mstyle>
+<munder class="msub"><mrow><mo>∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>V</mi> </mstyle></mrow></munder><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi> <mo class="MathClass-rel" stretchy="false">=</mo><munder class="msub"><mrow> <mi>∮</mi>
+</mrow><mrow><mstyle mathvariant="script"><mi>S</mi></mstyle></mrow></munder><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><munder class="msub"><mrow><mo> ∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>V</mi> </mstyle></mrow></munder><mi>ρ</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><msubsup><mrow><mi>Q</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow><mrow></mrow></msubsup><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(3.9)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.2.3"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.3.2.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.2.3</span> <span class="title"> <a id="x14-620003.2.3"></a>Applications of Gauss’s Law</span></h4></div>
+</p><p class="noindent">Let us look at some of the use cases of Gauss’s law, in integral form. When the problem allows
+symmetry, it allows us the <span class="alert">quickest</span> and <span class="alert">easiest</span> way of computing electric fields. Let’s understand this statement with
+a series of examples.
+</p>
+<a id="x14-62001r2"></a>
+<div class="exer-block"> <span class="exer-upper"> <span class="exer-header"> <b><b>Exercise</b> 3.2: </b> </span> <span class="exer-title"> A Gaussian Sphere </span> </span> <div class="body">
+<p class="noindent">Find the field outside a uniformly charged solid sphere of radius
+<math display="inline"><mi>R</mi></math> and total
+charge <math display="inline"><mi>q</mi></math>.
+</p>
+<hr/> Imagine a spherical surface at radius <math display="inline"><mi>r</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mi>R</mi></math>,
+shown below. This is called a Gaussian surface.
+<p class="noindent"></p><figure class="float">
+<p class="noindent"> <img alt="PIC" src="/Users/danielmcguiness/GitHub/MCI-Source-Files/SRC-MSc-Electrodynamics/Lecture-Documents/Tutorial-Book/figures/Electrostatics/figures-2.png" style=""/> <a id="x14-62002r6"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 3.6: </span><span class="content">An imaginary Gaussian sphere.                                                 </span></figcaption>
+</figure>
+<p class="noindent">Gauss’s law says that: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block"><munder class="msub"><mrow>
+<mi>∮</mi>
+</mrow><mrow><mstyle mathvariant="script"><mi>S</mi></mstyle></mrow></munder>
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover>
+<mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><msubsup><mrow><mi>Q</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow><mrow></mrow></msubsup><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td></tr></table>
+<p class="noindent">For this case it is <math display="inline"><msubsup><mrow><mi>Q</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>q</mi></math>.
+At first glance this doesn’t seem to get us very far, as the quantity we want (E) is buried
+inside the surface integral. Luckily, symmetry allows us to extract E from under the integral
+sign: E certainly points radially outward,5 as does da, so we can drop the dot product,
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<munder class="msub"><mrow><mo>∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>S</mi></mstyle></mrow></munder><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo><munder class="msub"><mrow><mo> ∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>S</mi></mstyle></mrow></munder><mrow class="mathinner"><mspace class="negthinspace" width="-0.17em"></mspace> <mrow><mo fence="true" form="prefix">|</mo><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>a</mi>
+</math></td></tr></table>
+<p class="noindent">and the magnitude of E is constant over the Gaussian surface, so it comes outside the integral
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<munder class="msub"><mrow><mo>∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>S</mi></mstyle></mrow></munder><mrow class="mathinner"><mspace class="negthinspace" width="-0.17em"></mspace> <mrow><mo fence="true" form="prefix">|</mo><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>a</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mrow class="mathinner"><mspace class="negthinspace" width="-0.17em"></mspace> <mrow><mo fence="true" form="prefix">|</mo><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow><munder class="msub"><mrow><mo>∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>S</mi></mstyle></mrow></munder><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>a</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mrow class="mathinner"><mspace class="negthinspace" width="-0.17em"></mspace> <mrow><mo fence="true" form="prefix">|</mo><mrow><mi>E</mi></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow><mn>4</mn><mi>π</mi><msubsup><mrow><mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup>
+</math></td></tr></table>
+<p class="noindent">Therefore: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mrow class="mathinner">
+<mspace class="negthinspace" width="-0.17em"></mspace>
+<mrow><mo fence="true" form="prefix">|</mo><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover>
+</mrow><mo fence="true" form="postfix">|</mo></mrow></mrow><mn>4</mn><mi>π</mi><msubsup><mrow><mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><mi>q</mi><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>or</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle> <mfrac>
+<mrow>
+<mi>q</mi></mrow>
+<mrow><msubsup><mrow>
+<mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></mrow></mfrac><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mspace class="quad" width="1em"></mspace><mo class="MathClass-ord">■</mo>
+</math></td></tr></table>
+<p class="noindent"></p></div> </div>
+<p class="noindent">Gauss’s law is always <span class="alert">true</span>, however it may <b>NOT</b> always be useful. If
+<math display="inline"><mi>ρ</mi></math>
+had not been <span class="margin-block">uniform, <span class="margin-comment"><span class="ellipsis">[47]</span>
+<span class="sidenote">or spherically symmetrical.</span></span></span> or if we had chosen some
+other shape for our Gaussian surface, it would still have been true that the flux of
+<math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math> is
+<math display="inline"><mi>q</mi><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></math>, but
+<math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math> would not have pointed
+in the same direction as <math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></math>,
+and its magnitude would not have been constant over the surface, and without that we cannot get
+<math display="inline"><mrow class="mathinner"><mspace class="negthinspace" width="-0.17em"></mspace> <mrow><mo fence="true" form="prefix">|</mo><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow></math> outside
+of the integral. </p><div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Symmetry is crucial to this application of Gauss’s law. </p></div></div>
+<p class="noindent">There are three (<span class="alert">3</span>) kinds of symmetry that work: </p>
+<dl class="description"><dt class="description"><a id="x14-62003x3.2.3"></a>
+<span style="color:#42395F;">Spherical</span>
+</dt><dd class="description">
+<p class="noindent"> it is a concentric sphere,
+</p>
+</dd>
+<dt class="description"><a id="x14-62004x3.2.3"></a>
+<span style="color:#42395F;">Cylindrical</span>
+</dt><dd class="description">
+<p class="noindent"> it is a coaxial cylinder,
+</p>
+</dd>
+<dt class="description"><a id="x14-62005x3.2.3"></a>
+<span style="color:#42395F;">Plane</span>
+</dt><dd class="description">
+<p class="noindent"> A pillbox which straddles the surface.</p></dd></dl>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">While cylindrical and plane symmetries technically require infinitely long cylinders, and planes are
+assumed to extend to infinity, we shall often use them to get approximate answers for “long” cylinders
+or “large” planes, at points far from the edges. </p></div></div>
+<div class="sidenote"> <span class="figure">
+<p class="noindent"> <img alt="PIC" src="figures/Electrostatics/figures-9.png" style=""/> <a id="x14-62006r7"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 3.7: </span><span class="content"> </span></figcaption>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">Although the direct use of Gauss’s law to compute electric fields is limited to cases of spherical,
+cylindrical, and planar symmetry, we can put together <b>combinations</b> of objects possessing such
+symmetry, even though the arrangement as a whole is not symmetrical. For example, invoking the
+principle of superposition, we could find the field in the vicinity of two uniformly charged parallel
+cylinders, or a sphere near an infinite charged plane.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.2.4"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.3.2.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.2.4</span> <span class="title"> <a id="x14-630003.2.4"></a>Curl of E</span></h4></div>
+</p><p class="noindent">It is time to calculate the curl of <math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>,
+as we did the divergence. As usual, to derive this behaviour, we shall use the simplest case: </p><div class="quote">  a point
+charge at the origin. </div>
+<p class="noindent">In this case we write down: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle> <mfrac>
+<mrow>
+<mi>q</mi></mrow>
+<mrow><msubsup><mrow>
+<mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></mrow></mfrac><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">To get a feel of the curve of <math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>,
+let us calculate the line integral of this field from some point
+<math display="inline"><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></math> to some
+other point <math display="inline"><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">→</mo></mover></math>:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msubsup><mrow><mo>∫
+ </mo></mrow><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">→</mo></mover></mrow></msubsup><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>l</mi></mrow><mo accent="true">→</mo></mover>
+</math></td></tr></table>
+<p class="noindent">As we are working in spherical coordinates, <math display="inline"><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>r</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>r</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>r</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>𝜃</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>𝜃</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>r</mi><mi class="loglike">sin</mi><mo>⁡</mo><mi>𝜃</mi><mi>d</mi><mi>ϕ</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>ϕ</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle></math>,
+so </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover>
+<mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>l</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle> <mfrac>
+<mrow>
+<mi>q</mi></mrow>
+<mrow><msubsup><mrow>
+<mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></mrow></mfrac><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>r</mi>
+</math></td></tr></table>
+<p class="noindent">Therefore </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msubsup><mrow><mo>∫
+ </mo></mrow><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">→</mo></mover></mrow></msubsup><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>l</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle><msubsup><mrow><mo> ∫
+ </mo></mrow><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></msubsup> <mfrac><mrow><mi>q</mi></mrow>
+<mrow><msubsup><mrow>
+<mi>r</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></mrow></mfrac><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>r</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle><mfrac>
+<mrow>
+<mi>q</mi></mrow>
+<mrow>
+<mi>r</mi></mrow></mfrac><mo class="MathClass-close" fence="true" mathsize="2.45em">|</mo><msubsup><mrow></mrow><mrow><msubsup><mrow><mi>r</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup></mrow><mrow><msubsup><mrow><mi>r</mi></mrow><mrow><mi>b</mi></mrow><mrow></mrow></msubsup>
+</mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac>
+<mrow>
+<mi>q</mi></mrow>
+<mrow><msubsup><mrow>
+<mi>r</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">−</mo> <mfrac><mrow><mi>q</mi></mrow>
+<mrow><msubsup><mrow>
+<mi>r</mi></mrow><mrow><mi>b</mi></mrow><mrow></mrow></msubsup></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup>
+</math></td></tr></table>
+<p class="noindent">where <math display="inline"><msubsup><mrow><mi>r</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup></math> is the distance from
+the origin to the point <math display="inline"><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></math>
+(i.e., <math display="inline"><msubsup><mrow><mi>r</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mrow class="mathinner"><mspace class="negthinspace" width="-0.17em"></mspace> <mrow><mo fence="true" form="prefix">|</mo><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle mathvariant="script"><mi>O</mi></mstyle></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow></math>) and
+<math display="inline"><msubsup><mrow><mi>r</mi></mrow><mrow><mi>b</mi></mrow><mrow></mrow></msubsup></math> is the
+distance to <math display="inline"><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">→</mo></mover></math>
+(i.e., <math display="inline"><msubsup><mrow><mi>r</mi></mrow><mrow><mi>b</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mrow class="mathinner"><mspace class="negthinspace" width="-0.17em"></mspace> <mrow><mo fence="true" form="prefix">|</mo><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle mathvariant="script"><mi>O</mi></mstyle></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow></math>).
+The integral around a closed path is evidently zero (for then
+<math display="inline"><msubsup><mrow><mi>r</mi></mrow><mrow><mi>a</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>r</mi></mrow><mrow><mi>b</mi></mrow><mrow></mrow></msubsup></math>):
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-63001r10"></mstyle>
+<mi>∮</mi>
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover>
+<mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>l</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn>
+</math></td><td class="eq-no">(3.10)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">And through the use of <span class="alert">Stokes' Theorem</span> one could arrive its differential form:
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-63002r11"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn>
+</math></td><td class="eq-no">(3.11)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">Now, we proved <span> Eq. (<a href="#x14-63001r10">3.10</a>)</span>  and <span> Eq. (<a href="#x14-63002r11">3.11</a>)</span>  only for the field of a single point charge at
+the origin, but these results make no reference to what is, a perfectly arbitrary choice of
+coordinates.
+</p><p class="noindent">They hold no matter where the charge is located. Moreover, if we have many charges, the
+principle of superposition states that the total field is a vector sum of their individual fields:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover>
+<mo class="MathClass-rel" stretchy="false">=</mo><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>1</mn></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>…</mi>
+</math></td></tr></table>
+<p class="noindent">which means </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>1</mn></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>…</mi><mspace class="thinspace" width="0.17em"></mspace></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td></tr></table>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Therefore, <span> Eq. (<a href="#x14-63001r10">3.10</a>)</span>  and <span> Eq. (<a href="#x14-63002r11">3.11</a>)</span>  hold for any static charge distribution. </p></div></div>
+<nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="ElectricPotential.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="TheElectricField.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="Electrostatics.html#DivergenceandCurlofElectrostaticFields.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 7.10.2026, at 8:21.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 3.2: Divergence and Curl of Electrostatic Fields</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

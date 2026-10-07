@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Integral Calculus</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Electrodynamics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2026.WS</span>
+<span class="header-chapter">Vector Calculus</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="ThePurposeofElectromagnetism.html#x3-20001">The Purpose of Electromagnetism</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-30001.1">Mechanics in Four Different
+Views</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-40001.1.1">Electromagnetism and Relativity</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-50001.1.2">Four Kinds of Forces</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-60001.1.3">Unifying
+Physical Theories</a></span></span><span class="subsectionToc"><span class="number">1.1.4</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-70001.1.4">The Fields of Electrodynamics</a></span></span><span class="subsectionToc"><span class="number">1.1.5</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-80001.1.5">Electric Charge</a></span></span><span class="subsectionToc"><span class="number">1.1.6</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-90001.1.6">Interpreting
+Conservation   of   Charge</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="VectorCalculus.html#x5-100002">Vector   Calculus</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="VectorAlgebra.html#x6-110002.1">Vector   Algebra</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="VectorAlgebra.html#x6-120002.1.1">Vector
+Operations</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="VectorAlgebra.html#x6-170002.1.2">Vector Component Forms</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="VectorAlgebra.html#x6-180002.1.3">Triple Products</a></span></span><span class="subsectionToc"><span class="number">2.1.4</span><span class="title"><a href="VectorAlgebra.html#x6-210002.1.4">Position,
+Displacement, and Separation Vectors</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-220002.2">Differential Calculus</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="DifferentialCalculus.html#x7-230002.2.1">Ordinary
+Derivatives</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-240002.2.2">Gradient</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="DifferentialCalculus.html#x7-250002.2.3">The Del Operator</a></span></span><span class="subsectionToc"><span class="number">2.2.4</span><span class="title"><a href="DifferentialCalculus.html#x7-280002.2.4">Product Rules</a></span></span><span class="subsectionToc"><span class="number">2.2.5</span><span class="title"><a href="DifferentialCalculus.html#x7-290002.2.5">Second
+Derivatives</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="#x8-350002.3">Integral Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="#x8-360002.3.1">Line, Surface, and Volume Integrals</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="#x8-400002.3.2">The
+Fundamental Theorems of Vector Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="#x8-430002.3.3">The Fundamental Theorem for
+Curls</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="CurvilinearCoordinates.html#x9-440002.4">Curvilinear Coordinates</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="CurvilinearCoordinates.html#x9-450002.4.1">Spherical Coordinate System</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="CurvilinearCoordinates.html#x9-460002.4.2">Cylindrical
+Coordinates</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="DiracDeltaFunction.html#x10-470002.5">Dirac Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="DiracDeltaFunction.html#x10-480002.5.1">A Mathematical Anomaly</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="DiracDeltaFunction.html#x10-490002.5.2">The 1D Dirac
+Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="DiracDeltaFunction.html#x10-500002.5.3">The 3D Dirac Delta Function</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="VectorFieldTheory.html#x11-510002.6">Vector Field Theory</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="VectorFieldTheory.html#x11-520002.6.1">Helmholtz
+Theorem</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="VectorFieldTheory.html#x11-530002.6.2">Potentials</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Electrostatics.html#x12-540003">Electrostatics</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="TheElectricField.html#x13-550003.1">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="TheElectricField.html#x13-560003.1.1">Coulomb’s
+Law</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="TheElectricField.html#x13-570003.1.2">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.3</span><span class="title"><a href="TheElectricField.html#x13-580003.1.3">Continuous Charge Distributions</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-590003.2">Divergence and
+Curl of Electrostatic Fields</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-600003.2.1">Quantification</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-610003.2.2">Divergence of E</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-620003.2.3">Applications
+of Gauss’s Law</a></span></span><span class="subsectionToc"><span class="number">3.2.4</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-630003.2.4">Curl of E</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ElectricPotential.html#x15-640003.3">Electric Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ElectricPotential.html#x15-650003.3.1">Defining the Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ElectricPotential.html#x15-660003.3.2">Some
+Digressions on Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.3</span><span class="title"><a href="ElectricPotential.html#x15-720003.3.3">Poisson’s Equation and Laplace’s Equation</a></span></span><span class="subsectionToc"><span class="number">3.3.4</span><span class="title"><a href="ElectricPotential.html#x15-730003.3.4">The
+Potential of a Localised Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.3.5</span><span class="title"><a href="ElectricPotential.html#x15-740003.3.5">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="WorkandEnergy.html#x16-750003.4">Work and
+Energy</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="WorkandEnergy.html#x16-760003.4.1">To Move a Charge</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="WorkandEnergy.html#x16-770003.4.2">The Energy of a Point Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.3</span><span class="title"><a href="WorkandEnergy.html#x16-780003.4.3">The
+Energy of a Continuous Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.4</span><span class="title"><a href="WorkandEnergy.html#x16-790003.4.4">Comments on Electrostatic
+Energy</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="Conductors.html#x17-830003.5">Conductors</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="Conductors.html#x17-840003.5.1">Properties</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="Conductors.html#x17-850003.5.2">Induced Charges</a></span></span><span class="subsectionToc"><span class="number">3.5.3</span><span class="title"><a href="Conductors.html#x17-860003.5.3">Surface Charge
+and the Force on a Conductor</a></span></span><span class="subsectionToc"><span class="number">3.5.4</span><span class="title"><a href="Conductors.html#x17-870003.5.4">Capacitors</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 7.10.2026, at 8:21.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="CurvilinearCoordinates.html">Curvilinear Coordinates</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="DifferentialCalculus.html">Differential Calculus</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="VectorCalculus.html#IntegralCalculus.html">Chapter: Vector
+Calculus</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-2.3"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#section.2.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">2.3</span> <span class="title"> <a id="x8-350002.3"></a>Integral Calculus</span></h3></div>
+<p class="noindent">Integral calculus is a branch of mathematics focused on integration. It is the inverse of differentiation
+and is primarily used to calculate the accumulation of quantities, find the area under curves, determine
+volumes of 3D objects, and solve real-world problems in physics and engineering. As with previous
+section, this is just an overview. For a detailed look, please consult <b>M.Sc Higher Mathematics</b>
+chapter of the same name.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.3.1"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.2.3.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.3.1</span> <span class="title"> <a id="x8-360002.3.1"></a>Line, Surface, and Volume Integrals</span></h4></div>
+</p><p class="noindent">In electrodynamics, we encounter several different kinds of integrals, among which the most important
+are <b>line</b> (or <b>path</b>) <b>integrals</b>, <b>surface integrals</b> (or <b>flux</b>), and <b>volume integrals</b>, which will be the
+focus of this section.
+</p>
+<p class="noindent"><span class="paragraphHead"> <a id="x8-37000"></a>Line Integrals</span>
+Has an expression of the form: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msubsup><mrow><mo>∫
+ </mo></mrow><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></msubsup><mstyle mathvariant="bold"><mi>v</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle>
+</math></td></tr></table>
+<p class="noindent">where <math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math> is a
+vector function, <math display="inline"><mi>d</mi><mstyle mathvariant="bold"><mi>l</mi></mstyle></math>
+is the infinitesimal displacement vector, and the integral is to be carried out along a prescribed path
+<math display="inline"><mstyle mathvariant="script"><mi>P</mi></mstyle></math> from point
+<math display="inline"><mi>a</mi></math> to point
+<math display="inline"><mi>b</mi></math>. If the path forms a
+closed <span class="margin-block">loop, <span class="margin-comment"><span class="ellipsis">[27]</span>
+<span class="sidenote">i.e., if <math display="inline"><mstyle mathvariant="bold"><mi>b</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>a</mi></mstyle></math>.</span></span></span>
+</p><p class="noindent">We put a circle on the integral sign: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>∮</mi>
+<mstyle mathvariant="bold">
+<mi>v</mi></mstyle>
+<mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle>
+</math></td></tr></table>
+<div class="sidenote"> <span class="figure">
+<a id="x8-37001r6"></a>
+<figcaption class="caption"><span class="id">Figure 2.6: </span><span class="content">The  method  in  which  line  integral  is  calculated.  At  each  point  the  dot  product  of  the  vector
+(<math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math>)
+is taken with the length vector (<math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle></math>)
+which is always tangential to the point in which the integration is taken. 
+</span></figcaption>
+<img alt="PIC" src="figures/Vector-Calculus/figures-10.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">At each point on the path, we take the dot product of
+<math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math> (evaluated at that point)
+with the displacement <math display="inline"><mi>d</mi><mstyle mathvariant="bold"><mi>l</mi></mstyle></math>
+to the next point on the path.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">A good example of a line integral is the work done by a force
+<math display="inline"><mstyle mathvariant="bold"><mi>F</mi></mstyle></math>:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ </mo><mstyle mathvariant="bold"><mi>F</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle>
+</math></td></tr></table>
+</div></div>
+<p class="noindent">Ordinarily, the value of a line integral depends critically on the path taken from
+<math display="inline"><mstyle mathvariant="bold"><mi>a</mi></mstyle></math> to
+<math display="inline"><mstyle mathvariant="bold"><mi>b</mi></mstyle></math>, but
+there is an important special class of vector functions for which the line integral is independent of path
+and is determined entirely by the end points.
+</p><p class="noindent">It will be our business in due course to characterise this special class of vectors.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">A force which has this property is called <b>conservative</b><span class="margin-block">. <span class="margin-comment"><span class="ellipsis">[28]</span>
+<span class="sidenote">A conservative vector field is a
+vector field that is the gradient of some function <span class="cite"><a class="cite-show" href="#w3-20001">[†-1]</a><span class="cite-detail"> <a id="x8-37002"></a>Marsden, J. E. &amp; Tromba, A. Vector
+calculus (Macmillan, 2003)</span></span> and has the property that its line integral is <b>path independent</b>.</span></span></span>
+</p></div></div>
+<p class="noindent"><span class="paragraphHead"> <a id="x8-38000"></a>Surface Integrals</span>
+</p>
+<div class="sidenote"> <span class="figure">
+<p class="noindent"> <img alt="PIC" src="figures/Vector-Calculus/figures-11.png" style=""/> <a id="x8-38001r7"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 2.7: </span><span class="content">An visual description of the surface integral.                                         </span></figcaption>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">A surface integral is an expression of the form: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mo>∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>S</mi></mstyle></mrow></msub><mstyle mathvariant="bold"><mi>v</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle>
+</math></td></tr></table>
+<p class="noindent">where <math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math>
+is a vector function, and the integral is over a specified surface
+<math display="inline"><mstyle mathvariant="script"><mi>S</mi></mstyle></math>. Here
+<math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>a</mi></math> is an
+infinitesimal patch of area, with direction <span class="alert">perpendicular to the surface</span>. There are, two (<span class="alert">2</span>) directions perpendicular to any surface, so
+the <span class="alert">sign</span> of a surface integral is intrinsically ambiguous.
+</p><p class="noindent">If the surface is <span class="margin-block">closed, <span class="margin-comment"><span class="ellipsis">[29]</span>
+<span class="sidenote">imagine it forming a balloon.</span></span></span> we put a circle on the integral sign:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>∮</mi>
+<mstyle mathvariant="bold">
+<mi>v</mi></mstyle>
+<mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle>
+</math></td></tr></table>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Tradition dictates that <span class="alert">outward</span> is positive, but for open surfaces it’s arbitrary. </p></div></div>
+<p class="noindent">As an example, if <math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math>
+describes the flow of a <span class="margin-block">fluid, <span class="margin-comment"><span class="ellipsis">[30]</span>
+<span class="sidenote">Measured in mass per unit area per unit time.</span></span></span> then
+<math display="inline"><mo>∫</mo>
+<mstyle mathvariant="bold"><mi>v</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle></math>
+represents the total mass per unit time passing through the surface.
+</p><p class="noindent">Ordinarily, the value of a surface integral depends on the particular surface chosen, but
+there is a special class of vector functions for which it is <span class="alert">independent</span> of the surface and is determined
+entirely by the boundary line. An important task will be to characterise this special class of
+functions.
+</p>
+<p class="noindent"><span class="paragraphHead"> <a id="x8-39000"></a>Volume Integrals</span>
+A volume integral is an expression of the form: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mo>∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>V</mi> </mstyle></mrow></msub><mi>T</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi>
+</math></td></tr></table>
+<p class="noindent">where <math display="inline"><mi>T</mi></math> is a scalar
+function and <math display="inline"><mi>d</mi><mi>τ</mi></math>
+is an infinitesimal volume element. In Cartesian coordinates, </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle>
+<mi>τ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>y</mi><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>z</mi>
+</math></td></tr></table>
+<p class="noindent">As an example, if <math display="inline"><mi>T</mi></math>
+is the density of a <span class="margin-block">substance, <span class="margin-comment"><span class="ellipsis">[31]</span>
+<span class="sidenote">This might vary from point to point.</span></span></span> then the volume integral would give
+the total mass.
+</p><p class="noindent">Occasionally we shall encounter volume integrals of vector functions: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mo>∫
+ </mo><mstyle mathvariant="bold"><mi>v</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ </mo><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>v</mi></mrow><mrow><mi>x</mi></mrow></msub><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>y</mi></mrow></msub><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>z</mi></mrow></msub><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mo>∫
+ </mo><msub><mrow><mi>v</mi></mrow><mrow><mi>x</mi></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle><mo>∫
+ </mo><msub><mrow><mi>v</mi></mrow><mrow><mi>y</mi></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle><mo>∫
+ </mo><msub><mrow><mi>v</mi></mrow><mrow><mi>z</mi></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">As the unit vectors (<math display="inline"><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle></math>)
+are constants, they can be taken outside the integral. </p></div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.3.2"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.2.3.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.3.2</span> <span class="title"> <a id="x8-400002.3.2"></a>The Fundamental Theorems of Vector Calculus</span></h4></div>
+</p><p class="noindent">Assume <math display="inline"><mi>f</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">)</mo></math> is
+a function of one (<span class="alert">1</span>) variable. Based on this, the fundamental theorem of calculus says:
+</p>
+<div class="theo-block" id="theo-block-2.1"> <a class="copiable-link" href="#theo-block-2.1"> ¶</a> <span class="theo-upper"> <span class="theo-header"> <b>Theory 2.<a id="x8-40001r1"></a>1: </b> </span> <span class="theo-title"> Calculus Theorem </span> </span> <div class="body">
+<p class="noindent">The <span class="alert">integral</span> of a <span class="alert">derivative</span> over some <span class="alert">region</span> is given by the <span class="alert">value of the function</span> at the end points (<span class="alert">boundaries</span>) </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msubsup><mrow><mo>∫
+ </mo></mrow><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></msubsup><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow> <mstyle class="text"><mtext>d</mtext></mstyle><mo class="MathClass-open" stretchy="false">[</mo>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>f</mi> </mrow></mfrac></mstyle><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-open" stretchy="false">[</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">]</mo></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>x</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>f</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>a</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>or</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mspace class="qquad" width="2em"></mspace><msubsup><mrow><mo>∫
+ </mo></mrow><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></msubsup><mi>F</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>x</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>x</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>f</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>a</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td></tr></table>
+</div> </div>
+<p class="noindent">In vector calculus there are three (<span class="alert">3</span>) species of <span class="margin-block">derivative <span class="margin-comment"><span class="ellipsis">[32]</span>
+<span class="sidenote">These are gradient, divergence,
+and curl</span></span></span> and each has its own “fundamental theorem” with essentially the same format.
+Our purpose here is to not prove these theorems here, but rather, understand what they
+<span class="alert">mean</span>.
+</p>
+<p class="noindent"><span class="paragraphHead"> <a id="x8-41000"></a>The Fundamental Theorem for Gradients</span>
+Suppose we have a scalar function of three (<span class="alert">3</span>) variables
+<math display="inline"><mi>T</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>x</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mi>y</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mi>z</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></math>. Starting at point <b>a</b>,
+move a small distance <math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mstyle mathvariant="bold"><mi>l</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub></math>.
+The function <math display="inline"><mi>T</mi></math>
+will change by an amount: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle>
+<mi>T</mi> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>T</mi> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mstyle mathvariant="bold"><mi>l</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub>
+</math></td></tr></table>
+<p class="noindent">Now let’s move an additional small displacement
+<math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mstyle mathvariant="bold"><mi>l</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub></math>. The incremental
+change in <math display="inline"><mi>T</mi></math>
+will be now: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle>
+<mi>T</mi> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>T</mi> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mstyle mathvariant="bold"><mi>l</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub>
+</math></td></tr></table>
+<p class="noindent">In this manner, proceeding by infinitesimal steps, we make the journey to point
+<math display="inline"><mstyle mathvariant="bold"><mi>b</mi></mstyle></math>. At each step we compute the
+gradient of <math display="inline"><mi>T</mi></math>, at that point, and
+dot it into the displacement <math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle></math>…this
+gives us the change in <math display="inline"><mi>T</mi></math>.
+</p>
+<div class="theo-block" id="theo-block-2.2"> <a class="copiable-link" href="#theo-block-2.2"> ¶</a> <span class="theo-upper"> <span class="theo-header"> <b>Theory 2.<a id="x8-41001r2"></a>2: </b> </span> <span class="theo-title"> Gradient Theorem </span> </span> <div class="body">
+<p class="noindent">The total change in <math display="inline"><mi>T</mi></math>
+in going from <math display="inline"><mstyle mathvariant="bold"><mi>a</mi></mstyle></math>
+to <math display="inline"><mstyle mathvariant="bold"><mi>b</mi></mstyle></math>
+(along the path selected) is: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msubsup><mrow><mo>∫
+ </mo></mrow><mrow><mstyle mathvariant="bold"><mi>a</mi></mstyle></mrow><mrow><mstyle mathvariant="bold"><mi>b</mi></mstyle></mrow></msubsup><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>T</mi> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mi>·</mi> <mi>d</mi><mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>T</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>b</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>T</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>a</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td></tr></table>
+</div> </div>
+<p class="noindent">Similar to “ordinary” fundamental theorem, this theorem says the <span class="margin-block">integral <span class="margin-comment"><span class="ellipsis">[33]</span>
+<span class="sidenote">In this case it is a line integral</span></span></span> of
+a derivative, which here the gradient, is given by the value of the function at the boundaries which are
+<math display="inline"><mstyle mathvariant="bold"><mi>a</mi></mstyle></math> and
+<math display="inline"><mstyle mathvariant="bold"><mi>b</mi></mstyle></math>
+respectively.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x8-41002r8"></a>
+<figcaption class="caption"><span class="id">Figure 2.8: 
+         </span><span class="content">To measure the height of a mountain, it doesn’t matter what way we take, as long as we know the base
+         and the top, we will know the height .                                            </span></figcaption>
+<img alt="PIC" src="figures/Vector-Calculus/raster/grossglockner.jpg" style=""/>
+</figure>
+<p class="noindent">As an example, assume we want to measure the height of GrossGlockner. We could climb the mountain
+from base, or take the high alpine road, or take a helicopter ride all the way up to top. Regardless or
+the options we take, we should get the same answer either <span class="margin-block">way. <span class="margin-comment"><span class="ellipsis">[34]</span>
+<span class="sidenote">This is the essence of the fundamental
+theorem</span></span></span>
+</p>
+<div class="theo-block" id="theo-block-2.3"> <a class="copiable-link" href="#theo-block-2.3"> ¶</a> <span class="theo-upper"> <span class="theo-header"> <b>Theory 2.<a id="x8-41003r3"></a>3: </b> </span> <span class="theo-title"> Line Independence of Gradient </span> </span> <div class="body">
+<p class="noindent"><span class="alert">Gradients</span> have the special property that their line integrals are path independent: </p>
+<ul class="itemize1">
+<li class="itemize">
+<p class="noindent"><math display="inline"><msubsup><mrow><mo>∫</mo>
+</mrow><mrow><mstyle mathvariant="bold"><mi>a</mi></mstyle></mrow><mrow><mstyle mathvariant="bold"><mi>b</mi></mstyle></mrow></msubsup><mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>T</mi><mo class="MathClass-close" stretchy="false">)</mo> <mi>·</mi> <mi>d</mi><mstyle mathvariant="bold"><mi>l</mi></mstyle></math>
+is independent of the path taken from <math display="inline"><mstyle mathvariant="bold"><mi>a</mi></mstyle></math>
+to <math display="inline"><mstyle mathvariant="bold"><mi>b</mi></mstyle></math>.
+</p>
+</li>
+<li class="itemize">
+<p class="noindent"><math display="inline"><mi>∮</mi>
+<mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>T</mi><mo class="MathClass-close" stretchy="false">)</mo> <mi>·</mi> <mi>d</mi><mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>,
+since the beginning and end points are identical, and hence <math display="inline"><mi>T</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>b</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>T</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>a</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>.</p></li></ul>
+</div> </div>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-6"> <a id="x8-42000"></a>The Fundamental Theorem for Divergences</h5>
+</p><p class="noindent">This theorem has at least three (<span class="alert">3</span>) special names depending on the literature source:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+1. 
+</dt><dd class="enumerate-enumitem">Gauss’s theorem,
+</dd>
+<dt class="enumerate-enumitem">
+2. 
+</dt><dd class="enumerate-enumitem">Green’s theorem,
+</dd>
+<dt class="enumerate-enumitem">
+3. 
+</dt><dd class="enumerate-enumitem">Divergence theorem.</dd></dl>
+<p class="noindent">The fundamental theorem for divergences states:
+</p>
+<div class="theo-block" id="theo-block-2.4"> <a class="copiable-link" href="#theo-block-2.4"> ¶</a> <span class="theo-upper"> <span class="theo-header"> <b>Theory 2.<a id="x8-42004r4"></a>4: </b> </span> <span class="theo-title"> Divergence Theorem </span> </span> <div class="body">
+<p class="noindent">The <span class="alert">integral</span> of a <span class="alert">derivative</span> (the <span class="alert">divergence</span>) over a <span class="alert">region</span> (in this case the <span class="alert">volume</span>, <math display="inline"><mstyle mathvariant="script"><mi>V</mi> </mstyle></math>)
+is equal to the value of the function at the <span class="alert">boundary</span> (in this case the <span class="alert">surface</span>
+<math display="inline"><mstyle mathvariant="script"><mi>S</mi></mstyle></math>
+bounding the volume). </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mo>∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>V</mi> </mstyle></mrow></msub><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mi>∮</mi>
+</mrow><mrow><mstyle mathvariant="script"><mi>S</mi></mstyle></mrow></msub><mstyle mathvariant="bold"><mi>v</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+</div> </div>
+<p class="noindent">The boundary term is itself an integral, more specifically, a surface integral. This is reasonable: the
+“boundary” of a line is just two end points, but the boundary of a volume is a closed surface. To create an
+analogy, if <math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math>
+represents the flow of an incompressible fluid, then the flux
+<math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math> is the
+total amount of fluid passing out through the surface, per unit time. Now, the divergence measures the
+<i>spreading out</i> of the vectors from a point, a place of high divergence is like a tap, pouring out liquid. If
+we have a bunch of tap in a region filled with incompressible fluid, an equal amount of liquid will be
+forced out through the boundaries of the region. In fact, there are two (<span class="alert">2</span>) ways we could determine how
+much is being produced:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+i. 
+</dt><dd class="enumerate-enumitem">we could count up all the faucets, recording how much each puts out
+</dd>
+<dt class="enumerate-enumitem">
+ii. 
+</dt><dd class="enumerate-enumitem">we could go around the boundary, measuring the flow at each point, and add it all up</dd></dl>
+<p class="noindent">We get the same answer either way: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mo>∫
+ </mo><mstyle class="mbox"><mtext>(faucets within the volume)</mtext></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>∮</mi>
+<mstyle class="mbox"><mtext>(flow out through the surface)</mtext></mstyle>
+</math></td></tr></table>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.3.3"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.2.3.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.3.3</span> <span class="title"> <a id="x8-430002.3.3"></a>The Fundamental Theorem for Curls</span></h4></div> The fundamental theorem for curls, also
+known as <b>Stokes’ theorem</b>, <span class="margin-block"><span class="margin"><span>states: <span class="ellipsis">[35]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Vector-Calculus/raster/portrait-stokes.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[35]</span><b>Sir George Gabriel Stokes, 1st Baronet,</b>
+<i>(1819  - 1903)</i>
+was an Irish mathematician and physicist. Born in County Sligo, Ireland, Stokes spent his entire career
+at the University of Cambridge, where he served as the Lucasian Professor of Mathematics
+for 54 years, from 1849 until his death in 1903, the longest tenure held by the Lucasian
+Professor. As a physicist, Stokes made seminal contributions to fluid mechanics, including the
+Navier-Stokes equations; and to physical optics, with notable works on polarisation and
+fluorescence. As a mathematician, he popularised "Stokes’ theorem" in vector calculus and
+contributed to the theory of asymptotic expansions. Stokes, along with Felix Hoppe-Seyler, first
+demonstrated the oxygen transport function of haemoglobin, and showed colour changes
+produced by the aeration of haemoglobin solutions. </span></span></span></span> </p><div class="theo-block" id="theo-block-2.5"> <a class="copiable-link" href="#theo-block-2.5"> ¶</a> <span class="theo-upper"> <span class="theo-header"> <b>Theory 2.<a id="x8-43001r5"></a>5: </b> </span> <span class="theo-title"> Stokes’ Theorem </span> </span>
+<div class="body">
+<p class="noindent"><span class="alert">Integral</span> of a <span class="alert">derivative</span> over a <span class="alert">region</span> (<math display="inline"><mstyle mathvariant="script"><mi>S</mi></mstyle></math>) is equal to the
+value of the function at <span class="alert">boundary</span> (<math display="inline"><mstyle mathvariant="script"><mi>P</mi></mstyle></math>).
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mo>∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>S</mi></mstyle></mrow></msub><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mi>∮</mi>
+</mrow><mrow><mstyle mathvariant="script"><mi>P</mi></mstyle></mrow></msub><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="bold"><mi>v</mi></mstyle> <mi>·</mi> <mi>d</mi><mstyle mathvariant="bold"><mi>l</mi></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+</div> </div>
+<p class="noindent">Similar to the divergence theorem, the boundary term is itself an integral. Specifically, a <i>closed line
+integral</i>.
+</p><p class="noindent">Remember the curl measures the <i>twist</i> of the vectors
+<math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math>. Think
+of a region of high curl as a whirlpool, where if we put a wheel there, it will rotate. Now, the integral of
+the curl over some surface (or, more precisely, the <i>flux</i> of the curl through the surface) represents the
+<i>total amount of swirl</i>, and we can determine that just as well by going around the edge and finding how
+much the flow is following the boundary.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent"><math display="inline"><mi>∮</mi>
+<mstyle mathvariant="bold"><mi>v</mi></mstyle> <mi>·</mi> <mi>d</mi><mstyle mathvariant="bold"><mi>l</mi></mstyle></math> is sometimes called
+the <b>circulation</b> of <math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math> <span class="cite"><a class="cite-show" href="#w3-20001">[†-2]</a><span class="cite-detail">
+<a id="x8-43002"></a>Moffatt, H. K. A brief introduction to vortex dynamics and turbulence in Environmental
+hazards: the fluid dynamics and geophysics of extreme events 1–27 (World Scientific, 2011)</span></span>.
+</p></div></div>
+<p class="noindent">There seems to be an ambiguity in <i>Stokes’ theorem</i> concerning the boundary line integral:
+</p>
+<div class="center">
+<p class="noindent">
+</p><p class="noindent">Which way are we supposed to go <span class="margin-block">around? <span class="margin-comment"><span class="ellipsis">[36]</span>
+<span class="sidenote">clockwise or counterclockwise.</span></span></span></p></div>
+<p class="noindent">The answer is that it doesn’t matter which way we go <b>as long as we are consistent</b>,
+for there is an additional sign ambiguity in the surface integral: </p><div class="quote">  Which way does
+<math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle></math> point?
+</div>
+<p class="noindent">For a closed <span class="margin-block">surface, <span class="margin-comment"><span class="ellipsis">[37]</span>
+<span class="sidenote">i.e., the divergence theorem.</span></span></span>
+<math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle></math>
+points in the direction of the outward normal. But for an open surface, which way would
+be defined as out? Consistency in Stokes’ theorem is given by the right-hand rule. If our
+rings point in the direction of the line integral, then our thumb fixes the direction of
+<math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle></math>.
+</p><p class="noindent">Ordinary, a flux integral depends critically on what surface we integrate
+over, but this is <b>NOT</b> the case with curls. For Stokes’ theorem says that
+<math display="inline"><mo>∫</mo>
+<mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mi>·</mi> <mi>d</mi><mstyle mathvariant="bold"><mi>a</mi></mstyle></math> is equal to the
+line integral of <math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math>
+around the boundary, and the latter makes no reference to the specific surface we choose.
+</p>
+<dl class="description"><dt class="description"><a id="x8-43003x2.3.3"></a>
+<span style="color:#42395F;">Preposition I</span>
+</dt><dd class="description">
+<p class="noindent"> <math display="inline"><mo>∫</mo>
+<mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mi>·</mi> <mi>d</mi><mstyle mathvariant="bold"><mi>a</mi></mstyle></math>
+depends only on the boundary line, not on the particular surface used.
+</p>
+</dd>
+<dt class="description"><a id="x8-43004x2.3.3"></a>
+<span style="color:#42395F;">Preposition II</span>
+</dt><dd class="description">
+<p class="noindent"> <math display="inline"><mi>∮</mi>
+<mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mi>·</mi> <mi>d</mi><mstyle mathvariant="bold"><mi>a</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>
+for any closed surface.</p></dd></dl>
+<div class="section-header">
+<h3 id="header-section-references">
+<span class="number">
+<i class="fa-solid fa-magnifying-glass"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+            Page References</span>
+</h3>
+</div>
+<div class="cite-block">
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">1.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> Marsden, J. E. &amp; Tromba, A. Vector calculus (Macmillan, 2003)</dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">2.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> Moffatt, H. K. A brief introduction to vortex dynamics and turbulence in Environmental hazards: the fluid dynamics and geophysics of extreme events 1–27 (World Scientific, 2011)</dd>
+</dl></div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="CurvilinearCoordinates.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="DifferentialCalculus.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="VectorCalculus.html#IntegralCalculus.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 7.10.2026, at 8:21.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 2.3: Integral Calculus</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

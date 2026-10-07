@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Conductors</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Electrodynamics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2026.WS</span>
+<span class="header-chapter">Electrostatics</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="ThePurposeofElectromagnetism.html#x3-20001">The Purpose of Electromagnetism</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-30001.1">Mechanics in Four Different
+Views</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-40001.1.1">Electromagnetism and Relativity</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-50001.1.2">Four Kinds of Forces</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-60001.1.3">Unifying
+Physical Theories</a></span></span><span class="subsectionToc"><span class="number">1.1.4</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-70001.1.4">The Fields of Electrodynamics</a></span></span><span class="subsectionToc"><span class="number">1.1.5</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-80001.1.5">Electric Charge</a></span></span><span class="subsectionToc"><span class="number">1.1.6</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-90001.1.6">Interpreting
+Conservation   of   Charge</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="VectorCalculus.html#x5-100002">Vector   Calculus</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="VectorAlgebra.html#x6-110002.1">Vector   Algebra</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="VectorAlgebra.html#x6-120002.1.1">Vector
+Operations</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="VectorAlgebra.html#x6-170002.1.2">Vector Component Forms</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="VectorAlgebra.html#x6-180002.1.3">Triple Products</a></span></span><span class="subsectionToc"><span class="number">2.1.4</span><span class="title"><a href="VectorAlgebra.html#x6-210002.1.4">Position,
+Displacement, and Separation Vectors</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-220002.2">Differential Calculus</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="DifferentialCalculus.html#x7-230002.2.1">Ordinary
+Derivatives</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-240002.2.2">Gradient</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="DifferentialCalculus.html#x7-250002.2.3">The Del Operator</a></span></span><span class="subsectionToc"><span class="number">2.2.4</span><span class="title"><a href="DifferentialCalculus.html#x7-280002.2.4">Product Rules</a></span></span><span class="subsectionToc"><span class="number">2.2.5</span><span class="title"><a href="DifferentialCalculus.html#x7-290002.2.5">Second
+Derivatives</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="IntegralCalculus.html#x8-350002.3">Integral Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="IntegralCalculus.html#x8-360002.3.1">Line, Surface, and Volume Integrals</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="IntegralCalculus.html#x8-400002.3.2">The
+Fundamental Theorems of Vector Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="IntegralCalculus.html#x8-430002.3.3">The Fundamental Theorem for
+Curls</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="CurvilinearCoordinates.html#x9-440002.4">Curvilinear Coordinates</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="CurvilinearCoordinates.html#x9-450002.4.1">Spherical Coordinate System</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="CurvilinearCoordinates.html#x9-460002.4.2">Cylindrical
+Coordinates</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="DiracDeltaFunction.html#x10-470002.5">Dirac Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="DiracDeltaFunction.html#x10-480002.5.1">A Mathematical Anomaly</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="DiracDeltaFunction.html#x10-490002.5.2">The 1D Dirac
+Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="DiracDeltaFunction.html#x10-500002.5.3">The 3D Dirac Delta Function</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="VectorFieldTheory.html#x11-510002.6">Vector Field Theory</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="VectorFieldTheory.html#x11-520002.6.1">Helmholtz
+Theorem</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="VectorFieldTheory.html#x11-530002.6.2">Potentials</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Electrostatics.html#x12-540003">Electrostatics</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="TheElectricField.html#x13-550003.1">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="TheElectricField.html#x13-560003.1.1">Coulomb’s
+Law</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="TheElectricField.html#x13-570003.1.2">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.3</span><span class="title"><a href="TheElectricField.html#x13-580003.1.3">Continuous Charge Distributions</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-590003.2">Divergence and
+Curl of Electrostatic Fields</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-600003.2.1">Quantification</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-610003.2.2">Divergence of E</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-620003.2.3">Applications
+of Gauss’s Law</a></span></span><span class="subsectionToc"><span class="number">3.2.4</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-630003.2.4">Curl of E</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ElectricPotential.html#x15-640003.3">Electric Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ElectricPotential.html#x15-650003.3.1">Defining the Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ElectricPotential.html#x15-660003.3.2">Some
+Digressions on Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.3</span><span class="title"><a href="ElectricPotential.html#x15-720003.3.3">Poisson’s Equation and Laplace’s Equation</a></span></span><span class="subsectionToc"><span class="number">3.3.4</span><span class="title"><a href="ElectricPotential.html#x15-730003.3.4">The
+Potential of a Localised Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.3.5</span><span class="title"><a href="ElectricPotential.html#x15-740003.3.5">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="WorkandEnergy.html#x16-750003.4">Work and
+Energy</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="WorkandEnergy.html#x16-760003.4.1">To Move a Charge</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="WorkandEnergy.html#x16-770003.4.2">The Energy of a Point Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.3</span><span class="title"><a href="WorkandEnergy.html#x16-780003.4.3">The
+Energy of a Continuous Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.4</span><span class="title"><a href="WorkandEnergy.html#x16-790003.4.4">Comments on Electrostatic
+Energy</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="#x17-830003.5">Conductors</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="#x17-840003.5.1">Properties</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="#x17-850003.5.2">Induced Charges</a></span></span><span class="subsectionToc"><span class="number">3.5.3</span><span class="title"><a href="#x17-860003.5.3">Surface Charge
+and the Force on a Conductor</a></span></span><span class="subsectionToc"><span class="number">3.5.4</span><span class="title"><a href="#x17-870003.5.4">Capacitors</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 7.10.2026, at 8:21.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><span class="nav-link"></span></span> <span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="WorkandEnergy.html">Work and Energy</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="Electrostatics.html#Conductors.html">Chapter: Electrostatics</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-3.5"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#section.3.5"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">3.5</span> <span class="title"> <a id="x17-830003.5"></a>Conductors</span></h3></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.5.1"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.3.5.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.5.1</span> <span class="title"> <a id="x17-840003.5.1"></a>Properties</span></h4></div>
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x17-84001r10"></a>
+<figcaption class="caption"><span class="id">Figure 3.10: 
+          </span><span class="content">Some may say that superconductors can be considered as “perfect conductors”, however, they exhibit
+          quantum effects such as the Meissner effect and quantization of magnetic flux. In perfect conductors,
+          the interior magnetic field must remain fixed but can have a zero or nonzero value <span class="cite"><a class="cite-show" href="#w3-20001">[†-1]</a><span class="cite-detail"> Henyey, F. S.
+          Distinction between a Perfect Conductor and a Superconductor. Physical Review Letters <b>49</b><b>,</b> 416 (1982)</span></span>.
+          In real superconductors, all magnetic flux is expelled during the phase transition to superconductivity
+          (the Meissner effect), and the magnetic field is always zero within the bulk of the superconductor <span class="cite"><a class="cite-show" href="#w3-20001">[†-2]</a><span class="cite-detail">
+          ScienceSup. A spectacular superconductor claim is making news. Here’s why experts are doubtful 2023</span></span>.</span></figcaption>
+<img alt="PIC" src="figures/Electrostatics/raster/superconductor.jpg" style=""/>
+</figure>
+<p class="noindent">In an insulator, for example glass or rubber, each electron is on a short leash, as it is attached to a
+particular atom. In a metallic <b>conductor</b>, by contrast, one or more electrons per atom are free to
+<span class="margin-block">roam. <span class="margin-comment"><span class="ellipsis">[66]</span>
+<span class="sidenote">In liquid conductors such as salt water, it is jons that do the moving. However, for
+now we shall only focus on solid materials.</span></span></span> A <span class="alert">perfect</span> conductor would contain an <span class="alert">unlimited</span> supply of free
+charges.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">In real life there are no such things perfect conductors, but metals come pretty close, for most purposes
+and therefore we can assume them to be perfect. </p></div></div>
+<p class="noindent">From this aforementioned definition, the basic electrostatic properties of ideal conductors immediately
+follow: </p>
+<dl class="description"><dt class="description"><a id="x17-84004x3.5.1"></a>
+<span style="color:#42395F;">i. No Electric Field Inside a Conductor</span>
+</dt><dd class="description">
+<p class="noindent"> Let’s have a think about this statement. If there <span class="alert">were</span> any field, those free charges would
+<span class="alert">move</span>, and it wouldn’t be electrostatics any more. To give a more concrete explanation, we
+better examine what happens when we put a conductor into an external electric field
+<math display="inline"><msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup></math>,
+seen in <b>Fig.</b> <a href="#x17-84010r12">3.12</a>.
+</p>
+<p class="noindent">Initially, the field will drive any free positive charges to the right, and negative ones to
+the <span class="margin-block">left. <span class="margin-comment"><span class="ellipsis">[67]</span>
+<span class="sidenote">In practice, it’s the electrons that do the moving, but when they depart, the right
+side is left with a net positive charge, so it doesn’t really matter which charges move; the
+effect is the same.</span></span></span> When they come to the edge of the material, the charges pile up: plus on
+the right side, minus on the left. Now, these induced charges produce a field of their own
+(<math display="inline"><msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>1</mn></mrow><mrow></mrow></msubsup></math>),
+which, as we can see from the figure, is in the <span class="alert">opposite direction</span> to <math display="inline"><msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup></math>.
+</p>
+<p class="noindent">That’s the crucial point, for it means the field of the induced charges tends to cancel
+the original field. Charge will continue to flow until this cancellation is complete, and the
+resultant field inside the conductor is precisely <span class="margin-block">zero. <span class="margin-comment"><span class="ellipsis">[68]</span>
+<span class="sidenote">Outside the conductor the field is not
+zero, for here <math display="inline"><msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup></math>
+and <math display="inline"><msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>1</mn></mrow><mrow></mrow></msubsup></math>
+do <b>NOT</b> tend to cancel.</span></span></span> The whole process is practically instantaneous.
+</p>
+</dd>
+<dt class="description"><a id="x17-84005x3.5.1"></a>
+<span style="color:#42395F;">ii. Charge Density is Zero inside a Conductor</span>
+</dt><dd class="description">
+<p class="noindent"> This follows from Gauss’s law: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>ρ</mi></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac>
+</math></td></tr></table>
+<p class="noindent">If <math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math> is zero, then by
+extension, so is <math display="inline"><mi>ρ</mi></math>.
+There is still charge around, but exactly as much plus as minus, so the <span class="alert">net</span> charge density in the
+interior is zero.
+</p>
+</dd>
+<dt class="description"><a id="x17-84006x3.5.1"></a>
+<span style="color:#42395F;">iii. Any Net Charge is on the Surface</span>
+</dt><dd class="description">
+<p class="noindent"> That’s the only place left.
+</p>
+</dd>
+<dt class="description"><a id="x17-84007x3.5.1"></a>
+<span style="color:#42395F;">iv. A Conductor is an Equipotential</span>
+</dt><dd class="description">
+<p class="noindent"> For if <math display="inline"><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></math>
+and <math display="inline"><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">→</mo></mover></math>
+are any two (<span class="alert">2</span>) points within (or at the surface of) a given conductor, </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>V</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>V</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><msubsup><mrow><mo> ∫
+ </mo></mrow><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></msubsup><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>l</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="quad" width="1em"></mspace><mstyle class="text"><mtext>therefore</mtext></mstyle><mspace class="quad" width="1em"></mspace><mi>V</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>V</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+</dd>
+<dt class="description"><a id="x17-84008x3.5.1"></a>
+<span style="color:#42395F;">v. E is Perpendicular to the Surface</span>
+</dt><dd class="description">
+<p class="noindent"> Otherwise, charge will immediately flow around the surface until it kills off the tangential
+component which are shown in <b>Fig.</b> <a href="#x17-84009r11">3.11</a> <span class="margin-block">. <span class="margin-comment"><span class="ellipsis">[69]</span>
+<span class="sidenote">Perpendicular to the surface, charge cannot flow, of
+course, since it is confined to the conducting object.</span></span></span></p></dd></dl>
+<div class="sidenote"> <span class="figure">
+<a id="x17-84009r11"></a>
+<figcaption class="caption"><span class="id">Figure 3.11: </span><span class="content">A visual representation of treating a non-standard body and the generated electric field. Please observe
+that all lines flowing from the body is perpendicular.                                            </span></figcaption>
+<img alt="PIC" src="figures/Electrostatics/figures-5.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">It is an astonishing fact the charge on a conductor flows to the surface. Given their mutual repulsion,
+the charges naturally <span class="alert">spread out</span> as much as possible, but for all of them to go to the surface seems like a waste of
+the interior space. Surely we could do better, from the point of view of making each charge as far as
+possible from its neighbors, to sprinkle <span class="alert">some</span> of them throughout the volume Well, it simply is not so. You
+do best to put all the charge on the surface, and this is true regardless of the size or shape of the
+conductor.
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x17-84010r12"></a>
+<figcaption class="caption"><span class="id">Figure 3.12: </span><span class="content">A visual representation of the electric field inside a conductor.                            </span></figcaption>
+<img alt="PIC" src="figures/Electrostatics/figures-12.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">The problem can also be phrased in terms of <span class="alert">energy</span>.
+</p><p class="noindent">Like any other free dynamical system, the charge on a conductor will seek the configuration that
+minimizes its potential energy. What property (<b>iii</b>) asserts is that the electrostatic energy of a <span class="margin-block">solid
+object <span class="margin-comment"><span class="ellipsis">[70]</span>
+<span class="sidenote">with specified shape and total charge</span></span></span> is a minimum when charge is spread over the surface. </p><div class="quote">  For
+instance, the energy of a sphere is <table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mn>8</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-bin" stretchy="false">/</mo><mi>R</mi><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td></tr></table>
+<p class="noindent">if the charge is uniformly distributed over the surface, but it is, </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn><mn>0</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi>q</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-bin" stretchy="false">/</mo><mi>R</mi><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td></tr></table>
+<p class="noindent">if the charge is uniformly distributed throughout the volume </p></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.5.2"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.3.5.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.5.2</span> <span class="title"> <a id="x17-850003.5.2"></a>Induced Charges</span></h4></div>
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x17-85001r13"></a>
+<figcaption class="caption"><span class="id">Figure 3.13: 
+          </span><span class="content">Charges induced by a point charge in a conductor (a) When a charge approaches a conductor the charges
+          will start to move where opposite charges will move towards the point charge and same charges will move
+          away. While there is an imbalance now, the overall charge of the conductor remains the same (b) When
+          a charge is given inside the cavity, again similar behaviour is to be expected inside the conductor.    </span></figcaption>
+<img alt="PIC" src="figures/Electrostatics/figures-10.png" style=""/>
+</figure>
+<p class="noindent">If we were to hold a charge (<math display="inline"> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>q</mi></math>)
+near an <span class="alert">uncharged</span> conductor seen in <b>Fig.</b> <a href="#x17-85001r13">3.13</a>a, the two (<span class="alert">2</span>) will attract one another. The reason for this is that
+<math display="inline"> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>q</mi></math> will pull minus
+charges (<math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>q</mi></math>)
+over to the near side and repel plus charges to the far <span class="margin-block">side. <span class="margin-comment"><span class="ellipsis">[71]</span>
+<span class="sidenote">Another way to think
+of it is that the charge moves around in such a way as to kill off the field of
+<math display="inline"><mi>q</mi></math> for points
+inside the conductor, where the total field must be zero.</span></span></span> Since the negative induced charge is closer to
+<math display="inline"><mi>q</mi></math>, there
+is a net force of attraction.
+</p><p class="noindent">When we speak of the field, charge, or potential “inside” a conductor, we should think of the "meat" of
+the conductor; if there is some hollow <span class="alert">cavity</span> in the conductor, and within that cavity we put some charge,
+then the field in the cavity will <b>NOT</b> be zero. But in a remarkable way the cavity and its contents
+are electrically isolated from the outside world by the surrounding conductor, shown in
+<b>Fig.</b> <a href="#x17-85001r13">3.13</a>b.
+</p><p class="noindent">No external fields penetrate the conductor; they are cancelled at the outer surface by the
+induced charge there. Similarly, the field due to charges within the cavity is cancelled, for all
+exterior points, by the induced charge on the inner surface. However, the compensating charge
+left over on the outer surface of the conductor effectively “communicates” the presence of
+<math display="inline"><mi>q</mi></math> to the
+outside world.
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x17-85002r14"></a>
+<figcaption class="caption"><span class="id">Figure 3.14: </span><span class="content">Visual description of an electric field inside a cavity. As can be seen all the lines generated by the positive
+side of the edge is cancelled by the negative side with it absorbs making the inside of the cavity have 0 field.       </span></figcaption>
+<img alt="PIC" src="figures/Electrostatics/figures-11.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">The total charge induced on the cavity wall is equal and opposite to the charge inside, for if we
+surround the cavity with a Gaussian surface, all points of which are in the conductor (<b>Fig.</b> <a href="#x17-85001r13">3.13</a>b),
+<math display="inline"><mi>∮</mi>
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>a</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>,
+and therefore with Gauss’s law, the net enclosed charge must be zero (<span class="alert">0</span>). But
+<math display="inline"><msubsup><mrow><mi>Q</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>q</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <msubsup><mrow><mi>q</mi></mrow><mrow><mi>i</mi><mi>n</mi><mi>d</mi><mi>u</mi><mi>c</mi><mi>e</mi><mi>d</mi></mrow><mrow></mrow></msubsup></math>, so
+<math display="inline"><msubsup><mrow><mi>q</mi></mrow><mrow><mi>i</mi><mi>n</mi><mi>d</mi><mi>u</mi><mi>c</mi><mi>e</mi><mi>d</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi>q</mi></math>.
+Then if the conductor as a whole is electrically neutral, there must be a charge
+<math display="inline"> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>q</mi></math> on its
+outer surface.
+</p><p class="noindent">If a cavity surrounded by conducting material is itself empty of charge, then the field within the cavity
+is zero. For any field line would have to begin and end on the cavity wall, going from a plus charge to a
+minus charge, shown in <b>Fig.</b> <a href="#x17-85002r14">3.14</a>.
+</p><p class="noindent">Letting that field line be part of a closed loop, the rest of which is entirely inside the conductor (where
+<math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>), the integral
+<math display="inline"><mi>∮</mi>
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>l</mi></mrow><mo accent="true">→</mo></mover></math> is distinctly <span class="alert">positive</span>,
+in violation of <math display="inline"><mi>∮</mi>
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>l</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>.
+It follows that <math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>
+within an <span class="alert">empty</span> cavity, and there is in fact <span class="alert">no</span> charge on the surface of the <span class="margin-block"><span class="margin"><span>cavity. <span class="ellipsis">[72]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Electrostatics/raster/faraday-cage.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[72]</span>This is why we
+are <span class="alert">relatively safe</span> inside a metal car during a thunderstorm-you may get cooked, if lightning strikes,
+but we will <b>NOT</b> be <span class="alert">electrocuted</span>. The same principle applies to the placement of sensitive apparatus
+inside a grounded Faraday cage, to shield out stray electric fields. In practice, the enclosure
+doesn’t even have to be solid conductor-chicken wire will often suffice <span class="cite"><a class="cite-show" href="#w3-20001">[†-3]</a><span class="cite-detail"> <a id="x17-85003"></a>ck12. Faraday Cage
+2025</span></span>.</span></span></span></span>
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.5.3"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.3.5.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.5.3</span> <span class="title"> <a id="x17-860003.5.3"></a>Surface Charge and the Force on a Conductor</span></h4></div>
+</p><p class="noindent">Because the field inside a conductor is zero (<span class="alert">0</span>), boundary condition 2.33 requires the field immediately <span class="alert">outside</span>
+is: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x17-86001r40"></mstyle>
+<mi>E</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>σ</mi></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>n</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(3.40)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">consistent with our earlier conclusion that the field is <b>normal to the surface</b>. In terms of potential, <span>
+Eq. 
+(<a href="ElectricPotential.html#x15-74010r27">3.27</a>)
+</span> gives us: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x17-86002r41"></mstyle>
+<mi>σ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi><mo class="MathClass-open" stretchy="false">[</mo>
+</mrow><mrow><mi>∂</mi><mi>V</mi> </mrow></mfrac></mstyle><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-open" stretchy="false">[</mo><mi>n</mi><mo class="MathClass-close" stretchy="false">]</mo>
+</math></td><td class="eq-no">(3.41)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">These equations enable us to calculate the surface charge on a conductor, if we can determine
+<math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math> or
+<math display="inline"><mi>V</mi> </math><span class="margin-block">. <span class="margin-comment"><span class="ellipsis">[73]</span>
+<span class="sidenote">we shall use them
+frequently in the next chapter.</span></span></span> In the presence of an electric field, a surface charge will experience a force; the force
+per unit area (<math display="inline"><mover accent="true"><mrow><mi>f</mi></mrow><mo accent="true">→</mo></mover></math>),
+is <math display="inline"><mi>σ</mi><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>.
+</p><p class="noindent">But there’s a problem here:
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">The electric field is <b>discontinuous</b> at a surface charge. </p></div></div>
+<p class="noindent">So what are we supposed to use: <math display="inline"><msubsup><mrow><mi>E</mi></mrow><mrow><mi>a</mi><mi>b</mi><mi>o</mi><mi>v</mi><mi>e</mi></mrow><mrow></mrow></msubsup></math>,
+<math display="inline"><msubsup><mrow><mi>E</mi></mrow><mrow><mi>b</mi><mi>e</mi><mi>l</mi><mi>o</mi><mi>w</mi></mrow><mrow></mrow></msubsup></math>, or
+something in between? The answer is that we should use the average of the two: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x17-86003r42"></mstyle>
+<mover accent="true"><mrow><mi>f</mi></mrow><mo accent="true">→</mo></mover>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>σ</mi><msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mi>a</mi><mi>v</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>g</mi><mi>e</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><mi>σ</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mi>a</mi><mi>b</mi><mi>o</mi><mi>v</mi><mi>e</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mi>b</mi><mi>e</mi><mi>l</mi><mi>o</mi><mi>w</mi></mrow><mrow></mrow></msubsup></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(3.42)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">You may ask:, why the average?
+</p><p class="noindent">The reason is very simple, though the telling makes it sound complicated: Let’s focus our
+attention on a tiny patch of surface surrounding the point in question (Fig. 2.50)<span class="margin-block">. <span class="margin-comment"><span class="ellipsis">[74]</span>
+<span class="sidenote">Make it small
+enough so it is essentially flat and the surface charge on it is essentially constant.</span></span></span> The total
+field consists of two parts-that attributable to the patch itself, and that due to everything
+else (other regions of the surface, as well as any external sources that may be present):
+<math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mi>p</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mi>o</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>r</mi></mrow><mrow></mrow></msubsup></math>. Now,
+the patch cannot exert a force on itself, any more than you can lift yourself by standing in a
+basket and pulling up on the handles. The force on the patch, then, is due exclusively to
+<math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mi>o</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>r</mi></mrow></msub></math>, and
+this suffers no discontinuity (if we removed the patch, the field in the "hole" would be perfectly
+smooth). The discontinuity is due entirely to the charge on the patch, which puts out a field
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>σ</mi><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math> on
+either side, pointing away from the surface. Thus, </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mtable class="gather-star" displaystyle="true">
+<mtr>
+<mtd><mtable class="split" columnalign="right left">
+<mtr class="split-mtr"><mtd class="split-mtd"> <msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mi>a</mi><mi>b</mi><mi>o</mi><mi>v</mi><mi>e</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mi>o</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>r</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><mi>σ</mi></mrow>
+<mrow>
+<mn>2</mn><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>n</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd class="split-mtd"> <msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mi>b</mi><mi>e</mi><mi>l</mi><mi>o</mi><mi>w</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mi>o</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>r</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <mfrac><mrow><mi>σ</mi></mrow>
+<mrow>
+<mn>2</mn><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>n</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mo class="MathClass-punc" stretchy="false">.</mo></mtd>
+</mtr></mtable> <mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>therefore,</mtext></mstyle><mspace class="qquad" width="2em"></mspace><msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mi>o</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>r</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><mo class="MathClass-open" stretchy="false">(</mo><msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mi>a</mi><mi>b</mi><mi>o</mi><mi>v</mi><mi>e</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mi>b</mi><mi>e</mi><mi>l</mi><mi>o</mi><mi>w</mi></mrow><mrow></mrow></msubsup><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mi>a</mi><mi>v</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>g</mi><mi>e</mi></mrow><mrow></mrow></msubsup><mo class="MathClass-punc" stretchy="false">.</mo></mtd>
+<mtd></mtd>
+</mtr></mtable>
+</math></td></tr></table>
+<p class="noindent">Averaging is really just a device for removing the contribution of the patch itself. That argument
+applies to <span class="alert">any</span> surface charge; in the particular case of a conductor, the field is zero inside and
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>σ</mi><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math> m outside as shown in <span> Eq.
+(<a href="#x17-86001r40">3.40</a>)
+</span> , so the average is <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>σ</mi><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>n</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle></math>,
+and the force per unit area is </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x17-86004r43"></mstyle>
+<mover accent="true"><mrow><mi>f</mi></mrow><mo accent="true">→</mo></mover>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><msubsup><mrow><mi>σ</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>n</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(3.43)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">This amounts to an outward <b>electrostatic pressure</b> on the surface, tending to draw the conductor into the field,
+regardless of the sign of <math display="inline"><mi>σ</mi></math>.
+Expressing the pressure in terms of the field just outside the surface, </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x17-86005r44"></mstyle>
+<mi>P</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <msubsup><mrow><mi>E</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(3.44)</td></tr></table>
+<p class="noindent"></p>
+<div class="sidenote"> <span class="figure">
+<a id="x17-86006r15"></a>
+<figcaption class="caption"><span class="id">Figure 3.15: </span><span class="content">A   parallel-plate   capacitor,   as   shown   in   part   A,   consists   of   two   flat   conducting   plates.
+Here   one   plate   is   positively   charged   and   the   other   one   is   charged   negatively.   At   a   distance   of
+<math display="inline"><mi>d</mi></math>
+apart, an electric field (<math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>)
+is generated between the two (<span class="alert">2</span>) plates.                                                     </span></figcaption>
+<img alt="PIC" src="figures/Electrostatics/figures-8.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.5.4"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.3.5.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.5.4</span> <span class="title"> <a id="x17-870003.5.4"></a>Capacitors</span></h4></div>
+</p><p class="noindent">Suppose we have two (<span class="alert">2</span>) conductors, and we put charge
+<math display="inline"> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>Q</mi></math> on one and
+<math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>Q</mi></math> on the other as shown
+in <b>Fig.</b> <a href="#x17-86006r15">3.15</a>. Since <math display="inline"><mi>V</mi> </math>
+is <span class="alert">constant</span> over a conductor, we can speak unambiguously of the potential difference between them:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>V</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>V</mi> </mrow><mrow><mo class="MathClass-bin" stretchy="false">+</mo></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow><mi>V</mi> </mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><msubsup><mrow><mo> ∫
+ </mo></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo></mrow><mrow><mo class="MathClass-bin" stretchy="false">+</mo></mrow></msubsup><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mover accent="true"><mrow><mi>l</mi></mrow><mo accent="true">→</mo></mover><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">We don’t know how the charge distributes itself over the two conductors, and calculating the
+field would be a nightmare, if their shapes are complicated, but this much we do know: </p><div class="quote">
+<math display="inline"><mi>E</mi></math> is proportional
+to <math display="inline"><mi>Q</mi></math>.
+</div>
+<p class="noindent">For <math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math> is
+given by Coulomb’s law: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><mn>4</mn><mi>π</mi><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle><mo> ∫
+ </mo> <mfrac><mrow><mi>ρ</mi></mrow>
+<mrow><msup><mrow>
+<mi>λ</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="quad" width="1em"></mspace><mstyle mathvariant="normal"><mi>V</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup>
+</math></td></tr></table>
+<p class="noindent">so if we double <math display="inline"><mi>ρ</mi></math>,
+we double <span class="margin-block"><math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>.
+<span class="margin-comment"><span class="ellipsis">[75]</span>
+<span class="sidenote">Doubling <math display="inline"><mi>Q</mi></math> doubles
+<math display="inline"><mi>ρ</mi></math> everywhere, it doesn’t shift
+the charge around.</span></span></span> Since <math display="inline"><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></math>
+is proportional to <math display="inline"><mi>Q</mi></math>,
+so also is <math display="inline"><mover accent="true"><mrow><mi>V</mi> </mrow><mo accent="true">→</mo></mover></math>.
+The constant of proportionality is called the <span class="alert">capacitance</span> of the arrangement: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x17-87001r45"></mstyle>
+<mi>C</mi> <mi>≡</mi> <mfrac><mrow><mi>Q</mi></mrow>
+<mrow>
+<mi>V</mi> </mrow></mfrac>
+</math></td><td class="eq-no"><span style="color:#326199;">[<math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle> <mspace class="thinspace" width="0.17em"></mspace><msup><mrow> <mstyle mathvariant="normal"> <mi>C</mi></mstyle> </mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn> </mrow> </msup> </math> or <math display="inline"><mstyle mathvariant="normal"><mi>F</mi></mstyle> </math>]</span>(3.45)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Capacitance is a <span class="alert">purely geometrical quantity</span>, determined by the sizes, shapes, and separation of the two (<span class="alert">2</span>) conductors. In SI units,
+<math display="inline"><mi>C</mi></math> is measured
+in farad (<math display="inline"><mstyle mathvariant="normal"><mi>F</mi></mstyle></math>); a
+farad is a coulomb-per-volt. This turns out to be inconveniently large; more practical units are the microfarad
+(<math display="inline"><mn>1</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>6</mn></mrow></msup></math> <math display="inline"><mstyle mathvariant="normal"><mi>F</mi></mstyle></math>)
+and the picofarad (<math display="inline"><mn>1</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn><mn>2</mn></mrow></msup></math> <math display="inline"><mstyle mathvariant="normal"><mi>F</mi></mstyle></math>).
+</p><p class="noindent">Notice <math display="inline"><mi>V</mi> </math>
+is, by definition, the potential of the <span class="alert">positive</span> conductor less that of the negative one; likewise,
+<math display="inline"><mi>Q</mi></math> is the
+charge of the <span class="alert">positive</span> conductor. Accordingly, capacitance is an intrinsically positive <span class="margin-block">quantity. <span class="margin-comment"><span class="ellipsis">[76]</span>
+<span class="sidenote">We may
+occasionally hear someone speak of the capacitance of a single conductor. In this case the “second
+conductor”, with the negative charge, is an imaginary spherical shell of infinite radius surrounding the
+one conductor. It contributes <span class="alert">nothing</span> to the field, so the capacitance is given by <span> Eq. (<a href="#x17-87001r45">3.45</a>)</span> , where
+<math display="inline"><mi>V</mi> </math> is the
+potential with infinity as the reference point.</span></span></span>
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-15"> <a id="x17-88000"></a>Charging a Capacitor</h5>
+</p><p class="noindent">To “charge up” a capacitor, so to say, we have to remove electrons from the positive plate and
+carry them to the negative plate. By doing so, we fight against the electric field, which is
+pulling them back toward the positive conductor and pushing them away from the negative
+one.
+</p>
+<div class="quote"> <i> How much work does it take, then, to charge the capacitor up to a final amount
+<math display="inline"><mi>Q</mi></math>?</i>
+</div>
+<p class="noindent">Suppose that at some intermediate stage in the process the charge on the positive plate is
+<math display="inline"><mi>q</mi></math>, so the potential
+difference is <math display="inline"><mi>q</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>C</mi></math>.
+According to <span> Eq. (<a href="WorkandEnergy.html#x16-76001r29">3.29</a>)</span> , the work we need do to transport the next piece of charge,
+<math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>q</mi></math>, is:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle>
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac><mrow><mi>q</mi></mrow>
+<mrow>
+<mi>C</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>q</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">The total work necessary, then, to go from <math display="inline"><mi>q</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>
+to <math display="inline"><mi>q</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>Q</mi></math>, is
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo><msubsup><mrow><mo> ∫
+ </mo></mrow><mrow><mn>0</mn></mrow><mrow><mi>Q</mi></mrow></msubsup><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac><mrow><mi>q</mi></mrow>
+<mrow>
+<mi>C</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>q</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mfrac><mrow><msup><mrow><mi>Q</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow>
+<mi>C</mi></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td></tr></table>
+<p class="noindent">or, since <math display="inline"><mi>Q</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>C</mi><mi>V</mi> </math>,</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x17-88001r46"></mstyle>
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><mi>C</mi><msup><mrow><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msup>
+</math></td><td class="eq-no">(3.46)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><mi>V</mi> </math>
+is the final potential of the capacitor.
+<div class="section-header">
+<h3 id="header-section-references">
+<span class="number">
+<i class="fa-solid fa-magnifying-glass"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+            Page References</span>
+</h3>
+</div>
+<div class="cite-block">
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">1.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> Henyey, F. S. Distinction between a Perfect Conductor and a Superconductor. Physical Review Letters 49, 416 (1982)</dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">2.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> ScienceSup. A spectacular superconductor claim is making news. Here’s why experts are doubtful 2023</dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">3.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> ck12. Faraday Cage 2025</dd>
+</dl></div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><span class="nav-inactive"><i class="fa-solid fa-caret-right"></i></span></span> <span class="nav-button"><a href="WorkandEnergy.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="Electrostatics.html#Conductors.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> </p><div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 7.10.2026, at 8:21.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 3.5: Conductors</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

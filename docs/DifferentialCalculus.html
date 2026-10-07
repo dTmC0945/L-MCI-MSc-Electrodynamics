@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Differential Calculus</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Electrodynamics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2026.WS</span>
+<span class="header-chapter">Vector Calculus</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="ThePurposeofElectromagnetism.html#x3-20001">The Purpose of Electromagnetism</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-30001.1">Mechanics in Four Different
+Views</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-40001.1.1">Electromagnetism and Relativity</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-50001.1.2">Four Kinds of Forces</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-60001.1.3">Unifying
+Physical Theories</a></span></span><span class="subsectionToc"><span class="number">1.1.4</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-70001.1.4">The Fields of Electrodynamics</a></span></span><span class="subsectionToc"><span class="number">1.1.5</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-80001.1.5">Electric Charge</a></span></span><span class="subsectionToc"><span class="number">1.1.6</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-90001.1.6">Interpreting
+Conservation   of   Charge</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="VectorCalculus.html#x5-100002">Vector   Calculus</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="VectorAlgebra.html#x6-110002.1">Vector   Algebra</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="VectorAlgebra.html#x6-120002.1.1">Vector
+Operations</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="VectorAlgebra.html#x6-170002.1.2">Vector Component Forms</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="VectorAlgebra.html#x6-180002.1.3">Triple Products</a></span></span><span class="subsectionToc"><span class="number">2.1.4</span><span class="title"><a href="VectorAlgebra.html#x6-210002.1.4">Position,
+Displacement, and Separation Vectors</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="#x7-220002.2">Differential Calculus</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="#x7-230002.2.1">Ordinary
+Derivatives</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="#x7-240002.2.2">Gradient</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="#x7-250002.2.3">The Del Operator</a></span></span><span class="subsectionToc"><span class="number">2.2.4</span><span class="title"><a href="#x7-280002.2.4">Product Rules</a></span></span><span class="subsectionToc"><span class="number">2.2.5</span><span class="title"><a href="#x7-290002.2.5">Second
+Derivatives</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="IntegralCalculus.html#x8-350002.3">Integral Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="IntegralCalculus.html#x8-360002.3.1">Line, Surface, and Volume Integrals</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="IntegralCalculus.html#x8-400002.3.2">The
+Fundamental Theorems of Vector Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="IntegralCalculus.html#x8-430002.3.3">The Fundamental Theorem for
+Curls</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="CurvilinearCoordinates.html#x9-440002.4">Curvilinear Coordinates</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="CurvilinearCoordinates.html#x9-450002.4.1">Spherical Coordinate System</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="CurvilinearCoordinates.html#x9-460002.4.2">Cylindrical
+Coordinates</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="DiracDeltaFunction.html#x10-470002.5">Dirac Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="DiracDeltaFunction.html#x10-480002.5.1">A Mathematical Anomaly</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="DiracDeltaFunction.html#x10-490002.5.2">The 1D Dirac
+Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="DiracDeltaFunction.html#x10-500002.5.3">The 3D Dirac Delta Function</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="VectorFieldTheory.html#x11-510002.6">Vector Field Theory</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="VectorFieldTheory.html#x11-520002.6.1">Helmholtz
+Theorem</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="VectorFieldTheory.html#x11-530002.6.2">Potentials</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Electrostatics.html#x12-540003">Electrostatics</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="TheElectricField.html#x13-550003.1">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="TheElectricField.html#x13-560003.1.1">Coulomb’s
+Law</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="TheElectricField.html#x13-570003.1.2">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.3</span><span class="title"><a href="TheElectricField.html#x13-580003.1.3">Continuous Charge Distributions</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-590003.2">Divergence and
+Curl of Electrostatic Fields</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-600003.2.1">Quantification</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-610003.2.2">Divergence of E</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-620003.2.3">Applications
+of Gauss’s Law</a></span></span><span class="subsectionToc"><span class="number">3.2.4</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-630003.2.4">Curl of E</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ElectricPotential.html#x15-640003.3">Electric Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ElectricPotential.html#x15-650003.3.1">Defining the Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ElectricPotential.html#x15-660003.3.2">Some
+Digressions on Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.3</span><span class="title"><a href="ElectricPotential.html#x15-720003.3.3">Poisson’s Equation and Laplace’s Equation</a></span></span><span class="subsectionToc"><span class="number">3.3.4</span><span class="title"><a href="ElectricPotential.html#x15-730003.3.4">The
+Potential of a Localised Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.3.5</span><span class="title"><a href="ElectricPotential.html#x15-740003.3.5">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="WorkandEnergy.html#x16-750003.4">Work and
+Energy</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="WorkandEnergy.html#x16-760003.4.1">To Move a Charge</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="WorkandEnergy.html#x16-770003.4.2">The Energy of a Point Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.3</span><span class="title"><a href="WorkandEnergy.html#x16-780003.4.3">The
+Energy of a Continuous Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.4</span><span class="title"><a href="WorkandEnergy.html#x16-790003.4.4">Comments on Electrostatic
+Energy</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="Conductors.html#x17-830003.5">Conductors</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="Conductors.html#x17-840003.5.1">Properties</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="Conductors.html#x17-850003.5.2">Induced Charges</a></span></span><span class="subsectionToc"><span class="number">3.5.3</span><span class="title"><a href="Conductors.html#x17-860003.5.3">Surface Charge
+and the Force on a Conductor</a></span></span><span class="subsectionToc"><span class="number">3.5.4</span><span class="title"><a href="Conductors.html#x17-870003.5.4">Capacitors</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 7.10.2026, at 8:21.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="IntegralCalculus.html">Integral Calculus</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="VectorAlgebra.html">Vector Algebra</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="VectorCalculus.html#DifferentialCalculus.html">Chapter: Vector
+Calculus</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-2.2"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#section.2.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">2.2</span> <span class="title"> <a id="x7-220002.2"></a>Differential
+Calculus</span></h3></div>
+<p class="noindent">In mathematics, differential calculus is a subfield of calculus that studies the rates at which quantities
+change and therefore plays a vital role in understanding electric and magnetic fields interacting and
+changing with time. This section will give a broad overview. If you require a detailed look, please
+consult <b>M.Sc Higher Mathematics I</b>.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.2.1"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.2.2.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.2.1</span> <span class="title"> <a id="x7-230002.2.1"></a>Ordinary Derivatives</span></h4></div>
+</p><p class="noindent">Assume a function of just one (<span class="alert">1</span>) variable: <math display="inline"><mi>f</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>x</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></math>.
+Therefore, the question we need to answer is what does the derivative,
+<math display="inline"><mstyle class="text"><mtext>d</mtext></mstyle><mi>f</mi><mo class="MathClass-bin" stretchy="false">/</mo><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi></math>, do and
+convey?
+</p><p class="noindent">It tells us how rapidly the function <math display="inline"><mi>f</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>x</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></math>
+<b>varies</b> when we change the argument <math display="inline"><mi>x</mi></math>
+by an infinitesimal amount, <math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi></math>:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle>
+<mi>f</mi> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow> <mstyle class="text"><mtext>d</mtext></mstyle><mo class="MathClass-open" stretchy="false">[</mo>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>f</mi> </mrow></mfrac></mstyle><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-open" stretchy="false">[</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">]</mo></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi>
+</math></td></tr></table>
+<p class="noindent">If we increment <math display="inline"><mi>x</mi></math> by an
+infinitesimal amount <math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi></math>,
+then <math display="inline"><mi>f</mi></math> changes
+by an amount <math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>f</mi></math><span class="margin-block">.
+<span class="margin-comment"><span class="ellipsis">[20]</span>
+<span class="sidenote">Here we can think the derivative as the proportionality factor.</span></span></span>
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Geometrically, the derivative <math display="inline"><mstyle class="text"><mtext>d</mtext></mstyle><mi>f</mi><mo class="MathClass-bin" stretchy="false">/</mo><mstyle class="text"><mtext>d</mtext></mstyle><mi>t</mi></math>
+is the <span class="alert">slope</span> of the graph of <math display="inline"><mi>f</mi></math>
+versus <math display="inline"><mi>x</mi></math>.
+</p></div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.2.2"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.2.2.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.2.2</span> <span class="title"> <a id="x7-240002.2.2"></a>Gradient</span></h4></div>
+</p><p class="noindent">Assume a function which accepts three (<span class="alert">3</span>) variables. As an example, lets take the temperature
+<math display="inline"><mi>T</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mi>y</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mi>z</mi><mo class="MathClass-close" stretchy="false">)</mo></math> in the
+lecture room. Start out in one corner, and set up a system of cardinal directions. Then for each point
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>x</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mi>y</mi><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="thinspace" width="0.17em"></mspace><mi>z</mi><mo class="MathClass-close" stretchy="false">)</mo></math> in the
+room, <math display="inline"><mi>T</mi></math>
+gives the temperature at that spot. We want to generalise the notion of <span class="alert">derivative</span> to functions like
+<math display="inline"><mi>T</mi></math>, which
+depend <b>NOT</b> on one but on three variables.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x7-24001r3"></a>
+<figcaption class="caption"><span class="id">Figure 2.3: 
+         </span><span class="content">An example of a gradient field. Here the field itself is plotted by using arrows to designate the direction of
+         the gradient. To explain the magnitude of the gradient it is either shown by the length of the arrow or by
+         imposing colour on to the plot, which the latter has been used here. Extending this plot to our example,
+         we can see that most of the high temperature resides on the edges of the room whereas the centre remains
+         cool.                                                                   </span></figcaption>
+<img alt="PIC" src="figures/Vector-Calculus/figures-9.png" style=""/>
+</figure>
+<p class="noindent">A derivative tells us <b>how fast the function varies</b>, if we move a little distance. But this
+time the situation is more complicated, because it depends on what <b>direction</b> we move:
+</p>
+<ul class="itemize1">
+<li class="itemize">
+<p class="noindent">Going straight up, the temperature will probably increase fairly rapidly,
+</p>
+</li>
+<li class="itemize">
+<p class="noindent">Moving horizontally, it may not change much at all.</p></li></ul>
+<p class="noindent">In fact, the question of “How fast does <math display="inline"><mi>T</mi></math>
+vary?” can have an infinite number of answers, one for each direction we might choose to explore.
+Fortunately, the problem is not as bad as it looks. A theorem on partial derivatives states:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle>
+<mi>T</mi> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><mi>T</mi>
+</mrow><mrow><mi>∂</mi><mi>x</mi> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><mi>T</mi>
+</mrow><mrow><mi>∂</mi><mi>y</mi> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>y</mi> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><mi>T</mi>
+</mrow><mrow><mi>∂</mi><mi>z</mi> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>z</mi>
+</math></td></tr></table>
+<p class="noindent">This tells us how <math display="inline"><mi>T</mi></math>
+changes when we alter all three (<span class="alert">3</span>) variables by the infinitesimal amounts of
+<math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi></math>,
+<math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>y</mi></math>,
+<math display="inline"><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>z</mi></math>. We
+can write the aforementioned equation as a dot product: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mspace class="thinspace" width="0.17em"></mspace>
+<mstyle class="text"><mtext>d</mtext></mstyle>
+<mi>T</mi> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow> <mstyle class="text"><mtext>d</mtext></mstyle><mo class="MathClass-open" stretchy="false">[</mo>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>T</mi> </mrow></mfrac></mstyle><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-open" stretchy="false">[</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">]</mo><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle displaystyle="true"><mfrac><mrow> <mstyle class="text"><mtext>d</mtext></mstyle><mo class="MathClass-open" stretchy="false">[</mo>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>T</mi> </mrow></mfrac></mstyle><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-open" stretchy="false">[</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">]</mo><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle displaystyle="true"><mfrac><mrow> <mstyle class="text"><mtext>d</mtext></mstyle><mo class="MathClass-open" stretchy="false">[</mo>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>T</mi> </mrow></mfrac></mstyle><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-open" stretchy="false">[</mo><mi>z</mi><mo class="MathClass-close" stretchy="false">]</mo><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mi>·</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>x</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>y</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>z</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>T</mi> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mi>·</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td></tr></table>
+<p class="noindent">where </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>T</mi> <mi>≡</mi> <mstyle displaystyle="true"><mfrac><mrow> <mstyle class="text"><mtext>d</mtext></mstyle><mo class="MathClass-open" stretchy="false">[</mo>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>T</mi> </mrow></mfrac></mstyle><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-open" stretchy="false">[</mo><mi>x</mi><mo class="MathClass-close" stretchy="false">]</mo><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle displaystyle="true"><mfrac><mrow> <mstyle class="text"><mtext>d</mtext></mstyle><mo class="MathClass-open" stretchy="false">[</mo>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>T</mi> </mrow></mfrac></mstyle><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-open" stretchy="false">[</mo><mi>y</mi><mo class="MathClass-close" stretchy="false">]</mo><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle displaystyle="true"><mfrac><mrow> <mstyle class="text"><mtext>d</mtext></mstyle><mo class="MathClass-open" stretchy="false">[</mo>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>T</mi> </mrow></mfrac></mstyle><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-open" stretchy="false">[</mo><mi>z</mi><mo class="MathClass-close" stretchy="false">]</mo><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle>
+</math></td></tr></table>
+<p class="noindent">is the <b>gradient</b> of <math display="inline"><mi>T</mi></math>.
+Note that <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mspace class="thinspace" width="0.17em"></mspace><mi>T</mi></math>
+is a <b>vector quantity</b>, with three (<span class="alert">3</span>) <span class="margin-block">components. <span class="margin-comment"><span class="ellipsis">[21]</span>
+<span class="sidenote">This is the generalised derivative we have been
+looking for.</span></span></span>
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.2.3"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.2.2.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.2.3</span> <span class="title"> <a id="x7-250002.2.3"></a>The Del Operator</span></h4></div> The gradient has the formal appearance of a vector,
+(<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo></math>)<span class="margin-block"><span class="margin"><span>, <span class="ellipsis">[22]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Vector-Calculus/raster/first-nabla.png" style=""/></span><span class="sidenote-text"><span class="ellipsis">[22]</span><b>The History of Nabla</b>
+The operator (<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo></math>),
+was originally introduced by William Rowan Hamilton (1805-1865). Hamilton wrote the operator as a
+rotated nabla and it was P. G. Tait who established An upside-down delta as the conventional symbol
+in <i>An Elementary Treatise on Quaternions</i> (1867) <span class="cite"><a class="cite-show" href="#w3-20001">[†-1]</a><span class="cite-detail"> <a id="x7-25001"></a>Tait, P. G. An elementary treatise on
+quaternions (CUP Archive, 2018)</span></span>. Tait was also responsible for establishing the term <i>nabla</i>.
+David Wilkins suggests Hamilton may have used the nabla as a general purpose symbol or abbreviation
+for whatever operator he wanted to introduce at any time. In 1837 Hamilton used the nabla, in its
+modern orientation, as a symbol for any arbitrary function in <i>Trans. R. Irish Acad. XVII. 236.</i> (OED.)
+<span class="cite"><a class="cite-show" href="#w3-20001">[†-2]</a><span class="cite-detail"> <a id="x7-25002"></a>Hamilton, W. R. On the Argument of Abel. Transactions of the Royal Irish Academy <b>18</b><b>,</b>
+171–259 (1839)</span></span> He used the nabla to signify a permutation operator in <i>"On the Argument
+of Abel, respecting the Impossibility of expressing a Root of any General Equation above
+the Fourth Degree, by any finite Combination of Radicals and Rational Functions,</i> (1839).
+Hamilton used the rotated nabla (<span class="rotatebox" style="transform: rotate(--90deg);"><math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo></math>
+</span>), for the vector differential operator in the <i>Proceedings of the Royal
+Irish Academy</i> (1846). Hamilton also used the rotated nabla as the vector differential operator in <i>On
+Quaternions; or on a new System of Imaginaries in Algebra</i>. For more information, please visit <a href="https://jeff560.tripod.com/calculus.html">here</a>.</span></span></span></span> <span class="alert">multiplying</span> a
+scalar <math display="inline"><mi>T</mi></math>:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>T</mi> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle><mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>y</mi> </mrow></mfrac></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle><mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>z</mi> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mi>T</mi>
+</math></td></tr></table>
+<p class="noindent">The term in parentheses is called <b>del</b> operator:
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x7-25003r7"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle><mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>y</mi> </mrow></mfrac></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle><mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>z</mi> </mrow></mfrac></mstyle>
+</math></td><td class="eq-no">(2.7)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">Del is <b>NOT</b> a vector, in the usual sense. It doesn’t mean much until we
+provide it with a function to act upon. Furthermore, it does <b>NOT</b> “multiply”
+<math display="inline"><mi>T</mi></math>.
+Rather, it is an instruction to <span class="alert">differentiate</span> what follows. To be precise, then, we say that
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo></math> is a vector operator
+which <span class="alert">acts upon</span> <math display="inline"><mi>T</mi></math>, not a vector
+that multiplies <math display="inline"><mi>T</mi></math>.
+</p><p class="noindent">With this qualification, though, <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo></math>
+mimics the behaviour of an ordinary vector in virtually every way. Almost
+anything that can be done with other vectors can also be done with
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo></math>. Now, an
+ordinary vector <math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math>
+can multiply in three (<span class="alert">3</span>) ways:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+1. 
+</dt><dd class="enumerate-enumitem">By a scalar <math display="inline"><mi>a</mi></math>:
+<math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle><mi>a</mi></math>;
+</dd>
+<dt class="enumerate-enumitem">
+2. 
+</dt><dd class="enumerate-enumitem">By a vector <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>,
+via the dot product: <math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></math>;
+</dd>
+<dt class="enumerate-enumitem">
+3. 
+</dt><dd class="enumerate-enumitem">By a vector <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>
+via the cross product: <math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></math>.</dd></dl>
+<p class="noindent">Correspondingly, there are three ways the operator
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo></math> can
+act:  
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">  
+1. 
+</dt><dd class="enumerate-enumitem">On a scalar function <math display="inline"><mi>T</mi><mo class="MathClass-rel" stretchy="false"> :</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>T</mi></math>
+(the gradient);
+</dd>
+<dt class="enumerate-enumitem">  
+2. 
+</dt><dd class="enumerate-enumitem">On a vector function <math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math>,
+via the dot product: <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle></math>
+(divergence)
+</dd>
+<dt class="enumerate-enumitem">
+3. 
+</dt><dd class="enumerate-enumitem">On a vector function <math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math>,
+via the cross product: <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle></math>
+(curl).</dd></dl>
+<p class="noindent">It is time to examine the other two (<span class="alert">2</span>) vector derivatives: divergence and curl.
+</p>
+<p class="noindent"><span class="paragraphHead"> <a id="x7-26000"></a>Divergence</span>
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x7-26001r4"></a>
+<figcaption class="caption"><span class="id">Figure 2.4: </span><span class="content">Visual description of the divergence operation and their possible outcomes.                    </span></figcaption>
+<img alt="PIC" src="figures/Vector-Calculus/figures-12.png" style=""/>
+</figure>
+<p class="noindent">From the definition of <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo></math>
+we construct the divergence as follows:
+</p><math display="block"><mtable class="align-star" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>y</mi> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>z</mi> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mi>·</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>v</mi></mrow><mrow><mi>x</mi></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>v</mi></mrow><mrow><mi>y</mi></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>v</mi></mrow><mrow><mi>z</mi></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><msub><mrow><mi>v</mi></mrow><mrow><mi>x</mi></mrow></msub>
+</mrow><mrow><mi>∂</mi><mi>x</mi> </mrow></mfrac></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><msub><mrow><mi>v</mi></mrow><mrow><mi>y</mi></mrow></msub>
+</mrow><mrow><mi>∂</mi><mi>y</mi> </mrow></mfrac></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><msub><mrow><mi>v</mi></mrow><mrow><mi>z</mi></mrow></msub>
+</mrow><mrow><mi>∂</mi><mi>z</mi> </mrow></mfrac></mstyle><mo class="MathClass-punc" stretchy="false">.</mo><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr></mtable></math>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Observe that the divergence of a vector function
+<math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math> is itself
+a <span class="alert">scalar</span> <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle></math>.
+</p></div></div>
+<p class="noindent">Let’s try to visualise this concept. The name divergence is well chosen, for
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle></math> is a measure
+of how much <math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math>
+spreads <span class="margin-block">out <span class="margin-comment"><span class="ellipsis">[23]</span>
+<span class="sidenote">i.e., diverges</span></span></span> from the initial point.
+</p><p class="noindent">For example, a vector function in <b>Fig.</b> <a href="#x7-26001r4">2.4</a> has a large (positive) <span class="margin-block">divergence, <span class="margin-comment"><span class="ellipsis">[24]</span>
+<span class="sidenote">if the arrows pointed in, it
+would be a negative divergence</span></span></span> two functions in <b>Fig.</b> <a href="#x7-26001r4">2.4</a> has zero divergence, and one function has a
+negative divergence.
+</p><p class="noindent">As an example, imagine standing at the edge of a pond. Sprinkle some dust on the surface.
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+1. 
+</dt><dd class="enumerate-enumitem">If the material spreads out, then we dropped it at a point of <span class="alert">positive divergence</span>;
+</dd>
+<dt class="enumerate-enumitem">
+2. 
+</dt><dd class="enumerate-enumitem">If it collects together, we dropped it at a point of <span class="alert">negative divergence</span>.</dd></dl>
+<p class="noindent"><span class="paragraphHead"> <a id="x7-27000"></a>Curl</span>
+From the definition of <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo></math>
+we construct the curl:
+</p><math display="block"><mtable class="align-star" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><mstyle mathvariant="bold"><mi>V</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace> <mi>×</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="bold"><mi>v</mi></mstyle></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mrow><mo fence="true" form="prefix">|</mo><mrow> <mtable align="axis" class="array" columnlines="none none" displaystyle="true" equalcolumns="false" equalrows="false" style=""> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mover accent="true"><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mo accent="true">^</mo></mover> </mtd>
+<mtd class="array-td" columnalign="center"> <mover accent="true"><mrow><mstyle mathvariant="bold"><mi>y</mi></mstyle></mrow><mo accent="true">^</mo></mover> </mtd>
+<mtd class="array-td" columnalign="center"> <mover accent="true"><mrow><mstyle mathvariant="bold"><mi>z</mi></mstyle></mrow><mo accent="true">^</mo></mover> </mtd>
+</mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <mi>∂</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>∂</mi><mi>x</mi> </mtd><mtd class="array-td" columnalign="center"> <mi>∂</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>∂</mi><mi>y</mi> </mtd><mtd class="array-td" columnalign="center"> <mi>∂</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>∂</mi><mi>z</mi> </mtd></mtr> <mtr class="array-row"><mtd class="array-td" columnalign="center"> <msub><mrow><mi>v</mi></mrow><mrow>
+<mi>x</mi></mrow></msub> </mtd>
+<mtd class="array-td" columnalign="center"> <msub><mrow><mi>v</mi></mrow><mrow><mi>y</mi></mrow></msub> </mtd>
+<mtd class="array-td" columnalign="center"> <msub><mrow><mi>v</mi></mrow><mrow><mi>z</mi></mrow></msub> </mtd></mtr></mtable> </mrow><mo fence="true" form="postfix">|</mo></mrow><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mover accent="true"><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mo accent="true">^</mo></mover> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mi>∂</mi><msub><mrow><mi>v</mi></mrow><mrow><mi>z</mi></mrow></msub></mrow>
+<mrow>
+<mi>∂</mi><mi>y</mi></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><msub><mrow><mi>v</mi></mrow><mrow><mi>y</mi></mrow></msub>
+</mrow><mrow><mi>∂</mi><mi>z</mi> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-bin" stretchy="false">+</mo> <mover accent="true"><mrow><mstyle mathvariant="bold"><mi>y</mi></mstyle></mrow><mo accent="true">^</mo></mover> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mi>∂</mi><msub><mrow><mi>v</mi></mrow><mrow><mi>x</mi></mrow></msub></mrow>
+<mrow>
+<mi>∂</mi><mi>z</mi></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">−</mo> <mfrac><mrow><mi>∂</mi><msub><mrow><mi>v</mi></mrow><mrow><mi>z</mi></mrow></msub></mrow>
+<mrow>
+<mi>∂</mi><mi>x</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mo class="MathClass-bin" stretchy="false">+</mo> <mover accent="true"><mrow><mstyle mathvariant="bold"><mi>z</mi></mstyle></mrow><mo accent="true">^</mo></mover> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><msub><mrow><mi>v</mi></mrow><mrow><mi>y</mi></mrow></msub>
+</mrow><mrow><mi>∂</mi><mi>x</mi> </mrow></mfrac></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo> <mfrac><mrow><mi>∂</mi><msub><mrow><mi>v</mi></mrow><mrow><mi>x</mi></mrow></msub></mrow>
+<mrow>
+<mi>∂</mi><mi>y</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow><mo class="MathClass-punc" stretchy="false">.</mo><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr></mtable></math>
+<p class="noindent"></p><figure class="float">
+<a id="x7-27001r5"></a>
+<figcaption class="caption"><span class="id">Figure 2.5: </span><span class="content">Different behaviours of the curl operation.                                          </span></figcaption>
+<img alt="PIC" src="figures/Vector-Calculus/figures-5.png" style=""/>
+</figure>
+<p class="noindent">Similar to divergence, the name curl is also well chosen, for
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle></math> is a measure
+of how much <math display="inline"><mstyle mathvariant="bold"><mi>v</mi></mstyle></math>
+swirls around the point in question. Therefore all function except the rightmost in <b>Fig.</b> <a href="#x7-27001r5">2.5</a> all have
+zero curl, whereas the functions in <b>Fig.</b> <a href="#x7-27001r5">2.5</a> all have a substantial curl sans one, pointing in the
+<math display="inline"><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle></math>
+direction, as the natural right-hand rule would suggest.
+</p><p class="noindent">To finish these two (<span class="alert">2</span>) important operations, let’s again imagine we are standing at the edge of a pond.
+Float a small flower, if it starts to rotate, then we placed it at a point of nonzero curl. A whirlpool
+would be a region of large curl.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.2.4"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.2.2.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.2.4</span> <span class="title"> <a id="x7-280002.2.4"></a>Product Rules</span></h4></div>
+</p><p class="noindent">The calculation of ordinary derivatives is facilitated by a number of rules which are as follows:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mtable class="aligned" displaystyle="true"><mtr><mtd columnalign="right"><mstyle class="text"><mtext>Sum Rule</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mstyle displaystyle="true"><mfrac><mrow> <mi>d</mi>
+</mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi>f</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>g</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mi>d</mi><mi>f</mi>
+</mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mi>g</mi>
+</mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mstyle></mtd>
+<mtd columnalign="right"></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>Constant Multiplication</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mstyle displaystyle="true"><mfrac><mrow> <mi>d</mi>
+</mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi><mi>f</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>k</mi><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mi>f</mi>
+</mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mstyle></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>Product Rule</mtext></mstyle></mtd> <mtd columnalign="left"></mtd><mtd columnalign="right"><mstyle displaystyle="true"><mfrac><mrow> <mi>d</mi>
+</mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi>f</mi><mi>g</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd> <mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mi>g</mi>
+</mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>g</mi><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mi>f</mi>
+</mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mstyle></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>Quotient Rule</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mstyle displaystyle="true"><mfrac><mrow> <mi>d</mi>
+</mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mstyle><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>f</mi>
+</mrow><mrow><mi>g</mi> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow><mi>g</mi><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mi>f</mi>
+</mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>f</mi><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mi>g</mi>
+</mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mstyle>
+</mrow><mrow><msup><mrow><mi>g</mi></mrow><mrow><mn>2</mn>
+</mrow></msup> </mrow></mfrac></mstyle></mtd>
+</mtr><mtr><mtd columnalign="right"></mtd>
+</mtr> </mtable>
+</math></td></tr></table>
+<p class="noindent">Similar relations hold for the vector derivatives. Thus,
+</p><math display="block"><mtable class="align-star" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><mtable class="aligned" displaystyle="true"><mtr><mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mi>f</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>g</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>f</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>g</mi><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+<mtd columnalign="right"></mtd>
+</mtr><mtr><mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr><mtr><mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr> </mtable><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>and</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mtable class="aligned" displaystyle="true"><mtr><mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi><mi>f</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>k</mi><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>f</mi><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+<mtd columnalign="right"></mtd>
+</mtr><mtr><mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi><mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>k</mi><mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr><mtr><mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi>k</mi><mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>k</mi><mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr> </mtable></mtd>
+<mtd class="align-even"><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right">
+</mtd></mtr></mtable></math>
+<p class="noindent">The product rules, on the other hand, are not quite so simple. There are two (<span class="alert">2</span>) ways to construct a
+scalar as the product of two functions:
+</p><math display="block"><mtable class="align-star" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><mi>f</mi><mi>g</mi><mspace class="qquad" width="2em"></mspace></mtd>
+<mtd class="align-even"><mstyle class="text"><mtext>(product of two scalar functions)</mtext></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mspace class="qquad" width="2em"></mspace></mtd>
+<mtd class="align-even"><mstyle class="text"><mtext>(dot product of two vector functions)</mtext></mstyle><mo class="MathClass-punc" stretchy="false">,</mo><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr></mtable></math>
+<p class="noindent">and two ways to make a vector:
+</p><math display="block"><mtable class="align-star" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><mi>f</mi><mstyle mathvariant="bold"><mi>A</mi></mstyle><mspace class="qquad" width="2em"></mspace></mtd>
+<mtd class="align-even"><mstyle class="text"><mtext>(scalar times vector),</mtext></mstyle><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mspace class="qquad" width="2em"></mspace></mtd>
+<mtd class="align-even"><mstyle class="text"><mtext>(cross product of two vectors).</mtext></mstyle><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr></mtable></math>
+<p class="noindent">Accordingly, there are six (<span class="alert">6</span>) product rules, which are as follows: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x7-28001r8"></mstyle><mtable class="aligned" displaystyle="true"><mtr><mtd columnalign="right"><mstyle class="text"><mtext>Gradient I</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mo class="MathClass-open" stretchy="false">(</mo><mi>f</mi><mi>g</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>g</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>g</mi><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>f</mi></mtd>
+<mtd columnalign="right"></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>Gradient II</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>×</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mi>×</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">+</mo> <mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mi class="MathClass-op">∇</mi><mo> ⁡</mo><mo class="MathClass-close" stretchy="false">)</mo><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mi>·</mi> <mi class="MathClass-op">∇</mi><mo> ⁡</mo><mo class="MathClass-close" stretchy="false">)</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>Divergence I</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi>f</mi><mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>f</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>Divergence II</mtext></mstyle></mtd><mtd columnalign="left"></mtd><mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mtd> <mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>Curl I</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi>f</mi><mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>f</mi><mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>×</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>f</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>Curl II</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mi>·</mi> <mi class="MathClass-op">∇</mi><mo> ⁡</mo><mo class="MathClass-close" stretchy="false">)</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo> <mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mi class="MathClass-op">∇</mi><mo> ⁡</mo><mo class="MathClass-close" stretchy="false">)</mo><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+</mtr><mtr><mtd columnalign="right"></mtd>
+</mtr> </mtable>
+</math></td><td class="eq-no">(2.8)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The proofs for rules come straight from the product rule for ordinary derivatives. As an
+example:
+</p><math display="block"><mtable class="align-star" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi>f</mi><mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi>f</mi><msub><mrow><mi>A</mi></mrow><mrow><mi>x</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>y</mi> </mrow></mfrac></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi>f</mi><msub><mrow><mi>A</mi></mrow><mrow><mi>y</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>z</mi> </mrow></mfrac></mstyle><mo class="MathClass-open" stretchy="false">(</mo><mi>f</mi><msub><mrow><mi>A</mi></mrow><mrow><mi>z</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><mi>f</mi>
+</mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac></mstyle><msub><mrow><mi>A</mi></mrow><mrow><mi>x</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>f</mi><mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><msub><mrow><mi>A</mi></mrow><mrow><mi>x</mi></mrow></msub>
+</mrow><mrow><mi>∂</mi><mi>x</mi> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><mi>f</mi>
+</mrow><mrow><mi>∂</mi><mi>y</mi> </mrow></mfrac></mstyle><msub><mrow><mi>A</mi></mrow><mrow><mi>y</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>f</mi><mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><msub><mrow><mi>A</mi></mrow><mrow><mi>y</mi></mrow></msub>
+</mrow><mrow><mi>∂</mi><mi>y</mi> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><mi>f</mi>
+</mrow><mrow><mi>∂</mi><mi>z</mi> </mrow></mfrac></mstyle><msub><mrow><mi>A</mi></mrow><mrow><mi>z</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>f</mi><mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><msub><mrow><mi>A</mi></mrow><mrow><mi>z</mi></mrow></msub>
+</mrow><mrow><mi>∂</mi><mi>z</mi> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>f</mi><mo class="MathClass-close" stretchy="false">)</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>f</mi><mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr></mtable></math>
+<p class="noindent">It is also possible to formulate three quotient rules:
+</p><math display="block"><mtable class="align-star" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mi>f</mi></mrow>
+<mrow>
+<mi>g</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>g</mi><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>f</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>f</mi><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>g</mi></mrow>
+<mrow><msup><mrow>
+<mi>g</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">,</mo><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mstyle mathvariant="bold"><mi>A</mi></mstyle></mrow>
+<mrow>
+<mi>g</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>g</mi><mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>g</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow>
+<mrow><msup><mrow>
+<mi>g</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">,</mo><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mstyle mathvariant="bold"><mi>A</mi></mstyle></mrow>
+<mrow>
+<mi>g</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>g</mi><mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>×</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>g</mi><mo class="MathClass-close" stretchy="false">)</mo></mrow>
+<mrow><msup><mrow>
+<mi>g</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">.</mo><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr></mtable></math>
+<p class="noindent">However, given these can be obtained quickly from the previously mentioned product rules, there is no
+point in listing them separately and is left for the reader as exercise.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.2.5"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.2.2.5"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.2.5</span> <span class="title"> <a id="x7-290002.2.5"></a>Second Derivatives</span></h4></div>
+</p><p class="noindent">The gradient, the divergence, and the curl are the only first derivatives we can make with
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle></math> by applying
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo></math> twice, we can construct
+five (<span class="alert">5</span>) types of <math display="inline"><msup><mrow><mstyle class="text"><mtext>2</mtext></mstyle></mrow><mrow><mstyle class="text"><mtext>nd</mtext></mstyle></mrow></msup></math>
+derivatives.
+</p><p class="noindent">The gradient <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>T</mi></math>
+is a vector, so we can take the divergence and curl of it:
+</p><p class="noindent">
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">  
+1. 
+</dt><dd class="enumerate-enumitem">Divergence of gradient: <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>T</mi><mo class="MathClass-close" stretchy="false">)</mo></math>.
+</dd>
+<dt class="enumerate-enumitem">
+2. 
+</dt><dd class="enumerate-enumitem">Curl of gradient: <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>T</mi><mo class="MathClass-close" stretchy="false">)</mo></math>.</dd></dl>
+<p class="noindent">The divergence <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle></math>
+is a scalar, therefore all we can do is take its gradient:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+3. 
+</dt><dd class="enumerate-enumitem">Gradient of divergence: <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></math>.</dd></dl>
+<p class="noindent">The curl <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle></math> is
+a vector, so we can take its divergence and curl:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+4. 
+</dt><dd class="enumerate-enumitem">Divergence of curl: <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></math>.
+</dd>
+<dt class="enumerate-enumitem">
+5. 
+</dt><dd class="enumerate-enumitem">Curl of curl: <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></math>.</dd></dl>
+<p class="noindent">This exhausts the possible combinations, and in fact <b>NOT</b> all of them give anything new. Let’s
+consider them one at a time:
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-1"> <a id="x7-30000"></a>Divergence of a Gradient</h5>
+</p><p class="noindent">
+</p><math display="block"><mtable class="align-star" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>T</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle><mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle><mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>y</mi> </mrow></mfrac></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle><mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>z</mi> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mi>·</mi> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><mi>T</mi>
+</mrow><mrow><mi>∂</mi><mi>x</mi> </mrow></mfrac></mstyle><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><mi>∂</mi><mi>T</mi></mrow>
+<mrow>
+<mi>∂</mi><mi>y</mi></mrow></mfrac> <mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><mi>∂</mi><mi>T</mi></mrow>
+<mrow>
+<mi>∂</mi><mi>z</mi></mrow></mfrac> <mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow><mn>2</mn></mrow></msup><mi>T</mi></mrow>
+<mrow>
+<mi>∂</mi><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow><mn>2</mn></mrow></msup><mi>T</mi></mrow>
+<mrow>
+<mi>∂</mi><msup><mrow><mi>y</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow><mn>2</mn></mrow></msup><mi>T</mi></mrow>
+<mrow>
+<mi>∂</mi><msup><mrow><mi>z</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">.</mo><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr></mtable></math>
+This object, which we write as <math display="inline"><msup><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo></mrow><mrow><mn>2</mn></mrow></msup><mi>T</mi></math>
+for short, is called the <span class="margin-block">Laplacian <span class="margin-comment"><span class="ellipsis">[25]</span>
+<span class="sidenote">A differential operator given by the divergence of the
+gradient of a scalar function on Euclidean space. It is usually denoted by the symbols
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mi class="MathClass-op">∇</mi><mo> ⁡</mo></math>,
+<math display="inline"><msup><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo></mrow><mrow><mn>2</mn></mrow></msup></math> or
+<math display="inline"><mi mathvariant="normal">Δ</mi></math>.
+In a Cartesian coordinate system, the Laplacian is given by the sum of second
+partial derivatives of the function with respect to each independent variable.
+The Laplace operator is named after the French mathematician <i>Pierre-Simon de
+Laplace</i> <i>(1749-1827)</i>, who first applied the operator to the study of celestial mechanics:
+the Laplacian of the gravitational potential due to a given mass density distribution
+is a constant multiple of that density distribution. Solutions of Laplace’s equation
+<math display="inline"><mi mathvariant="normal">Δ</mi><mi>f</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math> are
+called harmonic functions and represent the possible gravitational potentials in regions of vacuum.
+The Laplacian occurs in many differential equations describing physical phenomena. Poisson’s equation
+describes electric and gravitational potentials; the diffusion equation describes heat and fluid flow;
+the wave equation describes wave propagation; and the Schrödinger equation describes
+the wave function in quantum mechanics. In image processing and computer vision, the
+Laplacian operator has been used for various tasks, such as blob and edge detection.</span></span></span> of
+<math display="inline"><mi>T</mi></math>, which
+will be our focus later. <div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">The Laplacian of a scalar <math display="inline"><mi>T</mi></math>
+is a scalar value. </p></div></div>
+<p class="noindent">Occasionally, we will use the Laplacian of a vector,
+<math display="inline"><msup><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo></mrow><mrow><mn>2</mn></mrow></msup><mstyle mathvariant="bold"><mi>v</mi></mstyle></math>. By this we mean a <b>vector</b>
+quantity whose <math display="inline"><mi>x</mi></math>-component
+is the Laplacian of <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>x</mi></mrow></msub></math>,
+and so on. </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msup><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo></mrow><mrow><mn>2</mn></mrow></msup><mstyle mathvariant="bold"><mi>v</mi></mstyle> <mi>≡</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msup><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo></mrow><mrow><mn>2</mn></mrow></msup><msub><mrow><mi>v</mi></mrow><mrow>
+<mi>x</mi></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mover accent="true"><mrow><mi>x</mi></mrow><mo accent="true">^</mo></mover></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msup><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo></mrow><mrow><mn>2</mn></mrow></msup><msub><mrow><mi>v</mi></mrow><mrow>
+<mi>y</mi></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ŷ</mi></mstyle></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msup><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo></mrow><mrow><mn>2</mn></mrow></msup><msub><mrow><mi>v</mi></mrow><mrow>
+<mi>z</mi></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><mstyle mathvariant="bold-italic"><mspace class="thinspace" width="0.17em"></mspace><mstyle style="color:#993949;"><mi>ẑ</mi></mstyle></mstyle>
+</math></td></tr></table>
+<p class="noindent">This is nothing more than a convenient extension of the meaning of
+<math display="inline"><msup><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo></mrow><mrow><mn>2</mn></mrow></msup></math>.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-2"> <a id="x7-31000"></a>Curl of a Gradient</h5>
+</p><p class="noindent">The curl of a gradient is <b>always</b> zero: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>T</mi> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td></tr></table>
+<p class="noindent">This is an <b>important fact</b>, which will be used repeatedly. Without going into too much detail into the
+proof, it relies on the following relation: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac></mstyle><msup><mrow>
+<mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><mi>T</mi>
+</mrow><mrow><mi>∂</mi><mi>y</mi> </mrow></mfrac></mstyle>
+</mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi>
+</mrow><mrow><mi>∂</mi><mi>y</mi> </mrow></mfrac></mstyle><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>∂</mi><mi>T</mi>
+</mrow><mrow><mi>∂</mi><mi>x</mi> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td></tr></table>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-3"> <a id="x7-32000"></a>Gradient of Divergence</h5>
+</p><p class="noindent">This operation rarely occurs in physical applications, and it has not been given any special name of its own.
+Notice that <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></math>
+is <b>NOT</b> the same as the Laplacian of a vector: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msup><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mi class="MathClass-op">∇</mi><mo> ⁡</mo></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mi>≠</mi> <mi class="MathClass-op">∇</mi><mo> ⁡</mo><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td></tr></table>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-4"> <a id="x7-33000"></a>Divergence of a Curl</h5>
+</p><p class="noindent">Similar to the curl of a gradient, it is always zero: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-5"> <a id="x7-34000"></a>Curl of a Curl</h5>
+</p><p class="noindent">As we can check from the definition of <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo></math>:
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x7-34001r9"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo><mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>v</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo></mrow><mrow><mn>2</mn></mrow></msup><mstyle mathvariant="bold"><mi>v</mi></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(2.9)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">So curl-of-curl gives nothing new as the first term is just the divergence of a curl, and the second is the
+Laplacian. To put it short, then, there are just two kinds of second <span class="margin-block">derivatives: <span class="margin-comment"><span class="ellipsis">[26]</span>
+<span class="sidenote">It is possible to work
+out <math display="inline"><msup><mrow><mstyle class="text"><mtext>3</mtext></mstyle></mrow><mrow><mstyle class="text"><mtext>rd</mtext></mstyle></mrow></msup></math>
+derivatives, but fortunately second derivatives suffice for practically all physical applications.</span></span></span>
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+1. 
+</dt><dd class="enumerate-enumitem">Laplacian,
+</dd>
+<dt class="enumerate-enumitem">
+2. 
+</dt><dd class="enumerate-enumitem">Gradient of divergence.</dd></dl>
+<div class="section-header">
+<h3 id="header-section-references">
+<span class="number">
+<i class="fa-solid fa-magnifying-glass"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+            Page References</span>
+</h3>
+</div>
+<div class="cite-block">
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">1.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> Tait, P. G. An elementary treatise on quaternions (CUP Archive, 2018)</dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">2.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> Hamilton, W. R. On the Argument of Abel. Transactions of the Royal Irish Academy 18, 171–259 (1839)</dd>
+</dl></div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="IntegralCalculus.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="VectorAlgebra.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="VectorCalculus.html#DifferentialCalculus.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 7.10.2026, at 8:21.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 2.2: Differential Calculus</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>
