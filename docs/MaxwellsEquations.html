@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Maxwell’s Equations</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="flatweb.css" rel="stylesheet" type="text/css"/>
+<script src="flatweb.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="style-code/gruvbox-light-hard.min.css" id="code-style" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Electrodynamics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2026.WS</span>
+<span class="header-chapter">Electrodynamics</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="ThePurposeofElectromagnetism.html#x3-20001">The Purpose of Electromagnetism</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-30001.1">Mechanics in Four Different
+Views</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-40001.1.1">Electromagnetism and Relativity</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-50001.1.2">Four Kinds of Forces</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-60001.1.3">Unifying
+Physical Theories</a></span></span><span class="subsectionToc"><span class="number">1.1.4</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-70001.1.4">The Fields of Electrodynamics</a></span></span><span class="subsectionToc"><span class="number">1.1.5</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-80001.1.5">Electric Charge</a></span></span><span class="subsectionToc"><span class="number">1.1.6</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-90001.1.6">Interpreting
+Conservation   of   Charge</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="VectorCalculus.html#x5-100002">Vector   Calculus</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="VectorAlgebra.html#x6-110002.1">Vector   Algebra</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="VectorAlgebra.html#x6-120002.1.1">Vector
+Operations</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="VectorAlgebra.html#x6-170002.1.2">Vector Component Forms</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="VectorAlgebra.html#x6-180002.1.3">Triple Products</a></span></span><span class="subsectionToc"><span class="number">2.1.4</span><span class="title"><a href="VectorAlgebra.html#x6-210002.1.4">Position,
+Displacement, and Separation Vectors</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-220002.2">Differential Calculus</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="DifferentialCalculus.html#x7-230002.2.1">Ordinary
+Derivatives</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-240002.2.2">Gradient</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="DifferentialCalculus.html#x7-250002.2.3">The Del Operator</a></span></span><span class="subsectionToc"><span class="number">2.2.4</span><span class="title"><a href="DifferentialCalculus.html#x7-280002.2.4">Product Rules</a></span></span><span class="subsectionToc"><span class="number">2.2.5</span><span class="title"><a href="DifferentialCalculus.html#x7-290002.2.5">Second
+Derivatives</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="IntegralCalculus.html#x8-350002.3">Integral Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="IntegralCalculus.html#x8-360002.3.1">Line, Surface, and Volume Integrals</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="IntegralCalculus.html#x8-400002.3.2">The
+Fundamental Theorems of Vector Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="IntegralCalculus.html#x8-430002.3.3">The Fundamental Theorem for
+Curls</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="CurvilinearCoordinates.html#x9-440002.4">Curvilinear Coordinates</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="CurvilinearCoordinates.html#x9-450002.4.1">Spherical Coordinate System</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="CurvilinearCoordinates.html#x9-460002.4.2">Cylindrical
+Coordinates</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="DiracDeltaFunction.html#x10-470002.5">Dirac Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="DiracDeltaFunction.html#x10-480002.5.1">A Mathematical Anomaly</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="DiracDeltaFunction.html#x10-490002.5.2">The 1D Dirac
+Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="DiracDeltaFunction.html#x10-500002.5.3">The 3D Dirac Delta Function</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="VectorFieldTheory.html#x11-510002.6">Vector Field Theory</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="VectorFieldTheory.html#x11-520002.6.1">Helmholtz
+Theorem</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="VectorFieldTheory.html#x11-530002.6.2">Potentials</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Electrostatics.html#x12-540003">Electrostatics</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="TheElectricField.html#x13-550003.1">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="TheElectricField.html#x13-560003.1.1">Coulomb’s
+Law</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="TheElectricField.html#x13-570003.1.2">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.3</span><span class="title"><a href="TheElectricField.html#x13-580003.1.3">Continuous Charge Distributions</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-590003.2">Divergence and
+Curl of Electrostatic Fields</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-600003.2.1">Quantification</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-610003.2.2">Divergence of E</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-620003.2.3">Applications
+of Gauss’s Law</a></span></span><span class="subsectionToc"><span class="number">3.2.4</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-630003.2.4">Curl of E</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ElectricPotential.html#x15-640003.3">Electric Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ElectricPotential.html#x15-650003.3.1">Defining the Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ElectricPotential.html#x15-660003.3.2">Some
+Digressions on Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.3</span><span class="title"><a href="ElectricPotential.html#x15-720003.3.3">Poisson’s Equation and Laplace’s Equation</a></span></span><span class="subsectionToc"><span class="number">3.3.4</span><span class="title"><a href="ElectricPotential.html#x15-730003.3.4">The
+Potential of a Localised Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.3.5</span><span class="title"><a href="ElectricPotential.html#x15-740003.3.5">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="WorkandEnergy.html#x16-750003.4">Work
+and  Energy</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="WorkandEnergy.html#x16-760003.4.1">To  Move  a  Charge</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="WorkandEnergy.html#x16-770003.4.2">The  Energy  of  a  Point  Charge
+Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.3</span><span class="title"><a href="WorkandEnergy.html#x16-780003.4.3">The Energy of a Continuous Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.4</span><span class="title"><a href="WorkandEnergy.html#x16-790003.4.4">Comments on
+Electrostatic Energy</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="Conductors.html#x17-830003.5">Conductors</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="Conductors.html#x17-840003.5.1">Properties</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="Conductors.html#x17-850003.5.2">Induced Charges</a></span></span><span class="subsectionToc"><span class="number">3.5.3</span><span class="title"><a href="Conductors.html#x17-860003.5.3">Surface
+Charge and the Force on a Conductor</a></span></span><span class="subsectionToc"><span class="number">3.5.4</span><span class="title"><a href="Conductors.html#x17-870003.5.4">Capacitors</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="MagneticFieldsinMatter.html#x18-890004">Magnetic Fields in
+Matter</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="Magnetisation.html#x19-900004.1">Magnetisation</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="Magnetisation.html#x19-910004.1.1">Diamagnets, Paramagnets, and Ferromagnets</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="Magnetisation.html#x19-920004.1.2">Torques
+and Forces on Magnetic Dipoles</a></span></span><span class="subsectionToc"><span class="number">4.1.3</span><span class="title"><a href="Magnetisation.html#x19-930004.1.3">Effect of a Magnetic Field on Atomic
+Orbits</a></span></span><span class="subsectionToc"><span class="number">4.1.4</span><span class="title"><a href="Magnetisation.html#x19-940004.1.4">Magnetization</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-950004.2">The Field of a Magnetised Object</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-960004.2.1">Bound
+Currents</a></span></span><span class="subsectionToc"><span class="number">4.2.2</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-970004.2.2">Physical Interpretation of Bound Currents</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="TheAuxiliaryHField.html#x21-980004.3">The Auxiliary
+H  Field</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="TheAuxiliaryHField.html#x21-990004.3.1">Ampère’s  Law  in  Magnetized  Materials</a></span></span><span class="subsectionToc"><span class="number">4.3.2</span><span class="title"><a href="TheAuxiliaryHField.html#x21-1010004.3.2">A  Deceptive
+Parallel</a></span></span><span class="subsectionToc"><span class="number">4.3.3</span><span class="title"><a href="TheAuxiliaryHField.html#x21-1040004.3.3">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="LinearandNonLinearMedia.html#x22-1050004.4">Linear and Non-Linear Media</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="LinearandNonLinearMedia.html#x22-1060004.4.1">Magnetic
+Susceptibility and Permeability</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="LinearandNonLinearMedia.html#x22-1070004.4.2">Ferromagnetism</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="Electrodynamics.html#x23-1110005">Electrodynamics</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="ElectromotiveForce.html#x24-1120005.1">Electromotive
+Force</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="ElectromotiveForce.html#x24-1130005.1.1">Ohm’s Law</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="ElectromotiveForce.html#x24-1140005.1.2">Determining the Current Density</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="ElectromotiveForce.html#x24-1150005.1.3">Electromotive
+Force</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="ElectromotiveForce.html#x24-1170005.1.4">Motional EMF</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="ElectromagneticInduction.html#x25-1180005.2">Electromagnetic Induction</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="ElectromagneticInduction.html#x25-1190005.2.1">Faraday’s Law</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="ElectromagneticInduction.html#x25-1200005.2.2">The
+Induced Electric Field</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="ElectromagneticInduction.html#x25-1220005.2.3">Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="ElectromagneticInduction.html#x25-1230005.2.4">Energy in Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="#x26-1240005.3">Maxwell’s
+Equations</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="#x26-1250005.3.1">Electrodynamics Before Maxwell</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="#x26-1260005.3.2">How Maxwell Fixed Ampère’s
+Law</a></span></span><span class="subsectionToc"><span class="number">5.3.3</span><span class="title"><a href="#x26-1270005.3.3">Maxwell’s Equations</a></span></span><span class="subsectionToc"><span class="number">5.3.4</span><span class="title"><a href="#x26-1280005.3.4">Magnetic Charge</a></span></span><span class="subsectionToc"><span class="number">5.3.5</span><span class="title"><a href="#x26-1290005.3.5">Maxwell’s Equations
+in Matter</a></span></span><span class="subsectionToc"><span class="number">5.3.6</span><span class="title"><a href="#x26-1300005.3.6">Boundary Conditions</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="nav-footer-webBook"><b>Last Updated:</b> 10.11.2026, at 12:38.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><span class="nav-link"></span></span> <span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="ElectromagneticInduction.html">Electromagnetic Induction</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="Electrodynamics.html#MaxwellsEquations.html">Chapter: Electrodynamics</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"><h3 id="header-section-5.3"><span class="number">5.3</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#section.5.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x26-1240005.3"></a>Maxwell’s Equations</span></h3></div>
+<p class="noindent">It is time we develop the bigger picture and derive all the equations needed to complete classical
+electromagnetism.
+</p>
+<div class="subsection-header"><h4 id="header-subsection-5.3.1"><span class="number">5.3.1</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.5.3.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x26-1250005.3.1"></a>Electrodynamics Before Maxwell</span></h4></div>
+<p class="noindent">So far, we have encountered the following laws, specifying the <i>divergence</i> and <i>curl</i> of electric and
+magnetic fields. It is worth mentioning that they were <b>NOT</b> written in the compact form <span class="cite"><a class="cite-show" href="#w3-20001">[†-1]</a><span class="cite-detail" id="maxwell2010physical">
+<a id="x26-125001"></a>Maxwell, J. C. On physical lines of force. Philosophical magazine <b>90</b><b>,</b> 11–23 (2010)</span></span> we know today, but
+their physical content was <span class="margin-block"><span class="margin"><span>familiar: <a class="ellipsis" href="#m-ref-149">[149]</a></span><span class="sidenote"><a class="copiable-link" href="#m-ref-149" id="m-ref-149"> ¶</a><span class="sidenote-image"><img alt="PIC" src="figures/Electrodynamics/raster/portrait-heaviside.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[149]</span>We can thank <i>Oliver Heaviside</i> for the simplification, who was a
+British mathematician and electrical engineer. He also invented a new technique for solving differential
+equations (equivalent to the Laplace transform), and independently developed vector calculus.</span></span></span></span>
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mtable class="aligned" displaystyle="true"><mtr><mtd columnalign="right"><mstyle class="text"><mtext>(i)</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>ρ</mi></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mtd>
+<mtd columnalign="right"></mtd>
+<mtd columnalign="left"><mstyle class="text"><mtext>Gauss’s law</mtext></mstyle></mtd>
+<mtd columnalign="right"></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>(ii)</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mtd>
+<mtd columnalign="right"></mtd>
+<mtd columnalign="left"><mstyle class="text"><mtext>-</mtext></mstyle></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>(iii)</mtext></mstyle></mtd><mtd columnalign="left"></mtd><mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle></mtd><mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>B</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle></mtd><mtd columnalign="right"></mtd><mtd columnalign="left"><mstyle class="text"><mtext>Faraday’s law</mtext></mstyle></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>(iv)</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle mathvariant="bold"><mi>J</mi></mstyle></mtd>
+<mtd columnalign="right"></mtd>
+<mtd columnalign="left"><mstyle class="text"><mtext>Ampere’s law</mtext></mstyle></mtd>
+</mtr><mtr><mtd columnalign="right"></mtd>
+</mtr> </mtable>
+</math></td></tr></table>
+<p class="noindent">These equations represent the state of electromagnetic theory in the mid
+<math display="inline"><msup><mrow><mstyle class="text"><mtext>19</mtext></mstyle></mrow><mrow><mstyle class="text"><mtext>th</mtext></mstyle></mrow></msup></math> century,
+when <i>Maxwell</i> began his work. Now, it happens there is a major inconsistency in these formulas. It has
+to do with the old rule that <b>divergence of curl is always zero</b>. If were to apply the divergence operation
+(<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> </math>) to
+number (iii), everything works out: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>B</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle displaystyle="true"><mfrac><mrow> <msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup></mrow></mfrac></mstyle><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td></tr></table>
+<div class="sidenote"> <span class="figure">
+<a id="x26-125002r1"></a>
+<figcaption class="caption"><span class="id">Figure 5.1: </span><span class="content">The charging of the capacitor was one of the problem which the current knowledge of electrodynamics
+couldn’t explain and was a pivotal point in developing the final element of electrodynamics.                   </span></figcaption>
+<img alt="PIC" src="figures/Electrodynamics/figures-1.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">The left side is zero given divergence of curl is zero and the right side is zero by virtue of
+equation (ii). But when we do the same thing to number (iv), we seem to hit a problem:
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-125003r32"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td><td class="eq-no">(5.32)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">the left side must be zero, but the right side, in general, is <b>NOT</b>. For steady currents, the divergence of
+<math display="inline"><mstyle mathvariant="bold"><mi>J</mi></mstyle></math> is zero,
+which we have seen in <b>Magnetostatics</b>, but when we go beyond magnetostatics <i>Ampère’s law</i> cannot
+be right.
+</p><p class="noindent">There’s another way to see that <i>Ampère’s law</i> is bound to fail for nonsteady currents. Suppose we’re in
+the process of charging up a capacitor, shown in <b>Fig.</b> <a href="#x26-125002r1">5.1</a>. To recall, in integral form, <i>Ampère’s law</i>
+reads; </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>∮</mi>
+<mstyle mathvariant="bold">
+<mi>B</mi></mstyle>
+<mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msubsup><mrow><mi>I</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow><mrow></mrow></msubsup><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">Let’s apply it to the Amperian loop shown in the diagram. Before we do that, we need to ask the following question: </p><div class="quote">
+How do we determine <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow></msub></math>?
+</div>
+<p class="noindent">Well, it’s the total current passing through the loop, or, more precisely, the current piercing a surface that has
+the loop for its boundary. In this case, the <span class="alert">simplest</span> surface lies in the plane of the loop-the wire punctures this surface,
+therefore <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>I</mi></math>. </p><div class="quote">
+But what if we draw instead the balloon-shaped surface in <b>Fig.</b> <a href="#x26-125002r1">5.1</a>? </div>
+<p class="noindent">No current passes through <i>this</i> surface, and we conclude that
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>. We
+never had this problem in magnetostatics because the conflict arises only when charge is piling up
+<span class="margin-block">somewhere. <span class="margin-comment"><a class="ellipsis" href="#m-ref-150">[150]</a>
+<span class="sidenote">in this case, on the capacitor plates.</span></span></span> But for <i>non-steady</i> <span class="margin-block">currents <span class="margin-comment"><a class="ellipsis" href="#m-ref-151">[151]</a>
+<span class="sidenote">such as the charging of a
+capacitor.</span></span></span>
+</p>
+<div class="block-minor warning"><div class="body">
+<p class="noindent"><span class="alert">The current enclosed by the loop</span> is an ill-defined notion as it depends entirely on what surface we use. </p></div></div>
+<div class="block-minor knowledge"><div class="body">
+<p class="noindent">This may sound like an unnecessary argument as one could say to use the plane surface, but
+remember, the Amperian loop could be some contorted shape that doesn’t even lie in a plane.
+</p></div></div>
+<p class="noindent">Of course, we had no right to <i>expect</i> Ampère’s law to hold outside of magnetostatics given we
+derived it from the <i>Biot-Savart law</i>. However, if we put all these knowledge in the time
+of <i>Maxwell’s</i>, there was no <i>experimental</i> reason to doubt that <i>Ampère’s law</i> was of wider
+validity.
+</p><p class="noindent">The flaw was a purely theoretical one, and <i>Maxwell</i> fixed it by purely theoretical arguments.
+</p>
+<div class="subsection-header"><h4 id="header-subsection-5.3.2"><span class="number">5.3.2</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.5.3.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x26-1260005.3.2"></a>How Maxwell Fixed Ampère’s Law</span></h4></div>
+<p class="noindent">The problem is on the right side of <span> Eq. (<a href="#x26-125003r32">5.32</a>)</span> , which should be zero, but isn’t. Applying the
+continuity equation and Gauss’s law, the problematic term can be rephrased as: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>J</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mi>ρ</mi>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle displaystyle="true"><mfrac><mrow> <msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup></mrow></mfrac></mstyle><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>E</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">If we were to combine: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>E</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>with</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mstyle mathvariant="bold"><mi>J</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td></tr></table>
+<p class="noindent">in <i>Ampère’s law</i>, it would be just right to kill off the extra <span class="margin-block">divergence: <span class="margin-comment"><a class="ellipsis" href="#m-ref-152">[152]</a>
+<span class="sidenote">Maxwell himself had other
+reasons for wanting to add this quantity to Ampère’s law. To him, the rescue of the continuity
+equation was a happy dividend rather than a primary motive. But today we recognize this
+argument as a far more compelling one than Maxwell’s, which was based on a now-discredited
+model of the <i>ether</i> as at that time it was thought luminiferous aether (or ether), was a
+theorized medium for the propagation of light <span class="cite"><a class="cite-show" href="#w3-20001">[†-2]</a><span class="cite-detail" id="marston2016james"> <a id="x26-126001"></a>Marston, P. L. James Clerk Maxwell:
+life and science. Journal of Quantitative Spectroscopy and Radiative Transfer <b>178</b><b>,</b> 50–65
+(2016)</span></span>.</span></span></span>
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-126002r33"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle mathvariant="bold"><mi>J</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>E</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle>
+</math></td><td class="eq-no">(5.33)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">Such a modification changes nothing, as far as magnetostatics is concerned: </p><div class="quote">  when
+<math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math> is constant,
+we still have <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle mathvariant="bold"><mi>J</mi></mstyle></math>.
+</div>
+<p class="noindent">In fact, <i>Maxwell</i>’s term is hard to detect in ordinary electromagnetic experiments, that’s why <i>Faraday</i>
+and the others never discovered it in the laboratory.
+</p>
+<div class="block-minor warning"><div class="body">
+<p class="noindent">However, it plays a crucial role in the propagation of electromagnetic waves. </p></div></div>
+<p class="noindent">Apart from curing the defect in <i>Ampère’s law</i>, <i>Maxwell</i>’s term has a certain aesthetic appeal: </p><div class="quote">  Just as
+a changing <i>magnetic</i> field induces an <i>electric</i> <span class="margin-block">field, <span class="margin-comment"><a class="ellipsis" href="#m-ref-153">[153]</a>
+<span class="sidenote">Faraday’s law.</span></span></span> so is a changing electric field induces
+a magnetic field. </div>
+<p class="noindent">Of course, theoretical convenience and aesthetic consistency are only suggestive as there might be other
+ways to rephrase Ampère’s law. The real confirmation of Maxwell’s theory came in 1888 with
+Hertz’s experiments on electro-magnetic waves <span class="cite"><a class="cite-show" href="#w3-20001">[†-3]</a><span class="cite-detail" id="hertz1888ueber"> <a id="x26-126003"></a>Hertz, H. Ueber Inductionserscheinungen,
+hervorgerufen durch die electrischen Vorgänge in Isolatoren. Annalen der Physik <b>270</b><b>,</b> 273–285
+(1888)</span></span>.
+</p>
+<dl class="def-block block-major info-block"> <a class="copiable-link" href="#info-block-5.15" id="info-block-5.15"> ¶</a> <dt class="def-line"> <span class="upper"> <span class="header"> <b>Information 5.<a id="x26-126004r15"></a>15: </b> </span> <span class="title"> Proof of Electromagnetic Waves </span> </span> <input class="body-button" type="button" value="Show/Hide"/> </dt> <dd class="body">
+<p class="noindent"></p><figure class="float">
+<a id="x26-126005r2"></a>
+<figcaption class="caption"><span class="id">Figure 5.2: </span><span class="content">The experimental setup used to prove the existence of EM Waves.                          </span></figcaption>
+<img alt="PIC" src="figures/Electrodynamics/raster/em-wave-experiment.jpg" style=""/>
+</figure>
+<p class="noindent"><span class="alert">Heinrich Hertz</span> was a brilliant German physicist and experimentalist who demonstrated that the electromagnetic
+waves actually exist. Hertz is also the man whose peers honored by attaching his name to the unit of
+frequency; a cycle per second is one hertz.
+</p><p class="noindent">Hertz used a simple homemade experimental apparatus, involving an induction coil and a Leyden jar
+(the original capacitor) to create electromagnetic waves and a spark gap between two brass spheres to
+detect them. The gaps were difficult to see, and required that the he perform his investigations in a
+darkened room.
+</p><p class="noindent">In later experiments, he was able to calculate the speed of the radio waves he created, and found it to
+be the same as the speed of light. </p>
+<hr/>
+<p class="noindent"> 
+A great number of subsequent developments, like radio and
+television, not to mention Wi-Fi, were spun out of his simple demonstrations. Hertz was well aware of
+the extent of his contribution. </p><div class="quote"> <i>We perceive electricity in a thousand places where we had no proof of
+its existence before. In every flame, in every luminous particle, we see an electric process. Even if a
+body is not luminous, provided it radiates heat, it is a center of electric disturbances. Thus
+the domain of electricity extends over the whole of nature.</i> <span class="cite"><a class="cite-show" href="#w3-20001">[†-4]</a><span class="cite-detail" id="hertz2019relations"> <a id="x26-126006"></a>Hertz, H. On the relations
+between light and electricity in Heinrich Rudolf Hertz (1857-1894) 273–288 (Routledge, 2019)</span></span>
+</div>
+</dd></dl>
+<p class="noindent">Maxwell called his extra term the <b>displacement current</b> <span class="cite"><a class="cite-show" href="#w3-20001">[†-1]</a><span class="cite-detail" id="maxwell2010physical"> <a id="x26-126007"></a>Maxwell, J. C. On physical
+lines of force. Philosophical magazine <b>90</b><b>,</b> 11–23 (2010)</span></span><span class="margin-block">: <span class="margin-comment"><a class="ellipsis" href="#m-ref-154">[154]</a>
+<span class="sidenote">It’s a misleading name given
+<math display="inline"><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>∂</mi><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover><mo class="MathClass-bin" stretchy="false">/</mo><mi>∂</mi><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></math> has nothing to do with
+current, except that it adds to <math display="inline"><mstyle mathvariant="bold"><mi>J</mi></mstyle></math>
+in <i>Ampère’s law</i>.</span></span></span>
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-126008r34"></mstyle><msub><mrow>
+<mstyle mathvariant="bold">
+<mi>J</mi></mstyle>
+</mrow><mrow><mi>d</mi></mrow></msub>
+<mi>≡</mi> <msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>E</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle>
+</math></td><td class="eq-no">(5.34)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">Let’s see now how displacement current resolves the paradox of the charging capacitor in <b>Fig.</b> <a href="#x26-125002r1">5.1</a>. If
+the capacitor plates are very close <span class="margin-block">together, <span class="margin-comment"><a class="ellipsis" href="#m-ref-155">[155]</a>
+<span class="sidenote">The calculation is simpler if we assume this.</span></span></span> then the
+electric field between them is: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>E</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><mi>σ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac> <mfrac>
+<mrow>
+<mi>Q</mi></mrow>
+<mrow>
+<mi>A</mi></mrow></mfrac><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td></tr></table>
+<p class="noindent">where <math display="inline"><mi>Q</mi></math> is the charge
+on the plate (<math display="inline"><mstyle mathvariant="normal"><mi>C</mi></mstyle></math>)
+and <math display="inline"><mi>A</mi></math> is its
+area (<math display="inline"><msup><mrow><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msup></math>).
+Therefore, between the plates: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mi>E</mi>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mi>A</mi></mrow></mfrac><mstyle displaystyle="true"><mfrac><mrow> <mstyle class="text"><mtext>d</mtext></mstyle><mo class="MathClass-open" stretchy="false">[</mo>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>Q</mi></mrow></mfrac></mstyle><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-open" stretchy="false">[</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mi>A</mi></mrow></mfrac><mi>I</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">Now, <span> Eq. (<a href="#x26-126002r33">5.33</a>)</span>  reads, in its integral form as: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-126009r35"></mstyle>
+<mi>∮</mi>
+<mstyle mathvariant="bold">
+<mi>B</mi></mstyle>
+<mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msubsup><mrow><mi>I</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mo> ∫
+ </mo><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>E</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.35)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">If we were choose the <i>flat</i> surface, then <math display="inline"><mi>E</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>
+and <math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>I</mi></math>.
+If, on the other hand, we use the balloon-shaped surface, then
+<math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo><mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>, but:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mo>∫
+ </mo><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>E</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>I</mi></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac>
+</math></td></tr></table>
+<p class="noindent">So we get the same answer for either surface, though in the first case it comes from the conduction
+current, and in the second from the displacement current.
+</p>
+<div class="subsection-header"><h4 id="header-subsection-5.3.3"><span class="number">5.3.3</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.5.3.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x26-1270005.3.3"></a>Maxwell’s Equations</span></h4></div>
+<p class="noindent">In the last section we put the finishing touches on Maxwell’s equations:
+</p>
+<div class="tcolorbox tcolorbox" id="tcolobox-1">
+<div class="tcolorbox-content"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-127001r36"></mstyle><mtable class="aligned" displaystyle="true"><mtr><mtd columnalign="right"><mstyle class="text"><mtext>(i)</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>ρ</mi></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mtd>
+<mtd columnalign="right"></mtd>
+<mtd columnalign="left"><mstyle class="text"><mtext>Gauss’s law</mtext></mstyle></mtd>
+<mtd columnalign="right"></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>(ii)</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></mtd>
+<mtd columnalign="right"></mtd>
+<mtd columnalign="left"><mstyle class="text"><mtext>-</mtext></mstyle></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>(ii)</mtext></mstyle></mtd> <mtd columnalign="left"></mtd><mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle></mtd><mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>B</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle></mtd> <mtd columnalign="right"></mtd><mtd columnalign="left"><mstyle class="text"><mtext>Faraday’s law</mtext></mstyle></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>(iv)</mtext></mstyle></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle mathvariant="bold"><mi>J</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>E</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle></mtd>
+<mtd columnalign="right"></mtd>
+<mtd columnalign="left"><mstyle class="text"><mtext>Ampere’s law</mtext></mstyle></mtd>
+</mtr><mtr><mtd columnalign="right"></mtd>
+</mtr> </mtable>
+</math></td><td class="eq-no">(5.36)</td></tr></table>
+<p class="noindent"></p>
+</div>
+</div>                                                                                                                     Together
+with the force law, <table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-127002r37"></mstyle>
+<mstyle mathvariant="bold">
+<mi>F</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>q</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>v</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.37)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">summarise the entire theoretical content of classical <span class="margin-block">electrodynamics. <span class="margin-comment"><a class="ellipsis" href="#m-ref-156">[156]</a>
+<span class="sidenote">Except for some special properties
+of matter, which we have looked in the previous chapters.</span></span></span> Even the continuity equation,
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-127003r38"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>J</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mi>ρ</mi>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle>
+</math></td><td class="eq-no">(5.38)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">which is the mathematical expression of conservation of charge, can be derived from Maxwell’s
+equations by applying the divergence to number (iv).
+</p><p class="noindent">In the aforementioned set of equations, we have written Maxwell’s equations in
+the traditional way, which emphasizes that they specify the divergence and curl of
+<math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math> and
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>. In
+this form, they reinforce the notion that electric fields can be produced <i>either</i> by charges
+(<math display="inline"><mi>ρ</mi></math>) or by changing magnetic fields
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>∂</mi><mstyle mathvariant="bold"><mi>B</mi></mstyle><mi>t</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>∂</mi><mo class="MathClass-bin" stretchy="false">−</mo><mi>N</mi><mi>o</mi><mi>V</mi> <mi>a</mi><mi>l</mi><mi>u</mi><mi>e</mi><mo class="MathClass-bin" stretchy="false">−</mo><mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></math>, and magnetic fields can be
+produced <i>either</i> by currents (<math display="inline"><mstyle mathvariant="bold"><mi>J</mi></mstyle></math>)
+or by changing electric fields (<math display="inline"><mi>∂</mi><mstyle mathvariant="bold"><mi>E</mi></mstyle><mi>t</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>∂</mi><mo class="MathClass-bin" stretchy="false">−</mo><mi>N</mi><mi>o</mi><mi>V</mi> <mi>a</mi><mi>l</mi><mi>u</mi><mi>e</mi><mo class="MathClass-bin" stretchy="false">−</mo><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>).
+</p><p class="noindent">Actually, this is misleading, as <math display="inline"><mi>∂</mi><mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-bin" stretchy="false">/</mo><mi>∂</mi><mi>t</mi></math>
+and <math display="inline"><mi>∂</mi><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover><mo class="MathClass-bin" stretchy="false">/</mo><mi>∂</mi><mi>t</mi></math> are
+<i>themselves</i> due to charges and currents, therefore it may be better to write these equations as:
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-127004r39"></mstyle><mtable class="aligned" displaystyle="true"><mtr><mtd columnalign="right"><mstyle class="text"><mtext>(i)</mtext></mstyle></mtd>
+<mtd columnalign="left"><mspace class="quad" width="1em"></mspace><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><mi>ρ</mi><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+<mtd columnalign="right"><mspace class="quad" width="1em"></mspace></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mstyle class="text"><mtext>(iii)</mtext></mstyle></mtd>
+<mtd columnalign="left"><mspace class="quad" width="1em"></mspace><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>B</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+<mtd columnalign="right"></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>(ii)</mtext></mstyle></mtd>
+<mtd columnalign="left"><mspace class="quad" width="1em"></mspace><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+<mtd columnalign="right"><mspace class="quad" width="1em"></mspace></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mstyle class="text"><mtext>(iv)</mtext></mstyle></mtd>
+<mtd columnalign="left"><mspace class="quad" width="1em"></mspace><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>E</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle mathvariant="bold"><mi>J</mi></mstyle></mtd>
+</mtr> </mtable>
+</math></td><td class="eq-no">(5.39)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">with the fields (<math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>
+and <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>) on the left
+and the sources (<math display="inline"><mi>ρ</mi></math>
+and <math display="inline"><mstyle mathvariant="bold"><mi>J</mi></mstyle></math>)
+on the right. This notation emphasizes that all electromagnetic fields are ultimately attributable to
+charges and currents. Maxwell’s equations tell you how <i>charges</i> produce <i>fields</i>; reciprocally, the force
+law tells you how <i>fields</i> affect <i>charges</i>.
+</p>
+<div class="subsection-header"><h4 id="header-subsection-5.3.4"><span class="number">5.3.4</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.5.3.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x26-1280005.3.4"></a>Magnetic Charge</span></h4></div>
+<p class="noindent">There is a pleasant symmetry to Maxwell’s equations. It is particularly striking in <b>free space</b>, where
+<math display="inline"><mi>ρ</mi></math> and <b>J</b>
+vanish: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-128001r40"></mstyle><mtable class="aligned" displaystyle="true"><mtr><mtd columnalign="right"><mstyle class="text"><mtext>(i)</mtext></mstyle></mtd>
+<mtd columnalign="left"><mspace class="quad" width="1em"></mspace><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+<mtd columnalign="right"><mspace class="quad" width="1em"></mspace></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mstyle class="text"><mtext>(iii)</mtext></mstyle></mtd>
+<mtd columnalign="left"><mspace class="quad" width="1em"></mspace><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle></mtd>
+<mtd columnalign="right"></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>B</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle></mtd>
+<mtd columnalign="right"></mtd>
+</mtr><mtr><mtd columnalign="right"><mstyle class="text"><mtext>(ii)</mtext></mstyle></mtd>
+<mtd columnalign="left"><mspace class="quad" width="1em"></mspace><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+<mtd columnalign="right"><mspace class="quad" width="1em"></mspace></mtd>
+<mtd columnalign="left"></mtd>
+<mtd columnalign="right"><mstyle class="text"><mtext>(iv)</mtext></mstyle></mtd>
+<mtd columnalign="left"><mspace class="quad" width="1em"></mspace><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mtd>
+<mtd columnalign="right"></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>E</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle></mtd>
+</mtr> </mtable>
+</math></td><td class="eq-no">(5.40)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">If we were to replace <math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>
+by <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> and
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> by
+<math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mi>E</mi></math>, the first
+pair of equations turns into the second, and vice versa. This <span class="margin-block">symmetry <span class="margin-comment"><a class="ellipsis" href="#m-ref-157">[157]</a>
+<span class="sidenote">Dont be distracted by the constants
+<math display="inline"><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></math>; these are present only because
+the SI system measures <math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>
+and <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> in
+different units, and would not occur, for instance, in the <i>Gaussian system</i>.</span></span></span> between
+<math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math> and
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>
+is broken, though, by the charge term in Gauss’s law and the current term in Ampère’s
+law.
+</p><p class="noindent">We can’t help but wonder why the corresponding quantities are <span class="alert">missing</span> from
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math> and
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi>∂</mi><mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-bin" stretchy="false">/</mo><mi>∂</mi><mi>t</mi></math>. What if we
+had (i) <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac> <msub><mrow><mi>ρ</mi></mrow><mrow><mi>e</mi></mrow></msub></math>, &lt;br&gt;
+(iii) <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msub><mrow><mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>m</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <mfrac><mrow><mi>∂</mi><mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow>
+<mrow>
+<mi>∂</mi><mi>t</mi></mrow></mfrac> </math>,&lt;br&gt;
+(ii) <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msub><mrow><mi>ρ</mi></mrow><mrow><mi>m</mi></mrow></msub></math>,
+&lt;br&gt; (iv) </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-128002r41"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msub><mrow><mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>e</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mfrac>
+<mrow>
+<mi>∂</mi><mstyle mathvariant="bold"><mi>E</mi></mstyle></mrow>
+<mrow>
+<mi>∂</mi><mi>t</mi></mrow></mfrac>
+</math></td><td class="eq-no">(5.41)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Then <math display="inline"><msub><mrow><mi>ρ</mi></mrow><mrow><mi>m</mi></mrow></msub></math>
+would represent the density of magnetic "charge," and
+<math display="inline"><msub><mrow><mi>ρ</mi></mrow><mrow><mi>e</mi></mrow></msub></math> the density of electric
+charge; <math display="inline"><msub><mrow><mi>J</mi></mrow><mrow><mi>m</mi></mrow></msub></math> would be the current
+of magnetic charge, and <math display="inline"><msub><mrow><mi>J</mi></mrow><mrow><mi>e</mi></mrow></msub></math>
+the current of electric charge. Both charges would be conserved: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-128003r42"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi><msub><mrow> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>m</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mfrac><mrow><mi>∂</mi><msub><mrow><mi>ρ</mi></mrow><mrow><mi>m</mi></mrow></msub></mrow>
+<mrow>
+<mi>∂</mi><mi>t</mi></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">,</mo><mstyle class="text"><mtext> and </mtext></mstyle><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi><msub><mrow> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>e</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mfrac><mrow><mi>∂</mi><msub><mrow><mi>ρ</mi></mrow><mrow><mi>e</mi></mrow></msub></mrow>
+<mrow>
+<mi>∂</mi><mi>t</mi></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.42)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The former follows by application of the divergence to (iii), the latter by taking the divergence of
+(iv).
+</p><p class="noindent">In a sense, Maxwell’s equations strongly <b>imply</b> for magnetic charge to exist as it
+would fit just so perfectly. And yet, in spite of a diligent search, no one has ever
+found any <span class="cite"><a class="cite-show" href="#w3-20001">[†-5]</a><span class="cite-detail" id="goldhaber1990resource"> <a id="x26-128004"></a>Goldhaber, A. S. &amp; Trower, W. P. Resource Letter MM-1: Magnetic
+monopoles. American Journal of Physics <b>58</b><b>,</b> 429–439 (1990)</span></span>. As far as we know,
+<math display="inline"><msub><mrow><mi>ρ</mi></mrow><mrow><mi>m</mi></mrow></msub></math> is zero everywhere, and
+so is <math display="inline"><msub><mrow><mi>J</mi></mrow><mrow><mi>m</mi></mrow></msub></math>; <b>B</b> is <i>not</i> on equal
+foot- ing with <math display="inline"><mi>E</mi></math>: there exist
+stationary sources for <math display="inline"><mi>E</mi></math> (electric
+charges) but none for <span class="margin-block"><math display="inline"><mi>B</mi></math>.
+<span class="margin-comment"><a class="ellipsis" href="#m-ref-158">[158]</a>
+<span class="sidenote">This is reflected in the fact that magnetic multipole expansions have no monopole term, and magnetic
+dipoles consist of current loops, not separated north and south <span class="alert">poles</span>.</span></span></span>
+</p>
+<div class="subsection-header"><h4 id="header-subsection-5.3.5"><span class="number">5.3.5</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.5.3.5"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x26-1290005.3.5"></a>Maxwell’s Equations in Matter</span></h4></div>
+<p class="noindent">Maxwell’s equations in the form given in Eq. (<a href="#x26-127001r36">5.36</a>) are complete and correct as they stand. However,
+when we are working with materials which are subject to <span class="alert">electric</span> and <span class="alert">magnetic</span> polarization there is a more
+convenient way to write them. For inside polarized matter there will be accumulations of
+<b>bound</b> charge and current, over which you exert no direct control. It would be nice to
+reformulate Maxwell’s equations so as to make explicit reference only to the <b>free</b> charges and
+currents.
+</p><p class="noindent">We have already learned, from the static case, that an electric polarization
+<math display="inline"><mstyle mathvariant="bold"><mi>P</mi></mstyle></math>
+produces a bound charge density </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-129001r43"></mstyle>
+<msub><mrow><mi>ρ</mi></mrow><mrow><mi>h</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>P</mi></mstyle>
+</math></td><td class="eq-no">(5.43)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">(Eq. 4.12). Similarly, a magnetic <span class="margin-block">polarization <span class="margin-comment"><a class="ellipsis" href="#m-ref-159">[159]</a>
+<span class="sidenote">or simply <b>magnetisation</b>.</span></span></span>
+<math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math> results
+in a bound current: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-129002r44"></mstyle>
+<msub><mrow><mi>J</mi></mrow><mrow><mi>b</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mi>M</mi>
+</math></td><td class="eq-no">(5.44)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">(Eq. 6.13). There’s just one new feature to consider in the nonstatic case: </p><div class="quote">  Any
+<i>change</i> in the electric polarization involves a flow of (bound) charge, call it
+<math display="inline"><msub><mrow><mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>p</mi></mrow></msub></math>, which
+must be included in the total current. </div>
+<p class="noindent">For suppose we examine a tiny chunk of polarized material (Fig. 7.47). The polarization introduces a charge
+density <math display="inline"><msub><mrow><mi>σ</mi></mrow><mrow><mi>b</mi></mrow></msub></math> = P at
+one end and <math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>σ</mi></mrow><mrow><mi>b</mi></mrow></msub></math>
+at the other (Eq. 4.11). If P now <i>increases</i> a bit, the charge on each end increases accordingly, giving a
+net current </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>d</mi><mi>I</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>∂</mi><msub><mrow><mi>σ</mi></mrow><mrow><mi>b</mi></mrow></msub></mrow>
+<mrow>
+<mi>∂</mi><mi>t</mi></mrow></mfrac> <mi>d</mi><msub><mrow><mi>a</mi></mrow><mrow><mi>⊥</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>∂</mi><mi>P</mi></mrow>
+<mrow>
+<mi>∂</mi><mi>t</mi></mrow></mfrac> <mi>d</mi><msub><mrow><mi>a</mi></mrow><mrow><mi>⊥</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">The current density, therefore, is </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-129003r45"></mstyle>
+<msub><mrow><mi>J</mi></mrow><mrow><mi>p</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>∂</mi><mi>P</mi></mrow>
+<mrow>
+<mi>∂</mi><mi>x</mi></mrow></mfrac>
+</math></td><td class="eq-no">(5.45)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">This <b>polarization current</b> has nothing to do with the <i>bound</i> current
+<math display="inline"><msub><mrow><mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>b</mi></mrow></msub></math>. The latter
+is associated with <i>magnetization</i> of the material and involves the spin and orbital motion of electrons;
+<math display="inline"><msub><mrow><mi>J</mi></mrow><mrow><mi>p</mi></mrow></msub></math>, by
+contrast, is the result of the linear motion of charge when the electric polarization changes. If
+<math display="inline"><mstyle mathvariant="bold"><mi>P</mi></mstyle></math>
+points to the right, and is increasing, then each plus charge moves a bit to the right
+and each minus charge to the left; the cumulative effect is the polarization current
+<math display="inline"><msub><mrow><mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>p</mi></mrow></msub></math>. We
+ought to check that Eq. (<a href="#x26-129003r45">5.45</a>) is consistent with the continuity equation: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi><msub><mrow> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>p</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mfrac><mrow><mi>∂</mi><mstyle mathvariant="bold"><mi>P</mi></mstyle></mrow>
+<mrow>
+<mi>∂</mi><mi>t</mi></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>∂</mi></mrow>
+<mrow>
+<mi>∂</mi><mi>t</mi></mrow></mfrac><mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>P</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mfrac><mrow><mi>∂</mi><msub><mrow><mi>ρ</mi></mrow><mrow><mi>b</mi></mrow></msub></mrow>
+<mrow>
+<mi>∂</mi><mi>t</mi></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent"><b>FIGURE 7.47</b>
+</p><p class="noindent">Yes: The continuity equation is satisfied; in fact,
+<math display="inline"><msub><mrow><mi>J</mi></mrow><mrow><mi>p</mi></mrow></msub></math> is
+essential to ensure the conservation of bound charge. (Incidentally, a changing <i>magnetization</i>
+does not lead to any analogous accumulation of charge or current. The bound current
+<math display="inline"><msub><mrow><mi>J</mi></mrow><mrow><mi>b</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mi>M</mi></math> varies
+in response to changes in M, to be sure, but that’s about it.) In view of all this, the total charge density
+can be separated into two parts: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-129004r46"></mstyle>
+<mi>ρ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>ρ</mi></mrow><mrow><mi>f</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo> <msubsup><mrow><mi>ρ</mi></mrow><mrow><mi>b</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>ρ</mi></mrow><mrow><mi>f</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>P</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(5.46)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">and the current density into three (<span class="alert">3</span>) parts: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-129005r47"></mstyle>
+<mstyle mathvariant="bold">
+<mi>J</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>b</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>p</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>M</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>P</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.47)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Gauss’s law can now be written as </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-129006r48"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow><mi>ρ</mi></mrow><mrow><mi>f</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>P</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>or</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>D</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>ρ</mi><mi>f</mi><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>where, in static</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mstyle mathvariant="bold"><mi>D</mi></mstyle> <mi>≡</mi> <msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>P</mi></mstyle>
+</math></td><td class="eq-no">(5.48)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Meanwhile, Ampère’s law (with Maxwell’s term) becomes </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>M</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>P</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>E</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td></tr></table>
+<p class="noindent">or we can also write this expression as: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-129007r49"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>H</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>D</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>where, in static</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mstyle mathvariant="bold"><mi>H</mi></mstyle> <mi>≡</mi> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle mathvariant="bold"><mi>M</mi></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.49)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Faraday’s law and <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>
+are not affected by our separation of charge and current into free and bound parts, since they do not
+involve <math display="inline"><mi>ρ</mi></math>
+or <b>J</b>. In terms of <i>free</i> charges and currents, then, Maxwell’s equations read (i)
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>D</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>ρ</mi></mrow><mrow><mi>f</mi></mrow></msub></math>, (iii)
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mfrac><mrow><mi>∂</mi><mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow>
+<mrow>
+<mi>∂</mi><mi>t</mi></mrow></mfrac> </math>,&lt;br&gt;
+(ii) </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-129008r50"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <mo class="MathClass-bin" stretchy="false">/</mo><mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo><mo class="MathClass-punc" stretchy="false">,</mo> <mo class="MathClass-open" stretchy="false">(</mo><mi>i</mi><mi>v</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>H</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><mi>∂</mi><mstyle mathvariant="bold"><mi>D</mi></mstyle></mrow>
+<mrow>
+<mi>∂</mi><mi>t</mi></mrow></mfrac>
+</math></td><td class="eq-no">(5.50)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Some people regard these as the "true" Maxwell’s equations, but please under- stand that they
+are in no way more "general" than Eq. 7.40; they simply reflect a convenient division of
+charge and current into free and nonfree parts. And they 342 Chapter 7 Electrodynamics
+have the disadvantage of hybrid notation, since they contain both E and D, both <b>B</b> and
+<b>H</b>. They must be supplemented, therefore, by appropriate constitutive <b>relations</b>, giving
+<math display="inline"><mi>D</mi></math> and
+<math display="inline"><mi>H</mi></math> in terms of
+<math display="inline"><mi>E</mi></math> and
+<math display="inline"><mi>B</mi></math>. These
+depend on the nature of the material; for linear media </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-129009r51"></mstyle>
+<mstyle mathvariant="bold">
+<mi>P</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><msub><mrow><mi>χ</mi></mrow><mrow><mi>e</mi></mrow></msub><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <mo class="MathClass-bin" stretchy="false">/</mo><mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo><mo class="MathClass-punc" stretchy="false">,</mo><mi>a</mi><mi>n</mi><mi>d</mi> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mstyle mathvariant="bold"><mi>M</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>χ</mi></mrow><mrow><mi>m</mi></mrow></msub><mstyle mathvariant="bold"><mi>H</mi></mstyle>
+</math></td><td class="eq-no">(5.51)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">&lt;sub&gt;so&lt;/sub&gt; </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-129010r52"></mstyle>
+<mstyle mathvariant="bold">
+<mi>D</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>𝜖</mi><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <mo class="MathClass-bin" stretchy="false">/</mo><mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo><mo class="MathClass-punc" stretchy="false">,</mo><mi>a</mi><mi>n</mi><mi>d</mi> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mstyle mathvariant="bold"><mi>H</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mi>μ</mi></mrow></mfrac><mstyle mathvariant="bold"><mi>B</mi></mstyle>
+</math></td><td class="eq-no">(5.52)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><mi>𝜖</mi> <mi>≡</mi> <msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>χ</mi></mrow><mrow><mi>e</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math>
+and <math display="inline"><mi>μ</mi> <mi>≡</mi> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>χ</mi></mrow><mrow><mi>m</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math>.
+Incidentally, you’ll remember that D is called the electric "displacement"; that’s why the second term in
+the Ampère/Maxwell equation (iv) came to be called the displacement current. In this context,
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-129011r53"></mstyle><msub><mrow>
+<mstyle mathvariant="bold">
+<mi>J</mi></mstyle>
+</mrow><mrow><mi>d</mi></mrow></msub>
+<mi>≡</mi> <mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>D</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle>
+</math></td><td class="eq-no">(5.53)</td></tr></table>
+<p class="noindent"></p>
+<div class="subsection-header"><h4 id="header-subsection-5.3.6"><span class="number">5.3.6</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.5.3.6"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x26-1300005.3.6"></a>Boundary Conditions</span></h4></div>
+<p class="noindent">In general, the fields <math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>,
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>,
+<math display="inline"><mstyle mathvariant="bold"><mi>D</mi></mstyle></math>, and
+<math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math> will be <span class="alert">discontinuous</span>
+at a boundary between two (<span class="alert">2</span>) different media, or at a surface that carries a charge density
+<math display="inline"><mi>σ</mi></math> or a current
+density <math display="inline"><mstyle mathvariant="bold"><mi>K</mi></mstyle></math>.
+The explicit form of these discontinuities can be deduced from <i>Maxwell</i>’s equations given in Eq. (<a href="#x26-129011r53">5.53</a>),
+in their integral form Applying (i) to a tiny, wafer-thin <i>Gaussian pillbox</i> extending just slightly into the
+material on either side of the boundary (Fig. 7.48), we <span class="margin-block">obtain: <span class="margin-comment"><a class="ellipsis" href="#m-ref-160">[160]</a>
+<span class="sidenote">The positive direction for <b>a</b> is <i>from</i> 2
+<i>toward</i> 1. The edge of the wafer con- tributes nothing in the limit as the thickness goes to zero; nor
+does any <i>volume</i> charge density.</span></span></span> </p><table class="equation-star"><tr><td>
+<math class="equation" display="block"><msub><mrow>
+<mstyle mathvariant="bold">
+<mi>D</mi></mstyle>
+</mrow><mrow><mn>1</mn></mrow></msub>
+<mi>·</mi> <mstyle mathvariant="bold"><mi>a</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow> <mstyle mathvariant="bold"><mi>D</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub> <mi>·</mi> <mstyle mathvariant="bold"><mi>a</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>σ</mi></mrow><mrow><mi>f</mi></mrow></msub><mi>a</mi>
+</math></td></tr></table>
+<p class="noindent">Thus, the component of <b>D</b> that is perpendicular to the interface is discontinuous in the amount
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-130001r54"></mstyle>
+<msubsup><mrow><mi>D</mi></mrow><mrow><mn>1</mn></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow><mi>D</mi></mrow><mrow>
+<mn>2</mn></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>σ</mi></mrow><mrow>
+<mi>f</mi></mrow><mrow></mrow></msubsup>
+</math></td><td class="eq-no">(5.54)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Identical reasoning, applied to equation (ii), yields </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-130002r55"></mstyle>
+<msubsup><mrow><mi>B</mi></mrow><mrow><mn>1</mn></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow><mi>B</mi></mrow><mrow>
+<mn>2</mn></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.55)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Turning to (iii), a very thin Amperian loop straddling the surface gives </p><table class="equation-star"><tr><td>
+<math class="equation" display="block"><msub><mrow>
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover>
+</mrow><mrow><mn>1</mn></mrow></msub>
+<mi>·</mi> <mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>2</mn></mrow></msub> <mi>·</mi> <mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mfrac><mrow><mi>d</mi></mrow>
+<mrow>
+<mi>d</mi><mi>t</mi></mrow></mfrac><msub><mrow><mo>∫
+ </mo></mrow><mrow><mi>S</mi></mrow></msub><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">But in the limit as the width of the loop goes to zero, the flux vanishes. (I have already dropped the contribution of
+the two ends to <math display="inline"><mi>∮</mi>
+<mstyle mathvariant="bold"><mi>E</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle></math>,
+on the same grounds.) Therefore, </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-130003r56"></mstyle><msubsup><mrow>
+<mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover>
+</mrow><mrow><mn>1</mn></mrow><mrow><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow>
+<mn>2</mn></mrow><mrow><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mn>0</mn></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.56)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">That is, the components of E <i>parallel</i> to the interface are continuous across the boundary. By the same
+token, (iv) implies </p><table class="equation-star"><tr><td>
+<math class="equation" display="block"><msub><mrow>
+<mstyle mathvariant="bold">
+<mi>H</mi></mstyle>
+</mrow><mrow><mn>1</mn></mrow></msub>
+<mi>·</mi> <mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow> <mstyle mathvariant="bold"><mi>H</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub> <mi>·</mi> <mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>I</mi></mrow><mrow><msub><mrow><mi>f</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow></msub></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td></tr></table>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><msub><mrow><mi>f</mi></mrow><mrow><mstyle class="text"><mtext>enc</mtext></mstyle></mrow></msub></mrow></msub></math>
+is the free current passing through the Amperian loop. No <i>volume</i> current density will
+contribute (in the limit of infinitesimal width), but a surface current can. In fact, if
+<math display="inline"><mover accent="true"><mrow><mstyle mathvariant="bold"><mi>n</mi></mstyle></mrow><mo accent="true">^</mo></mover></math>
+is a unit vector perpendicular to the interface (pointing from 2 toward 1), so that
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mover accent="true"><mrow><mi>n</mi></mrow><mo accent="true">^</mo></mover> <mi>×</mi> <mi>l</mi><mo class="MathClass-close" stretchy="false">)</mo></math> is
+normal to the Amperian loop (Fig. 7.49), then </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>I</mi></mrow><mrow><msub><mrow><mi>f</mi></mrow><mrow><mstyle class="text"><mtext>enc</mtext></mstyle></mrow></msub></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="bold"><mi>K</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mover accent="true"><mrow><mi>n</mi></mrow><mo accent="true">^</mo></mover></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>I</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mstyle mathvariant="bold"><mi>K</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub> <mi>×</mi> <mstyle mathvariant="bold"><mover accent="true"><mrow><mi>n</mi></mrow><mo accent="true">^</mo></mover></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>I</mi></mstyle><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td></tr></table>
+<p class="noindent">344 Chapter 7 Electrodynamics </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mover accent="true"><mrow><mi>n</mi></mrow><mo accent="true">^</mo></mover>
+<mo class="MathClass-rel" stretchy="false">&lt;</mo> <mo class="MathClass-bin" stretchy="false">/</mo><mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo><mo class="MathClass-rel" stretchy="false">&lt;</mo> <mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <mover accent="true"><mrow></mrow><mo accent="true">^</mo></mover>
+</math></td></tr></table>
+<p class="noindent">T, </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>⟨</mi><mn>2</mn><mi>⟩</mi>
+</math></td></tr></table>
+<table class="equation-star"><tr><td>
+<math class="equation" display="block"><msub><mrow>
+<mstyle mathvariant="bold">
+<mi>K</mi></mstyle>
+</mrow><mrow><mi>t</mi></mrow></msub>
+</math></td></tr></table>
+<p class="noindent"><b>FIGURE 7.49</b> and hence </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-130004r57"></mstyle><msubsup><mrow>
+<mstyle mathvariant="bold">
+<mi>H</mi></mstyle>
+</mrow><mrow><mn>1</mn></mrow><mrow><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo><msubsup><mrow> <mstyle mathvariant="bold"><mi>H</mi></mstyle></mrow><mrow>
+<mn>2</mn></mrow><mrow><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="bold"><mi>K</mi></mstyle></mrow><mrow>
+<mi>f</mi></mrow></msub> <mi>×</mi> <mover accent="true"><mrow><mstyle mathvariant="bold"><mi>n</mi></mstyle></mrow><mo accent="true">^</mo></mover><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.57)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">So the <i>parallel</i> components of <b>H</b> are discontinuous by an amount proportional to the
+free surface current density. Equations 7.60-63 are the general boundary conditions for
+electrodynamics. In the case of <i>linear</i> media, they can be expressed in terms of E and B alone: (i)
+<math display="inline"><msub><mrow><mi>𝜖</mi></mrow><mrow><mn>1</mn></mrow></msub><msubsup><mrow><mi>E</mi></mrow><mrow><mn>1</mn></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>𝜖</mi></mrow><mrow><mn>2</mn></mrow></msub><msubsup><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>σ</mi></mrow><mrow><mi>f</mi></mrow></msub></math>, &lt;br&gt; (iii)
+<math display="inline"><msubsup><mrow><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>1</mn></mrow><mrow><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow><mn>2</mn></mrow><mrow><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mn>0</mn></mstyle></math>,&lt;br&gt;
+(ii) <math display="inline"><msubsup><mrow><mi>B</mi></mrow><mrow><mn>1</mn></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow><mi>B</mi></mrow><mrow><mn>2</mn></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>,
+&lt;br&gt; (iv) </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-130005r58"></mstyle>
+<mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>μ</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow></mfrac><msubsup><mrow>
+<mstyle mathvariant="bold">
+<mi>B</mi></mstyle>
+</mrow><mrow><mn>1</mn></mrow><mrow><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>μ</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow></mfrac><msubsup><mrow><mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mrow><mn>2</mn></mrow><mrow><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="bold"><mi>K</mi></mstyle></mrow><mrow>
+<mi>f</mi></mrow></msub> <mi>×</mi> <mover accent="true"><mrow><mstyle mathvariant="bold"><mi>n</mi></mstyle></mrow><mo accent="true">^</mo></mover>
+</math></td><td class="eq-no">(5.58)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">In particular, if there is no free charge or free current at the interface, then (i) </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x26-130006r59"></mstyle>
+<msub><mrow><mi>𝜖</mi></mrow><mrow><mn>1</mn></mrow></msub><msubsup><mrow><mi>E</mi></mrow><mrow><mn>1</mn></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>𝜖</mi></mrow><mrow>
+<mn>2</mn></mrow></msub><msubsup><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <mo class="MathClass-bin" stretchy="false">/</mo><mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo><mo class="MathClass-punc" stretchy="false">,</mo> <mo class="MathClass-open" stretchy="false">(</mo><mi>i</mi><mi>i</mi><mi>i</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi> <mo class="MathClass-rel" stretchy="false">&gt;</mo><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow>
+<mn>1</mn></mrow><mrow><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo><msubsup><mrow> <mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover></mrow><mrow>
+<mn>2</mn></mrow><mrow><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mn>0</mn></mstyle>
+</math></td><td class="eq-no">(5.59)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">(ii) <math display="inline"><msubsup><mrow><mi>B</mi></mrow><mrow><mn>1</mn></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow><mi>B</mi></mrow><mrow><mn>2</mn></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>, &lt;br&gt;
+(iv) <math display="inline"> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>μ</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow></mfrac> <msubsup><mrow><mi>B</mi></mrow><mrow><mn>1</mn></mrow><mrow><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>μ</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow></mfrac> <msubsup><mrow><mi>B</mi></mrow><mrow><mn>2</mn></mrow><mrow><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>.
+As we shall see in Chapter 9, these equations are the basis for the theory of reflec- tion and refraction.
+r
+<div class="section-header">
+<h3 id="header-section-references">
+<span class="number">
+<i class="fa-solid fa-magnifying-glass"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+            Page References</span>
+</h3>
+</div>
+<div class="cite-block">
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">1.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> Maxwell, J. C. On physical lines of force. Philosophical magazine 90, 11–23 (2010)</dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">2.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> Marston, P. L. James Clerk Maxwell: life and science. Journal of Quantitative Spectroscopy and Radiative Transfer 178, 50–65 (2016)</dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">3.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> Hertz, H. Ueber Inductionserscheinungen, hervorgerufen durch die electrischen Vorgänge in Isolatoren. Annalen der Physik 270, 273–285 (1888)</dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">4.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> Hertz, H. On the relations between light and electricity in Heinrich Rudolf Hertz (1857-1894) 273–288 (Routledge, 2019)</dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">5.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> Goldhaber, A. S. &amp; Trower, W. P. Resource Letter MM-1: Magnetic monopoles. American Journal of Physics 58, 429–439 (1990)</dd>
+</dl></div>
+<div class="section-header">
+<h3 id="header-section-references">
+<span class="number">
+<i class="fa-regular fa-note-sticky"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+                    Page Footnotes</span>
+</h3>
+</div>
+<div class="footnote-block">
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-150"><span class="acr-short">[150].</span></dt>
+<dd class="enumerate-enumitem"><span class="">in this case, on the capacitor plates.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-151"><span class="acr-short">[151].</span></dt>
+<dd class="enumerate-enumitem"><span class="">such as the charging of a
+capacitor.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-152"><span class="acr-short">[152].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Maxwell himself had other
+reasons for wanting to add this quantity to Ampère’s law. To him, the rescue of the continuity
+equation was a happy dividend rather than a primary motive. But today we recognize this
+argument as a far more compelling one than Maxwell’s, which was based on a now-discredited
+model of the <i>ether</i> as at that time it was thought luminiferous aether (or ether), was a
+theorized medium for the propagation of light <span class="cite"><a class="cite-show" href="#w3-20001">[†-2]</a><span class="cite-detail" id="marston2016james"> <a id="x26-126001"></a>Marston, P. L. James Clerk Maxwell:
+life and science. Journal of Quantitative Spectroscopy and Radiative Transfer <b>178</b><b>,</b> 50–65
+(2016)</span></span>.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-153"><span class="acr-short">[153].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Faraday’s law.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-154"><span class="acr-short">[154].</span></dt>
+<dd class="enumerate-enumitem"><span class="">It’s a misleading name given
+<math display="inline"><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>∂</mi><mover accent="true"><mrow><mi>E</mi></mrow><mo accent="true">→</mo></mover><mo class="MathClass-bin" stretchy="false">/</mo><mi>∂</mi><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></math> has nothing to do with
+current, except that it adds to <math display="inline"><mstyle mathvariant="bold"><mi>J</mi></mstyle></math>
+in <i>Ampère’s law</i>.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-155"><span class="acr-short">[155].</span></dt>
+<dd class="enumerate-enumitem"><span class="">The calculation is simpler if we assume this.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-156"><span class="acr-short">[156].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Except for some special properties
+of matter, which we have looked in the previous chapters.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-157"><span class="acr-short">[157].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Dont be distracted by the constants
+<math display="inline"><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></math>; these are present only because
+the SI system measures <math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>
+and <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> in
+different units, and would not occur, for instance, in the <i>Gaussian system</i>.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-158"><span class="acr-short">[158].</span></dt>
+<dd class="enumerate-enumitem"><span class="">This is reflected in the fact that magnetic multipole expansions have no monopole term, and magnetic
+dipoles consist of current loops, not separated north and south <span class="alert">poles</span>.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-159"><span class="acr-short">[159].</span></dt>
+<dd class="enumerate-enumitem"><span class="">or simply <b>magnetisation</b>.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-160"><span class="acr-short">[160].</span></dt>
+<dd class="enumerate-enumitem"><span class="">The positive direction for <b>a</b> is <i>from</i> 2
+<i>toward</i> 1. The edge of the wafer con- tributes nothing in the limit as the thickness goes to zero; nor
+does any <i>volume</i> charge density.</span></dd>
+</dl></div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><span class="nav-inactive"><i class="fa-solid fa-caret-right"></i></span></span> <span class="nav-button"><a href="ElectromagneticInduction.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="Electrodynamics.html#MaxwellsEquations.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> </p><div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 10.11.2026, at 12:38.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">5.3: Maxwell’s Equations</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

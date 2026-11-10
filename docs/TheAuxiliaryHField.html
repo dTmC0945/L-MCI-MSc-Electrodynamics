@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>The Auxiliary H Field</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="flatweb.css" rel="stylesheet" type="text/css"/>
+<script src="flatweb.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="style-code/gruvbox-light-hard.min.css" id="code-style" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Electrodynamics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2026.WS</span>
+<span class="header-chapter">Magnetic Fields in Matter</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="ThePurposeofElectromagnetism.html#x3-20001">The Purpose of Electromagnetism</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-30001.1">Mechanics in Four Different
+Views</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-40001.1.1">Electromagnetism and Relativity</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-50001.1.2">Four Kinds of Forces</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-60001.1.3">Unifying
+Physical Theories</a></span></span><span class="subsectionToc"><span class="number">1.1.4</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-70001.1.4">The Fields of Electrodynamics</a></span></span><span class="subsectionToc"><span class="number">1.1.5</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-80001.1.5">Electric Charge</a></span></span><span class="subsectionToc"><span class="number">1.1.6</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-90001.1.6">Interpreting
+Conservation   of   Charge</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="VectorCalculus.html#x5-100002">Vector   Calculus</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="VectorAlgebra.html#x6-110002.1">Vector   Algebra</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="VectorAlgebra.html#x6-120002.1.1">Vector
+Operations</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="VectorAlgebra.html#x6-170002.1.2">Vector Component Forms</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="VectorAlgebra.html#x6-180002.1.3">Triple Products</a></span></span><span class="subsectionToc"><span class="number">2.1.4</span><span class="title"><a href="VectorAlgebra.html#x6-210002.1.4">Position,
+Displacement, and Separation Vectors</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-220002.2">Differential Calculus</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="DifferentialCalculus.html#x7-230002.2.1">Ordinary
+Derivatives</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-240002.2.2">Gradient</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="DifferentialCalculus.html#x7-250002.2.3">The Del Operator</a></span></span><span class="subsectionToc"><span class="number">2.2.4</span><span class="title"><a href="DifferentialCalculus.html#x7-280002.2.4">Product Rules</a></span></span><span class="subsectionToc"><span class="number">2.2.5</span><span class="title"><a href="DifferentialCalculus.html#x7-290002.2.5">Second
+Derivatives</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="IntegralCalculus.html#x8-350002.3">Integral Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="IntegralCalculus.html#x8-360002.3.1">Line, Surface, and Volume Integrals</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="IntegralCalculus.html#x8-400002.3.2">The
+Fundamental Theorems of Vector Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="IntegralCalculus.html#x8-430002.3.3">The Fundamental Theorem for
+Curls</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="CurvilinearCoordinates.html#x9-440002.4">Curvilinear Coordinates</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="CurvilinearCoordinates.html#x9-450002.4.1">Spherical Coordinate System</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="CurvilinearCoordinates.html#x9-460002.4.2">Cylindrical
+Coordinates</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="DiracDeltaFunction.html#x10-470002.5">Dirac Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="DiracDeltaFunction.html#x10-480002.5.1">A Mathematical Anomaly</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="DiracDeltaFunction.html#x10-490002.5.2">The 1D Dirac
+Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="DiracDeltaFunction.html#x10-500002.5.3">The 3D Dirac Delta Function</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="VectorFieldTheory.html#x11-510002.6">Vector Field Theory</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="VectorFieldTheory.html#x11-520002.6.1">Helmholtz
+Theorem</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="VectorFieldTheory.html#x11-530002.6.2">Potentials</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Electrostatics.html#x12-540003">Electrostatics</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="TheElectricField.html#x13-550003.1">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="TheElectricField.html#x13-560003.1.1">Coulomb’s
+Law</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="TheElectricField.html#x13-570003.1.2">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.3</span><span class="title"><a href="TheElectricField.html#x13-580003.1.3">Continuous Charge Distributions</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-590003.2">Divergence and
+Curl of Electrostatic Fields</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-600003.2.1">Quantification</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-610003.2.2">Divergence of E</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-620003.2.3">Applications
+of Gauss’s Law</a></span></span><span class="subsectionToc"><span class="number">3.2.4</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-630003.2.4">Curl of E</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ElectricPotential.html#x15-640003.3">Electric Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ElectricPotential.html#x15-650003.3.1">Defining the Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ElectricPotential.html#x15-660003.3.2">Some
+Digressions on Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.3</span><span class="title"><a href="ElectricPotential.html#x15-720003.3.3">Poisson’s Equation and Laplace’s Equation</a></span></span><span class="subsectionToc"><span class="number">3.3.4</span><span class="title"><a href="ElectricPotential.html#x15-730003.3.4">The
+Potential of a Localised Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.3.5</span><span class="title"><a href="ElectricPotential.html#x15-740003.3.5">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="WorkandEnergy.html#x16-750003.4">Work
+and  Energy</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="WorkandEnergy.html#x16-760003.4.1">To  Move  a  Charge</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="WorkandEnergy.html#x16-770003.4.2">The  Energy  of  a  Point  Charge
+Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.3</span><span class="title"><a href="WorkandEnergy.html#x16-780003.4.3">The Energy of a Continuous Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.4</span><span class="title"><a href="WorkandEnergy.html#x16-790003.4.4">Comments on
+Electrostatic Energy</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="Conductors.html#x17-830003.5">Conductors</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="Conductors.html#x17-840003.5.1">Properties</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="Conductors.html#x17-850003.5.2">Induced Charges</a></span></span><span class="subsectionToc"><span class="number">3.5.3</span><span class="title"><a href="Conductors.html#x17-860003.5.3">Surface
+Charge and the Force on a Conductor</a></span></span><span class="subsectionToc"><span class="number">3.5.4</span><span class="title"><a href="Conductors.html#x17-870003.5.4">Capacitors</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="MagneticFieldsinMatter.html#x18-890004">Magnetic Fields in
+Matter</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="Magnetisation.html#x19-900004.1">Magnetisation</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="Magnetisation.html#x19-910004.1.1">Diamagnets, Paramagnets, and Ferromagnets</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="Magnetisation.html#x19-920004.1.2">Torques
+and Forces on Magnetic Dipoles</a></span></span><span class="subsectionToc"><span class="number">4.1.3</span><span class="title"><a href="Magnetisation.html#x19-930004.1.3">Effect of a Magnetic Field on Atomic
+Orbits</a></span></span><span class="subsectionToc"><span class="number">4.1.4</span><span class="title"><a href="Magnetisation.html#x19-940004.1.4">Magnetization</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-950004.2">The Field of a Magnetised Object</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-960004.2.1">Bound
+Currents</a></span></span><span class="subsectionToc"><span class="number">4.2.2</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-970004.2.2">Physical Interpretation of Bound Currents</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="#x21-980004.3">The Auxiliary
+H  Field</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="#x21-990004.3.1">Ampère’s  Law  in  Magnetized  Materials</a></span></span><span class="subsectionToc"><span class="number">4.3.2</span><span class="title"><a href="#x21-1010004.3.2">A  Deceptive
+Parallel</a></span></span><span class="subsectionToc"><span class="number">4.3.3</span><span class="title"><a href="#x21-1040004.3.3">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="LinearandNonLinearMedia.html#x22-1050004.4">Linear and Non-Linear Media</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="LinearandNonLinearMedia.html#x22-1060004.4.1">Magnetic
+Susceptibility and Permeability</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="LinearandNonLinearMedia.html#x22-1070004.4.2">Ferromagnetism</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="Electrodynamics.html#x23-1110005">Electrodynamics</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="ElectromotiveForce.html#x24-1120005.1">Electromotive
+Force</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="ElectromotiveForce.html#x24-1130005.1.1">Ohm’s Law</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="ElectromotiveForce.html#x24-1140005.1.2">Determining the Current Density</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="ElectromotiveForce.html#x24-1150005.1.3">Electromotive
+Force</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="ElectromotiveForce.html#x24-1170005.1.4">Motional EMF</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="ElectromagneticInduction.html#x25-1180005.2">Electromagnetic Induction</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="ElectromagneticInduction.html#x25-1190005.2.1">Faraday’s Law</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="ElectromagneticInduction.html#x25-1200005.2.2">The
+Induced Electric Field</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="ElectromagneticInduction.html#x25-1220005.2.3">Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="ElectromagneticInduction.html#x25-1230005.2.4">Energy in Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="MaxwellsEquations.html#x26-1240005.3">Maxwell’s
+Equations</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="MaxwellsEquations.html#x26-1250005.3.1">Electrodynamics Before Maxwell</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="MaxwellsEquations.html#x26-1260005.3.2">How Maxwell Fixed Ampère’s
+Law</a></span></span><span class="subsectionToc"><span class="number">5.3.3</span><span class="title"><a href="MaxwellsEquations.html#x26-1270005.3.3">Maxwell’s Equations</a></span></span><span class="subsectionToc"><span class="number">5.3.4</span><span class="title"><a href="MaxwellsEquations.html#x26-1280005.3.4">Magnetic Charge</a></span></span><span class="subsectionToc"><span class="number">5.3.5</span><span class="title"><a href="MaxwellsEquations.html#x26-1290005.3.5">Maxwell’s Equations
+in Matter</a></span></span><span class="subsectionToc"><span class="number">5.3.6</span><span class="title"><a href="MaxwellsEquations.html#x26-1300005.3.6">Boundary Conditions</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="nav-footer-webBook"><b>Last Updated:</b> 10.11.2026, at 12:38.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="LinearandNonLinearMedia.html">Linear and Non-Linear Media</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="TheFieldofaMagnetisedObject.html">The Field of a Magnetised Object</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="MagneticFieldsinMatter.html#TheAuxiliaryHField.html">Chapter: Magnetic Fields in Matter</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"><h3 id="header-section-4.3"><span class="number">4.3</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#section.4.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x21-980004.3"></a>The Auxiliary H
+Field</span></h3></div>
+<div class="subsection-header"><h4 id="header-subsection-4.3.1"><span class="number">4.3.1</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.4.3.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x21-990004.3.1"></a>Ampère’s Law in Magnetized Materials</span></h4></div>
+<p class="noindent">In the previous section, we found that the effect of magnetization is to establish bound currents
+<math display="inline"><msub><mrow><mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>b</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>M</mi></mstyle></math> within the
+material and <math display="inline"><msub><mrow><mstyle mathvariant="bold"><mi>K</mi></mstyle></mrow><mrow><mi>b</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>M</mi></mstyle> <mi>×</mi> <mover accent="true"><mrow><mstyle mathvariant="bold"><mi>n</mi></mstyle></mrow><mo accent="true">^</mo></mover></math>
+on the surface. The field due to magnetization of the medium is just the field produced by these bound
+currents.
+</p><p class="noindent">It is time we put everything together: </p><div class="quote">  The field attributable to bound currents, plus the field due to
+everything else, which we will call the <b>free current</b>. </div>
+<div class="block-minor knowledge"><div class="body">
+<p class="noindent">The free current might flow through wires embedded in the magnetized substance or, if the latter is a
+conductor, through the material itself. </p></div></div>
+<p class="noindent">Regardless of any event, the total current can be written as </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x21-99001r24"></mstyle>
+<mstyle mathvariant="bold">
+<mi>J</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>b</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(4.24)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">There is nothing new in <span> Eq. (<a href="#x21-99001r24">4.24</a>)</span>  as it is simply a <b>convenience</b> to separate the current into these
+two (<span class="alert">2</span>) parts,as they got there by quite different means: </p>
+<ul class="itemize1">
+<li class="itemize">
+<p class="noindent">The free current is there because somebody hooked up a wire to a battery. It involves actual
+transport of charge.
+</p>
+</li>
+<li class="itemize">
+<p class="noindent">The bound current is there because of magnetization. It results from the collective behavior
+of many aligned atomic dipoles.</p></li></ul>
+<p class="noindent">In view of <span> Eq. (<a href="TheFieldofaMagnetisedObject.html#x20-96006r19">4.19</a>)</span>  and <span> Eq. (<a href="#x21-99001r24">4.24</a>)</span> , Ampère’s law can be written as: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mtable class="aligned" displaystyle="true"><mtr><mtd columnalign="right"> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>J</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msub><mrow> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>b</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>M</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></mtd>
+</mtr> </mtable><mspace class="quad" width="1em"></mspace><mstyle class="text"><mtext>or tidying them up</mtext></mstyle><mspace class="quad" width="1em"></mspace><mi class="MathClass-op">∇</mi><mo> ⁡</mo><mi>×</mi><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle mathvariant="bold"><mi>M</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">The quantity in parentheses is designated by the letter
+<math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>:
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x21-99002r25"></mstyle>
+<mstyle mathvariant="bold">
+<mi>H</mi></mstyle>
+<mi>≡</mi> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle mathvariant="bold"><mi>M</mi></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(4.25)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">In terms of <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>,
+then, Ampère’s law reads
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x21-99003r26"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>H</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>in integral form</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mi>∮</mi>
+<mstyle mathvariant="bold"><mi>H</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>I</mi></mrow><mrow><msub><mrow><mi>f</mi></mrow><mrow><mstyle class="text"><mtext>enc</mtext></mstyle></mrow></msub></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(4.26)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><msub><mrow><mi>f</mi></mrow><mrow><mstyle class="text"><mtext>enc</mtext></mstyle></mrow></msub></mrow></msub></math>
+is the total <b>free</b> current passing through the Amperian loop.
+<math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math> plays a role in magnetostatics
+similar to <math display="inline"><mstyle mathvariant="bold"><mi>D</mi></mstyle></math> in electrostatics: </p><div class="quote">  Just
+as <math display="inline"><mstyle mathvariant="bold"><mi>D</mi></mstyle></math> allowed us to write <i>Gauss’s
+law</i> in terms of the <span class="alert">free charge</span> alone, <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>
+permits us to express <i>Ampère’s law</i> in terms of the <b>free current</b> alone. </div>
+<div class="block-minor warning"><div class="body">
+<p class="noindent">Free current is what we control directly </p></div></div>
+<p class="noindent">Bound current, similar to bound charge, comes <span class="alert">naturally</span>. The material gets magnetized, and this results in
+bound currents.
+</p>
+<div class="block-minor knowledge"><div class="body">
+<p class="noindent">We cannot turn them on or off <span class="alert">independently</span>, as we can free currents. </p></div></div>
+<p class="noindent">In applying <span> Eq. (<a href="#x21-99003r26">4.26</a>)</span> , all we need to worry about is the <b>free</b> current, which we know
+about because we <b>put</b> it there. In particular, when symmetry permits, we can calculate
+<math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>
+immediately from <span> Eq. (??)</span>  by the usual <i>Ampère’s law</i> methods.
+</p>
+<div class="subsection-header"><h5 id="header-subsubsection-4.3.1.16"><span class="number"></span><a class="pdf-icon" href=""></a><span class="title"> <a id="x21-100000"></a>Practicality of The Auxiliary Field</span></h5></div>
+<p class="noindent">Turns out, <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math> is a <span class="alert">more useful quantity</span> than
+<math display="inline"><mstyle mathvariant="bold"><mi>D</mi></mstyle></math>. In the laboratory, many
+scientist will be talking about <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math><span class="margin-block">,
+<span class="margin-comment"><a class="ellipsis" href="#m-ref-95">[95]</a>
+<span class="sidenote">Even more often than <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>.</span></span></span> but
+will almost never speak of <math display="inline"><mstyle mathvariant="bold"><mi>D</mi></mstyle></math>,
+as most will work with <math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>
+instead.
+</p><p class="noindent">The reason is this straightforward:
+</p><p class="noindent">To build an <b>electromagnet</b> we run a certain <span class="margin-block">current <span class="margin-comment"><a class="ellipsis" href="#m-ref-96">[96]</a>
+<span class="sidenote">As this is a current we
+are putting into the system we consider this <b>free current</b>.</span></span></span> through a coil. The
+<b>current</b> is the thing we read on our measuring equipment, and this determines
+<math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math><span class="margin-block">; <span class="margin-comment"><a class="ellipsis" href="#m-ref-97">[97]</a>
+<span class="sidenote">Or if we want to get
+pedantic, the line integral of <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>.</span></span></span>
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>
+depends on the <span class="alert">specific materials</span> we used and even, if iron is present, on the <span class="alert">history of the magnet</span>.
+</p><p class="noindent">On the other hand, if we want to set up an <i>electric field</i>, we don’t plaster a known free
+charge on the plates of a parallel plate capacitor. Rather, we connect them to a battery of
+known <b>voltage</b>. It’s the <b>potential difference</b> we read on your dial, and that determines
+<math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math><span class="margin-block">. <span class="margin-comment"><a class="ellipsis" href="#m-ref-98">[98]</a>
+<span class="sidenote">Or rather, the
+line integral of <math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>.</span></span></span>
+</p><div class="quote"> <math display="inline"><mstyle mathvariant="bold"><mi>D</mi></mstyle></math>
+depends on the details of the dielectric we’re using. </div>
+<p class="noindent">If it were easy to measure charge, and hard to measure potential, then we’d find experimentalists talking more
+about <math display="inline"><mstyle mathvariant="bold"><mi>D</mi></mstyle></math> instead of
+<math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>. So the relative
+familiarity of <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>, as
+contrasted with <math display="inline"><mstyle mathvariant="bold"><mi>D</mi></mstyle></math>,
+derives from purely practical <span class="margin-block">considerations. <span class="margin-comment"><a class="ellipsis" href="#m-ref-99">[99]</a>
+<span class="sidenote">This is why majority of engineering applications use the
+<math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math> field in their calculation
+instead of using <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> <span class="cite"><a class="cite-show" href="#w3-20001">[†-1]</a><span class="cite-detail" id="cheng1989field">
+<a id="x21-100001"></a>Cheng, D. K. et al. Field and wave electromagnetics (Pearson Education India, 1989)</span></span>. Its just
+easier.</span></span></span>
+</p>
+<div class="block-minor knowledge"><div class="body">
+<p class="noindent">Theoretically, they’re on an <b>equal footing</b>. </p></div></div>
+<dl class="def-block block-major info-block"> <a class="copiable-link" href="#info-block-4.8" id="info-block-4.8"> ¶</a> <dt class="def-line"> <span class="upper"> <span class="header"> <b>Information 4.<a id="x21-100002r8"></a>8: </b> </span> <span class="title"> The Naming of the Field </span> </span> <input class="body-button" type="button" value="Show/Hide"/> </dt> <dd class="body">
+<p class="noindent">Many authors call <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>, not
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>, the <span class="alert">magnetic field</span>. Then they have to
+invent a new word for <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>:
+the <span class="alert">flux density</span>, or <span class="alert">magnetic induction</span> <span class="margin-block">. <span class="margin-comment"><a class="ellipsis" href="#m-ref-100">[100]</a>
+<span class="sidenote">an absurd choice, given the term already has at least two other meanings
+in electrodynamics. This would do nothing but add more to the confusion.</span></span></span>
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> is
+indisputably the fundamental quantity, therefore we will continue to call it the <b>magnetic field</b>.
+<math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>
+has no sensible name and therefore to keep it simple, just call it
+<math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>.
+</p>
+</dd></dl>
+<div class="subsection-header"><h4 id="header-subsection-4.3.2"><span class="number">4.3.2</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.4.3.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x21-1010004.3.2"></a>A Deceptive Parallel</span></h4></div>
+<p class="noindent">If we were to look at Eq. (<a href="#x21-99003r26">4.26</a>) closely, we will see that it looks just like <i>Ampère’s original law</i>
+Eq. 
+(??)
+, with the exception that the total current is replaced by the free current, and
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> is replaced
+by <math display="inline"><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>.
+</p><p class="noindent">Similar to the case of <math display="inline"><mstyle mathvariant="bold"><mi>D</mi></mstyle></math>,
+however, We need to be careful, as it does <b>NOT</b> say that </p><div class="quote">
+<math display="inline"><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle mathvariant="bold"><mi>H</mi></mstyle></math> is just like
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>, only its
+source is <math display="inline"><msub><mrow><mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub></math>
+instead of <math display="inline"><mstyle mathvariant="bold"><mi>J</mi></mstyle></math>.
+</div>
+<p class="noindent">For the curl alone does not determine a vector field as we must also know the <span class="margin-block">divergence. <span class="margin-comment"><a class="ellipsis" href="#m-ref-101">[101]</a>
+<span class="sidenote">This is one of
+the key ideas of <b>Vector Field Theory</b> which we covered in <span class="refclass-ref"><a href="VectorCalculus.html#x5-100002">Vector Calculus</a></span>.</span></span></span> And whereas
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>, the
+divergence of <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>
+is <b>NOT</b>, in general, zero.
+</p><p class="noindent">In fact, from <span> Eq. (<a href="#x21-99002r25">4.25</a>)</span> </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x21-101001r27"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>H</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>M</mi></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(4.27)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Only when the divergence of <math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math>
+vanishes is the parallel between <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>
+and <math display="inline"><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></math><b>H</b>
+faithful.
+</p>
+<div class="paragraph-header"><h6 id="header-paragraph-4.3.2.16.13"><span class="number"></span><a class="pdf-icon" href=""></a><span class="title"> <a id="x21-102000"></a>A Thought Experiment</span></h6></div>
+<p class="noindent">Consider the example of the bar magnet; a short cylinder of iron carrying a permanent uniform magnetization
+<math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math> parallel to its axis.
+In this case there is no free current anywhere, and a simple application of <span> Eq. (<a href="#x21-99003r26">4.26</a>)</span>  might lead us to assume
+<math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math> being 0, and therefore
+assuming <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle mathvariant="bold"><mi>M</mi></mstyle></math> inside
+the magnet and <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>
+outside, which makes no physical sense. It is quite true that the
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>H</mi></mstyle></math>
+vanishes everywhere, but the divergence does <b>NOT</b>.
+</p>
+<div class="paragraph-header"><h6 id="header-paragraph-4.3.2.16.14"><span class="number"></span><a class="pdf-icon" href=""></a><span class="title"> <a id="x21-103000"></a>Approaching the Problem</span></h6></div>
+<p class="noindent">When we are asked to find <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>
+or <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>
+in a problem involving magnetic materials, first try look for symmetry. If the
+problem permits cylindrical, plane, solenoidal, or toroidal symmetry, then we can get
+<math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>
+directly from <span> Eq. (<a href="#x21-99003r26">4.26</a>)</span>  by the usual <i>Ampère’s law</i> <span class="margin-block">methods. <span class="margin-comment"><a class="ellipsis" href="#m-ref-102">[102]</a>
+<span class="sidenote">Evidently, in such cases
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>M</mi></mstyle></math> is
+automatically zero, given the free current alone determines the answer.</span></span></span> If the requisite symmetry is
+absent, we’ll have to think of another approach, and in particular we cannotx assume that
+<math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math> is zero
+just because there is no free current in sight.
+</p>
+<div class="subsection-header"><h4 id="header-subsection-4.3.3"><span class="number">4.3.3</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.4.3.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x21-1040004.3.3"></a>Boundary Conditions</span></h4></div>
+<p class="noindent">The magnetostatic boundary conditions of Sect. 5.4.2 can be rewritten in terms of <b>H</b> and the <b>free</b>
+current. From <span> Eq. (<a href="#x21-101001r27">4.27</a>)</span>  it follows that </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x21-104001r28"></mstyle>
+<msubsup><mrow><mi>H</mi></mrow><mrow><mstyle class="text"><mtext>above</mtext></mstyle></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow><mi>H</mi></mrow><mrow>
+<mstyle class="text"><mtext>below</mtext></mstyle></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mo class="MathClass-open" stretchy="false">(</mo><msubsup><mrow><mi>M</mi></mrow><mrow>
+<mstyle class="text"><mtext>above</mtext></mstyle></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow><mi>M</mi></mrow><mrow>
+<mstyle class="text"><mtext>below</mtext></mstyle></mrow><mrow><mi>⊥</mi></mrow></msubsup><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(4.28)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">whereas <span> Eq. (??)</span>  says; </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x21-104002r29"></mstyle><msubsup><mrow>
+<mstyle mathvariant="bold">
+<mi>H</mi></mstyle>
+</mrow><mrow><mstyle class="text"><mtext>above</mtext></mstyle></mrow><mrow><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo><msubsup><mrow> <mstyle mathvariant="bold"><mi>H</mi></mstyle></mrow><mrow>
+<mstyle class="text"><mtext>below</mtext></mstyle></mrow><mrow><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow> <mstyle mathvariant="bold"><mi>K</mi></mstyle></mrow><mrow>
+<mi>f</mi></mrow></msub> <mi>×</mi> <mover accent="true"><mrow><mstyle mathvariant="bold"><mi>n</mi></mstyle></mrow><mo accent="true">^</mo></mover><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(4.29)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">In the presence of materials, these are sometimes more useful than the corresponding boundary conditions
+on <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> (Eq.
+(??) 
+and Eq. (??)): </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x21-104003r30"></mstyle>
+<msubsup><mrow><mi>B</mi></mrow><mrow><mstyle class="text"><mtext>above</mtext></mstyle></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow><mi>B</mi></mrow><mrow>
+<mstyle class="text"><mtext>below</mtext></mstyle></mrow><mrow><mi>⊥</mi></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>and</mtext></mstyle><mspace class="qquad" width="2em"></mspace><msubsup><mrow><mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mrow>
+<mstyle class="text"><mtext>above</mtext></mstyle></mrow><mrow><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo><msubsup><mrow> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mrow>
+<mstyle class="text"><mtext>below</mtext></mstyle></mrow><mrow><mo class="MathClass-rel" stretchy="false">∥</mo></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow>
+<mn>0</mn></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>K</mi></mstyle> <mi>×</mi> <mover accent="true"><mrow><mstyle mathvariant="bold"><mi>n</mi></mstyle></mrow><mo accent="true">^</mo></mover><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(4.30)</td></tr></table>
+<p class="noindent"></p>
+<div class="section-header">
+<h3 id="header-section-references">
+<span class="number">
+<i class="fa-solid fa-magnifying-glass"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+            Page References</span>
+</h3>
+</div>
+<div class="cite-block">
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">1.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> Cheng, D. K. et al. Field and wave electromagnetics (Pearson Education India, 1989)</dd>
+</dl></div>
+<div class="section-header">
+<h3 id="header-section-references">
+<span class="number">
+<i class="fa-regular fa-note-sticky"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+                    Page Footnotes</span>
+</h3>
+</div>
+<div class="footnote-block">
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-95"><span class="acr-short">[95].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Even more often than <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-96"><span class="acr-short">[96].</span></dt>
+<dd class="enumerate-enumitem"><span class="">As this is a current we
+are putting into the system we consider this <b>free current</b>.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-97"><span class="acr-short">[97].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Or if we want to get
+pedantic, the line integral of <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-98"><span class="acr-short">[98].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Or rather, the
+line integral of <math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-99"><span class="acr-short">[99].</span></dt>
+<dd class="enumerate-enumitem"><span class="">This is why majority of engineering applications use the
+<math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math> field in their calculation
+instead of using <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> <span class="cite"><a class="cite-show" href="#w3-20001">[†-1]</a><span class="cite-detail" id="cheng1989field">
+<a id="x21-100001"></a>Cheng, D. K. et al. Field and wave electromagnetics (Pearson Education India, 1989)</span></span>. Its just
+easier.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-100"><span class="acr-short">[100].</span></dt>
+<dd class="enumerate-enumitem"><span class="">an absurd choice, given the term already has at least two other meanings
+in electrodynamics. This would do nothing but add more to the confusion.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-101"><span class="acr-short">[101].</span></dt>
+<dd class="enumerate-enumitem"><span class="">This is one of
+the key ideas of <b>Vector Field Theory</b> which we covered in <span class="refclass-ref"><a href="VectorCalculus.html#x5-100002">Vector Calculus</a></span>.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-102"><span class="acr-short">[102].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Evidently, in such cases
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>M</mi></mstyle></math> is
+automatically zero, given the free current alone determines the answer.</span></dd>
+</dl></div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="LinearandNonLinearMedia.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="TheFieldofaMagnetisedObject.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="MagneticFieldsinMatter.html#TheAuxiliaryHField.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 10.11.2026, at 12:38.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">4.3: The Auxiliary H Field</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

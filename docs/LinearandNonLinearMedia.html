@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Linear and Non-Linear Media</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="flatweb.css" rel="stylesheet" type="text/css"/>
+<script src="flatweb.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="style-code/gruvbox-light-hard.min.css" id="code-style" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Electrodynamics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2026.WS</span>
+<span class="header-chapter">Magnetic Fields in Matter</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="ThePurposeofElectromagnetism.html#x3-20001">The Purpose of Electromagnetism</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-30001.1">Mechanics in Four Different
+Views</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-40001.1.1">Electromagnetism and Relativity</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-50001.1.2">Four Kinds of Forces</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-60001.1.3">Unifying
+Physical Theories</a></span></span><span class="subsectionToc"><span class="number">1.1.4</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-70001.1.4">The Fields of Electrodynamics</a></span></span><span class="subsectionToc"><span class="number">1.1.5</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-80001.1.5">Electric Charge</a></span></span><span class="subsectionToc"><span class="number">1.1.6</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-90001.1.6">Interpreting
+Conservation   of   Charge</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="VectorCalculus.html#x5-100002">Vector   Calculus</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="VectorAlgebra.html#x6-110002.1">Vector   Algebra</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="VectorAlgebra.html#x6-120002.1.1">Vector
+Operations</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="VectorAlgebra.html#x6-170002.1.2">Vector Component Forms</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="VectorAlgebra.html#x6-180002.1.3">Triple Products</a></span></span><span class="subsectionToc"><span class="number">2.1.4</span><span class="title"><a href="VectorAlgebra.html#x6-210002.1.4">Position,
+Displacement, and Separation Vectors</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-220002.2">Differential Calculus</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="DifferentialCalculus.html#x7-230002.2.1">Ordinary
+Derivatives</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-240002.2.2">Gradient</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="DifferentialCalculus.html#x7-250002.2.3">The Del Operator</a></span></span><span class="subsectionToc"><span class="number">2.2.4</span><span class="title"><a href="DifferentialCalculus.html#x7-280002.2.4">Product Rules</a></span></span><span class="subsectionToc"><span class="number">2.2.5</span><span class="title"><a href="DifferentialCalculus.html#x7-290002.2.5">Second
+Derivatives</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="IntegralCalculus.html#x8-350002.3">Integral Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="IntegralCalculus.html#x8-360002.3.1">Line, Surface, and Volume Integrals</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="IntegralCalculus.html#x8-400002.3.2">The
+Fundamental Theorems of Vector Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="IntegralCalculus.html#x8-430002.3.3">The Fundamental Theorem for
+Curls</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="CurvilinearCoordinates.html#x9-440002.4">Curvilinear Coordinates</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="CurvilinearCoordinates.html#x9-450002.4.1">Spherical Coordinate System</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="CurvilinearCoordinates.html#x9-460002.4.2">Cylindrical
+Coordinates</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="DiracDeltaFunction.html#x10-470002.5">Dirac Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="DiracDeltaFunction.html#x10-480002.5.1">A Mathematical Anomaly</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="DiracDeltaFunction.html#x10-490002.5.2">The 1D Dirac
+Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="DiracDeltaFunction.html#x10-500002.5.3">The 3D Dirac Delta Function</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="VectorFieldTheory.html#x11-510002.6">Vector Field Theory</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="VectorFieldTheory.html#x11-520002.6.1">Helmholtz
+Theorem</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="VectorFieldTheory.html#x11-530002.6.2">Potentials</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Electrostatics.html#x12-540003">Electrostatics</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="TheElectricField.html#x13-550003.1">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="TheElectricField.html#x13-560003.1.1">Coulomb’s
+Law</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="TheElectricField.html#x13-570003.1.2">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.3</span><span class="title"><a href="TheElectricField.html#x13-580003.1.3">Continuous Charge Distributions</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-590003.2">Divergence and
+Curl of Electrostatic Fields</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-600003.2.1">Quantification</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-610003.2.2">Divergence of E</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-620003.2.3">Applications
+of Gauss’s Law</a></span></span><span class="subsectionToc"><span class="number">3.2.4</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-630003.2.4">Curl of E</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ElectricPotential.html#x15-640003.3">Electric Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ElectricPotential.html#x15-650003.3.1">Defining the Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ElectricPotential.html#x15-660003.3.2">Some
+Digressions on Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.3</span><span class="title"><a href="ElectricPotential.html#x15-720003.3.3">Poisson’s Equation and Laplace’s Equation</a></span></span><span class="subsectionToc"><span class="number">3.3.4</span><span class="title"><a href="ElectricPotential.html#x15-730003.3.4">The
+Potential of a Localised Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.3.5</span><span class="title"><a href="ElectricPotential.html#x15-740003.3.5">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="WorkandEnergy.html#x16-750003.4">Work
+and  Energy</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="WorkandEnergy.html#x16-760003.4.1">To  Move  a  Charge</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="WorkandEnergy.html#x16-770003.4.2">The  Energy  of  a  Point  Charge
+Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.3</span><span class="title"><a href="WorkandEnergy.html#x16-780003.4.3">The Energy of a Continuous Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.4</span><span class="title"><a href="WorkandEnergy.html#x16-790003.4.4">Comments on
+Electrostatic Energy</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="Conductors.html#x17-830003.5">Conductors</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="Conductors.html#x17-840003.5.1">Properties</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="Conductors.html#x17-850003.5.2">Induced Charges</a></span></span><span class="subsectionToc"><span class="number">3.5.3</span><span class="title"><a href="Conductors.html#x17-860003.5.3">Surface
+Charge and the Force on a Conductor</a></span></span><span class="subsectionToc"><span class="number">3.5.4</span><span class="title"><a href="Conductors.html#x17-870003.5.4">Capacitors</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="MagneticFieldsinMatter.html#x18-890004">Magnetic Fields in
+Matter</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="Magnetisation.html#x19-900004.1">Magnetisation</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="Magnetisation.html#x19-910004.1.1">Diamagnets, Paramagnets, and Ferromagnets</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="Magnetisation.html#x19-920004.1.2">Torques
+and Forces on Magnetic Dipoles</a></span></span><span class="subsectionToc"><span class="number">4.1.3</span><span class="title"><a href="Magnetisation.html#x19-930004.1.3">Effect of a Magnetic Field on Atomic
+Orbits</a></span></span><span class="subsectionToc"><span class="number">4.1.4</span><span class="title"><a href="Magnetisation.html#x19-940004.1.4">Magnetization</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-950004.2">The Field of a Magnetised Object</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-960004.2.1">Bound
+Currents</a></span></span><span class="subsectionToc"><span class="number">4.2.2</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-970004.2.2">Physical Interpretation of Bound Currents</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="TheAuxiliaryHField.html#x21-980004.3">The Auxiliary
+H  Field</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="TheAuxiliaryHField.html#x21-990004.3.1">Ampère’s  Law  in  Magnetized  Materials</a></span></span><span class="subsectionToc"><span class="number">4.3.2</span><span class="title"><a href="TheAuxiliaryHField.html#x21-1010004.3.2">A  Deceptive
+Parallel</a></span></span><span class="subsectionToc"><span class="number">4.3.3</span><span class="title"><a href="TheAuxiliaryHField.html#x21-1040004.3.3">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="#x22-1050004.4">Linear and Non-Linear Media</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="#x22-1060004.4.1">Magnetic
+Susceptibility and Permeability</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="#x22-1070004.4.2">Ferromagnetism</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="Electrodynamics.html#x23-1110005">Electrodynamics</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="ElectromotiveForce.html#x24-1120005.1">Electromotive
+Force</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="ElectromotiveForce.html#x24-1130005.1.1">Ohm’s Law</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="ElectromotiveForce.html#x24-1140005.1.2">Determining the Current Density</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="ElectromotiveForce.html#x24-1150005.1.3">Electromotive
+Force</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="ElectromotiveForce.html#x24-1170005.1.4">Motional EMF</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="ElectromagneticInduction.html#x25-1180005.2">Electromagnetic Induction</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="ElectromagneticInduction.html#x25-1190005.2.1">Faraday’s Law</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="ElectromagneticInduction.html#x25-1200005.2.2">The
+Induced Electric Field</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="ElectromagneticInduction.html#x25-1220005.2.3">Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="ElectromagneticInduction.html#x25-1230005.2.4">Energy in Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="MaxwellsEquations.html#x26-1240005.3">Maxwell’s
+Equations</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="MaxwellsEquations.html#x26-1250005.3.1">Electrodynamics Before Maxwell</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="MaxwellsEquations.html#x26-1260005.3.2">How Maxwell Fixed Ampère’s
+Law</a></span></span><span class="subsectionToc"><span class="number">5.3.3</span><span class="title"><a href="MaxwellsEquations.html#x26-1270005.3.3">Maxwell’s Equations</a></span></span><span class="subsectionToc"><span class="number">5.3.4</span><span class="title"><a href="MaxwellsEquations.html#x26-1280005.3.4">Magnetic Charge</a></span></span><span class="subsectionToc"><span class="number">5.3.5</span><span class="title"><a href="MaxwellsEquations.html#x26-1290005.3.5">Maxwell’s Equations
+in Matter</a></span></span><span class="subsectionToc"><span class="number">5.3.6</span><span class="title"><a href="MaxwellsEquations.html#x26-1300005.3.6">Boundary Conditions</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="nav-footer-webBook"><b>Last Updated:</b> 10.11.2026, at 12:38.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="Electrodynamics.html">Chapter: Electrodynamics</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="TheAuxiliaryHField.html">The Auxiliary H Field</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="MagneticFieldsinMatter.html#LinearandNonLinearMedia.html">Chapter: Magnetic Fields in Matter</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"><h3 id="header-section-4.4"><span class="number">4.4</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#section.4.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x22-1050004.4"></a>Linear and Non-Linear
+Media</span></h3></div>
+<div class="subsection-header"><h4 id="header-subsection-4.4.1"><span class="number">4.4.1</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.4.4.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x22-1060004.4.1"></a>Magnetic Susceptibility and Permeability</span></h4></div>
+<p class="noindent">For both <b>paramagnetic</b> and <b>diamagnetic</b> materials, the magnetisation
+(<math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math>) is sustained
+by the field (<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>).
+</p>
+<div class="block-minor warning"><div class="body">
+<p class="noindent">when <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> is
+removed, <math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math>
+disappears. </p></div></div>
+<p class="noindent">In fact, for most substances the magnetization is <b>proportional</b> to the field, provided the field is
+<b>NOT</b> too strong. To keep consistency with the electrical case given in Eq. (<a href="ElectricPotential.html#x15-73006r21">3.21</a>), we will express the
+proportionality as follows: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mstyle mathvariant="bold">
+<mi>M</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msub><mrow>
+<mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><msub><mrow><mi>χ</mi></mrow><mrow><mi>m</mi></mrow></msub><mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">While the above expression is mathematically correct, scientific tradition prefers it be written in terms
+of <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>, instead
+of <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>:
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x22-106001r31"></mstyle>
+<mstyle mathvariant="bold">
+<mi>M</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>χ</mi></mrow><mrow><mi>m</mi></mrow></msub><mstyle mathvariant="bold"><mi>H</mi></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(4.31)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">The constant of proportionality <math display="inline"><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>χ</mi></mrow><mrow><mi>m</mi></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup></math>
+is called the <b>magnetic susceptibility</b> and is a dimensionless quantity which varies from one substance
+to another.
+</p>
+<div class="block-minor knowledge"><div class="body">
+<p class="noindent">This is positive for <span class="alert">paramagnets</span> and negative for <span class="alert">diamagnets</span>. </p></div></div>
+<p class="noindent"></p><figure class="float">
+<a id="x22-106002r1"></a>
+<figcaption class="caption"><span class="id">Table 4.1: 
+         </span><span class="content">Magnetic Susceptibilities (unless otherwise specified, values are for 1 atm, 20ř C). Data from Handbook of
+         Chemistry and Physics, 91st ed. (Boca Raton: CRC Press, Inc., 2010) and other references.          </span></figcaption>
+<table class="tabularray tblr" id="tbl-7"> <tr id="row-7-1-"><td colspan="2" id="1-1" style=""> <b>Diamagnetic</b> </td><td colspan="6" id="1-3" style=""> <b>Paramagnetic</b> </td></tr>
+<tr id="row-7-2-"><td id="2-1" style=""> <b>Material</b> </td><td id="2-2" style=""> <b>Susceptibility</b> </td><td id="2-3" style=""> <b>Susceptibility</b> </td><td colspan="5" id="2-4" style=""> <b>Material</b> </td></tr>
+<tr id="row-7-3-"><td id="3-1" style="">                                                                                                                 Bismuth  </td><td id="3-2" style=""> <math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>1</mn><mi>,</mi><mn>7</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>4</mn></mrow></msup></math> </td><td id="3-3" style="">                                                                                                                                                               Oxygen 
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>O</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math> </td><td colspan="5" id="3-4" style=""> <math display="inline"><mn>1</mn><mi>,</mi><mn>7</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>6</mn></mrow></msup></math> </td></tr>
+<tr id="row-7-4-"><td id="4-1" style="">                                                                                                                                                                       Gold  </td><td id="4-2" style=""> <math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>3</mn><mi>,</mi><mn>4</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>5</mn></mrow></msup></math> </td><td id="4-3" style="">                                                                                                                                                               Sodium  </td><td colspan="5" id="4-4" style=""> <math display="inline"><mn>8</mn><mi>,</mi><mn>5</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>6</mn></mrow></msup></math> </td></tr>
+<tr id="row-7-5-"><td id="5-1" style="">                                                                                                                                                                     Silver  </td><td id="5-2" style=""> <math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>2</mn><mi>,</mi><mn>4</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>5</mn></mrow></msup></math> </td><td id="5-3" style="">                                                                                                                                                          Aluminum  </td><td colspan="5" id="5-4" style=""> <math display="inline"><mn>2</mn><mi>,</mi><mn>2</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>5</mn></mrow></msup></math> </td></tr>
+<tr id="row-7-6-"><td id="6-1" style="">                                                                                                                                                                   Copper  </td><td id="6-2" style=""> <math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>9</mn><mi>,</mi><mn>7</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>6</mn></mrow></msup></math> </td><td id="6-3" style="">                                                                                                                                                            Tungsten  </td><td colspan="5" id="6-4" style=""> <math display="inline"><mn>7</mn><mi>,</mi><mn>0</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>5</mn></mrow></msup></math> </td></tr>
+<tr id="row-7-7-"><td id="7-1" style="">                                                                                                                                                                    Water  </td><td id="7-2" style=""> <math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>9</mn><mi>,</mi><mn>0</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>6</mn></mrow></msup></math> </td><td id="7-3" style="">                                                                                                                                                            Platinum  </td><td colspan="5" id="7-4" style=""> <math display="inline"><mn>2</mn><mi>,</mi><mn>7</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>4</mn></mrow></msup></math> </td></tr>
+<tr id="row-7-8-"><td id="8-1" style="">                                                                                                                                                                  Carbon 
+Dioxide  </td><td id="8-2" style=""> <math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>1</mn><mi>,</mi><mn>1</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>8</mn></mrow></msup></math> </td><td id="8-3" style="">                                                                                                                                                                 Liquid 
+Oxygen  </td><td colspan="5" id="8-4" style=""> <math display="inline"><mn>3</mn><mi>,</mi><mn>9</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup></math> </td></tr>
+<tr id="row-7-9-"><td id="9-1" style="">                                                                                                                                                               Hydrogen 
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>H</mi><mn>2</mn><mo class="MathClass-close" stretchy="false">)</mo></math> </td><td id="9-2" style=""> <math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>2</mn><mi>,</mi><mn>1</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>9</mn></mrow></msup></math> </td><td id="9-3" style="">                                                                                                                                                        Gadolinium  </td><td colspan="5" id="9-4" style=""> <math display="inline"><mn>0</mn><mi>,</mi><mn>4</mn><mn>8</mn></math> </td></tr>
+</table>
+</figure>
+<p class="noindent">Materials that obey <span> Eq. (<a href="#x22-106001r31">4.31</a>)</span>  are called <b>linear media</b>. In view of <span> Eq. (<a href="TheAuxiliaryHField.html#x21-99002r25">4.25</a>)</span> ,
+<math display="inline"><mi>B</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>H</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>M</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>χ</mi></mrow><mrow><mi>m</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mi>H</mi></math>,&lt;/b&gt; (6.30) for
+linear media. Thus <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> is
+<b>also</b> proportional to <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math><span class="margin-block">:
+<span class="margin-comment"><a class="ellipsis" href="#m-ref-103">[103]</a>
+<span class="sidenote">Physically, therefore, <span> Eq. (??)</span>  would say exactly the same as <span> Eq. (<a href="#x22-106001r31">4.31</a>)</span> , only the constant
+<math display="inline"><msub><mrow><mi>χ</mi></mrow><mrow><mi>m</mi></mrow></msub></math> would have a
+different value. Equation 6.29 is a little more convenient, because experimentalists find it handier to work with
+H than B.</span></span></span> <math display="inline"><mi>B</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>μ</mi><mi>H</mi></math>,
+(6.31) where </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x22-106003r32"></mstyle>
+<mi>μ</mi> <mi>≡</mi> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>χ</mi></mrow><mrow><mi>m</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(4.32)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"><math display="inline"><mi>μ</mi></math>
+is called the <b>permeability</b> of the <span class="margin-block">material. <span class="margin-comment"><a class="ellipsis" href="#m-ref-104">[104]</a>
+<span class="sidenote">If you factor out
+<math display="inline"><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></math>, what’s left is called the
+<b>relative permeability</b>: <math display="inline"><msub><mrow><mi>μ</mi></mrow><mrow><mi>r</mi></mrow></msub> <mi>≡</mi> <mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>χ</mi></mrow><mrow><mi>m</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>μ</mi><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></math>.
+By the way, formulas for H in terms of B (<span> Eq. (??)</span> , in the case of linear media) are called constitutive relations,
+just like those for D in terms of E.</span></span></span> In a vacuum, where there is no matter to magnetize, the susceptibility
+<math display="inline"><msub><mrow><mi>χ</mi></mrow><mrow><mi>m</mi></mrow></msub></math> vanishes, and the
+permeability is <math display="inline"><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></math>.
+That’s why <math display="inline"><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></math>
+is called the <b>permeability of free space</b>.
+</p><p class="noindent">We might assume that linear media escape the defect in the parallel between
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> and
+<math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>. given
+<math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math> and
+<math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math> are now
+<b>proportional</b> to <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>.
+</p><p class="noindent">If this is true, doesn’t this mean, their divergence, similar to
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>’s, must always
+vanish? Unfortunately, it does <b>NOT</b> at the boundary between two (<span class="alert">2</span>) materials of different permeability, the
+divergence of <math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math>
+can actually be infinite.
+</p>
+<dl class="def-block block-major info-block"> <a class="copiable-link" href="#info-block-4.9" id="info-block-4.9"> ¶</a> <dt class="def-line"> <span class="upper"> <span class="header"> <b>Information 4.<a id="x22-106004r9"></a>9: </b> </span> <span class="title"> Divergence of Auxiliary-Field </span> </span> <input class="body-button" type="button" value="Show/Hide"/> </dt> <dd class="body">
+<p class="noindent">Formally: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>H</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mi>μ</mi></mrow></mfrac><mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mi>μ</mi></mrow></mfrac><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mi>·</mi> <mi class="MathClass-op">∇</mi><mo> ⁡</mo><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mi>μ</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mi>·</mi> <mi class="MathClass-op">∇</mi><mo> ⁡</mo><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mi>μ</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td></tr></table>
+<p class="noindent">so, in general, <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math> is
+<b>NOT</b> divergenceless at points where <math display="inline"><mi>μ</mi></math>
+is changing.
+</p>
+</dd></dl>
+<p class="noindent">For instance, at the end of a cylinder of linear paramagnetic material,
+<math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math> is
+zero on one side but <b>NOT</b> on the other. For the “Gaussian pillbox” shown in Fig. 6.23,
+<math display="inline"><mi>∮</mi>
+<mstyle mathvariant="bold"><mi>M</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle> <mi>≠</mi> <mn>0</mn></math>, and hence, by the
+divergence theorem, <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>M</mi></mstyle></math>
+cannot vanish everywhere within it.
+</p><p class="noindent">Incidentally, the volume bound current density in a homogeneous linear material is proportional to the
+free current density: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x22-106005r33"></mstyle><msub><mrow>
+<mstyle mathvariant="bold">
+<mi>J</mi></mstyle>
+</mrow><mrow><mi>b</mi></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mi>M</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msubsup><mrow><mi>χ</mi></mrow><mrow><mi>m</mi></mrow><mrow></mrow></msubsup><mstyle mathvariant="bold"><mi>H</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>χ</mi></mrow><mrow><mi>m</mi></mrow><mrow></mrow></msubsup><msub><mrow><mstyle mathvariant="bold"><mi>J</mi></mstyle></mrow><mrow><mi>f</mi></mrow></msub><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(4.33)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Particularly, unless free current actually flows through the material, all bound current will be at the
+surface.
+</p>
+<div class="subsection-header"><h4 id="header-subsection-4.4.2"><span class="number">4.4.2</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.4.4.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x22-1070004.4.2"></a>Ferromagnetism</span></h4></div>
+<p class="noindent">In a <b>linear medium</b>, the alignment of atomic dipoles is maintained by a magnetic field <span class="alert">imposed</span> from the
+outside. Ferromagnets, which are by nature <b>NOT</b> <span class="margin-block">linear, <span class="margin-comment"><a class="ellipsis" href="#m-ref-105">[105]</a>
+<span class="sidenote">In this sense, it is misleading to
+speak of the susceptibility or permeability of a ferromagnet. The terms are used for such
+materials, but they refer to the proportionality factor between a differential increase in
+<math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math> and the resulting
+<b>differential</b> change in <math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math>
+(or <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>); moreover, they are
+<b>NOT</b> constants, but functions of <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>.</span></span></span>
+require no external fields to sustain the magnetization; </p><div class="quote">  the alignment is <b>frozen in</b>. </div>
+<p class="noindent">Like paramagnetism, ferromagnetism involves the magnetic dipoles associated with the spins of
+unpaired electrons. The new feature, which makes ferromagnetism so different from paramagnetism, is
+the interaction between nearby dipoles:
+</p>
+<div class="block-minor warning"><div class="body">
+<p class="noindent">In a ferromagnet, each dipole “wants” to point in the same direction as its <b>neighbours</b>.
+</p></div></div>
+<p class="noindent">The reason for this preference is essentially quantum mechanical and therefore significantly
+beyond the scope of an engineers need. It is enough to know that the correlation is so strong
+as to align virtually 100% of the unpaired electron spins. If we could somehow magnify a
+piece of iron and <b>see</b> the individual dipoles as tiny arrows, it would look something like
+<b>Fig.</b> <a href="#x22-107002r4">4.4</a>.
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x22-107001r3"></a>
+<figcaption class="caption"><span class="id">Figure 4.3: </span><span class="content">A closer look into the magnetic domains of a material. Here each domain has an orientation. As can bee
+seen, here there is no majority preference among the domains and this results in the macroscopic behavior of being
+non-magnetic. If there was an overall alignment, then the material would be magnetic.                      </span></figcaption>
+<img alt="PIC" src="figures/Magnetic-Fields-in-Matter/figures-3.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<div class="quote"> <i>But if that is true, why isn’t every wrench and nail a powerful magnet?</i> </div>
+<p class="noindent">The answer is that the alignment occurs in relatively small patches, called <b>domains</b>. Each domain
+contains billions of dipoles, all <span class="margin-block">lined up, <span class="margin-comment"><a class="ellipsis" href="#m-ref-106">[106]</a>
+<span class="sidenote">these domains are actually <b>visible</b> under a microscope, using
+suitable etching techniques, as an example shown in <b>Fig.</b> <a href="#x22-107002r4">4.4</a>.</span></span></span> but the domains <b>themselves</b> are
+randomly oriented. The a standard wrench contains an enormous number of domains, and their
+magnetic fields cancel, so the wrench as a whole is not <span class="margin-block">magnetized. <span class="margin-comment"><a class="ellipsis" href="#m-ref-107">[107]</a>
+<span class="sidenote">Actually, the orientation of domains
+is not <b>completely</b> random; within a given crystal, there may be some preferential alignment along the
+crystal axes. But there will be just as many domains pointing one way as the other, so there is
+still no large-scale magnetization. Moreover, the crystals themselves are randomly oriented
+within any sizable chunk of metal.</span></span></span> </p><div class="quote">  How, then, would you produce a <b>permanent magnet</b>?
+</div>
+<p class="noindent">If we were to put a piece of iron into a strong magnetic field, the torque
+<math display="inline"><mstyle mathvariant="bold"><mi>N</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>m</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></math> tends
+to align the dipoles parallel to the field. Since they like to stay parallel to their neighbors, most of the
+dipoles will resist this torque. However, at the <b>boundary</b> between two domains, there are <b>competing</b>
+neighbors, and the torque will throw its weight on the side of the domain most nearly parallel to the
+field; </p><div class="quote">  This domain will win some converts, at the expense of the less favorably oriented one.
+</div>
+<p class="noindent">The net effect of the magnetic field, then, is to move the domain boundaries. Domains
+parallel to the field grow, and the others shrink. If the field is strong enough, one domain
+takes over entirely, and the iron is said to be saturated. It turns out that this <span class="margin-block">process <span class="margin-comment"><a class="ellipsis" href="#m-ref-108">[108]</a>
+<span class="sidenote">the
+shifting of domain boundaries in response to an external field</span></span></span> is not entirely reversible:
+When the field is switched off, there will be <b>some</b> return to randomly oriented domains,
+but it is far from complete as there remains a preponderance of domains in the original
+direction.
+</p>
+<div class="block-minor warning"><div class="body">
+<p class="noindent">We now have a permanent magnet. </p></div></div>
+<p class="noindent"></p><figure class="float">
+<a id="x22-107002r4"></a>
+<figcaption class="caption"><span class="id">Figure 4.4: 
+         </span><span class="content">Illustration of the magnetic domains structure at the surface of a Fe-27%Co polycrystal <span class="cite"><a class="cite-show" href="#w3-20001">[†-1]</a><span class="cite-detail" id="savary2018experimental"> Savary, M.
+         Experimental Analysis and Numerical Approach of the Low Magnetostrictive Fe-27% Co Alloy PhD
+         thesis (phd thesis, Université Paris Saclay, 2018)</span></span> -Kerr microscopy.                         </span></figcaption>
+<img alt="PIC" src="figures/Magnetic-Fields-in-Matter/raster/ferromagnetic-domains.png" style=""/>
+</figure>
+<div class="subsection-header"><h5 id="header-subsubsection-4.4.2.17"><span class="number"></span><a class="pdf-icon" href=""></a><span class="title"> <a id="x22-108000"></a>A Simple Experiment</span></h5></div>
+<p class="noindent">A simple way to accomplish this, in practice, is to wrap a coil of wire around the object to be magnetized. Run
+a current <math display="inline"><mi>I</mi></math>
+through the coil; this provides the external magnetic field As we increase the current, the field
+increases, the domain boundaries move, and the magnetization grows. Eventually, we will reach the
+saturation point, with all the dipoles aligned, and a further increase in current has no effect on
+<math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math>.
+</p><p class="noindent">Now suppose we <b>reduce</b> the current. Instead of retracing the path back to
+<math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>,
+there is only a <b>partial</b> return to randomly oriented domains; </p><div class="quote">
+<math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math>
+decreases, but even with the current off there is some <b>residual magnetization</b>. </div>
+<p class="noindent">The object is now a <b>permanent magnet</b>. If we want to eliminate the remaining magnetization,
+we’ll have to run a current backwards through the <span class="margin-block">coil. <span class="margin-comment"><a class="ellipsis" href="#m-ref-109">[109]</a>
+<span class="sidenote">Meaning we switch the polarity of
+the applied current.</span></span></span> Now the external field points to the right, and as you increase
+<math display="inline"><mi>I</mi></math> (negatively),
+<math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math> drops down to
+zero. If we turn <math display="inline"><mi>I</mi></math>
+still higher, we soon reach saturation in the other direction; </p><div class="quote">  all the dipoles now pointing to the right.
+</div>
+<p class="noindent">At this stage, switching off the current will leave the object with a
+permanent magnetization to the right. To complete the cycle, we turn
+<math display="inline"><mi>I</mi></math> on again in the
+positive sense where <math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math>
+returns to zero, and eventually to the forward saturation point.
+</p>
+<div class="block-minor knowledge"><div class="body">
+<p class="noindent">The path we have traced out is called a <b>hysteresis loop</b>. </p></div></div>
+<p class="noindent"></p><figure class="float">
+<a id="x22-108001r5"></a>
+<figcaption class="caption"><span class="id">Figure 4.5: </span><span class="content">An example of a hysteresis curve showcasing relevant points of interest.                       </span></figcaption>
+<img alt="PIC" src="figures/Magnetic-Fields-in-Matter/figures-4.png" style=""/>
+</figure>
+<p class="noindent">Notice that the magnetization of the object depends not only on the applied <span class="margin-block">field, <span class="margin-comment"><a class="ellipsis" href="#m-ref-110">[110]</a>
+<span class="sidenote">Basically meaning
+the current we have applied.</span></span></span> but also on its <b>previous magnetic history</b><span class="margin-block">. <span class="margin-comment"><a class="ellipsis" href="#m-ref-111">[111]</a>
+<span class="sidenote">Etymologically, the word
+<i>hysteresis</i> has nothing to do with the word <i>history</i> or <i>hysteria</i>. It derives from a Greek
+verb meaning <i>lag behind</i>.</span></span></span> For instance, at three (<span class="alert">3</span>) different times in our experiment going
+through the loop the current was zero and yet the magnetization was different for each of
+them.
+</p><p class="noindent">Actually, it is customary to draw hysteresis loops as plots of
+<math display="inline"><mi>B</mi></math> against
+<math display="inline"><mi>H</mi></math>, rather than
+<math display="inline"><mi>M</mi></math> against
+<span class="margin-block"><math display="inline"><mi>I</mi></math>. <span class="margin-comment"><a class="ellipsis" href="#m-ref-112">[112]</a>
+<span class="sidenote">If our coil is approximated
+by a long solenoid, with <math display="inline"><mstyle mathvariant="bold"><mi>n</mi></mstyle></math>
+turns per unit length, then <math display="inline"><mi>H</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>n</mi><mi>I</mi></math>,
+so <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math> and
+<math display="inline"><mstyle mathvariant="bold"><mi>I</mi></mstyle></math> are proportional.
+Meanwhile, <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>H</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>M</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></math>,
+but in practice M is huge compared to H, so to all intents and purposes
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> is proportional
+to <math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math>.</span></span></span>
+</p>
+<dl class="def-block block-major info-block"> <a class="copiable-link" href="#info-block-4.10" id="info-block-4.10"> ¶</a> <dt class="def-line"> <span class="upper"> <span class="header"> <b>Information 4.<a id="x22-108002r10"></a>10: </b> </span> <span class="title"> Relative Values of B and H </span> </span> <input class="body-button" type="button" value="Show/Hide"/> </dt> <dd class="body">
+<p class="noindent">Generally, vertical scale is 3 to 4 order of times greater than the horizontal one. </p>
+<hr/>
+<p class="noindent"> 
+A little current goes a
+long way, when we have ferromagnetic materials around. That’s why anyone who wants to make a
+powerful electromagnet will wrap the coil around an iron core. It doesn’t take much of an external field
+to move the domain boundaries, and when we do that, we have all the dipoles in the iron working
+together.
+</p>
+</dd></dl>
+<div class="subsection-header"><h5 id="header-subsubsection-4.4.2.18"><span class="number"></span><a class="pdf-icon" href=""></a><span class="title"> <a id="x22-109000"></a>Curie Point</span></h5></div>
+<p class="noindent">Random thermal motions compete with the ordering of magnetic domains, but as long as the
+temperature doesn’t get too high, they cannot budge the dipoles out of line. It’s not surprising, though,
+that very high temperatures can and will destroy the alignment. What is surprising is that this occurs
+at a precise <span class="margin-block">temperature. <span class="margin-comment"><a class="ellipsis" href="#m-ref-113">[113]</a>
+<span class="sidenote">For example, to completely demagnatize iron we need to heat it up to
+<math display="inline"><mn>7</mn><mn>7</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>◦</mi><mi>C</mi></mstyle></math>.</span></span></span>
+</p>
+<div class="block-minor warning"><div class="body">
+<p class="noindent">Below this temperature, called the <b>Curie point</b>, iron is <span class="alert">ferromagnetic</span>; above, it is <span class="alert">paramagnetic</span>. </p></div></div>
+<div class="paragraph-header"><h6 id="header-paragraph-4.4.2.18.15"><span class="number"></span><a class="pdf-icon" href=""></a><span class="title"> <a id="x22-110000"></a>Interpretation</span></h6></div>
+<p class="noindent">The Curie point is similar to the <i>boiling point</i> or the <i>freezing point</i> in that there is no gradual transition
+from ferro- to para-magnetic behavior, any more than there is between water and ice. These abrupt
+changes in the properties of a substance, occurring at sharply defined temperatures, are known in
+statistical mechanics as <b>phase transitions</b>.
+<div class="section-header">
+<h3 id="header-section-references">
+<span class="number">
+<i class="fa-solid fa-magnifying-glass"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+            Page References</span>
+</h3>
+</div>
+<div class="cite-block">
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">1.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> Savary, M. Experimental Analysis and Numerical Approach of the Low Magnetostrictive Fe-27% Co Alloy PhD thesis (phd thesis, Université Paris Saclay, 2018)</dd>
+</dl></div>
+<div class="section-header">
+<h3 id="header-section-references">
+<span class="number">
+<i class="fa-regular fa-note-sticky"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+                    Page Footnotes</span>
+</h3>
+</div>
+<div class="footnote-block">
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-103"><span class="acr-short">[103].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Physically, therefore, <span> Eq. (??)</span>  would say exactly the same as <span> Eq. (<a href="#x22-106001r31">4.31</a>)</span> , only the constant
+<math display="inline"><msub><mrow><mi>χ</mi></mrow><mrow><mi>m</mi></mrow></msub></math> would have a
+different value. Equation 6.29 is a little more convenient, because experimentalists find it handier to work with
+H than B.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-104"><span class="acr-short">[104].</span></dt>
+<dd class="enumerate-enumitem"><span class="">If you factor out
+<math display="inline"><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></math>, what’s left is called the
+<b>relative permeability</b>: <math display="inline"><msub><mrow><mi>μ</mi></mrow><mrow><mi>r</mi></mrow></msub> <mi>≡</mi> <mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>χ</mi></mrow><mrow><mi>m</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>μ</mi><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></math>.
+By the way, formulas for H in terms of B (<span> Eq. (??)</span> , in the case of linear media) are called constitutive relations,
+just like those for D in terms of E.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-105"><span class="acr-short">[105].</span></dt>
+<dd class="enumerate-enumitem"><span class="">In this sense, it is misleading to
+speak of the susceptibility or permeability of a ferromagnet. The terms are used for such
+materials, but they refer to the proportionality factor between a differential increase in
+<math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math> and the resulting
+<b>differential</b> change in <math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math>
+(or <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>); moreover, they are
+<b>NOT</b> constants, but functions of <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math>.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-106"><span class="acr-short">[106].</span></dt>
+<dd class="enumerate-enumitem"><span class="">these domains are actually <b>visible</b> under a microscope, using
+suitable etching techniques, as an example shown in <b>Fig.</b> <a href="#x22-107002r4">4.4</a>.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-107"><span class="acr-short">[107].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Actually, the orientation of domains
+is not <b>completely</b> random; within a given crystal, there may be some preferential alignment along the
+crystal axes. But there will be just as many domains pointing one way as the other, so there is
+still no large-scale magnetization. Moreover, the crystals themselves are randomly oriented
+within any sizable chunk of metal.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-108"><span class="acr-short">[108].</span></dt>
+<dd class="enumerate-enumitem"><span class="">the
+shifting of domain boundaries in response to an external field</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-109"><span class="acr-short">[109].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Meaning we switch the polarity of
+the applied current.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-110"><span class="acr-short">[110].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Basically meaning
+the current we have applied.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-111"><span class="acr-short">[111].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Etymologically, the word
+<i>hysteresis</i> has nothing to do with the word <i>history</i> or <i>hysteria</i>. It derives from a Greek
+verb meaning <i>lag behind</i>.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-112"><span class="acr-short">[112].</span></dt>
+<dd class="enumerate-enumitem"><span class="">If our coil is approximated
+by a long solenoid, with <math display="inline"><mstyle mathvariant="bold"><mi>n</mi></mstyle></math>
+turns per unit length, then <math display="inline"><mi>H</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>n</mi><mi>I</mi></math>,
+so <math display="inline"><mstyle mathvariant="bold"><mi>H</mi></mstyle></math> and
+<math display="inline"><mstyle mathvariant="bold"><mi>I</mi></mstyle></math> are proportional.
+Meanwhile, <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>H</mi></mstyle> <mo class="MathClass-bin" stretchy="false">+</mo> <mstyle mathvariant="bold"><mi>M</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></math>,
+but in practice M is huge compared to H, so to all intents and purposes
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> is proportional
+to <math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math>.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-113"><span class="acr-short">[113].</span></dt>
+<dd class="enumerate-enumitem"><span class="">For example, to completely demagnatize iron we need to heat it up to
+<math display="inline"><mn>7</mn><mn>7</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>◦</mi><mi>C</mi></mstyle></math>.</span></dd>
+</dl></div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="Electrodynamics.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="TheAuxiliaryHField.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="MagneticFieldsinMatter.html#LinearandNonLinearMedia.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> </p><div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 10.11.2026, at 12:38.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">4.4: Linear and Non-Linear Media</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

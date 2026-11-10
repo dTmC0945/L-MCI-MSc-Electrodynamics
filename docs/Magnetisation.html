@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Magnetisation</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="flatweb.css" rel="stylesheet" type="text/css"/>
+<script src="flatweb.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="style-code/gruvbox-light-hard.min.css" id="code-style" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Electrodynamics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2026.WS</span>
+<span class="header-chapter">Magnetic Fields in Matter</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="ThePurposeofElectromagnetism.html#x3-20001">The Purpose of Electromagnetism</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-30001.1">Mechanics in Four Different
+Views</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-40001.1.1">Electromagnetism and Relativity</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-50001.1.2">Four Kinds of Forces</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-60001.1.3">Unifying
+Physical Theories</a></span></span><span class="subsectionToc"><span class="number">1.1.4</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-70001.1.4">The Fields of Electrodynamics</a></span></span><span class="subsectionToc"><span class="number">1.1.5</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-80001.1.5">Electric Charge</a></span></span><span class="subsectionToc"><span class="number">1.1.6</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-90001.1.6">Interpreting
+Conservation   of   Charge</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="VectorCalculus.html#x5-100002">Vector   Calculus</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="VectorAlgebra.html#x6-110002.1">Vector   Algebra</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="VectorAlgebra.html#x6-120002.1.1">Vector
+Operations</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="VectorAlgebra.html#x6-170002.1.2">Vector Component Forms</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="VectorAlgebra.html#x6-180002.1.3">Triple Products</a></span></span><span class="subsectionToc"><span class="number">2.1.4</span><span class="title"><a href="VectorAlgebra.html#x6-210002.1.4">Position,
+Displacement, and Separation Vectors</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-220002.2">Differential Calculus</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="DifferentialCalculus.html#x7-230002.2.1">Ordinary
+Derivatives</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-240002.2.2">Gradient</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="DifferentialCalculus.html#x7-250002.2.3">The Del Operator</a></span></span><span class="subsectionToc"><span class="number">2.2.4</span><span class="title"><a href="DifferentialCalculus.html#x7-280002.2.4">Product Rules</a></span></span><span class="subsectionToc"><span class="number">2.2.5</span><span class="title"><a href="DifferentialCalculus.html#x7-290002.2.5">Second
+Derivatives</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="IntegralCalculus.html#x8-350002.3">Integral Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="IntegralCalculus.html#x8-360002.3.1">Line, Surface, and Volume Integrals</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="IntegralCalculus.html#x8-400002.3.2">The
+Fundamental Theorems of Vector Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="IntegralCalculus.html#x8-430002.3.3">The Fundamental Theorem for
+Curls</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="CurvilinearCoordinates.html#x9-440002.4">Curvilinear Coordinates</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="CurvilinearCoordinates.html#x9-450002.4.1">Spherical Coordinate System</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="CurvilinearCoordinates.html#x9-460002.4.2">Cylindrical
+Coordinates</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="DiracDeltaFunction.html#x10-470002.5">Dirac Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="DiracDeltaFunction.html#x10-480002.5.1">A Mathematical Anomaly</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="DiracDeltaFunction.html#x10-490002.5.2">The 1D Dirac
+Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="DiracDeltaFunction.html#x10-500002.5.3">The 3D Dirac Delta Function</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="VectorFieldTheory.html#x11-510002.6">Vector Field Theory</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="VectorFieldTheory.html#x11-520002.6.1">Helmholtz
+Theorem</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="VectorFieldTheory.html#x11-530002.6.2">Potentials</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Electrostatics.html#x12-540003">Electrostatics</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="TheElectricField.html#x13-550003.1">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="TheElectricField.html#x13-560003.1.1">Coulomb’s
+Law</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="TheElectricField.html#x13-570003.1.2">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.3</span><span class="title"><a href="TheElectricField.html#x13-580003.1.3">Continuous Charge Distributions</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-590003.2">Divergence and
+Curl of Electrostatic Fields</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-600003.2.1">Quantification</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-610003.2.2">Divergence of E</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-620003.2.3">Applications
+of Gauss’s Law</a></span></span><span class="subsectionToc"><span class="number">3.2.4</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-630003.2.4">Curl of E</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ElectricPotential.html#x15-640003.3">Electric Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ElectricPotential.html#x15-650003.3.1">Defining the Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ElectricPotential.html#x15-660003.3.2">Some
+Digressions on Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.3</span><span class="title"><a href="ElectricPotential.html#x15-720003.3.3">Poisson’s Equation and Laplace’s Equation</a></span></span><span class="subsectionToc"><span class="number">3.3.4</span><span class="title"><a href="ElectricPotential.html#x15-730003.3.4">The
+Potential of a Localised Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.3.5</span><span class="title"><a href="ElectricPotential.html#x15-740003.3.5">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="WorkandEnergy.html#x16-750003.4">Work
+and  Energy</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="WorkandEnergy.html#x16-760003.4.1">To  Move  a  Charge</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="WorkandEnergy.html#x16-770003.4.2">The  Energy  of  a  Point  Charge
+Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.3</span><span class="title"><a href="WorkandEnergy.html#x16-780003.4.3">The Energy of a Continuous Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.4</span><span class="title"><a href="WorkandEnergy.html#x16-790003.4.4">Comments on
+Electrostatic Energy</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="Conductors.html#x17-830003.5">Conductors</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="Conductors.html#x17-840003.5.1">Properties</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="Conductors.html#x17-850003.5.2">Induced Charges</a></span></span><span class="subsectionToc"><span class="number">3.5.3</span><span class="title"><a href="Conductors.html#x17-860003.5.3">Surface
+Charge and the Force on a Conductor</a></span></span><span class="subsectionToc"><span class="number">3.5.4</span><span class="title"><a href="Conductors.html#x17-870003.5.4">Capacitors</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="MagneticFieldsinMatter.html#x18-890004">Magnetic Fields in
+Matter</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="#x19-900004.1">Magnetisation</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="#x19-910004.1.1">Diamagnets, Paramagnets, and Ferromagnets</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="#x19-920004.1.2">Torques
+and Forces on Magnetic Dipoles</a></span></span><span class="subsectionToc"><span class="number">4.1.3</span><span class="title"><a href="#x19-930004.1.3">Effect of a Magnetic Field on Atomic
+Orbits</a></span></span><span class="subsectionToc"><span class="number">4.1.4</span><span class="title"><a href="#x19-940004.1.4">Magnetization</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-950004.2">The Field of a Magnetised Object</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-960004.2.1">Bound
+Currents</a></span></span><span class="subsectionToc"><span class="number">4.2.2</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-970004.2.2">Physical Interpretation of Bound Currents</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="TheAuxiliaryHField.html#x21-980004.3">The Auxiliary
+H  Field</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="TheAuxiliaryHField.html#x21-990004.3.1">Ampère’s  Law  in  Magnetized  Materials</a></span></span><span class="subsectionToc"><span class="number">4.3.2</span><span class="title"><a href="TheAuxiliaryHField.html#x21-1010004.3.2">A  Deceptive
+Parallel</a></span></span><span class="subsectionToc"><span class="number">4.3.3</span><span class="title"><a href="TheAuxiliaryHField.html#x21-1040004.3.3">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="LinearandNonLinearMedia.html#x22-1050004.4">Linear and Non-Linear Media</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="LinearandNonLinearMedia.html#x22-1060004.4.1">Magnetic
+Susceptibility and Permeability</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="LinearandNonLinearMedia.html#x22-1070004.4.2">Ferromagnetism</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="Electrodynamics.html#x23-1110005">Electrodynamics</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="ElectromotiveForce.html#x24-1120005.1">Electromotive
+Force</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="ElectromotiveForce.html#x24-1130005.1.1">Ohm’s Law</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="ElectromotiveForce.html#x24-1140005.1.2">Determining the Current Density</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="ElectromotiveForce.html#x24-1150005.1.3">Electromotive
+Force</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="ElectromotiveForce.html#x24-1170005.1.4">Motional EMF</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="ElectromagneticInduction.html#x25-1180005.2">Electromagnetic Induction</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="ElectromagneticInduction.html#x25-1190005.2.1">Faraday’s Law</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="ElectromagneticInduction.html#x25-1200005.2.2">The
+Induced Electric Field</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="ElectromagneticInduction.html#x25-1220005.2.3">Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="ElectromagneticInduction.html#x25-1230005.2.4">Energy in Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="MaxwellsEquations.html#x26-1240005.3">Maxwell’s
+Equations</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="MaxwellsEquations.html#x26-1250005.3.1">Electrodynamics Before Maxwell</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="MaxwellsEquations.html#x26-1260005.3.2">How Maxwell Fixed Ampère’s
+Law</a></span></span><span class="subsectionToc"><span class="number">5.3.3</span><span class="title"><a href="MaxwellsEquations.html#x26-1270005.3.3">Maxwell’s Equations</a></span></span><span class="subsectionToc"><span class="number">5.3.4</span><span class="title"><a href="MaxwellsEquations.html#x26-1280005.3.4">Magnetic Charge</a></span></span><span class="subsectionToc"><span class="number">5.3.5</span><span class="title"><a href="MaxwellsEquations.html#x26-1290005.3.5">Maxwell’s Equations
+in Matter</a></span></span><span class="subsectionToc"><span class="number">5.3.6</span><span class="title"><a href="MaxwellsEquations.html#x26-1300005.3.6">Boundary Conditions</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="nav-footer-webBook"><b>Last Updated:</b> 10.11.2026, at 12:38.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="TheFieldofaMagnetisedObject.html">The Field of a Magnetised Object</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="MagneticFieldsinMatter.html">Chapter: Magnetic Fields in Matter</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="MagneticFieldsinMatter.html#Magnetisation.html">Chapter: Magnetic Fields in Matter</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"><h3 id="header-section-4.1"><span class="number">4.1</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#section.4.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x19-900004.1"></a>Magnetisation</span></h3></div>
+<p class="noindent">Magnetism is the class of physical attributes which occur through a <b>magnetic field</b>, allowing
+objects to either <span class="alert">attract</span> or <span class="alert">repel</span> each other. Because both electric currents and magnetic moments of
+elementary particles give rise to a magnetic field, magnetism is one of two (<span class="alert">2</span>) aspects of
+electromagnetism.
+</p><p class="noindent">In this chapter we will shift our focus into <span class="margin-block"><span class="margin"><span>materials <a class="ellipsis" href="#m-ref-77">[77]</a></span><span class="sidenote"><a class="copiable-link" href="#m-ref-77" id="m-ref-77"> ¶</a><span class="sidenote-image"><img alt="PIC" src="figures/Magnetic-Fields-in-Matter/raster/magnet-bar.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[77]</span>As we now, bar magnets are generally
+attributed to exhibiting magnetism, but nature has more variety.</span></span></span></span> which exhibit magnetism through
+various forms.
+</p>
+<div class="subsection-header"><h4 id="header-subsection-4.1.1"><span class="number">4.1.1</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.4.1.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x19-910004.1.1"></a>Diamagnets, Paramagnets, and Ferromagnets</span></h4></div>
+<p class="noindent">If the topic of <b>magnetism</b> ever comes to play during lunch <span class="margin-block">break, <span class="margin-comment"><a class="ellipsis" href="#m-ref-78">[78]</a>
+<span class="sidenote">Perhaps when you are discussing the
+current events or why the elevator is again under maintenance at MCI IV.</span></span></span> you may think about
+refrigerator decorations, compass needles, and the North Pole which initially seems to have no obvious
+connection with moving charges or current-carrying wires.
+</p><p class="noindent">However, it is important to state, all magnetic phenomena are cause by <b>electric charges in motion</b>.
+If we could examine a piece of magnetic material on an atomic scale we would find tiny <b>currents</b>: </p><div class="quote">
+electrons orbiting around nuclei and spinning about their axes. </div>
+<p class="noindent">For macroscopic <span class="margin-block">domain, <span class="margin-comment"><a class="ellipsis" href="#m-ref-79">[79]</a>
+<span class="sidenote">The domain in which most day-to-day events occur.</span></span></span> these current loops are <span class="alert">minuscule</span>
+so we treat them as magnetic dipoles. Ordinarily, they cancel each other out due of the <span class="alert">random orientation of the atoms</span>. But when a
+magnetic field is applied, a <span class="alert">net alignment</span> of these magnetic dipoles occurs, and the medium becomes magnetically
+polarised, or <b>magnetised</b>.
+</p><p class="noindent">Unlike electric polarisation we have looked previously, which is <span class="alert">almost</span> always in the same direction as the
+<math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>-field, some materials acquire
+a magnetisation <b>parallel</b> to <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>,
+called <span class="alert">paramagnets</span> and some <b>opposite</b> to <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>,
+called <span class="alert">diamagnets</span>. A few <span class="margin-block">substances <span class="margin-comment"><a class="ellipsis" href="#m-ref-80">[80]</a>
+<span class="sidenote">called <b>ferromagnets</b>, named after to the most common example, iron (Fe).</span></span></span>
+retain their magnetization even after the external field has been removed-for these, the
+magnetisation is <b>NOT</b> determined by the <b>present</b> field but by the whole magnetic “history” of the
+object.
+</p>
+<dl class="def-block block-major info-block"> <a class="copiable-link" href="#info-block-4.5" id="info-block-4.5"> ¶</a> <dt class="def-line"> <span class="upper"> <span class="header"> <b>Information 4.<a id="x19-91001r5"></a>5: </b> </span> <span class="title"> Lode Stones </span> </span> <input class="body-button" type="button" value="Show/Hide"/> </dt> <dd class="body">
+<div class="sidenote"> <span class="figure">
+<p class="noindent"><img alt="PIC" src="figures/Magnetic-Fields-in-Matter/raster/lodestone.jpg" style=""/> <a id="x19-91002r1"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 4.1: </span><span class="content">Lodestone in the Hall of Gems of the Smithsonian <span class="cite"><a class="cite-show" href="#w3-20001">[†-1]</a><span class="cite-detail" id="Somma1980"> Somma. A lodestone, a natural magnet, displayed
+at the Smithsonian Institution, attracting paper clips 1980</span></span>.                                       </span></figcaption>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">Lodestones are naturally magnetized pieces of the mineral magnetite <span class="cite"><a class="cite-show" href="#w3-20001">[†-2]</a><span class="cite-detail" id="cribb1998dana,bowles2011rock"> <a id="x19-91004"></a>Cribb, W. Dana’s Minerals
+and How to Study Them 1998, <a id="x19-91005"></a>Bowles, J. et al. Rock-forming minerals: Non-silicates: Oxides,
+hydroxides and sulphides. Geological Society (2011)</span></span>. They are naturally occurring magnets, which can
+attract iron. The property of magnetism was first discovered in antiquity through lodestones <span class="cite"><a class="cite-show" href="#w3-20001">[†-3]</a><span class="cite-detail" id="de2005magnetism">
+<a id="x19-91006"></a>De Lacheisserie, E. d. T., Gignoux, D. &amp; Schlenker, M. Magnetism (Springer Science &amp; Business
+Media, 2005)</span></span>. Pieces of lodestone, suspended so they could turn, were the first magnetic compasses, <span class="cite"><a class="cite-show" href="#w3-20001">[†-3]</a><span class="cite-detail" id="de2005magnetism">
+De Lacheisserie, E. d. T., Gignoux, D. &amp; Schlenker, M. Magnetism (Springer Science &amp; Business
+Media, 2005)</span></span> and their importance to early navigation is indicated by the name lodestone, which in
+Middle English means “course stone” or “leading stone”, from the now-obsolete meaning of lode as
+“journey, way”.
+</p><p class="noindent">Lodestone is one of only a very few minerals that is found naturally magnetised.
+</p>
+</dd></dl>
+<div class="block-minor warning"><div class="body">
+<p class="noindent"><span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:pm">PM</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:pm">Permanent Magnet</a></span><span class="acronym-desc"><a class="glossary" href="#glo:pm">An object made from a material that is magnetized and creates its own
+persistent magnetic field</a></span></span></span>s made of iron are the most familiar examples of magnetism, but from a
+theoretical point of view they are the most complicated. </p></div></div>
+<p class="noindent">We will have a look at ferromagnetism for the end of the chapter, and begin with qualitative models of
+paramagnetism and diamagnetism.
+</p>
+<div class="subsection-header"><h4 id="header-subsection-4.1.2"><span class="number">4.1.2</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.4.1.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x19-920004.1.2"></a>Torques and Forces on Magnetic Dipoles</span></h4></div>
+<p class="noindent">A magnetic dipole experiences a torque under the effect of a magnetic field
+(<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>),
+similar to an electric dipole in an electric field.
+</p><p class="noindent">Let’s calculate the torque on a rectangular current loop in a uniform field
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math><span class="margin-block">. <span class="margin-comment"><a class="ellipsis" href="#m-ref-81">[81]</a>
+<span class="sidenote">Since any
+current loop could be built up from infinitesimal rectangles, with all the “internal” sides canceling, as indicated
+in Fig. 6.1, there is no real loss of generality here.</span></span></span> To begin, centre the loop at the origin, and tilt it an angle
+<math display="inline"><mi>𝜃</mi></math> from the
+<math display="inline"><mover accent="true"><mrow><mstyle mathvariant="bold"><mi>z</mi></mstyle></mrow><mo accent="true">^</mo></mover></math>-axis towards
+the <math display="inline"><mover accent="true"><mrow><mstyle mathvariant="bold"><mi>y</mi></mstyle></mrow><mo accent="true">^</mo></mover></math>-axis
+(Fig. 6.2).
+</p><p class="noindent">Let <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> point
+in the <math display="inline"><mover accent="true"><mrow><mstyle mathvariant="bold"><mi>z</mi></mstyle></mrow><mo accent="true">^</mo></mover></math>
+direction. The forces on the two (<span class="alert">2</span>) sloping sides <span class="margin-block">cancel. <span class="margin-comment"><a class="ellipsis" href="#m-ref-82">[82]</a>
+<span class="sidenote">they tend to <b>stretch</b> the loop, but they don’t
+<b>rotate</b> it</span></span></span> The forces on the “horizontal” sides are likewise equal and opposite, which makes the net
+<b>force</b> on the loop is zero, but regardless they generate a torque: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x19-92001r1"></mstyle>
+<mstyle mathvariant="bold">
+<mi>N</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>a</mi><mi>F</mi><mi class="loglike">sin</mi><mo>⁡</mo><mi>𝜃</mi><mover accent="true"><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mo accent="true">^</mo></mover><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(4.1)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The magnitude of the force on each of these segments is </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x19-92002r2"></mstyle>
+<mi>F</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>I</mi><mi>b</mi><mi>B</mi><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(4.2)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">and therefore
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x19-92003r3"></mstyle>
+<mstyle mathvariant="bold">
+<mi>N</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>I</mi><mi>a</mi><mi>b</mi><mi>B</mi><mi class="loglike">sin</mi><mo>⁡</mo><mi>𝜃</mi><mover accent="true"><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mo accent="true">^</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>m</mi><mi>B</mi><mo><mi class="loglike">sin</mi><mo>⁡</mo></mo><mi>𝜃</mi><mover accent="true"><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mo accent="true">^</mo></mover><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>or</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mstyle mathvariant="bold"><mi>N</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>m</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle>
+</math></td><td class="eq-no">(4.3)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">where <math display="inline"><mi>m</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>I</mi><mi>a</mi><mi>b</mi></math>
+is the magnetic dipole moment of the loop with <span> Eq. (<a href="#x19-92003r3">4.3</a>)</span>  giving the torque on any localized current
+distribution, in the presence of a <b>uniform</b> field; in a nonuniform field it is the exact <span class="margin-block">torque <span class="margin-comment"><a class="ellipsis" href="#m-ref-83">[83]</a>
+<span class="sidenote">about the
+center.</span></span></span> for a perfect dipole of infinitesimal size.
+</p>
+<p class="noindent"></p><figure class="float">
+<p class="noindent"><img alt="PIC" src="example-image-a.png" style=""/> <a id="x19-92004r2"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 4.2: </span><span class="content">FIgure 6.1                                                               </span></figcaption>
+</figure>
+<div class="block-minor warning"><div class="body">
+<p class="noindent">Here, <span> Eq. (<a href="#x19-92003r3">4.3</a>)</span>  is <b>identical</b> in form to the electrical analog, Eq. 4.4:
+<math display="inline"><mi>N</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>p</mi> <mi>×</mi> <mi>E</mi></math>. In
+particular, the torque is again in such a direction as to line the dipole up <b>parallel</b> to the
+field.
+</p><p class="noindent">It is this torque which accounts for <b>paramagnetism</b> effect. </p></div></div>
+<p class="noindent">Given every electron constitutes a magnetic <span class="margin-block">dipole, <span class="margin-comment"><a class="ellipsis" href="#m-ref-84">[84]</a>
+<span class="sidenote">picture it, if you wish, as a tiny spinning sphere of
+charge</span></span></span> we might expect paramagnetism to be a <span class="alert">universal phenomenon</span>.
+</p><p class="noindent">Actually, quantum <span class="margin-block">mechanics <span class="margin-comment"><a class="ellipsis" href="#m-ref-85">[85]</a>
+<span class="sidenote">specifically, the Pauli exclusion principle.</span></span></span> tends to lock the electrons
+within a given atom together in pairs with opposing spins<span class="margin-block">, <span class="margin-comment"><a class="ellipsis" href="#m-ref-86">[86]</a>
+<span class="sidenote">This is <b>NOT</b> always true for the
+outermost electrons in unfilled shells.</span></span></span> and this effectively <b>neutralises</b> the torque on the
+combination.
+</p><p class="noindent">As a result, paramagnetism most often occurs in atoms or molecules with an <b>odd number</b> of electrons,
+where the “extra” unpaired member is subject to the magnetic torque.
+</p>
+<div class="block-minor knowledge"><div class="body">
+<p class="noindent">Even here, the alignment is far from complete, given random thermal collisions tend to destroy the
+order. </p></div></div>
+<p class="noindent">In a uniform field, the net <b>force</b> on a current loop is zero: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x19-92005r4"></mstyle>
+<mstyle mathvariant="bold">
+<mi>F</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>I</mi> <mi>∮</mi>
+<mo class="MathClass-open" stretchy="false">(</mo><mi>d</mi><mstyle mathvariant="bold"><mi>l</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>I</mi> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>∮</mi>
+<mi>d</mi><mstyle mathvariant="bold"><mi>l</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">;</mo>
+</math></td><td class="eq-no">(4.4)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Here, the constant <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> comes <span class="alert">outside the integral</span>,
+and the net displacement <math display="inline"><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>∮</mi>
+<mi>d</mi><mstyle mathvariant="bold"><mi>l</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></math>
+around a closed loop vanishes. In a <b>non-uniform</b> field this is no longer the case.
+</p><p class="noindent">As an example, assume a circular wire ring of radius of
+<math display="inline"><mi>R</mi></math>, carrying a
+current of <math display="inline"><mi>I</mi></math>,
+is suspended above a short solenoid in the “fringing” region (Fig. 6.3). Here
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> has a
+radial component, and there is a net downward force on the loop (Fig. 6.4): </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x19-92006r5"></mstyle>
+<mi>F</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn><mi>π</mi><mi>I</mi><mi>R</mi><mi>B</mi><mi class="loglike">cos</mi><mo>⁡</mo><mi>𝜃</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(4.5)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">For an <b>infinitesimal</b> loop, with dipole moment
+<math display="inline"><mstyle mathvariant="bold"><mi>m</mi></mstyle></math>, in a
+field <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>,
+the force is: </p><div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x19-92007r6"></mstyle>
+<mstyle mathvariant="bold">
+<mi>F</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>m</mi></mstyle> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td><td class="eq-no">(4.6)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">Once again the magnetic formula is identical to its electrical “twin,” if we write the latter in the form
+of: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mstyle mathvariant="bold">
+<mi>F</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle mathvariant="bold"><mi>p</mi></mstyle> <mi>·</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td></tr></table>
+<dl class="def-block block-major info-block"> <a class="copiable-link" href="#info-block-4.6" id="info-block-4.6"> ¶</a> <dt class="def-line"> <span class="upper"> <span class="header"> <b>Information 4.<a id="x19-92008r6"></a>6: </b> </span> <span class="title"> An Unfortunate Analogy </span> </span> <input class="body-button" type="button" value="Show/Hide"/> </dt> <dd class="body">
+<p class="noindent">If you’re starting to get a sense of deja vu, perhaps you will have more respect for those early physicists
+who thought magnetic dipoles consisted of positive and negative magnetic “charges” (north and south
+“poles,” they called them), separated by a small distance, just like electric dipoles (Fig. 6.5(a)). They
+wrote down a “Coulomb’s law” for the attraction and repulsion of these poles, and developed the whole
+of magnetostatics in exact analogy to electrostatics. It’s not a bad model, for many purposes-it gives
+the correct field of a dipole (at least, away from the origin), the right torque on a dipole (at least, on a
+stationary dipole), and the proper force on a dipole (at least, in the absence of external
+currents). But it’s bad physics, because there’s no such thing as a single magnetic north
+pole or south pole. If you break a bar magnet in half, you don’t get a north pole in one
+hand and a south pole in the other; you get two complete magnets. Magnetism is not due
+to magnetic monopoles, but rather to moving electric charges; magnetic dipoles are tiny
+current loops (Fig. 6.5(c)), and it’s an extraordinary thing, really, that the formulas involving
+<math display="inline"><mstyle mathvariant="bold"><mi>m</mi></mstyle></math> bear any resemblance to the
+corresponding formulas for <math display="inline"><mstyle mathvariant="bold"><mi>p</mi></mstyle></math>.
+Sometimes it is easier to think in terms of the “Gilbert” model of a magnetic dipole (separated
+monopoles), instead of the physically correct “Ampere” model (current loop).
+</p><p class="noindent">Indeed, this picture occasionally offers a quick and clever solution to an otherwise cumbersome
+problem
+</p><p class="noindent">We just copy the corresponding result from electrostatics, changing: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>p</mi> <mi>→</mi> <mi>m</mi><mspace class="qquad" width="2em"></mspace><mstyle displaystyle="true"><mfrac><mrow> <mn>1</mn>
+</mrow><mrow><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mstyle> <mi>→</mi> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mspace class="qquad" width="2em"></mspace><mstyle mathvariant="bold"><mi>E</mi></mstyle> <mi>→</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">However, if we want to have a closer look at the features of the dipoles, the two models can produce
+significant results.
+</p>
+</dd></dl>
+<div class="subsection-header"><h4 id="header-subsection-4.1.3"><span class="number">4.1.3</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.4.1.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x19-930004.1.3"></a>Effect of a Magnetic Field on Atomic Orbits</span></h4></div>
+<p class="noindent">Electrons <b>NOT</b> only <b>spin</b> as they also <b>revolve</b> around the nucleus. To give a better understanding of the
+aforementioned statement, let’s assume the orbit is a <span class="margin-block"><span class="margin"><span>circle <a class="ellipsis" href="#m-ref-87">[87]</a></span><span class="sidenote"><a class="copiable-link" href="#m-ref-87" id="m-ref-87"> ¶</a><span class="sidenote-image"> <img alt="PIC" src="figures/Magnetic-Fields-in-Matter/figures-2.png" style=""/> </span><span class="sidenote-text"><span class="ellipsis">[87]</span>A visualisation of the electron orbit.</span></span></span></span> of
+radius <math display="inline"><mi>R</mi></math>.
+</p><p class="noindent">While, under the strictest technical definitions, this orbital motion does <b>NOT</b> constitute a steady
+current, in practice the period: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>T</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn><mi>π</mi><mi>R</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>v</mi>
+</math></td></tr></table>
+<p class="noindent">is imperceptibly short that we might as well assume it is <span class="alert">steady-current</span><span class="margin-block">: <span class="margin-comment"><a class="ellipsis" href="#m-ref-88">[88]</a>
+<span class="sidenote">The minus sign accounts for the negative
+charge of the electron.</span></span></span> </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>I</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>e</mi></mrow>
+<mrow>
+<mi>T</mi></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mfrac><mrow><mi>e</mi><mi>v</mi></mrow>
+<mrow>
+<mn>2</mn><mi>π</mi><mi>R</mi></mrow></mfrac><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">Following this chain of thought, the orbital dipole moment
+<math display="inline"><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi>I</mi><mi>π</mi><msubsup><mrow><mi>R</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup></math> is:
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x19-93001r7"></mstyle>
+<mstyle mathvariant="bold">
+<mi>m</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><mi>e</mi><mi>v</mi><mi>R</mi><mover accent="true"><mrow><mstyle mathvariant="bold"><mi>z</mi></mstyle></mrow><mo accent="true">^</mo></mover><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(4.7)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Similar to any other magnetic dipole, this one is subject to a torque
+<math display="inline"><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle mathvariant="bold"><mi>m</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></math> when
+we turn on a magnetic field.
+</p>
+<div class="block-minor knowledge"><div class="body">
+<p class="noindent">But it’s a lot harder to tilt the entire orbit than it is the spin, so the orbital contribution to
+paramagnetism is small. </p></div></div>
+<p class="noindent">There is, however, a more significant effect on the orbital motion which is worth mention
+and it is that the electron speeds up or slows down, depending on the orientation of
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>. For whereas the
+centripetal acceleration <math display="inline"><msup><mrow><mi>v</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-bin" stretchy="false">/</mo><mi>R</mi></math>
+is ordinarily sustained by electrical forces alone,
+</p>
+<div class="block-minor warning"><div class="body">
+<p class="noindent">To avoid confusion with the magnetic dipole moment
+<math display="inline"><mi>m</mi></math>, we will write the electron
+mass with subscript: <math display="inline"><msub><mrow><mi>m</mi></mrow><mrow><mi>e</mi></mrow></msub></math>.
+</p></div></div>
+<table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x19-93002r8"></mstyle>
+<mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow>
+<mn>4</mn><mi>π</mi><msub><mrow><mi>𝜖</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac>
+<mfrac>
+<mrow>
+<msup><mrow><mi>e</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow><msup><mrow>
+<mi>R</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac>
+<mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>m</mi></mrow><mrow><mi>e</mi></mrow></msub><mfrac>
+<mrow>
+<msup><mrow><mi>v</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow>
+<mi>R</mi></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(4.8)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">in the presence of a magnetic field there is an additional force, described as: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mo class="MathClass-bin" stretchy="false">−</mo><mi>e</mi><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>v</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td></tr></table>
+<p class="noindent">For the sake of argument, let’s say that <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>
+is perpendicular to the plane of the orbit, as shown in Fig. 6.10; then </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x19-93003r9"></mstyle>
+<mfrac>
+<mrow>
+<mn>1</mn></mrow>
+<mrow>
+<mn>4</mn><mi>π</mi><msub><mrow><mi>𝜖</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac>
+<mfrac>
+<mrow>
+<msup><mrow><mi>e</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow><msup><mrow>
+<mi>R</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac>
+<mo class="MathClass-bin" stretchy="false">+</mo> <mi>e</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo accent="true">¯</mo></mover><mi>B</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>m</mi></mrow><mrow><mi>e</mi></mrow></msub><mfrac>
+<mrow><msup><mrow>
+<mover accent="true"><mrow><mi>v</mi></mrow><mo accent="true">¯</mo></mover></mrow><mrow><mn>2</mn></mrow></msup>
+</mrow>
+<mrow>
+<mi>R</mi></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(4.9)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Under these conditions, the new speed <math display="inline"><mover accent="true"><mrow><mi>v</mi></mrow><mo accent="true">¯</mo></mover></math>
+is <b>greater</b> than v: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x19-93004r10"></mstyle>
+<mi>e</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo accent="true">¯</mo></mover><mi>B</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>m</mi></mrow><mrow><mi>e</mi></mrow></msub></mrow>
+<mrow>
+<mi>R</mi></mrow></mfrac> <mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mover accent="true"><mrow><mi>v</mi></mrow><mo accent="true">¯</mo></mover></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">−</mo> <msup><mrow><mi>v</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>m</mi></mrow><mrow><mi>e</mi></mrow></msub></mrow>
+<mrow>
+<mi>R</mi></mrow></mfrac> <mo class="MathClass-open" stretchy="false">(</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo accent="true">¯</mo></mover> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>v</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-open" stretchy="false">(</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo accent="true">¯</mo></mover> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>v</mi><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(4.10)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">or, assuming the change <math display="inline"><mi mathvariant="normal">Δ</mi><mi>v</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mover accent="true"><mrow><mi>v</mi></mrow><mo accent="true">¯</mo></mover> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>v</mi></math>
+is small, </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x19-93005r11"></mstyle>
+<mi mathvariant="normal">Δ</mi><mi>v</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mi>e</mi><mi>R</mi><mi>B</mi></mrow>
+<mrow>
+<mn>2</mn><msub><mrow><mi>m</mi></mrow><mrow><mi>e</mi></mrow></msub></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(4.11)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">When <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>
+is turned on, then, the electron speeds <span class="margin-block">up. <span class="margin-comment"><a class="ellipsis" href="#m-ref-89">[89]</a>
+<span class="sidenote">I said (Eq. 5.11) that magnetic fields do no work, and are
+incapable of speeding a particle up. I stand by that. However, as we shall see in Chapter 7, a changing
+magnetic field induces an electric field, and it is the latter that accelerates the electrons in this
+instance.</span></span></span> A change in orbital speed means a change in the dipole moment (<span> Eq. (<a href="#x19-93001r7">4.7</a>)</span> ):
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x19-93006r12"></mstyle>
+<mi mathvariant="normal">Δ</mi><mstyle mathvariant="bold"><mi>m</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><mi>e</mi><mo class="MathClass-open" stretchy="false">(</mo><mi mathvariant="normal">Δ</mi><mi>v</mi><mo class="MathClass-close" stretchy="false">)</mo><mi>R</mi><mspace class="thinspace" width="0.17em"></mspace><mover accent="true"><mrow><mstyle mathvariant="bold"><mi>z</mi></mstyle></mrow><mo accent="true">^</mo></mover> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mfrac><mrow><msup><mrow><mi>e</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow>
+<mn>4</mn><msub><mrow><mi>m</mi></mrow><mrow><mi>e</mi></mrow></msub></mrow></mfrac> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(4.12)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Notice that the change in <math display="inline"><mstyle mathvariant="bold"><mi>m</mi></mstyle></math> is
+opposite to the direction of <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>.
+(An electron circling the other way would have a dipole moment pointing upward, but
+such an orbit would be slowed down by the field, so the <b>change</b> is still opposite to
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>.) Ordi-
+narily, the electron orbits are randomly oriented, and the orbital dipole moments cancel out. But in the
+presence of a magnetic field, each atom picks up a little "extra" dipole moment, and these increments
+are all <b>antiparallel</b> to the field. This is the mechanism responsible for diamagnetism. It is a universal
+phenomenon, affecting all atoms. However, it is typically much weaker than paramagnetism, and is
+therefore observed mainly in atoms with even numbers of electrons, where paramagnetism is usually
+absent.
+</p><p class="noindent">In deriving <span> Eq. (<a href="#x19-93006r12">4.12</a>)</span> , I assumed that the orbit remains circular, with its original radius
+<math display="inline"><mi>R</mi></math>. I
+cannot offer a justification for this at the present stage. If the atom is stationary while the field is
+turned on, then my assumption can be proved- this is not magnetostatics, however, and the details will
+have to await Chapter 7 (see Prob. 7.52). If the atom is moved into the field, the situation is
+enormously more complicated. But never mind-I’m only trying to give you a qualitative account of
+diamagnetism. Assume, if you prefer, that the velocity remains the same while the <b>radius</b> changes-the
+formula (<span> Eq. (<a href="#x19-93006r12">4.12</a>)</span> ) is altered (by a factor of 2), but the qualitative conclusion is unaffected. The
+truth is that this classical model is fundamentally <span class="margin-block">flawed, <span class="margin-comment"><a class="ellipsis" href="#m-ref-90">[90]</a>
+<span class="sidenote">diamagnetism is really a <b>quantum</b>
+phenomenon.</span></span></span> so there’s not much point in refining the details. What is important is the empirical fact
+that in diamagnetic materials the induced dipole moments point opposite to the magnetic
+field.
+</p>
+<div class="subsection-header"><h4 id="header-subsection-4.1.4"><span class="number">4.1.4</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.4.1.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x19-940004.1.4"></a>Magnetization</span></h4></div>
+<p class="noindent">In the presence of a magnetic field, matter becomes <b>magnetized</b>; that is, upon microscopic
+examination, it will be found to contain many tiny dipoles, with a net alignment along some direction.
+We have discussed two mechanisms that account for this magnetic polarization:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+1. 
+</dt><dd class="enumerate-enumitem">paramagnetism (the dipoles associated with the spins of unpaired electrons experience a
+torque tending to line them up parallel to the field), and
+</dd>
+<dt class="enumerate-enumitem">  
+2. 
+</dt><dd class="enumerate-enumitem">diamagnetism (the orbital speed of the electrons is altered in such a way as to change the
+orbital dipole moment in a direction opposite to the field)</dd></dl>
+<p class="noindent">Whatever the cause, we describe the state of magnetic polarization by the vector quantity
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x19-94003r13"></mstyle>
+<mstyle mathvariant="bold">
+<mi>M</mi></mstyle>
+<mi>≡</mi> <mstyle class="text"><mtext>magnetic dipole moment per unit volume</mtext></mstyle>
+</math></td><td class="eq-no">(4.13)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><mstyle mathvariant="bold"><mi>M</mi></mstyle></math>
+is called the magnetization and plays a role analogous to the polarization <b>P</b> in electrostatics. In the
+following section, we will not worry about how the magnetization <b>got</b> there-it could be paramagnetism,
+diamagnetism, or even ferromagnetism-we shall take M as given, and calculate the field this
+magnetization itself produces.
+</p><p class="noindent">Incidentally, it may have surprised you to learn that materials other than the famous ferromagnetic trio
+(iron, nickel, and cobalt) are affected by a magnetic field at all. You cannot, of course, pick up a piece
+of wood or aluminum with a magnet. The reason is that diamagnetism and paramagnetism are
+extremely weak: </p><div class="quote">  It takes a delicate experiment and a powerful magnet to detect them at all.
+</div>
+<p class="noindent">If you were to suspend a piece of paramagnetic material above a solenoid, as in Fig. 6.3, the
+induced magnetization would be upward, and hence the force downward. By contrast, the
+magnetization of a diamagnetic object would be downward and the force upward. In general, when
+a sample is placed in a region of nonuniform field, the paramagnet is attracted into the
+field, whereas the diamagnet is repelled away. But the actual forces are pitifully weak-in
+a typical experimental arrangement the force on a comparable sample of iron would be
+<math display="inline"><mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>4</mn></mrow></msup></math> or
+<math display="inline"><mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>5</mn></mrow></msup></math> times
+as great. That’s why it was reasonable for us to calculate the field inside a piece of copper wire, say, in
+Chapter 5, without worrying about the effects of magnetization.
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i class="fa-regular fa-bookmark"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:pm">¶</a>
+<dt class="acr-bottom" id="glo:pm"><span class="acr-short">PM</span><span class="acr-long">Permanent Magnet</span></dt>
+<dd class="acr-desc"><p>An object made from a material that is magnetized and creates its own
+persistent magnetic field</p></dd>
+</dl>
+</div>
+<div class="section-header">
+<h3 id="header-section-references">
+<span class="number">
+<i class="fa-solid fa-magnifying-glass"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+            Page References</span>
+</h3>
+</div>
+<div class="cite-block">
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">1.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> Somma. A lodestone, a natural magnet, displayed at the Smithsonian Institution, attracting paper clips 1980</dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">2.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> Cribb, W. Dana’s Minerals and How to Study Them 1998, Bowles, J. et al. Rock-forming minerals: Non-silicates: Oxides, hydroxides and sulphides. Geological Society (2011)</dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">3.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> De Lacheisserie, E. d. T., Gignoux, D. &amp; Schlenker, M. Magnetism (Springer Science &amp; Business Media, 2005)</dd>
+</dl></div>
+<div class="section-header">
+<h3 id="header-section-references">
+<span class="number">
+<i class="fa-regular fa-note-sticky"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+                    Page Footnotes</span>
+</h3>
+</div>
+<div class="footnote-block">
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-78"><span class="acr-short">[78].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Perhaps when you are discussing the
+current events or why the elevator is again under maintenance at MCI IV.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-79"><span class="acr-short">[79].</span></dt>
+<dd class="enumerate-enumitem"><span class="">The domain in which most day-to-day events occur.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-80"><span class="acr-short">[80].</span></dt>
+<dd class="enumerate-enumitem"><span class="">called <b>ferromagnets</b>, named after to the most common example, iron (Fe).</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-81"><span class="acr-short">[81].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Since any
+current loop could be built up from infinitesimal rectangles, with all the “internal” sides canceling, as indicated
+in Fig. 6.1, there is no real loss of generality here.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-82"><span class="acr-short">[82].</span></dt>
+<dd class="enumerate-enumitem"><span class="">they tend to <b>stretch</b> the loop, but they don’t
+<b>rotate</b> it</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-83"><span class="acr-short">[83].</span></dt>
+<dd class="enumerate-enumitem"><span class="">about the
+center.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-84"><span class="acr-short">[84].</span></dt>
+<dd class="enumerate-enumitem"><span class="">picture it, if you wish, as a tiny spinning sphere of
+charge</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-85"><span class="acr-short">[85].</span></dt>
+<dd class="enumerate-enumitem"><span class="">specifically, the Pauli exclusion principle.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-86"><span class="acr-short">[86].</span></dt>
+<dd class="enumerate-enumitem"><span class="">This is <b>NOT</b> always true for the
+outermost electrons in unfilled shells.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-88"><span class="acr-short">[88].</span></dt>
+<dd class="enumerate-enumitem"><span class="">The minus sign accounts for the negative
+charge of the electron.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-89"><span class="acr-short">[89].</span></dt>
+<dd class="enumerate-enumitem"><span class="">I said (Eq. 5.11) that magnetic fields do no work, and are
+incapable of speeding a particle up. I stand by that. However, as we shall see in Chapter 7, a changing
+magnetic field induces an electric field, and it is the latter that accelerates the electrons in this
+instance.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-90"><span class="acr-short">[90].</span></dt>
+<dd class="enumerate-enumitem"><span class="">diamagnetism is really a <b>quantum</b>
+phenomenon.</span></dd>
+</dl></div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="TheFieldofaMagnetisedObject.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="MagneticFieldsinMatter.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="MagneticFieldsinMatter.html#Magnetisation.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> </p><div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 10.11.2026, at 12:38.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">4.1: Magnetisation</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

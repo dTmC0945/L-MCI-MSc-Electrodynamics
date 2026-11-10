@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Electromagnetic Induction</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="flatweb.css" rel="stylesheet" type="text/css"/>
+<script src="flatweb.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="style-code/gruvbox-light-hard.min.css" id="code-style" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Electrodynamics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2026.WS</span>
+<span class="header-chapter">Electrodynamics</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="ThePurposeofElectromagnetism.html#x3-20001">The Purpose of Electromagnetism</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-30001.1">Mechanics in Four Different
+Views</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-40001.1.1">Electromagnetism and Relativity</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-50001.1.2">Four Kinds of Forces</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-60001.1.3">Unifying
+Physical Theories</a></span></span><span class="subsectionToc"><span class="number">1.1.4</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-70001.1.4">The Fields of Electrodynamics</a></span></span><span class="subsectionToc"><span class="number">1.1.5</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-80001.1.5">Electric Charge</a></span></span><span class="subsectionToc"><span class="number">1.1.6</span><span class="title"><a href="MechanicsinFourDifferentViews.html#x4-90001.1.6">Interpreting
+Conservation   of   Charge</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="VectorCalculus.html#x5-100002">Vector   Calculus</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="VectorAlgebra.html#x6-110002.1">Vector   Algebra</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="VectorAlgebra.html#x6-120002.1.1">Vector
+Operations</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="VectorAlgebra.html#x6-170002.1.2">Vector Component Forms</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="VectorAlgebra.html#x6-180002.1.3">Triple Products</a></span></span><span class="subsectionToc"><span class="number">2.1.4</span><span class="title"><a href="VectorAlgebra.html#x6-210002.1.4">Position,
+Displacement, and Separation Vectors</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-220002.2">Differential Calculus</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="DifferentialCalculus.html#x7-230002.2.1">Ordinary
+Derivatives</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="DifferentialCalculus.html#x7-240002.2.2">Gradient</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="DifferentialCalculus.html#x7-250002.2.3">The Del Operator</a></span></span><span class="subsectionToc"><span class="number">2.2.4</span><span class="title"><a href="DifferentialCalculus.html#x7-280002.2.4">Product Rules</a></span></span><span class="subsectionToc"><span class="number">2.2.5</span><span class="title"><a href="DifferentialCalculus.html#x7-290002.2.5">Second
+Derivatives</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="IntegralCalculus.html#x8-350002.3">Integral Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="IntegralCalculus.html#x8-360002.3.1">Line, Surface, and Volume Integrals</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="IntegralCalculus.html#x8-400002.3.2">The
+Fundamental Theorems of Vector Calculus</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="IntegralCalculus.html#x8-430002.3.3">The Fundamental Theorem for
+Curls</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="CurvilinearCoordinates.html#x9-440002.4">Curvilinear Coordinates</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="CurvilinearCoordinates.html#x9-450002.4.1">Spherical Coordinate System</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="CurvilinearCoordinates.html#x9-460002.4.2">Cylindrical
+Coordinates</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="DiracDeltaFunction.html#x10-470002.5">Dirac Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="DiracDeltaFunction.html#x10-480002.5.1">A Mathematical Anomaly</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="DiracDeltaFunction.html#x10-490002.5.2">The 1D Dirac
+Delta Function</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="DiracDeltaFunction.html#x10-500002.5.3">The 3D Dirac Delta Function</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="VectorFieldTheory.html#x11-510002.6">Vector Field Theory</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="VectorFieldTheory.html#x11-520002.6.1">Helmholtz
+Theorem</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="VectorFieldTheory.html#x11-530002.6.2">Potentials</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Electrostatics.html#x12-540003">Electrostatics</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="TheElectricField.html#x13-550003.1">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="TheElectricField.html#x13-560003.1.1">Coulomb’s
+Law</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="TheElectricField.html#x13-570003.1.2">The Electric Field</a></span></span><span class="subsectionToc"><span class="number">3.1.3</span><span class="title"><a href="TheElectricField.html#x13-580003.1.3">Continuous Charge Distributions</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-590003.2">Divergence and
+Curl of Electrostatic Fields</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-600003.2.1">Quantification</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-610003.2.2">Divergence of E</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-620003.2.3">Applications
+of Gauss’s Law</a></span></span><span class="subsectionToc"><span class="number">3.2.4</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-630003.2.4">Curl of E</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ElectricPotential.html#x15-640003.3">Electric Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ElectricPotential.html#x15-650003.3.1">Defining the Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ElectricPotential.html#x15-660003.3.2">Some
+Digressions on Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.3</span><span class="title"><a href="ElectricPotential.html#x15-720003.3.3">Poisson’s Equation and Laplace’s Equation</a></span></span><span class="subsectionToc"><span class="number">3.3.4</span><span class="title"><a href="ElectricPotential.html#x15-730003.3.4">The
+Potential of a Localised Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.3.5</span><span class="title"><a href="ElectricPotential.html#x15-740003.3.5">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="WorkandEnergy.html#x16-750003.4">Work
+and  Energy</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="WorkandEnergy.html#x16-760003.4.1">To  Move  a  Charge</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="WorkandEnergy.html#x16-770003.4.2">The  Energy  of  a  Point  Charge
+Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.3</span><span class="title"><a href="WorkandEnergy.html#x16-780003.4.3">The Energy of a Continuous Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.4</span><span class="title"><a href="WorkandEnergy.html#x16-790003.4.4">Comments on
+Electrostatic Energy</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="Conductors.html#x17-830003.5">Conductors</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="Conductors.html#x17-840003.5.1">Properties</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="Conductors.html#x17-850003.5.2">Induced Charges</a></span></span><span class="subsectionToc"><span class="number">3.5.3</span><span class="title"><a href="Conductors.html#x17-860003.5.3">Surface
+Charge and the Force on a Conductor</a></span></span><span class="subsectionToc"><span class="number">3.5.4</span><span class="title"><a href="Conductors.html#x17-870003.5.4">Capacitors</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="MagneticFieldsinMatter.html#x18-890004">Magnetic Fields in
+Matter</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="Magnetisation.html#x19-900004.1">Magnetisation</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="Magnetisation.html#x19-910004.1.1">Diamagnets, Paramagnets, and Ferromagnets</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="Magnetisation.html#x19-920004.1.2">Torques
+and Forces on Magnetic Dipoles</a></span></span><span class="subsectionToc"><span class="number">4.1.3</span><span class="title"><a href="Magnetisation.html#x19-930004.1.3">Effect of a Magnetic Field on Atomic
+Orbits</a></span></span><span class="subsectionToc"><span class="number">4.1.4</span><span class="title"><a href="Magnetisation.html#x19-940004.1.4">Magnetization</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-950004.2">The Field of a Magnetised Object</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-960004.2.1">Bound
+Currents</a></span></span><span class="subsectionToc"><span class="number">4.2.2</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-970004.2.2">Physical Interpretation of Bound Currents</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="TheAuxiliaryHField.html#x21-980004.3">The Auxiliary
+H  Field</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="TheAuxiliaryHField.html#x21-990004.3.1">Ampère’s  Law  in  Magnetized  Materials</a></span></span><span class="subsectionToc"><span class="number">4.3.2</span><span class="title"><a href="TheAuxiliaryHField.html#x21-1010004.3.2">A  Deceptive
+Parallel</a></span></span><span class="subsectionToc"><span class="number">4.3.3</span><span class="title"><a href="TheAuxiliaryHField.html#x21-1040004.3.3">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="LinearandNonLinearMedia.html#x22-1050004.4">Linear and Non-Linear Media</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="LinearandNonLinearMedia.html#x22-1060004.4.1">Magnetic
+Susceptibility and Permeability</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="LinearandNonLinearMedia.html#x22-1070004.4.2">Ferromagnetism</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="Electrodynamics.html#x23-1110005">Electrodynamics</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="ElectromotiveForce.html#x24-1120005.1">Electromotive
+Force</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="ElectromotiveForce.html#x24-1130005.1.1">Ohm’s Law</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="ElectromotiveForce.html#x24-1140005.1.2">Determining the Current Density</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="ElectromotiveForce.html#x24-1150005.1.3">Electromotive
+Force</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="ElectromotiveForce.html#x24-1170005.1.4">Motional EMF</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="#x25-1180005.2">Electromagnetic Induction</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="#x25-1190005.2.1">Faraday’s Law</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="#x25-1200005.2.2">The
+Induced Electric Field</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="#x25-1220005.2.3">Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="#x25-1230005.2.4">Energy in Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="MaxwellsEquations.html#x26-1240005.3">Maxwell’s
+Equations</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="MaxwellsEquations.html#x26-1250005.3.1">Electrodynamics Before Maxwell</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="MaxwellsEquations.html#x26-1260005.3.2">How Maxwell Fixed Ampère’s
+Law</a></span></span><span class="subsectionToc"><span class="number">5.3.3</span><span class="title"><a href="MaxwellsEquations.html#x26-1270005.3.3">Maxwell’s Equations</a></span></span><span class="subsectionToc"><span class="number">5.3.4</span><span class="title"><a href="MaxwellsEquations.html#x26-1280005.3.4">Magnetic Charge</a></span></span><span class="subsectionToc"><span class="number">5.3.5</span><span class="title"><a href="MaxwellsEquations.html#x26-1290005.3.5">Maxwell’s Equations
+in Matter</a></span></span><span class="subsectionToc"><span class="number">5.3.6</span><span class="title"><a href="MaxwellsEquations.html#x26-1300005.3.6">Boundary Conditions</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="nav-footer-webBook"><b>Last Updated:</b> 10.11.2026, at 12:38.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="MaxwellsEquations.html">Maxwell’s Equations</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="ElectromotiveForce.html">Electromotive Force</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="Electrodynamics.html#ElectromagneticInduction.html">Chapter: Electrodynamics</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"><h3 id="header-section-5.2"><span class="number">5.2</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#section.5.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x25-1180005.2"></a>Electromagnetic
+Induction</span></h3></div>
+<p class="noindent">We will now look at perhaps one of the more important laws governing the behavior of transformers
+and electric machines, which form the backbone of modern industry.
+</p>
+<div class="subsection-header"><h4 id="header-subsection-5.2.1"><span class="number">5.2.1</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.5.2.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x25-1190005.2.1"></a>Faraday’s Law</span></h4></div>
+<p class="noindent">In 1831 <span class="margin-block"><span class="margin"><span>Michael Faraday <a class="ellipsis" href="#m-ref-133">[133]</a></span><span class="sidenote"><a class="copiable-link" href="#m-ref-133" id="m-ref-133"> ¶</a><span class="sidenote-image"><img alt="PIC" src="figures/Electrodynamics/raster/portrait-faraday.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[133]</span><b>Michael Faraday</b>
+(<i>1791  - 1867</i>)
+An English chemist and physicist who contributed to the study of electro-chemistry and
+electromagnetism. His main discoveries include the principles underlying electromagnetic induction,
+diamagnetism, and electrolysis. Although Faraday received little formal education, as a self-made man,
+he was one of the most influential scientists in history <span class="cite"><a class="cite-show" href="#w3-20001">[†-1]</a><span class="cite-detail" id="rao2000understanding"> <a id="x25-119001"></a>Rao, C. N. R. Understanding chemistry
+(Universities Press, 2000)</span></span>. It was by his research on the magnetic field around a conductor carrying a
+direct current Faraday established the concept of the electromagnetic field in physics. Faraday also
+established magnetism could affect rays of light and that there was an underlying relationship between
+the two phenomena. He similarly discovered the principles of electromagnetic induction, diamagnetism,
+and the laws of electrolysis. His inventions of electromagnetic rotary devices formed the foundation
+of electric motor technology, and it was largely due to his efforts that electricity became
+practical for use in technology. The SI unit of capacitance, the farad, is named after him.</span></span></span></span>
+reported on a series of experiments, including three (<span class="alert">3</span>) which can be characterized as follows:
+</p>
+<dl class="description"><dt class="description"><a id="x25-119002x5.2.1"></a>
+<span style="color:#42395F;">Experiment 1</span>
+</dt><dd class="description">
+<p class="noindent"> He pulled a loop of wire to the right through a magnetic field and observed a current
+flowing in the loop.
+</p>
+</dd>
+<dt class="description"><a id="x25-119003x5.2.1"></a>
+<span style="color:#42395F;">Experiment 2</span>
+</dt><dd class="description">
+<p class="noindent"> He moved the <i>magnet</i> to the <i>left</i>, holding the loop still and again, observed a current
+flowing in the loop.
+</p>
+</dd>
+<dt class="description"><a id="x25-119004x5.2.1"></a>
+<span style="color:#42395F;">Experiment 3</span>
+</dt><dd class="description">
+<p class="noindent"> With both the loop and the magnet at rest, he changed the strength of the field by using an
+electromagnet, and varied the current in the coil. Once again, he observed current flowing
+in the loop.</p></dd></dl>
+<p class="noindent">The first experiment, of course, is a straightforward case of motional <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An
+energy transfer to an electric circuit per unit of electric charge, measured in volts. Devices called
+electrical transducers provide an EMF by converting other forms of energy into electrical
+energy. Other types of electrical equipment also produce an emf, such as batteries, which
+convert chemical energy, and generators, which convert mechanical energy. This energy
+conversion is achieved by physical forces applying physical work on electric charges. However,
+electromotive force itself is not a physical force</a></span></span></span>; according to the flux rule we have derived earlier:
+</p><div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-119005r14"></mstyle>
+<mstyle mathvariant="script"><mi>E</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mfrac><mrow><mi>d</mi><mi mathvariant="normal">Φ</mi></mrow>
+<mrow>
+<mi>d</mi><mi>t</mi></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.14)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">It is worth noting that exactly the same <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An energy transfer to an electric
+circuit per unit of electric charge, measured in volts. Devices called electrical transducers provide an
+EMF by converting other forms of energy into electrical energy. Other types of electrical equipment also
+produce an emf, such as batteries, which convert chemical energy, and generators, which convert
+mechanical energy. This energy conversion is achieved by physical forces applying physical work on
+electric charges. However, electromotive force itself is not a physical force</a></span></span></span> arises in Experiment
+2.
+</p>
+<div class="block-minor warning"><div class="body">
+<p class="noindent">All that really matters is the <i>relative</i> motion of the magnet and the loop </p></div></div>
+<p class="noindent">Indeed, in the light of special relativity it has to be so. But Faraday knew nothing of relativity, and in
+classical electrodynamics this simple reciprocity is a remarkable coincidence. For if the <i>loop</i> moves, it’s
+a <i>magnetic</i> force that sets up the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An energy transfer to an electric circuit per
+unit of electric charge, measured in volts. Devices called electrical transducers provide an EMF by
+converting other forms of energy into electrical energy. Other types of electrical equipment also produce
+an emf, such as batteries, which convert chemical energy, and generators, which convert mechanical
+energy. This energy conversion is achieved by physical forces applying physical work on
+electric charges. However, electromotive force itself is not a physical force</a></span></span></span>, but if the loop is
+<i>stationary</i>, the force <i>cannot</i> be magnetic as stationary charges experience no magnetic forces. </p><div class="quote">
+<i>In that case, what is responsible and what sort of field exerts a force on charges at rest?</i>
+</div>
+<p class="noindent">Well, <i>electric</i> fields do, of course, but in this case there doesn’t seem to be any electric field in
+sight.
+</p><p class="noindent">Faraday had an ingenious inspiration:
+</p>
+<div class="quote">
+<blockquote class="quote">
+<p class="noindent"><b>A changing magnetic field induces an electric field.</b></p></blockquote>
+</div>
+<p class="noindent">It is this <i>induced</i> electric field which accounts for the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An energy transfer to an
+electric circuit per unit of electric charge, measured in volts. Devices called electrical transducers
+provide an EMF by converting other forms of energy into electrical energy. Other types of electrical
+equipment also produce an emf, such as batteries, which convert chemical energy, and generators, which
+convert mechanical energy. This energy conversion is achieved by physical forces applying
+physical work on electric charges. However, electromotive force itself is not a physical force</a></span></span></span> in
+Experiment 2. Indeed, <span class="margin-block">if <span class="margin-comment"><a class="ellipsis" href="#m-ref-134">[134]</a>
+<span class="sidenote">as Faraday found empirically.</span></span></span> the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An energy
+transfer to an electric circuit per unit of electric charge, measured in volts. Devices called
+electrical transducers provide an EMF by converting other forms of energy into electrical
+energy. Other types of electrical equipment also produce an emf, such as batteries, which
+convert chemical energy, and generators, which convert mechanical energy. This energy
+conversion is achieved by physical forces applying physical work on electric charges. However,
+electromotive force itself is not a physical force</a></span></span></span> is again equal to the rate of change of the flux,
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-119006r15"></mstyle>
+<mstyle mathvariant="script"><mi>E</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mi>∮</mi>
+<mstyle mathvariant="bold"><mi>E</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle displaystyle="true"><mfrac><mrow> <mstyle class="text"><mtext>d</mtext></mstyle><mo class="MathClass-open" stretchy="false">[</mo>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi mathvariant="normal">Φ</mi></mrow></mfrac></mstyle><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-open" stretchy="false">[</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(5.15)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">then <math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math> is related
+to the change in <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>
+by the equation </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-119007r16"></mstyle>
+<mi>∮</mi>
+<mstyle mathvariant="bold">
+<mi>E</mi></mstyle>
+<mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mo> ∫
+ </mo><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>B</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.16)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">This is Faraday’s law, in integral form and its differential form is derived using <i>Stokes’ theorem</i>:
+</p><div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-119008r17"></mstyle>
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>B</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.17)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">Note that Faraday’s law reduces to the old rule
+<math display="inline"><mi>∮</mi>
+<mstyle mathvariant="bold"><mi>E</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math> (or, in differential
+form, <math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math> in
+the static case (constant <b>B</b>) as, of course, it should. In Experiment 3, the magnetic field changes for entirely
+different reasons, but according to Faraday’s law an electric field will again be induced, giving rise to an
+emf <math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>d</mi><mi mathvariant="normal">Φ</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>d</mi><mi>t</mi></math>.
+</p><p class="noindent">Indeed, one can subsume all three <span class="margin-block">cases <span class="margin-comment"><a class="ellipsis" href="#m-ref-135">[135]</a>
+<span class="sidenote">and for that matter any combination of them.</span></span></span> into a kind of
+universal flux rule: Whenever (and for whatever reason) the magnetic flux through a loop changes, an
+emf </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-119009r18"></mstyle>
+<mstyle mathvariant="script"><mi>E</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mfrac><mrow><mi>d</mi><mi mathvariant="normal">Φ</mi></mrow>
+<mrow>
+<mi>d</mi><mi>t</mi></mrow></mfrac>
+</math></td><td class="eq-no">(5.18)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">will appear in the loop. Many people call this "Faraday’s law." Maybe I’m overly fastidious, but I find
+this confusing. There are really two totally different mechanisms underlying Eq. 7.17, and to
+identify them both as "Faraday’s law" is a little like saying that because identical twins
+look alike we ought to call them by the same name. In Faraday’s first experiment it’s the
+Lorentz force law at work; the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An energy transfer to an electric
+circuit per unit of electric charge, measured in volts. Devices called electrical transducers
+provide an EMF by converting other forms of energy into electrical energy. Other types of
+electrical equipment also produce an emf, such as batteries, which convert chemical energy, and
+generators, which convert mechanical energy. This energy conversion is achieved by physical
+forces applying physical work on electric charges. However, electromotive force itself is not a
+physical force</a></span></span></span> is <i>magnetic</i>. But in the other two it’s an <i>electric</i> field (induced by the changing
+magnetic field) that does the job. Viewed in this light, it is quite astonishing that all three
+processes yield the same formula for the emf. In fact, it was precisely this "coincidence"
+that led Einstein to the special theory of relativity-he sought a deeper understanding of
+what is, in classical electrodynamics, a peculiar accident. But that’s a story for Chapter
+12. In the meantime, I shall reserve the term "Faraday’s law" for electric fields induced by
+changing magnetic fields, and I do <i>not</i> regard Experiment 1 as an instance of Faraday’s
+law.
+Keeping track of the <i>signs</i> in Faraday’s law can be a real headache. For in- stance, in Ex. 7.5 we would like
+to know which way around the ring the induced current flows. In principle, the right-hand rule does the job
+(we called <math display="inline"><mi mathvariant="normal">Φ</mi></math>
+positive to the left, in Fig. 7.22, so the positive direction for current in the ring is counter-
+clockwise, as viewed from the left; since the first spike in Fig. 7.23b is negative, the
+first current pulse flows <i>clockwise</i>, and the second counterclockwise). But there’s
+a handy rule, called Lenz’s law, whose sole purpose is to help you get the directions
+right:<math display="inline"><mn>1</mn><mn>0</mn></math>
+</p><p class="noindent">Nature abhors a change in flux. The induced current will flow in such a direction that the flux <i>it</i>
+produces tends to cancel the change. (As the front end of the magnet in Ex. 7.5 enters the ring, the flux
+increases, so the current in the ring must generate a field to the <i>right</i>-it therefore flows
+<i>clockwise</i>.) Notice that it is the <i>change</i> in flux, not the flux it- self, that nature abhors
+(when the tail end of the magnet exits the ring, the flux drops, so the induced current flows
+<i>counterclockwise</i>, in an effort to restore it). Faraday induction is a kind of "inertial" phenomenon: A
+conducting loop "likes" to maintain a constant flux through it; if you try to <i>change</i> the flux,
+the loop re- sponds by sending a current around in such a direction as to frustrate your
+efforts. (It doesn’t succeed completely; the flux produced by the induced current is typi-
+cally only a tiny fraction of the original. All Lenz’s law tells you is the <i>direction</i> of the
+flow.)
+</p>
+<div class="subsection-header"><h4 id="header-subsection-5.2.2"><span class="number">5.2.2</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.5.2.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x25-1200005.2.2"></a>The Induced Electric Field</span></h4></div>
+<p class="noindent"><i>Faraday’s law</i> generalises the electrostatic rule, we have derived in previous <span class="margin-block">chapters.
+<span class="margin-comment"><a class="ellipsis" href="#m-ref-136">[136]</a>
+<span class="sidenote"><math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math> to the time-dependent régime.
+The <i>divergence</i> of <math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math> is still
+given by Gauss’s law (<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>ρ</mi><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></math>).</span></span></span> If
+<math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math> is a pure Faraday <span class="margin-block">field, <span class="margin-comment"><a class="ellipsis" href="#m-ref-137">[137]</a>
+<span class="sidenote">due
+exclusively to a changing <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>,
+with <math display="inline"><mi>ρ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math></span></span></span>
+then: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>and</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup><mstyle mathvariant="bold"><mi>B</mi></mstyle>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup> </mrow></mfrac></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">This is mathematically identical to <span class="alert">magnetostatics</span>, </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">,</mo><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>and</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle mathvariant="bold"><mi>J</mi></mstyle><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<div class="paragraph-header"><h6 id="header-paragraph-5.2.2.18.17"><span class="number"></span><a class="pdf-icon" href=""></a><span class="title"> <a id="x25-121000"></a>Conclusion</span></h6></div>
+<p class="noindent">Faraday-induced electric fields are determined by
+<math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>∂</mi><mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-bin" stretchy="false">/</mo><mi>∂</mi><mi>t</mi></math>
+in exactly the same way as magnetostatic fields are determined by
+<math display="inline"><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle mathvariant="bold"><mi>J</mi></mstyle></math>. The analog
+to <i>Biot-Savart</i> <span class="margin-block">is <span class="margin-comment"><a class="ellipsis" href="#m-ref-138">[138]</a>
+<span class="sidenote">Magnetostatics holds only for <b>time-independent</b> currents, but there is no such restriction
+on <math display="inline"><mi>∂</mi><mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-bin" stretchy="false">/</mo><mi>∂</mi><mi>t</mi></math>.</span></span></span>
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-121001r19"></mstyle>
+<mstyle mathvariant="bold">
+<mi>E</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>4</mn><mi>π</mi></mrow></mfrac><mo>∫
+ </mo><mfrac><mrow><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mi>∂</mi><mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-bin" stretchy="false">/</mo><mi>∂</mi><mi>t</mi></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup> <mi>×</mi> <msup><mrow><mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mover accent="true"><mrow><mstyle mathvariant="bold"><mi>r</mi></mstyle></mrow><mo accent="true">^</mo></mover><mi>}</mi></mrow>
+<mrow><msup><mrow>
+<mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mstyle mathvariant="sans-serif"><mi>r</mi></mstyle><msup><mrow><mi>}</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>4</mn><mi>π</mi></mrow></mfrac><mstyle displaystyle="true"><mfrac><mrow> <msup><mrow><mi>∂</mi></mrow><mrow></mrow></msup>
+</mrow><mrow><mi>∂</mi><msup><mrow><mi>t</mi></mrow><mrow></mrow></msup></mrow></mfrac></mstyle><mo>∫
+ </mo><mfrac><mrow><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mi>×</mi> <msup><mrow><mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mover accent="true"><mrow><mstyle mathvariant="bold"><mi>r</mi></mstyle></mrow><mo accent="true">^</mo></mover><mi>}</mi></mrow>
+<mrow><msup><mrow>
+<mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mstyle mathvariant="sans-serif"><mi>r</mi></mstyle><msup><mrow><mi>}</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(5.19)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">and if symmetry permits, we can use all the methods and simplifications associated with <i>Ampère’s law</i> in integral
+form (<math display="inline"><mi>∮</mi>
+<mstyle mathvariant="bold"><mi>B</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msubsup><mrow><mi>I</mi></mrow><mrow><mi>e</mi><mi>n</mi><mi>c</mi></mrow><mrow></mrow></msubsup></math>),
+only now it’s <i>Faraday’s law</i> in integral form: </p><div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-121002r20"></mstyle>
+<mi>∮</mi>
+<mstyle mathvariant="bold">
+<mi>E</mi></mstyle>
+<mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle displaystyle="true"><mfrac><mrow> <mstyle class="text"><mtext>d</mtext></mstyle><mo class="MathClass-open" stretchy="false">[</mo>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi mathvariant="normal">Φ</mi></mrow></mfrac></mstyle><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-open" stretchy="false">[</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.20)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">The rate of change of magnetic flux through the Amperian loop plays the role formerly assigned to
+<math display="inline"><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msub><mrow><mi>I</mi></mrow><mrow><mstyle class="text"><mtext>enc</mtext></mstyle></mrow></msub></math>.
+</p>
+<dl class="def-block block-major info-block"> <a class="copiable-link" href="#info-block-5.13" id="info-block-5.13"> ¶</a> <dt class="def-line"> <span class="upper"> <span class="header"> <b>Information 5.<a id="x25-121003r13"></a>13: </b> </span> <span class="title"> The Importance of Time </span> </span> <input class="body-button" type="button" value="Show/Hide"/> </dt> <dd class="body">
+<p class="noindent">We need to be aware of a small limitation which <span class="alert">restricts</span> applications of <span class="alert">Faraday's law</span>: </p><div class="quote">  Electromagnetic induction, of
+course, occurs only when the magnetic fields are <span class="alert">changing</span>, and yet we would like to use the apparatus of
+<span class="margin-block">magnetostatics <span class="margin-comment"><a class="ellipsis" href="#m-ref-139">[139]</a>
+<span class="sidenote">Ampère’s law, the Biot-Savart law, and the rest.</span></span></span> to calculate those magnetic fields.
+</div>
+<p class="noindent">Technically, any result derived in this way is only approximately correct. But in practice
+the error is usually negligible, unless the field fluctuates extremely rapidly, or if we are
+interested in points very far from the source. Even the case of a wire snipped by a pair
+of scissors is considered <i>static enough</i> for <i>Ampère’s law</i> to apply. This régime, in which
+magnetostatic rules can be used to calculate the magnetic field on the right hand side of
+<i>Faraday’s law</i>, is called <span class="alert">quasistatic</span>. </p>
+<hr/>
+<p class="noindent"> 
+Generally speaking, it is only when we come to electromagnetic
+waves and radiation that we must worry seriously about the breakdown of magnetostatics
+itself.
+</p>
+</dd></dl>
+<div class="subsection-header"><h4 id="header-subsection-5.2.3"><span class="number">5.2.3</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.5.2.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x25-1220005.2.3"></a>Inductance</span></h4></div>
+<p class="noindent">Suppose we have two (<span class="alert">2</span>) loops of wire, at rest (Fig. 7.30). If were to run a steady current
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mn>1</mn></mrow></msub></math> around loop 1, it produces a
+magnetic field <math display="inline"><msub><mrow><mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub></math>. Some of the field
+lines pass through loop 2; let <math display="inline"><msub><mrow><mi mathvariant="normal">Φ</mi></mrow><mrow><mn>2</mn></mrow></msub></math>
+be the flux of <math display="inline"><msub><mrow><mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub></math>
+through 2. We might have a tough time actually <i>calculating</i>
+<math display="inline"><msub><mrow><mi>B</mi></mrow><mrow><mn>1</mn></mrow></msub></math>, but a
+glance at the <i>Biot-Savart law</i>, </p><table class="equation-star"><tr><td>
+<math class="equation" display="block"><msub><mrow>
+<mstyle mathvariant="bold">
+<mi>B</mi></mstyle>
+</mrow><mrow><mn>1</mn></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow>
+<mrow>
+<mn>4</mn><mi>π</mi></mrow></mfrac><msubsup><mrow><mi>I</mi></mrow><mrow><mn>1</mn></mrow><mrow></mrow></msubsup> <mi>∮</mi>
+<mfrac><mrow><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mstyle mathvariant="bold"><mi>l</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub>
+<mi>×</mi> <msup><mrow><mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mover accent="true"><mrow><mstyle mathvariant="bold"><mi>r</mi></mstyle></mrow><mo accent="true">^</mo></mover><mi>}</mi></mrow>
+<mrow><msup><mrow>
+<mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mstyle mathvariant="sans-serif"><mi>r</mi></mstyle><msup><mrow><mi>}</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac>
+</math></td></tr></table>
+<p class="noindent">reveals one significant fact about this field: </p><div class="quote">  It is proportional to the current
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mn>1</mn></mrow></msub></math>.
+</div>
+<p class="noindent">Therefore, so too is the flux through loop 2: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-122001r21"></mstyle><msubsup><mrow>
+<mi mathvariant="normal">Φ</mi>
+</mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ </mo><msub><mrow><mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mstyle mathvariant="bold"><mi>a</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>therefore</mtext></mstyle><mspace class="qquad" width="2em"></mspace><msubsup><mrow><mi mathvariant="normal">Φ</mi></mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>M</mi></mrow><mrow><mn>2</mn><mn>1</mn></mrow><mrow></mrow></msubsup><msubsup><mrow><mi>I</mi></mrow><mrow><mn>1</mn></mrow><mrow></mrow></msubsup>
+</math></td><td class="eq-no">(5.21)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>M</mi></mrow><mrow><mn>2</mn><mn>1</mn></mrow></msub></math>
+is the constant of proportionality; it is known as the <b>mutual inductance</b> of the two loops. There is a
+simple formula for the mutual inductance, which we can derive by expressing the flux in terms of the <span class="alert">vector potential</span>,
+and invoking <i>Stokes’ theorem</i>: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block"><msubsup><mrow>
+<mi mathvariant="normal">Φ</mi>
+</mrow><mrow><mn>2</mn></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ </mo><msub><mrow><mstyle mathvariant="bold"><mi>B</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mstyle mathvariant="bold"><mi>a</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ </mo><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi><msub><mrow> <mstyle mathvariant="bold"><mi>A</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mstyle mathvariant="bold"><mi>a</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>∮</mi><msub><mrow>
+<mstyle mathvariant="bold"><mi>A</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mstyle mathvariant="bold"><mi>l</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">Now, according to Eq. (??): </p><table class="equation-star"><tr><td>
+<math class="equation" display="block"><msub><mrow>
+<mstyle mathvariant="bold">
+<mi>A</mi></mstyle>
+</mrow><mrow><mn>1</mn></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msub><mrow><mi>I</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow>
+<mrow>
+<mn>4</mn><mi>π</mi></mrow></mfrac> <mi>∮</mi>
+<mfrac><mrow><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mstyle mathvariant="bold"><mi>I</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub>
+</mrow>
+<mrow><msup><mrow>
+<mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mstyle mathvariant="sans-serif"><mi>r</mi></mstyle><mi>}</mi></mrow></mfrac><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td></tr></table>
+<p class="noindent">We can use this equation to derive: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-122002r22"></mstyle>
+<msub><mrow><mi mathvariant="normal">Φ</mi></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><msub><mrow><mi>I</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow>
+<mrow>
+<mn>4</mn><mi>π</mi></mrow></mfrac> <mi>∮</mi>
+<mrow><mo fence="true" form="prefix">(</mo><mrow><mi>∮</mi>
+<mfrac><mrow><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mstyle mathvariant="bold"><mi>I</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub>
+</mrow>
+<mrow><msup><mrow>
+<mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mstyle mathvariant="sans-serif"><mi>r</mi></mstyle><mi>}</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><msub><mrow><mstyle mathvariant="bold"><mi>I</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">.</mo><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>therefore</mtext></mstyle><mspace class="qquad" width="2em"></mspace><msub><mrow><mi>M</mi></mrow><mrow><mn>2</mn><mn>1</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow>
+<mrow>
+<mn>4</mn><mi>π</mi></mrow></mfrac> <mi>∮</mi>
+<mi>∮</mi>
+<mfrac><mrow><mi>d</mi><msub><mrow><mstyle mathvariant="bold"><mi>I</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub> <mi>·</mi> <mi>d</mi><msub><mrow><mstyle mathvariant="bold"><mi>I</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub></mrow>
+<mrow><msup><mrow>
+<mi>{</mi></mrow><mrow><mstyle style="color:#BF0040;"><mi>η</mi></mstyle></mrow></msup><mstyle mathvariant="sans-serif"><mi>r</mi></mstyle><mi>}</mi></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.22)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">This is the Neumann formula; it involves a double line integral;
+</p>
+<div class="quote"> one integration around <i>loop 1</i>, the other around <i>loop 2</i>. </div>
+<p class="noindent">It’s not very useful for practical calculations, but it does reveal two (<span class="alert">2</span>) important things about mutual
+inductance:
+</p><p class="noindent">
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">   
+i. 
+</dt><dd class="enumerate-enumitem"><math display="inline"><msub><mrow><mi>M</mi></mrow><mrow><mn>2</mn><mn>1</mn></mrow></msub></math>
+is a purely geometrical quantity, having to do with the sizes, shapes, and relative positions
+of the two loops.
+</dd>
+<dt class="enumerate-enumitem">
+ii. 
+</dt><dd class="enumerate-enumitem">The integral in <span> Eq. (<a href="#x25-122002r22">5.22</a>)</span>  is unchanged if we switch the roles of loops 1 and 2: it follows that
+<table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-122005r23"></mstyle>
+<msub><mrow><mi>M</mi></mrow><mrow><mn>2</mn><mn>1</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>M</mi></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.23)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">This is an astonishing conclusion:
+</p>
+<div class="block-minor warning"><div class="body">
+<p class="noindent">Whatever the shapes and positions of the loops, the flux through
+<math display="inline"><mn>2</mn></math> when we run a
+current <math display="inline"><mi>I</mi></math> around
+<math display="inline"><mi>I</mi></math> is identical
+to the flux through 1 when we send the same current I around 2. We may as well drop the subscripts and call
+them both <math display="inline"><mi>M</mi></math>.
+</p>
+</div></div>
+</dd></dl>
+<p class="noindent">Suppose, now, we <i>vary</i> the current in loop 1. The flux through loop 2 will vary accordingly, and
+<i>Faraday’s law</i> says this changing flux will induce an <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An energy transfer to an
+electric circuit per unit of electric charge, measured in volts. Devices called electrical transducers
+provide an EMF by converting other forms of energy into electrical energy. Other types of electrical
+equipment also produce an emf, such as batteries, which convert chemical energy, and generators,
+which convert mechanical energy. This energy conversion is achieved by physical forces
+applying physical work on electric charges. However, electromotive force itself is not a physical
+force</a></span></span></span> in loop <span class="margin-block">2: <span class="margin-comment"><a class="ellipsis" href="#m-ref-140">[140]</a>
+<span class="sidenote">In quoting Eq. 7.22-which was based on the Biot-Savart law-I am tacitly
+assuming that the currents change slowly enough for the system to be consid- ered quasistatic.</span></span></span>
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-122006r24"></mstyle><msub><mrow>
+<mstyle mathvariant="script"><mi>E</mi></mstyle>
+</mrow><mrow><mn>2</mn></mrow></msub>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mfrac><mrow><mi>d</mi><msub><mrow><mi mathvariant="normal">Φ</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow>
+<mrow>
+<mi>d</mi><mi>t</mi></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi>M</mi> <mfrac><mrow><mi>d</mi><msub><mrow><mi>I</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow>
+<mrow>
+<mi>d</mi><mi>t</mi></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.24)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">What a remarkable thing: Every time you change the current in loop 1, an induced current flows in
+loop 2-even though there are no wires connecting them! Come to think of it, a changing
+current not only induces an <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An energy transfer to an electric
+circuit per unit of electric charge, measured in volts. Devices called electrical transducers
+provide an EMF by converting other forms of energy into electrical energy. Other types of
+electrical equipment also produce an emf, such as batteries, which convert chemical energy,
+and generators, which convert mechanical energy. This energy conversion is achieved by
+physical forces applying physical work on electric charges. However, electromotive force
+itself is not a physical force</a></span></span></span> in any nearby loops, it also induces an <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive
+Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An energy transfer to an electric circuit per unit of electric charge, measured in volts.
+Devices called electrical transducers provide an EMF by converting other forms of energy
+into electrical energy. Other types of electrical equipment also produce an emf, such as
+batteries, which convert chemical energy, and generators, which convert mechanical energy.
+This energy conversion is achieved by physical forces applying physical work on electric
+charges. However, electromotive force itself is not a physical force</a></span></span></span> in the source loop <i>itself</i> (Fig
+7.33).
+Once again, the field (and therefore also the flux) is proportional to the current: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-122007r25"></mstyle>
+<mi mathvariant="normal">Φ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>L</mi><mi>I</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.25)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The constant of proportionality <math display="inline"><mi>L</mi></math>
+is called the self <span class="margin-block">inductance <span class="margin-comment"><a class="ellipsis" href="#m-ref-141">[141]</a>
+<span class="sidenote">or simply the <b>inductance</b>.</span></span></span> of the loop. As with
+<math display="inline"><mi>M</mi></math>,
+it depends on the geometry of the loop. If the current changes, the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive
+Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An energy transfer to an electric circuit per unit of electric charge, measured in volts.
+Devices called electrical transducers provide an EMF by converting other forms of energy
+into electrical energy. Other types of electrical equipment also produce an emf, such as
+batteries, which convert chemical energy, and generators, which convert mechanical energy.
+This energy conversion is achieved by physical forces applying physical work on electric
+charges. However, electromotive force itself is not a physical force</a></span></span></span> induced in the loop is
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-122008r26"></mstyle>
+<mstyle mathvariant="script"><mi>E</mi></mstyle>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mi>L</mi><mfrac><mrow><mi>d</mi><mi>I</mi></mrow>
+<mrow>
+<mi>d</mi><mi>t</mi></mrow></mfrac> <mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.26)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Inductance is measured in henries (H); a henry is a volt-second per ampere.
+</p><p class="noindent">Inductance, similarly to capacitance, is an intrinsically <i>positive</i> quantity. Lenz’s law, which is enforced
+by the minus sign in Eq. (<a href="#x25-122008r26">5.26</a>), dictates that the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An energy transfer to an
+electric circuit per unit of electric charge, measured in volts. Devices called electrical transducers
+provide an EMF by converting other forms of energy into electrical energy. Other types of electrical
+equipment also produce an emf, such as batteries, which convert chemical energy, and generators, which
+convert mechanical energy. This energy conversion is achieved by physical forces applying physical work
+on electric charges. However, electromotive force itself is not a physical force</a></span></span></span> is in such a direction as
+to <i>oppose</i> any <i>change in current</i>. For this reason, it is called a back emf. Whenever you
+try to alter the current in a wire, you must fight against this back emf. Inductance plays
+somewhat the same role in electric circuits that <i>mass</i> plays in mechanical systems: The greater
+<math display="inline"><mi>L</mi></math> is, the
+harder it is to change the current, just as the larger the mass, the harder it is to change an object’s
+velocity.
+</p>
+<div class="subsection-header"><h4 id="header-subsection-5.2.4"><span class="number">5.2.4</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.5.2.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x25-1230005.2.4"></a>Energy in Magnetic Fields</span></h4></div>
+<p class="noindent">It takes a certain amount of energy to start a current flowing in a circuit. Here, were are
+<b>NOT</b> talking about the energy delivered to the resistors and converted into <span class="margin-block">heat. <span class="margin-comment"><a class="ellipsis" href="#m-ref-142">[142]</a>
+<span class="sidenote">that is
+<b>irretrievably</b> lost, as far as the circuit is concerned, and can either be large or small, depending on
+how long the current is left to run.</span></span></span> What we are concerned with, rather, is the work we
+must do <b>against the back emf</b> to get the current going. This is a fixed amount, and it is
+<i>recoverable</i>:
+</p>
+<div class="quote"> We get it back when the current is <b>turned off</b>. </div>
+<p class="noindent">In the meantime, it represents energy present in the circuit, and as we’ll see in a moment, it can be
+regarded as energy stored in the magnetic field. The work done on a unit charge, against the
+back <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An energy transfer to an electric circuit per unit of electric charge,
+measured in volts. Devices called electrical transducers provide an EMF by converting other forms of
+energy into electrical energy. Other types of electrical equipment also produce an emf, such as
+batteries, which convert chemical energy, and generators, which convert mechanical energy. This
+energy conversion is achieved by physical forces applying physical work on electric charges.
+However, electromotive force itself is not a physical force</a></span></span></span>, in one trip around the circuit is
+<math display="inline"> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle mathvariant="script"><mi>E</mi></mstyle></math><span class="margin-block">. <span class="margin-comment"><a class="ellipsis" href="#m-ref-143">[143]</a>
+<span class="sidenote">The
+minus sign records the fact that this is the work done by us <i>against</i> the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An
+energy transfer to an electric circuit per unit of electric charge, measured in volts. Devices called
+electrical transducers provide an EMF by converting other forms of energy into electrical energy. Other
+types of electrical equipment also produce an emf, such as batteries, which convert chemical energy, and
+generators, which convert mechanical energy. This energy conversion is achieved by physical forces
+applying physical work on electric charges. However, electromotive force itself is not a physical
+force</a></span></span></span>, not the work done by the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An energy transfer to an electric
+circuit per unit of electric charge, measured in volts. Devices called electrical transducers
+provide an EMF by converting other forms of energy into electrical energy. Other types of
+electrical equipment also produce an emf, such as batteries, which convert chemical energy,
+and generators, which convert mechanical energy. This energy conversion is achieved by
+physical forces applying physical work on electric charges. However, electromotive force itself is
+not a physical force</a></span></span></span> itself.</span></span></span> The amount of charge per unit time passing down the wire is
+<math display="inline"><mi>I</mi></math>.
+Therefore, the total work done per unit time is: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mstyle displaystyle="true"><mfrac><mrow> <mstyle class="text"><mtext>d</mtext></mstyle><mo class="MathClass-open" stretchy="false">[</mo>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>W</mi> </mrow></mfrac></mstyle>
+<mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-open" stretchy="false">[</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">]</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mstyle mathvariant="script"><mi>E</mi></mstyle><mi>I</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>L</mi><mi>I</mi><mstyle displaystyle="true"><mfrac><mrow> <mstyle class="text"><mtext>d</mtext></mstyle><mo class="MathClass-open" stretchy="false">[</mo>
+</mrow><mrow><mstyle class="text"><mtext>d</mtext></mstyle><mi>I</mi> </mrow></mfrac></mstyle><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-open" stretchy="false">[</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">]</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">If we start with zero current and build it up to a final value
+<math display="inline"><mi>I</mi></math>, the
+work <span class="margin-block">done <span class="margin-comment"><a class="ellipsis" href="#m-ref-144">[144]</a>
+<span class="sidenote">integrating the last equation over time</span></span></span> is:
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-123001r27"></mstyle>
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><mi>L</mi><msubsup><mrow><mi>I</mi></mrow><mrow></mrow><mrow><mn>2</mn></mrow></msubsup>
+</math></td><td class="eq-no">(5.27)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">It does not depend on how <i>long</i> we take to crank up the current, only on the geometry of
+the <span class="margin-block">loop <span class="margin-comment"><a class="ellipsis" href="#m-ref-145">[145]</a>
+<span class="sidenote">Which this information is encoded in the inductance.</span></span></span> and the final current
+<math display="inline"><mi>I</mi></math>. There is a cleaner
+way to write <math display="inline"><mi>W</mi></math>,
+which has the advantage that it is readily generalized to surface and volume currents. Remember that the flux
+<math display="inline"><mi mathvariant="normal">Φ</mi></math> through the
+loop is equal to <math display="inline"><mi>L</mi><mi>I</mi></math>
+shown in <span> Eq. (<a href="#x25-122007r25">5.25</a>)</span> . On the other hand, </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi mathvariant="normal">Φ</mi> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ </mo><mstyle mathvariant="bold"><mi>B</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo><mo> ∫
+ </mo><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>∮</mi>
+<mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle>
+</math></td></tr></table>
+<p class="noindent">where the <b>line integral</b> is around the perimeter of the loop. We can then make the conclusion that:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi>L</mi><mi>I</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>∮</mi>
+<mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle><mspace class="quad" width="1em"></mspace><mstyle class="text"><mtext>therefore</mtext></mstyle><mspace class="quad" width="1em"></mspace><mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><mi>I</mi> <mi>∮</mi>
+<mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>l</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mi>∮</mi><msup><mrow>
+<mrow><mo fence="true" form="prefix">(</mo><mrow><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mstyle mathvariant="bold"><mi>I</mi></mstyle></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>l</mi>
+</math></td></tr></table>
+<p class="noindent">In this form, the generalization to volume currents is obvious: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-123002r28"></mstyle>
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mo>∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>V</mi> </mstyle></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mstyle mathvariant="bold"><mi>J</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><mi>d</mi><mi>τ</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.28)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">But we can do even better, and express <math display="inline"><mi>W</mi></math>
+entirely in terms of the magnetic field: Ampère’s law,
+<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mstyle mathvariant="bold"><mi>J</mi></mstyle></math>, lets us
+eliminate <b>J</b>: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-123003r29"></mstyle>
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><mo> ∫
+ </mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><mi>d</mi><mi>τ</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.29)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Integration by parts transfers the derivative from <b>B</b> to
+<math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math>;
+specifically, product rule 6 states that </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>A</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">−</mo> <mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">which allows us to write: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mstyle mathvariant="bold">
+<mi>A</mi></mstyle>
+<mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mi>·</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle> <mo class="MathClass-bin" stretchy="false">−</mo> <mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td></tr></table>
+<p class="noindent">Consequently, </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-123004r30"></mstyle>
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac> <mrow><mo fence="true" form="prefix">[</mo><mrow><mo>∫
+ </mo><msup><mrow><mi>B</mi></mrow><mrow><mn>2</mn></mrow></msup><mi>d</mi><mi>τ</mi> <mo class="MathClass-bin" stretchy="false">−</mo><mo> ∫
+ </mo><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><mi>d</mi><mi>τ</mi> </mrow><mo fence="true" form="postfix">]</mo></mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac> <mrow><mo fence="true" form="prefix">[</mo><mrow><msub><mrow><mo>∫
+ </mo></mrow><mrow><mstyle mathvariant="script"><mi>V</mi> </mstyle></mrow></msub><msup><mrow><mi>B</mi></mrow><mrow><mn>2</mn></mrow></msup><mi>d</mi><mi>τ</mi> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow> <mi>∮</mi>
+</mrow><mrow><mstyle mathvariant="script"><mi>S</mi></mstyle></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>×</mi> <mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo> <mi>·</mi> <mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mstyle mathvariant="bold"><mi>a</mi></mstyle></mrow><mo fence="true" form="postfix">]</mo></mrow><mo class="MathClass-punc" stretchy="false">,</mo>
+</math></td><td class="eq-no">(5.30)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><mi>S</mi></math> is the surface
+bounding the volume <math display="inline"><mi>V</mi> </math>.
+</p><p class="noindent">Now, the integration in Eq. (<a href="#x25-123002r28">5.28</a>) is to be taken over the <i>entire volume
+occupied</i> by the current. But any region larger than this will do just as well, for
+<math display="inline"><mstyle mathvariant="bold"><mi>J</mi></mstyle></math>
+is zero out there anyway. In Eq. (<a href="#x25-123004r30">5.30</a>), the larger the region we pick the greater is
+the contribution from the volume integral, and therefore the smaller is that of the
+surface <span class="margin-block">integral. <span class="margin-comment"><a class="ellipsis" href="#m-ref-146">[146]</a>
+<span class="sidenote">This makes sense, as the surface gets farther from the current, both
+<math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math> and
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>
+decrease.</span></span></span> In particular, if we agree to integrate over all space, then the surface integral goes to zero, and
+we are left with </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x25-123005r31"></mstyle>
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><msub><mrow><mo> ∫
+ </mo></mrow><mrow><mstyle class="text"><mtext>all space</mtext></mstyle></mrow></msub><msup><mrow><mi>B</mi></mrow><mrow><mn>2</mn></mrow></msup><mi>d</mi><mi>τ</mi><mo class="MathClass-punc" stretchy="false">.</mo>
+</math></td><td class="eq-no">(5.31)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">In view of this result, we say the energy is <b>stored in the magnetic field</b>, in the amount
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><msup><mrow><mi>B</mi></mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math>
+per unit volume. This is a nice way to think of it, though someone looking at Eq. (<a href="#x25-123002r28">5.28</a>)
+might prefer to say that the energy is stored in the <i>current distribution</i>, in the amount
+<math display="inline"><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mstyle mathvariant="bold"><mi>J</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo></math> per
+unit <span class="margin-block">volume. <span class="margin-comment"><a class="ellipsis" href="#m-ref-147">[147]</a>
+<span class="sidenote">The distinction is one of bookkeeping as the important quantity is the total energy
+<math display="inline"><mi>W</mi></math>, and
+we need not worry about where the energy is <b>located</b>.</span></span></span>
+</p><p class="noindent">We might find it strange that it takes energy to set up a magnetic field given magnetic fields <i>themselves</i>
+do no work. The point is that producing a magnetic field, where previously there was none,
+requires <i>changing</i> the field, and a changing <b>B</b>-field, according to Faraday, induces an <i>electric</i>
+field.
+</p>
+<div class="block-minor knowledge"><div class="body">
+<p class="noindent">The latter, of course, <span class="alert">can do work</span>. </p></div></div>
+<p class="noindent">In the beginning, there is no <math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>,
+and at the end there is no <math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>;
+but in between, while <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math> is
+building up, there is an <math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>,
+and it is against <i>this</i> that the work is done. In the light of this, it is extraordinary how similar the
+magnetic energy formulas are to their electrostatic counterparts: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<mtable class="aligned" displaystyle="true"><mtr><mtd columnalign="right"><msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext>elec</mtext></mstyle></mrow></msub></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><mo>∫
+ </mo><mo class="MathClass-open" stretchy="false">(</mo><mi>V</mi> <mi>ρ</mi><mo class="MathClass-close" stretchy="false">)</mo><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi></mtd>
+<mtd columnalign="right"></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mo>∫
+ </mo><msup><mrow><mi>E</mi></mrow><mrow><mn>2</mn></mrow></msup><mi>d</mi><mi>τ</mi><mo class="MathClass-punc" stretchy="false">,</mo></mtd>
+<mtd columnalign="right"></mtd>
+<mtd columnalign="left"><mstyle class="text"><mtext>(Energy Stored in Electric Field)</mtext></mstyle></mtd>
+<mtd columnalign="right"></mtd>
+</mtr><mtr><mtd columnalign="right"><msub><mrow><mi>W</mi></mrow><mrow><mstyle class="text"><mtext>mag</mtext></mstyle></mrow></msub></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><mo>∫
+ </mo><mo class="MathClass-open" stretchy="false">(</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle> <mi>·</mi> <mstyle mathvariant="bold"><mi>J</mi></mstyle><mo class="MathClass-close" stretchy="false">)</mo><mspace class="thinspace" width="0.17em"></mspace><mstyle class="text"><mtext>d</mtext></mstyle><mi>τ</mi></mtd>
+<mtd columnalign="right"></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn><msub><mrow><mi>μ</mi></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac><mo> ∫
+ </mo><msup><mrow><mi>B</mi></mrow><mrow><mn>2</mn></mrow></msup><mi>d</mi><mi>τ</mi><mo class="MathClass-punc" stretchy="false">.</mo></mtd><mtd columnalign="right"></mtd><mtd columnalign="left"><mstyle class="text"><mtext>(Energy Stored in Magnetic Field)</mtext></mstyle></mtd>
+</mtr> </mtable>
+</math></td></tr></table>
+<dl class="def-block block-major info-block"> <a class="copiable-link" href="#info-block-5.14" id="info-block-5.14"> ¶</a> <dt class="def-line"> <span class="upper"> <span class="header"> <b>Information 5.<a id="x25-123006r14"></a>14: </b> </span> <span class="title"> Superconducting Magnetic Energy Storage System </span> </span> <input class="body-button" type="button" value="Show/Hide"/> </dt> <dd class="body">
+<p class="noindent">Superconducting magnetic energy storage <span class="margin-block"><span class="margin"><span>systems <a class="ellipsis" href="#m-ref-148">[148]</a></span><span class="sidenote"><a class="copiable-link" href="#m-ref-148" id="m-ref-148"> ¶</a><span class="sidenote-image"><img alt="PIC" src="figures/Electrodynamics/raster/smes.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[148]</span>An example of a SMES produced by
+FRAKO-TERM</span></span></span></span> store energy in the magnetic field created by the flow of direct current in a
+superconducting coil that has been cryogenically cooled to a temperature below its superconducting
+critical temperature. This use of superconducting coils to store magnetic energy was invented by M.
+Ferrier in 1970.[2]
+</p><p class="noindent">A typical SMES system includes three parts: superconducting coil, power conditioning system and
+cryogenically cooled refrigerator. Once the superconducting coil is energized, the current will not decay
+and the magnetic energy can be stored indefinitely.
+</p><p class="noindent">The stored energy can be released back to the network by discharging the coil. The power conditioning
+system uses an inverter/rectifier to transform alternating current (AC) power to direct current or
+convert DC back to AC power. The inverter/rectifier accounts for about 23% energy loss in each
+direction. SMES loses the least amount of electricity in the energy storage process compared to other
+methods of storing energy. SMES systems are highly efficient; the round-trip efficiency is greater than
+95%.[3]
+</p><p class="noindent">Due to the energy requirements of refrigeration and the high cost of superconducting wire, SMES is
+currently used for short duration energy storage. Therefore, SMES is most commonly devoted to
+improving power quality.
+</p>
+</dd></dl>
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i class="fa-regular fa-bookmark"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:emf">¶</a>
+<dt class="acr-bottom" id="glo:emf"><span class="acr-short">EMF</span><span class="acr-long">Electro-motive Force</span></dt>
+<dd class="acr-desc"><p>An
+energy transfer to an electric circuit per unit of electric charge, measured in volts. Devices called
+electrical transducers provide an EMF by converting other forms of energy into electrical
+energy. Other types of electrical equipment also produce an emf, such as batteries, which
+convert chemical energy, and generators, which convert mechanical energy. This energy
+conversion is achieved by physical forces applying physical work on electric charges. However,
+electromotive force itself is not a physical force</p></dd>
+</dl>
+</div>
+<div class="section-header">
+<h3 id="header-section-references">
+<span class="number">
+<i class="fa-solid fa-magnifying-glass"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+            Page References</span>
+</h3>
+</div>
+<div class="cite-block">
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">1.</span><span class="acr-long"></span></dt>
+<dd class="enumerate-enumitem"> Rao, C. N. R. Understanding chemistry (Universities Press, 2000)</dd>
+</dl></div>
+<div class="section-header">
+<h3 id="header-section-references">
+<span class="number">
+<i class="fa-regular fa-note-sticky"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+                    Page Footnotes</span>
+</h3>
+</div>
+<div class="footnote-block">
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-134"><span class="acr-short">[134].</span></dt>
+<dd class="enumerate-enumitem"><span class="">as Faraday found empirically.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-135"><span class="acr-short">[135].</span></dt>
+<dd class="enumerate-enumitem"><span class="">and for that matter any combination of them.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-136"><span class="acr-short">[136].</span></dt>
+<dd class="enumerate-enumitem"><span class=""><math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>×</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math> to the time-dependent régime.
+The <i>divergence</i> of <math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math> is still
+given by Gauss’s law (<math display="inline"><mi class="MathClass-op">∇</mi><mo> ⁡</mo> <mi>·</mi> <mstyle mathvariant="bold"><mi>E</mi></mstyle> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>ρ</mi><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>𝜀</mi></mrow><mrow><mn>0</mn></mrow></msub></math>).</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-137"><span class="acr-short">[137].</span></dt>
+<dd class="enumerate-enumitem"><span class="">due
+exclusively to a changing <math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>,
+with <math display="inline"><mi>ρ</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math></span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-138"><span class="acr-short">[138].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Magnetostatics holds only for <b>time-independent</b> currents, but there is no such restriction
+on <math display="inline"><mi>∂</mi><mstyle mathvariant="bold"><mi>B</mi></mstyle><mo class="MathClass-bin" stretchy="false">/</mo><mi>∂</mi><mi>t</mi></math>.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-139"><span class="acr-short">[139].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Ampère’s law, the Biot-Savart law, and the rest.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-140"><span class="acr-short">[140].</span></dt>
+<dd class="enumerate-enumitem"><span class="">In quoting Eq. 7.22-which was based on the Biot-Savart law-I am tacitly
+assuming that the currents change slowly enough for the system to be consid- ered quasistatic.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-141"><span class="acr-short">[141].</span></dt>
+<dd class="enumerate-enumitem"><span class="">or simply the <b>inductance</b>.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-142"><span class="acr-short">[142].</span></dt>
+<dd class="enumerate-enumitem"><span class="">that is
+<b>irretrievably</b> lost, as far as the circuit is concerned, and can either be large or small, depending on
+how long the current is left to run.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-143"><span class="acr-short">[143].</span></dt>
+<dd class="enumerate-enumitem"><span class="">The
+minus sign records the fact that this is the work done by us <i>against</i> the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An
+energy transfer to an electric circuit per unit of electric charge, measured in volts. Devices called
+electrical transducers provide an EMF by converting other forms of energy into electrical energy. Other
+types of electrical equipment also produce an emf, such as batteries, which convert chemical energy, and
+generators, which convert mechanical energy. This energy conversion is achieved by physical forces
+applying physical work on electric charges. However, electromotive force itself is not a physical
+force</a></span></span></span>, not the work done by the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:emf">EMF</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:emf">Electro-motive Force</a></span><span class="acronym-desc"><a class="glossary" href="#glo:emf">An energy transfer to an electric
+circuit per unit of electric charge, measured in volts. Devices called electrical transducers
+provide an EMF by converting other forms of energy into electrical energy. Other types of
+electrical equipment also produce an emf, such as batteries, which convert chemical energy,
+and generators, which convert mechanical energy. This energy conversion is achieved by
+physical forces applying physical work on electric charges. However, electromotive force itself is
+not a physical force</a></span></span></span> itself.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-144"><span class="acr-short">[144].</span></dt>
+<dd class="enumerate-enumitem"><span class="">integrating the last equation over time</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-145"><span class="acr-short">[145].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Which this information is encoded in the inductance.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-146"><span class="acr-short">[146].</span></dt>
+<dd class="enumerate-enumitem"><span class="">This makes sense, as the surface gets farther from the current, both
+<math display="inline"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math> and
+<math display="inline"><mstyle mathvariant="bold"><mi>B</mi></mstyle></math>
+decrease.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-147"><span class="acr-short">[147].</span></dt>
+<dd class="enumerate-enumitem"><span class="">The distinction is one of bookkeeping as the important quantity is the total energy
+<math display="inline"><mi>W</mi></math>, and
+we need not worry about where the energy is <b>located</b>.</span></dd>
+</dl></div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="MaxwellsEquations.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="ElectromotiveForce.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="Electrodynamics.html#ElectromagneticInduction.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 10.11.2026, at 12:38.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">5.2: Electromagnetic Induction</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

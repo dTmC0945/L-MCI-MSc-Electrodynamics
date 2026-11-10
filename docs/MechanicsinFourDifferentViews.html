@@ -10,11 +10,10 @@
 <script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.css" rel="stylesheet" type="text/css"/>
-<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<link href="flatweb.css" rel="stylesheet" type="text/css"/>
+<script src="flatweb.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<link href="style-code/gruvbox-light-hard.min.css" id="code-style" rel="stylesheet"/>
 <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
 <link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
@@ -48,17 +47,28 @@ Law</a></span></span><span class="subsectionToc"><span class="number">3.1.2</spa
 Curl of Electrostatic Fields</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-600003.2.1">Quantification</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-610003.2.2">Divergence of E</a></span></span><span class="subsectionToc"><span class="number">3.2.3</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-620003.2.3">Applications
 of Gauss’s Law</a></span></span><span class="subsectionToc"><span class="number">3.2.4</span><span class="title"><a href="DivergenceandCurlofElectrostaticFields.html#x14-630003.2.4">Curl of E</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ElectricPotential.html#x15-640003.3">Electric Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ElectricPotential.html#x15-650003.3.1">Defining the Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ElectricPotential.html#x15-660003.3.2">Some
 Digressions on Potential</a></span></span><span class="subsectionToc"><span class="number">3.3.3</span><span class="title"><a href="ElectricPotential.html#x15-720003.3.3">Poisson’s Equation and Laplace’s Equation</a></span></span><span class="subsectionToc"><span class="number">3.3.4</span><span class="title"><a href="ElectricPotential.html#x15-730003.3.4">The
-Potential of a Localised Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.3.5</span><span class="title"><a href="ElectricPotential.html#x15-740003.3.5">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="WorkandEnergy.html#x16-750003.4">Work and
-Energy</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="WorkandEnergy.html#x16-760003.4.1">To Move a Charge</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="WorkandEnergy.html#x16-770003.4.2">The Energy of a Point Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.3</span><span class="title"><a href="WorkandEnergy.html#x16-780003.4.3">The
-Energy of a Continuous Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.4</span><span class="title"><a href="WorkandEnergy.html#x16-790003.4.4">Comments on Electrostatic
-Energy</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="Conductors.html#x17-830003.5">Conductors</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="Conductors.html#x17-840003.5.1">Properties</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="Conductors.html#x17-850003.5.2">Induced Charges</a></span></span><span class="subsectionToc"><span class="number">3.5.3</span><span class="title"><a href="Conductors.html#x17-860003.5.3">Surface Charge
-and the Force on a Conductor</a></span></span><span class="subsectionToc"><span class="number">3.5.4</span><span class="title"><a href="Conductors.html#x17-870003.5.4">Capacitors</a></span></span>
-<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 7.10.2026, at 8:21.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+Potential of a Localised Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.3.5</span><span class="title"><a href="ElectricPotential.html#x15-740003.3.5">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="WorkandEnergy.html#x16-750003.4">Work
+and  Energy</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="WorkandEnergy.html#x16-760003.4.1">To  Move  a  Charge</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="WorkandEnergy.html#x16-770003.4.2">The  Energy  of  a  Point  Charge
+Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.3</span><span class="title"><a href="WorkandEnergy.html#x16-780003.4.3">The Energy of a Continuous Charge Distribution</a></span></span><span class="subsectionToc"><span class="number">3.4.4</span><span class="title"><a href="WorkandEnergy.html#x16-790003.4.4">Comments on
+Electrostatic Energy</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="Conductors.html#x17-830003.5">Conductors</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="Conductors.html#x17-840003.5.1">Properties</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="Conductors.html#x17-850003.5.2">Induced Charges</a></span></span><span class="subsectionToc"><span class="number">3.5.3</span><span class="title"><a href="Conductors.html#x17-860003.5.3">Surface
+Charge and the Force on a Conductor</a></span></span><span class="subsectionToc"><span class="number">3.5.4</span><span class="title"><a href="Conductors.html#x17-870003.5.4">Capacitors</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="MagneticFieldsinMatter.html#x18-890004">Magnetic Fields in
+Matter</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="Magnetisation.html#x19-900004.1">Magnetisation</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="Magnetisation.html#x19-910004.1.1">Diamagnets, Paramagnets, and Ferromagnets</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="Magnetisation.html#x19-920004.1.2">Torques
+and Forces on Magnetic Dipoles</a></span></span><span class="subsectionToc"><span class="number">4.1.3</span><span class="title"><a href="Magnetisation.html#x19-930004.1.3">Effect of a Magnetic Field on Atomic
+Orbits</a></span></span><span class="subsectionToc"><span class="number">4.1.4</span><span class="title"><a href="Magnetisation.html#x19-940004.1.4">Magnetization</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-950004.2">The Field of a Magnetised Object</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-960004.2.1">Bound
+Currents</a></span></span><span class="subsectionToc"><span class="number">4.2.2</span><span class="title"><a href="TheFieldofaMagnetisedObject.html#x20-970004.2.2">Physical Interpretation of Bound Currents</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="TheAuxiliaryHField.html#x21-980004.3">The Auxiliary
+H  Field</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="TheAuxiliaryHField.html#x21-990004.3.1">Ampère’s  Law  in  Magnetized  Materials</a></span></span><span class="subsectionToc"><span class="number">4.3.2</span><span class="title"><a href="TheAuxiliaryHField.html#x21-1010004.3.2">A  Deceptive
+Parallel</a></span></span><span class="subsectionToc"><span class="number">4.3.3</span><span class="title"><a href="TheAuxiliaryHField.html#x21-1040004.3.3">Boundary Conditions</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="LinearandNonLinearMedia.html#x22-1050004.4">Linear and Non-Linear Media</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="LinearandNonLinearMedia.html#x22-1060004.4.1">Magnetic
+Susceptibility and Permeability</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="LinearandNonLinearMedia.html#x22-1070004.4.2">Ferromagnetism</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="Electrodynamics.html#x23-1110005">Electrodynamics</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="ElectromotiveForce.html#x24-1120005.1">Electromotive
+Force</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="ElectromotiveForce.html#x24-1130005.1.1">Ohm’s Law</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="ElectromotiveForce.html#x24-1140005.1.2">Determining the Current Density</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="ElectromotiveForce.html#x24-1150005.1.3">Electromotive
+Force</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="ElectromotiveForce.html#x24-1170005.1.4">Motional EMF</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="ElectromagneticInduction.html#x25-1180005.2">Electromagnetic Induction</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="ElectromagneticInduction.html#x25-1190005.2.1">Faraday’s Law</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="ElectromagneticInduction.html#x25-1200005.2.2">The
+Induced Electric Field</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="ElectromagneticInduction.html#x25-1220005.2.3">Inductance</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="ElectromagneticInduction.html#x25-1230005.2.4">Energy in Magnetic Fields</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="MaxwellsEquations.html#x26-1240005.3">Maxwell’s
+Equations</a></span></span><span class="subsectionToc"><span class="number">5.3.1</span><span class="title"><a href="MaxwellsEquations.html#x26-1250005.3.1">Electrodynamics Before Maxwell</a></span></span><span class="subsectionToc"><span class="number">5.3.2</span><span class="title"><a href="MaxwellsEquations.html#x26-1260005.3.2">How Maxwell Fixed Ampère’s
+Law</a></span></span><span class="subsectionToc"><span class="number">5.3.3</span><span class="title"><a href="MaxwellsEquations.html#x26-1270005.3.3">Maxwell’s Equations</a></span></span><span class="subsectionToc"><span class="number">5.3.4</span><span class="title"><a href="MaxwellsEquations.html#x26-1280005.3.4">Magnetic Charge</a></span></span><span class="subsectionToc"><span class="number">5.3.5</span><span class="title"><a href="MaxwellsEquations.html#x26-1290005.3.5">Maxwell’s Equations
+in Matter</a></span></span><span class="subsectionToc"><span class="number">5.3.6</span><span class="title"><a href="MaxwellsEquations.html#x26-1300005.3.6">Boundary Conditions</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="nav-footer-webBook"><b>Last Updated:</b> 10.11.2026, at 12:38.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
 <article class="chapter">
-<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="VectorCalculus.html">Chapter: Vector
-Calculus</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="ThePurposeofElectromagnetism.html">Chapter: The Purpose of
-Electromagnetism</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="ThePurposeofElectromagnetism.html#MechanicsinFourDifferentViews.html">Chapter: The Purpose of
-Electromagnetism</a></span><span class="nav-button">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="VectorCalculus.html">Chapter: Vector Calculus</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="ThePurposeofElectromagnetism.html">Chapter: The Purpose of Electromagnetism</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="ThePurposeofElectromagnetism.html#MechanicsinFourDifferentViews.html">Chapter: The Purpose of Electromagnetism</a></span><span class="nav-button">
 <a href="index.html" rel="index" title="Visit Entry Point">
 <i class="fa-solid fa-table-list">
 </i>
@@ -68,36 +78,36 @@ Electromagnetism</a></span><span class="nav-button">
 <i class="fa-brands fa-git-alt"></i>
 <span class="nav-info">Visit Material GitHub Repo</span>
 </a></span></nav>
-<div class="section-header"> <h3 id="header-section-1.1"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#section.1.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">1.1</span> <span class="title"> <a id="x4-30001.1"></a>Mechanics in Four
-Different Views</span></h3></div>
+<div class="section-header"><h3 id="header-section-1.1"><span class="number">1.1</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#section.1.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x4-30001.1"></a>Mechanics in Four Different
+Views</span></h3></div>
 <p class="noindent">Newtonian mechanics is generally sufficient enough for most <span class="alert">everyday</span> applications ranging from calculating the
 motion an object falling from a building to predicting the motion of planets. When objects start to
-move at high <span class="margin-block">speeds, <span class="margin-comment"><span class="ellipsis">[1]</span>
+move at high <span class="margin-block">speeds, <span class="margin-comment"><a class="ellipsis" href="#m-ref-1">[1]</a>
 <span class="sidenote">as in speeds comparable to the speed of light.</span></span></span> however, the <i>Newtonian model</i> fails
 to predict accurately and was replaced by special relativity, which was introduced by <i>Einstein</i> in
-1905 <span class="cite"><a class="cite-show" href="#w3-20001">[†-1]</a><span class="cite-detail"> <a id="x4-3001"></a>Einstein, A. On the electrodynamics of moving bodies (1905)</span></span>. For objects which are <span class="alert">extremely small</span>, sizes
+1905 <span class="cite"><a class="cite-show" href="#w3-20001">[†-1]</a><span class="cite-detail" id="einstein1905electrodynamics"> <a id="x4-3001"></a>Einstein, A. On the electrodynamics of moving bodies (1905)</span></span>. For objects which are <span class="alert">extremely small</span>, sizes
 comparable to that of atoms, then the theory of relativity fails for different reasons, and is superseded
-by quantum <span class="margin-block">mechanics. <span class="margin-comment"><span class="ellipsis">[2]</span>
+by quantum <span class="margin-block">mechanics. <span class="margin-comment"><a class="ellipsis" href="#m-ref-2">[2]</a>
 <span class="sidenote">Developed by Bohr, Schrodinger, Heisenberg, and many others, in the 1920’s,
 mostly.</span></span></span>
-</p><p class="noindent">Finally, for objects which are both very fast and very <span class="margin-block">small, <span class="margin-comment"><span class="ellipsis">[3]</span>
+</p><p class="noindent">Finally, for objects which are both very fast and very <span class="margin-block">small, <span class="margin-comment"><a class="ellipsis" href="#m-ref-3">[3]</a>
 <span class="sidenote">As is common in modern particle physics.</span></span></span> a
 mechanics which combines both relativity and quantum principles is needed:
 </p>
 <div class="quote"> This relativistic quantum mechanics is known as <span class="alert">quantum field theory</span>. Even today this new model cannot claim to be a
 completely satisfactory system. </div>
 <p class="noindent">Luckily for us, in <b>M.Sc Electrodynamics</b>, we will <b>NOT</b> look at these models in detail but look at a
-specific subset of it called <span class="alert">electrodynamics</span> which is generally in the domain of classical <span class="margin-block">mechanics. <span class="margin-comment"><span class="ellipsis">[4]</span>
+specific subset of it called <span class="alert">electrodynamics</span> which is generally in the domain of classical <span class="margin-block">mechanics. <span class="margin-comment"><a class="ellipsis" href="#m-ref-4">[4]</a>
 <span class="sidenote">which can be
 extended to other domains if needed.</span></span></span>
 </p>
-<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-1.1.1"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.1.1.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">1.1.1</span> <span class="title"> <a id="x4-40001.1.1"></a>Electromagnetism and Relativity</span></h4></div>
-</p><p class="noindent">Interestingly, electromagnetism was one of the primary catalyst for developing <span class="alert">general relativity</span>.
+<div class="subsection-header"><h4 id="header-subsection-1.1.1"><span class="number">1.1.1</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.1.1.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x4-40001.1.1"></a>Electromagnetism and Relativity</span></h4></div>
+<p class="noindent">Interestingly, electromagnetism was one of the primary catalyst for developing <span class="alert">general relativity</span>.
 </p><p class="noindent">Historically, the <i>Maxwell equations</i> were discovered before the theory of special relativity. It was
 thought light waves we derived above must be oscillations of some substance which fills
-all of space. This was dubbed the <span class="margin-block">aether. <span class="margin-comment"><span class="ellipsis">[5]</span>
+all of space. This was dubbed the <span class="margin-block">aether. <span class="margin-comment"><a class="ellipsis" href="#m-ref-5">[5]</a>
 <span class="sidenote">the postulated medium for the propagation of
-light <span class="cite"><a class="cite-show" href="#w3-20001">[†-2]</a><span class="cite-detail"> <a id="x4-4001"></a>Brewer, E. C. A guide to the scientific knowledge of things familiar (CS Francis &amp;
+light <span class="cite"><a class="cite-show" href="#w3-20001">[†-2]</a><span class="cite-detail" id="brewer1852guide"> <a id="x4-4001"></a>Brewer, E. C. A guide to the scientific knowledge of things familiar (CS Francis &amp;
 Company, 1852)</span></span>. It was originally used to explain the ability of the apparently wave-based
 light to propagate through empty space, something waves should <b>NOT</b> be able to do. The
 assumption of a spatial plenum of luminiferous aether, rather than a spatial vacuum, provided the
@@ -108,11 +118,11 @@ to the aether.
 </p><p class="noindent">We now know that the <span class="alert">concept of the aether is unnecessary</span>. Instead, <i>Maxwell’s equations</i> hold in all inertial frames and are the first
 equations of physics which are consistent with the laws of special relativity. Ultimately, it was by
 studying the Maxwell equations that Lorentz was able to determine the form of the Lorentz
-transformations which subsequently laid the foundation for Einstein’s vision of space and time <span class="cite"><a class="cite-show" href="#w3-20001">[†-3]</a><span class="cite-detail">
+transformations which subsequently laid the foundation for Einstein’s vision of space and time <span class="cite"><a class="cite-show" href="#w3-20001">[†-3]</a><span class="cite-detail" id="DTong2024">
 <a id="x4-4002"></a>Tong, D. Ch 5. Electromagnetism and Relativity 2024</span></span>.
 </p>
-<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-1.1.2"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.1.1.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">1.1.2</span> <span class="title"> <a id="x4-50001.1.2"></a>Four Kinds of Forces</span></h4></div>
-</p><p class="noindent">Classical Mechanics tells us how behavior is when subjected to a given force. There are four (<span class="alert">4</span>) basic
+<div class="subsection-header"><h4 id="header-subsection-1.1.2"><span class="number">1.1.2</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.1.1.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x4-50001.1.2"></a>Four Kinds of Forces</span></h4></div>
+<p class="noindent">Classical Mechanics tells us how behavior is when subjected to a given force. There are four (<span class="alert">4</span>) basic
 forces known to physics. Listing them in the order of decreasing strength:
 </p>
 <dl class="description"><dt class="description"><a id="x4-5001x1.1.2"></a>
@@ -133,7 +143,7 @@ weaker than electromagnetic forces.
 <dt class="description"><a id="x4-5003x1.1.2"></a>
 <span style="color:#42395F;">Gravitational</span>
 </dt><dd class="description">
-<p class="noindent"> it  is  very  <span class="margin-block">weak  <span class="margin-comment"><span class="ellipsis">[6]</span>
+<p class="noindent"> it  is  very  <span class="margin-block">weak  <span class="margin-comment"><a class="ellipsis" href="#m-ref-6">[6]</a>
 <span class="sidenote">compared  to  all  of  the  others</span></span></span>  that  it  is  only  in  scale  of  huge  mass
 concentrations, for example the earth and the sun, that we ever notice it at all.
 </p>
@@ -143,7 +153,7 @@ concentrations, for example the earth and the sun, that we ever notice it at all
 </dt><dd class="description">
 <p class="noindent"> It  is  the  interaction  which  occurs  between  particles  with  electric  charge  through
 electromagnetic fields.</p></dd></dl>
-<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<div class="block-minor knowledge"><div class="body">
 <p class="noindent">For reference, the electrical repulsion between two (<span class="alert">2</span>) electrons is
 <math display="inline"><mn>1</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>4</mn><mn>2</mn></mrow></msup></math> times
 as large as their gravitational attraction. </p></div></div>
@@ -211,7 +221,7 @@ for physicists:
 <div class="quote"> An ideal model that other theories emulate. </div>
 <p class="noindent">The laws of classical electrodynamics were discovered in bits and pieces by Franklin, Coulomb, Ampere,
 Faraday, and others, but the person who completed the job, and packaged it all in the compact
-and consistent form it has today, was <span class="margin-block"><span class="margin"><span>James Clerk Maxwell. <span class="ellipsis">[7]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/The-Purpose-of-Electromagnetics/raster/portrait-maxwell.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[7]</span><b>James Clerk Maxwell</b>
+and consistent form it has today, was <span class="margin-block"><span class="margin"><span>James Clerk Maxwell. <a class="ellipsis" href="#m-ref-7">[7]</a></span><span class="sidenote"><a class="copiable-link" href="#m-ref-7" id="m-ref-7"> ¶</a><span class="sidenote-image"><img alt="PIC" src="figures/The-Purpose-of-Electromagnetics/raster/portrait-maxwell.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[7]</span><b>James Clerk Maxwell</b>
 FRS  FRSE
 <i>(1831  - 1879)</i>
 A Scottish physicist and mathematician who was responsible for the classical theory of
@@ -228,26 +238,26 @@ effective method to deal with network problems and linear conductors, he is rega
 founder of the modern field of electrical engineering.</span></span></span></span> The theory is now about 150 years
 old.
 </p>
-<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-1.1.3"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.1.1.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">1.1.3</span> <span class="title"> <a id="x4-60001.1.3"></a>Unifying Physical Theories</span></h4></div>
-</p><p class="noindent">In the beginning, electricity and magnetism were entirely separate subjects. The one dealt
+<div class="subsection-header"><h4 id="header-subsection-1.1.3"><span class="number">1.1.3</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.1.1.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x4-60001.1.3"></a>Unifying Physical Theories</span></h4></div>
+<p class="noindent">In the beginning, electricity and magnetism were entirely separate subjects. The one dealt
 with glass rods and cat’s fur, batteries, currents, electrolysis, and lightning, whereas the
 other with bar magnets, iron filings, compass needles, and the North Pole. However, in
-1820 Øersted noticed that an electric current could deflect a magnetic compass needle <span class="cite"><a class="cite-show" href="#w3-20001">[†-4]</a><span class="cite-detail">
+1820 Øersted noticed that an electric current could deflect a magnetic compass needle <span class="cite"><a class="cite-show" href="#w3-20001">[†-4]</a><span class="cite-detail" id="snelders1990oersted">
 <a id="x4-6001"></a>Snelders, H. A. M. Oersted’s discovery of electromagnetism. Romanticism and the Sciences, 228–40
 (1990)</span></span>. Soon afterwards, Ampére correctly postulated all magnetic phenomena are due to
 electric charges in motion. Then, in 1831, Faraday discovered that a moving magnet generates
-an electric current <span class="cite"><a class="cite-show" href="#w3-20001">[†-5]</a><span class="cite-detail"> <a id="x4-6002"></a>Al-Khalili, J. The birth of the electric machines: a commentary on
+an electric current <span class="cite"><a class="cite-show" href="#w3-20001">[†-5]</a><span class="cite-detail" id="al2015birth"> <a id="x4-6002"></a>Al-Khalili, J. The birth of the electric machines: a commentary on
 Faraday (1832)‘Experimental researches in electricity’. Philosophical transactions. Series A,
 Mathematical, physical, and engineering sciences <b>373</b><b>,</b> 20140208 (2015)</span></span>. By the time Maxwell and
 Lorentz put the finishing touches on the theory, electricity and magnetism were inextricably
 intertwined.
 </p><p class="noindent">They could no longer be regarded as separate subjects, but rather as two aspects of a single subject:
 electromagnetism.
-</p><p class="noindent">Faraday speculated that light, too, is electrical in nature <span class="cite"><a class="cite-show" href="#w3-20001">[†-6]</a><span class="cite-detail"> <a id="x4-6003"></a>Schatz, P. &amp; McCaffery, A. The faraday
+</p><p class="noindent">Faraday speculated that light, too, is electrical in nature <span class="cite"><a class="cite-show" href="#w3-20001">[†-6]</a><span class="cite-detail" id="schatz1969faraday"> <a id="x4-6003"></a>Schatz, P. &amp; McCaffery, A. The faraday
 effect. Quarterly Reviews, Chemical Society <b>23</b><b>,</b> 552–584 (1969)</span></span>. Maxwell’s theory provided justification
 for this hypothesis, and soon optics, which is the study of lenses, mirrors, prisms, interference,
 and diffraction, was incorporated into electromagnetism. Hertz, who presented the decisive
-experimental confirmation for Maxwell’s theory in 1888, said <span class="cite"><a class="cite-show" href="#w3-20001">[†-7]</a><span class="cite-detail"> <a id="x4-6004"></a>Hertz, H. On the relations
+experimental confirmation for Maxwell’s theory in 1888, said <span class="cite"><a class="cite-show" href="#w3-20001">[†-7]</a><span class="cite-detail" id="hertz2019relations"> <a id="x4-6004"></a>Hertz, H. On the relations
 between light and electricity in Heinrich Rudolf Hertz (1857-1894) 273–288 (Routledge,
 2019)</span></span>:
 </p><p class="noindent">
@@ -260,7 +270,7 @@ that we possess …an electrical organ-the eye.</p></blockquote>
 <p class="noindent">By 1900, three (<span class="alert">3</span>) great branches of physics: <b>electricity</b>, <b>magnetism</b>, and <b>optics</b> had merged into a
 single unified theory.
 </p>
-<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<div class="block-minor knowledge"><div class="body">
 <p class="noindent">It became apparent that visible light represents only a tiny “window” in the vast spectrum of
 electromagnetic radiation, from radio through microwaves, infrared and ultraviolet …</p></div></div>
 <p class="noindent">Einstein worked on a further unification, which would combine gravity and electrodynamics, in
@@ -268,9 +278,9 @@ much the same way as electricity and magnetism had been combined a century earli
 unified field theory was not particularly successful, but in recent years the same impulse has
 spawned a hierarchy of increasingly ambitious unification schemes, beginning in the 1960s
 with the electroweak theory of Glashow, Weinberg, and Salam, which joins the weak and
-electromagnetic forces <span class="cite"><a class="cite-show" href="#w3-20001">[†-8]</a><span class="cite-detail"> <a id="x4-6005"></a>Bilenky, S. M. &amp; Hosek, J. Glashow-Weinberg-Salam theory of electroweak
+electromagnetic forces <span class="cite"><a class="cite-show" href="#w3-20001">[†-8]</a><span class="cite-detail" id="bilenky1982glashow"> <a id="x4-6005"></a>Bilenky, S. M. &amp; Hosek, J. Glashow-Weinberg-Salam theory of electroweak
 interactions and the neutral currents. Physics Reports <b>90</b><b>,</b> 73–157 (1982)</span></span>, and culminating
-in the 1980s with the <span class="margin-block">superstring theory. <span class="margin-comment"><span class="ellipsis">[8]</span>
+in the 1980s with the <span class="margin-block">superstring theory. <span class="margin-comment"><a class="ellipsis" href="#m-ref-8">[8]</a>
 <span class="sidenote">an attempt to explain all of the particles and
 fundamental forces of nature in one theory by modeling them as vibrations of tiny supersymmetric
 strings.</span></span></span>
@@ -289,8 +299,8 @@ strings.</span></span></span>
 conjecture and experimental test widens; nevertheless, it is clear the unification of forces initiated by
 electrodynamics has become a major theme in the progress of physics.
 </p>
-<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-1.1.4"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.1.1.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">1.1.4</span> <span class="title"> <a id="x4-70001.1.4"></a>The Fields of Electrodynamics</span></h4></div>
-</p><p class="noindent">The essential problem the theory of electromagnetism hopes to solve is:
+<div class="subsection-header"><h4 id="header-subsection-1.1.4"><span class="number">1.1.4</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.1.1.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x4-70001.1.4"></a>The Fields of Electrodynamics</span></h4></div>
+<p class="noindent">The essential problem the theory of electromagnetism hopes to solve is:
 </p>
 <div class="quote"> If there exists a bunch of electric charges here, what happens to some other charge, over another
 place? </div>
@@ -300,7 +310,7 @@ second charge, in the presence of these fields, experiences a force. The fields,
 influence from one charge to the other-they “mediate” the interaction.
 </p><p class="noindent">When a charge undergoes acceleration, a portion of the field <span class="alert">detaches</span> itself, in sense, and travels off
 at the speed of light, carrying with it energy, momentum, and angular momentum. We
-call this <b>electromagnetic radiation</b>. Its existence <span class="margin-block">invites <span class="margin-comment"><span class="ellipsis">[9]</span>
+call this <b>electromagnetic radiation</b>. Its existence <span class="margin-block">invites <span class="margin-comment"><a class="ellipsis" href="#m-ref-9">[9]</a>
 <span class="sidenote">if not compels</span></span></span> us to regard
 the fields as independent dynamical entities in their own right, every bit as <span class="alert">real</span> as atoms or
 baseballs.
@@ -309,12 +319,11 @@ themselves. But it takes a charge to produce an electromagnetic field, and it ta
 charge to detect one, so we had best begin by reviewing the essential properties of electric
 charge.
 </p>
-<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-1.1.5"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.1.1.5"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">1.1.5</span> <span class="title"> <a id="x4-80001.1.5"></a>Electric Charge</span></h4></div>
-</p>
+<div class="subsection-header"><h4 id="header-subsection-1.1.5"><span class="number">1.1.5</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.1.1.5"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x4-80001.1.5"></a>Electric Charge</span></h4></div>
 <dl class="description"><dt class="description"><a id="x4-8001x1.1.5"></a>
 <span style="color:#42395F;">Charge comes in two varieties</span>
 </dt><dd class="description">
-<p class="noindent"> We call <b>plus</b> and <b>minus</b>, as their effects tend to <span class="margin-block">cancel. <span class="margin-comment"><span class="ellipsis">[10]</span>
+<p class="noindent"> We call <b>plus</b> and <b>minus</b>, as their effects tend to <span class="margin-block">cancel. <span class="margin-comment"><a class="ellipsis" href="#m-ref-10">[10]</a>
 <span class="sidenote">If we have +q and q at the same
 point, electrically it is the same as having no charge there at all.</span></span></span> The interesting point here
 is that plus and minus charges occur in exactly equal amounts, to high precision, in bulk
@@ -324,7 +333,7 @@ matter, so that their effects are almost completely neutralised.
 <dt class="description"><a id="x4-8002x1.1.5"></a>
 <span style="color:#42395F;">Charge is conserved</span>
 </dt><dd class="description">
-<p class="noindent"> Charge  cannot  be  created  or  destroyed <span class="cite"><a class="cite-show" href="#w3-20001">[†-9]</a><span class="cite-detail"> <a id="x4-8003"></a>Purcell,  E. M.  Electricity and magnetism
+<p class="noindent"> Charge  cannot  be  created  or  destroyed <span class="cite"><a class="cite-show" href="#w3-20001">[†-9]</a><span class="cite-detail" id="purcell2013electricity"> <a id="x4-8003"></a>Purcell,  E. M.  Electricity and magnetism
 (Cambridge university press, 2013)</span></span>. What there is now has always been. A plus charge can
 <b>annihilate</b> an equal minus charge, but a plus charge cannot simply disappear by itself,
 something must pick up that electric charge. So the total charge of the universe is fixed for
@@ -340,21 +349,21 @@ called <b>local conservation of charge</b>.
 </dt><dd class="description">
 <p class="noindent"> While there is no restrictions in classical electrodynamics which require it to be, electric
 charge comes only in <b>integer multiples</b> of the basic unit of charge. If we call the charge
-on the proton +<i>e</i>, then the electron carries charge <i>e</i><span class="margin-block">. <span class="margin-comment"><span class="ellipsis">[11]</span>
+on the proton +<i>e</i>, then the electron carries charge <i>e</i><span class="margin-block">. <span class="margin-comment"><a class="ellipsis" href="#m-ref-11">[11]</a>
 <span class="sidenote">It is never 7.392<i>e</i>, or 1/2<i>e</i>.</span></span></span></p></dd></dl>
-<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-1.1.6"> <a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.1.1.6"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">1.1.6</span> <span class="title"> <a id="x4-90001.1.6"></a>Interpreting Conservation of Charge</span></h4></div>
-</p><p class="noindent">Charge conservation does <b>NOT</b> mean that individual positive and negative charges cannot be created
+<div class="subsection-header"><h4 id="header-subsection-1.1.6"><span class="number">1.1.6</span><a class="pdf-icon" href="ElectrodynamicsLectureBook.pdf#subsection.1.1.6"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="title"> <a id="x4-90001.1.6"></a>Interpreting Conservation of Charge</span></h4></div>
+<p class="noindent">Charge conservation does <b>NOT</b> mean that individual positive and negative charges cannot be created
 or destroyed. Electric charge is carried by subatomic particles such as <span class="alert">electrons</span> and <span class="alert">protons</span>. Charged particles can be
 created and destroyed in elementary particle reactions.
 </p><p class="noindent">In particle physics, charge conservation means, in reactions that create charged particles, equal
 numbers of positive and negative particles are always created, keeping the net amount of charge
 unchanged. Similarly, when particles are destroyed, equal numbers of positive and negative charges are
 destroyed.
-</p><p class="noindent">This property is supported without exception by all empirical observations so far <span class="cite"><a class="cite-show" href="#w3-20001">[†-9]</a><span class="cite-detail"> <a id="x4-9001"></a>Purcell, E. M.
+</p><p class="noindent">This property is supported without exception by all empirical observations so far <span class="cite"><a class="cite-show" href="#w3-20001">[†-9]</a><span class="cite-detail" id="purcell2013electricity"> <a id="x4-9001"></a>Purcell, E. M.
 Electricity and magnetism (Cambridge university press, 2013)</span></span>.
 </p><p class="noindent">Even though the conservation of charge requires that the total quantity of charge in the universe is
 constant, it leaves open the question of what that quantity is. Most evidence indicates that the net
-charge in the universe is zero <span class="cite"><a class="cite-show" href="#w3-20001">[†-10]</a><span class="cite-detail"> <a id="x4-9002"></a>Orito, S &amp; Yoshimura, M. Can the universe be charged? Physical
+charge in the universe is zero <span class="cite"><a class="cite-show" href="#w3-20001">[†-10]</a><span class="cite-detail" id="orito1985can"> <a id="x4-9002"></a>Orito, S &amp; Yoshimura, M. Can the universe be charged? Physical
 review letters <b>54</b><b>,</b> 2457 (1985)</span></span>. That is, there are equal quantities of positive and negative
 charge.
 <div class="section-header">
@@ -407,6 +416,67 @@ charge.
 <dl class="enumerate-enumitem">
 <dt class="enumerate-enumitem" id="w3-20001"><span class="acr-short">10.</span><span class="acr-long"></span></dt>
 <dd class="enumerate-enumitem"> Orito, S &amp; Yoshimura, M. Can the universe be charged? Physical review letters 54, 2457 (1985)</dd>
+</dl></div>
+<div class="section-header">
+<h3 id="header-section-references">
+<span class="number">
+<i class="fa-regular fa-note-sticky"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+                    Page Footnotes</span>
+</h3>
+</div>
+<div class="footnote-block">
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-1"><span class="acr-short">[1].</span></dt>
+<dd class="enumerate-enumitem"><span class="">as in speeds comparable to the speed of light.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-2"><span class="acr-short">[2].</span></dt>
+<dd class="enumerate-enumitem"><span class="">Developed by Bohr, Schrodinger, Heisenberg, and many others, in the 1920’s,
+mostly.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-3"><span class="acr-short">[3].</span></dt>
+<dd class="enumerate-enumitem"><span class="">As is common in modern particle physics.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-4"><span class="acr-short">[4].</span></dt>
+<dd class="enumerate-enumitem"><span class="">which can be
+extended to other domains if needed.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-5"><span class="acr-short">[5].</span></dt>
+<dd class="enumerate-enumitem"><span class="">the postulated medium for the propagation of
+light <span class="cite"><a class="cite-show" href="#w3-20001">[†-2]</a><span class="cite-detail" id="brewer1852guide"> <a id="x4-4001"></a>Brewer, E. C. A guide to the scientific knowledge of things familiar (CS Francis &amp;
+Company, 1852)</span></span>. It was originally used to explain the ability of the apparently wave-based
+light to propagate through empty space, something waves should <b>NOT</b> be able to do. The
+assumption of a spatial plenum of luminiferous aether, rather than a spatial vacuum, provided the
+theoretical medium that was required by wave theories of light.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-6"><span class="acr-short">[6].</span></dt>
+<dd class="enumerate-enumitem"><span class="">compared  to  all  of  the  others</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-8"><span class="acr-short">[8].</span></dt>
+<dd class="enumerate-enumitem"><span class="">an attempt to explain all of the particles and
+fundamental forces of nature in one theory by modeling them as vibrations of tiny supersymmetric
+strings.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-9"><span class="acr-short">[9].</span></dt>
+<dd class="enumerate-enumitem"><span class="">if not compels</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-10"><span class="acr-short">[10].</span></dt>
+<dd class="enumerate-enumitem"><span class="">If we have +q and q at the same
+point, electrically it is the same as having no charge there at all.</span></dd>
+</dl>
+<dl class="enumerate-enumitem">
+<dt class="enumerate-enumitem" id="m-ref-11"><span class="acr-short">[11].</span></dt>
+<dd class="enumerate-enumitem"><span class="">It is never 7.392<i>e</i>, or 1/2<i>e</i>.</span></dd>
 </dl></div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="VectorCalculus.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="ThePurposeofElectromagnetism.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="ThePurposeofElectromagnetism.html#MechanicsinFourDifferentViews.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
 <a href="index.html" rel="index" title="Index">
 <i class="fa-solid fa-table-list">
@@ -415,7 +485,7 @@ charge.
 <a href="Index.html" rel="index" title="Index">
 <i class="fa-brands fa-git-alt"></i>
 </a></span></div></nav> </p><div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
-<span class="footer-webBook"><b>Last Updated:</b> 7.10.2026, at 8:21.</span></div></div><div class="author-notes">
+<span class="footer-webBook"><b>Last Updated:</b> 10.11.2026, at 12:38.</span></div></div><div class="author-notes">
 <span class="note">Authors Note </span>
 <span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
 </div>
@@ -424,7 +494,7 @@ charge.
 <div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
 <div class="current-header">
 <span class="header-pretext">Viewing | </span>
-<span class="header-text">Section 1.1: Mechanics in Four Different Views</span>
+<span class="header-text">1.1: Mechanics in Four Different Views</span>
 </div>
 <div class="button-group">
 </div>
